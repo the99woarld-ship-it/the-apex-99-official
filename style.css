@@ -95,3 +95,77 @@ footer{padding:40px 0;border-top:1px solid #292929;color:#aaa}.footer-grid{displ
     }
 
 }
+/* COMPACT PARTNERSHIP CARD */
+
+.partnership-card{
+    height:auto !important;
+    min-height:0 !important;
+    padding-bottom:22px !important;
+}
+
+.partnership-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:8px;
+    margin:14px 0;
+}
+
+.partnership-list div{
+    padding:9px 10px;
+    border:1px solid #333;
+    border-radius:8px;
+    background:#151515;
+}
+
+.partnership-list strong{
+    display:block;
+    color:#f5d27a;
+    font-size:11px;
+    line-height:1.3;
+    margin-bottom:3px;
+}
+
+.partnership-list span{
+    display:block;
+    color:#ccc;
+    font-size:10px;
+    line-height:1.35;
+}
+
+.partnership-card h4{
+    font-size:12px;
+    margin:14px 0 7px;
+}
+
+.partnership-card > p:last-of-type{
+    font-size:10px;
+    line-height:1.4;
+    margin-bottom:10px;
+}
+
+.partnership-card .btn{
+    font-size:11px;
+    padding:9px 12px;
+    margin-top:10px;
+}
+
+@media(max-width:600px){
+
+    .partnership-list{
+        grid-template-columns:1fr 1fr;
+        gap:7px;
+    }
+
+    .partnership-list div{
+        padding:8px;
+    }
+
+    .partnership-list strong{
+        font-size:10px;
+    }
+
+    .partnership-list span{
+        font-size:9px;
+    }
+
+}
