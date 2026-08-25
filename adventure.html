@@ -1,11 +1,1195 @@
-<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Adventure | THE APEX 99</title><meta name="description" content="THE APEX 99 — Professional Event, Competition, Adventure and Tour Organizer">
-<link rel="stylesheet" href="style.css"></head><body>
-<header><div class="container nav"><a class="brand" href="index.html">THE APEX <span>99</span></a><button class="menu" aria-label="Menu">☰</button><nav><a href="index.html">Home</a><a href="about.html">About</a><a href="events.html">Events</a><a href="afth.html">AFTH</a><a href="adventure.html">Adventure</a><a href="tours.html">Tours</a><a href="competitions.html">Competitions</a><a href="register.html">Registration</a><a href="booking.html">Booking</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a></nav></div></header>
-<main>
-<div class="pagehero"><div class="container"><div class="eyebrow">Adventure Experiences</div><h1>Challenge Yourself</h1><p class="section-sub">Adventure and survival events created around teamwork, skills and real experiences.</p></div></div>
-<section><div class="container"><div class="grid"><div class="card"><h3>Survival Challenges</h3><p>Outdoor tasks, teamwork and practical challenge-based experiences.</p></div><div class="card"><h3>Adventure Rides</h3><p>Explore routes and experiences built for participants who love adventure.</p></div><div class="card"><h3>Team Challenges</h3><p>Build leadership, communication and decision-making through activities.</p></div></div><a class="btn" href="register.html">Register for Adventure</a></div></section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Adventure | THE APEX 99</title>
+
+<meta name="description"
+content="THE APEX 99 Adventure - Man V/S Nature Adventure Experience.">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* ============================= */
+/* ADVENTURE PAGE */
+/* ============================= */
+
+.adventure-page{
+    padding:60px 0;
+}
+
+/* HERO */
+
+.adventure-hero{
+    text-align:center;
+    padding:35px 20px 55px;
+}
+
+.adventure-hero .eyebrow{
+    color:#f5d27a;
+    font-size:13px;
+    letter-spacing:4px;
+    font-weight:700;
+}
+
+.adventure-hero h1{
+    font-size:46px;
+    margin:15px 0 8px;
+    line-height:1.1;
+}
+
+.adventure-hero h1 span{
+    color:#f5d27a;
+}
+
+.adventure-hero h2{
+    font-size:22px;
+    letter-spacing:3px;
+    margin-bottom:18px;
+}
+
+.adventure-hero p{
+    max-width:750px;
+    margin:auto;
+    color:#bbb;
+    line-height:1.8;
+}
+
+
+/* GRID */
+
+.adventure-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+
+/* CARD */
+
+.adventure-box{
+    background:#151515;
+    border:1px solid #333;
+    border-radius:15px;
+    padding:25px;
+    transition:.3s;
+}
+
+.adventure-box:hover{
+    transform:translateY(-5px);
+    border-color:#f5d27a;
+}
+
+.adventure-icon{
+    font-size:42px;
+    margin-bottom:14px;
+}
+
+.adventure-box h3{
+    color:#f5d27a;
+    margin:0 0 10px;
+}
+
+.adventure-box p{
+    color:#bbb;
+    font-size:14px;
+    line-height:1.7;
+}
+
+.adventure-box ul{
+    padding-left:20px;
+    color:#ccc;
+    font-size:13px;
+    line-height:1.9;
+}
+
+
+/* SECTION */
+
+.adventure-section{
+    margin-top:65px;
+}
+
+.adventure-section-title{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.adventure-section-title h2{
+    color:#f5d27a;
+    font-size:30px;
+}
+
+.adventure-section-title p{
+    color:#aaa;
+}
+
+
+/* PRIZE */
+
+.prize-card{
+    text-align:center;
+}
+
+.prize-card .prize{
+    font-size:30px;
+    font-weight:800;
+    color:#f5d27a;
+    margin:15px 0;
+}
+
+
+/* REGISTRATION */
+
+.registration-section{
+    margin-top:70px;
+    padding:40px 25px;
+    background:#111;
+    border:1px solid #333;
+    border-radius:16px;
+}
+
+.registration-section h2{
+    text-align:center;
+    color:#f5d27a;
+    margin-bottom:10px;
+}
+
+.registration-sub{
+    text-align:center;
+    color:#aaa;
+    margin-bottom:30px;
+}
+
+.registration-form{
+    max-width:750px;
+    margin:auto;
+}
+
+.registration-form label{
+    display:block;
+    margin:14px 0 7px;
+    color:#ddd;
+    font-weight:600;
+}
+
+.registration-form input,
+.registration-form select,
+.registration-form textarea{
+    width:100%;
+    box-sizing:border-box;
+    padding:13px;
+    background:#181818;
+    border:1px solid #444;
+    border-radius:8px;
+    color:#fff;
+    outline:none;
+}
+
+.registration-form textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+.registration-form input:focus,
+.registration-form select:focus,
+.registration-form textarea:focus{
+    border-color:#f5d27a;
+}
+
+.registration-submit{
+    display:block;
+    margin:25px auto 0;
+    padding:14px 26px;
+    background:#f5d27a;
+    color:#111;
+    border:0;
+    border-radius:8px;
+    font-weight:800;
+    cursor:pointer;
+}
+
+.registration-submit:hover{
+    opacity:.9;
+}
+
+
+/* CTA */
+
+.adventure-cta{
+    text-align:center;
+    margin-top:60px;
+    padding:45px 20px;
+    border:1px solid #333;
+    border-radius:16px;
+}
+
+.adventure-cta h2{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.adventure-cta p{
+    color:#aaa;
+    margin-bottom:25px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+    .adventure-grid{
+        grid-template-columns:1fr;
+    }
+
+    .adventure-hero h1{
+        font-size:35px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="container nav">
+
+<a class="brand" href="index.html">
+THE APEX <span>99</span>
+</a>
+
+<button class="menu" aria-label="Menu">
+☰
+</button>
+
+<nav>
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="events.html">Events</a>
+<a href="afth.html">AFTH</a>
+<a href="adventure.html">Adventure</a>
+<a href="tours.html">Tours</a>
+<a href="competitions.html">Competitions</a>
+<a href="register.html">Registration</a>
+<a href="booking.html">Booking</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- MAIN -->
+
+<main class="adventure-page">
+
+<div class="container">
+
+
+<!-- HERO -->
+
+<section class="adventure-hero">
+
+<div class="eyebrow">
+THE APEX 99 ADVENTURE
+</div>
+
+<h1>
+MAN <span>V/S</span> NATURE
+</h1>
+
+<h2>
+ADVENTURE SURVIVE CHALLENGE
+</h2>
+
+<p>
+Challenge yourself, explore nature, learn new skills
+and experience an unforgettable outdoor adventure
+with THE APEX 99.
+</p>
+
+</section>
+
+
+<!-- HIGHLIGHTS -->
+
+<section>
+
+<div class="adventure-section-title">
+
+<h2>
+ADVENTURE HIGHLIGHTS
+</h2>
+
+<p>
+Experience something different from ordinary travel.
+</p>
+
+</div>
+
+
+<div class="adventure-grid">
+
+
+<div class="adventure-box">
+
+<div class="adventure-icon">
+🏆
+</div>
+
+<h3>
+PRIZE & RECOGNITION
+</h3>
+
+<p>
+Compete in adventure challenges and earn recognition
+for your performance.
+</p>
+
+<ul>
+<li>Winner Prize</li>
+<li>Trophy</li>
+<li>Certificate</li>
+<li>Special Recognition</li>
+</ul>
+
+</div>
+
+
+<div class="adventure-box">
+
+<div class="adventure-icon">
+🐎
+</div>
+
+<h3>
+HORSE RIDING
+</h3>
+
+<p>
+Enjoy a supervised horse riding experience as part
+of the adventure journey.
+</p>
+
+<ul>
+<li>Basic Introduction</li>
+<li>Supervised Activity</li>
+<li>Outdoor Experience</li>
+</ul>
+
+</div>
+
+
+<div class="adventure-box">
+
+<div class="adventure-icon">
+🌲
+</div>
+
+<h3>
+FOREST EXPERIENCE
+</h3>
+
+<p>
+Explore the natural environment and discover new
+things about forests and nature.
+</p>
+
+<ul>
+<li>Forest Exploration</li>
+<li>Nature Awareness</li>
+<li>Observation Challenge</li>
+</ul>
+
+</div>
+
+
+<div class="adventure-box">
+
+<div class="adventure-icon">
+🔥
+</div>
+
+<h3>
+SURVIVAL CHALLENGE
+</h3>
+
+<p>
+Learn basic outdoor survival concepts through
+supervised activities.
+</p>
+
+<ul>
+<li>Shelter Challenge</li>
+<li>Water Awareness</li>
+<li>Outdoor Skills</li>
+</ul>
+
+</div>
+
+
+<div class="adventure-box">
+
+<div class="adventure-icon">
+🧭
+</div>
+
+<h3>
+ADVENTURE TASKS
+</h3>
+
+<p>
+Complete different physical, mental and teamwork
+based challenges.
+</p>
+
+<ul>
+<li>Navigation</li>
+<li>Teamwork</li>
+<li>Problem Solving</li>
+<li>Final Challenge</li>
+</ul>
+
+</div>
+
+
+<div class="adventure-box">
+
+<div class="adventure-icon">
+📸
+</div>
+
+<h3>
+MEMORIES
+</h3>
+
+<p>
+Capture your adventure and take home memories from
+your experience.
+</p>
+
+<ul>
+<li>Event Photography</li>
+<li>Video Coverage</li>
+<li>Participation Certificate</li>
+</ul>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- WHAT YOU EXPERIENCE -->
+
+<section class="adventure-section">
+
+<div class="adventure-section-title">
+
+<h2>
+WHAT YOU WILL EXPERIENCE
+</h2>
+
+</div>
+
+
+<div class="adventure-grid">
+
+
+<div class="adventure-box">
+
+<h3>
+🌳 FOREST EXPLORATION
+</h3>
+
+<p>
+Guided exploration of natural surroundings with
+nature awareness activities.
+</p>
+
+</div>
+
+
+<div class="adventure-box">
+
+<h3>
+🐎 HORSE RIDING EXPERIENCE
+</h3>
+
+<p>
+A supervised horse riding activity designed to give
+participants a memorable outdoor experience.
+</p>
+
+</div>
+
+
+<div class="adventure-box">
+
+<h3>
+🛖 SHELTER CHALLENGE
+</h3>
+
+<p>
+Work with your team to complete a supervised
+shelter-building challenge.
+</p>
+
+</div>
+
+
+<div class="adventure-box">
+
+<h3>
+💧 WATER & NATURE LEARNING
+</h3>
+
+<p>
+Learn about water, nature and responsible outdoor
+practices.
+</p>
+
+</div>
+
+
+<div class="adventure-box">
+
+<h3>
+🍳 OUTDOOR COOKING
+</h3>
+
+<p>
+Experience a supervised outdoor cooking activity
+and learn basic camp skills.
+</p>
+
+</div>
+
+
+<div class="adventure-box">
+
+<h3>
+🤝 TEAM CHALLENGE
+</h3>
+
+<p>
+Build communication, teamwork and decision-making
+skills through group challenges.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- TASKS -->
+
+<section class="adventure-section">
+
+<div class="adventure-section-title">
+
+<h2>
+ADVENTURE TASKS
+</h2>
+
+<p>
+Different challenges. One unforgettable experience.
+</p>
+
+</div>
+
+
+<div class="adventure-grid">
+
+
+<div class="adventure-box">
+
+<div class="adventure-icon">
+🧭
+</div>
+
+<h3>
+TASK 01 — NAVIGATION
+</h3>
+
+<p>
+Observation and direction-based adventure challenge.
+</p>
+
+</div>
+
+
+<div class="adventure-box">
+
+<div class="adventure-icon">
+🛖
+</div>
+
+<h3>
+TASK 02 — SHELTER
+</h3>
+
+<p>
+Team shelter-building challenge using approved
+materials and supervised methods.
+</p>
+
+</div>
+
+
+<div class="adventure-box">
+
+<div class="adventure-icon">
+🌿
+</div>
+
+<h3>
+TASK 03 — NATURE KNOWLEDGE
+</h3>
+
+<p>
+Discover and learn about the surrounding natural
+environment.
+</p>
+
+</div>
+
+
+<div class="adventure-box">
+
+<div class="adventure-icon">
+🤝
+</div>
+
+<h3>
+TASK 04 — TEAM CHALLENGE
+</h3>
+
+<p>
+Teamwork, coordination and problem-solving challenge.
+</p>
+
+</div>
+
+
+<div class="adventure-box">
+
+<div class="adventure-icon">
+🔥
+</div>
+
+<h3>
+TASK 05 — SURVIVAL SKILLS
+</h3>
+
+<p>
+Learn supervised basic outdoor survival concepts.
+</p>
+
+</div>
+
+
+<div class="adventure-box">
+
+<div class="adventure-icon">
+🏆
+</div>
+
+<h3>
+TASK 06 — FINAL CHALLENGE
+</h3>
+
+<p>
+Final challenge to determine the top performers.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- PRIZES -->
+
+<section class="adventure-section">
+
+<div class="adventure-section-title">
+
+<h2>
+PRIZES & RECOGNITION
+</h2>
+
+</div>
+
+
+<div class="adventure-grid">
+
+
+<div class="adventure-box prize-card">
+
+<div class="adventure-icon">
+🥇
+</div>
+
+<h3>
+WINNER
+</h3>
+
+<div class="prize">
+₹XXXX
+</div>
+
+<p>
+Cash Prize + Trophy + Certificate
+</p>
+
+</div>
+
+
+<div class="adventure-box prize-card">
+
+<div class="adventure-icon">
+🥈
+</div>
+
+<h3>
+RUNNER-UP
+</h3>
+
+<div class="prize">
+TROPHY
+</div>
+
+<p>
+Trophy + Certificate
+</p>
+
+</div>
+
+
+<div class="adventure-box prize-card">
+
+<div class="adventure-icon">
+🎖️
+</div>
+
+<h3>
+PARTICIPANT
+</h3>
+
+<div class="prize">
+CERTIFICATE
+</div>
+
+<p>
+Official Adventure Participation Certificate
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- EVENT INFORMATION -->
+
+<section class="adventure-section">
+
+<div class="adventure-section-title">
+
+<h2>
+EVENT INFORMATION
+</h2>
+
+</div>
+
+
+<div class="adventure-grid">
+
+
+<div class="adventure-box">
+
+<h3>📅 EVENT DATE</h3>
+
+<p>
+To Be Announced
+</p>
+
+</div>
+
+
+<div class="adventure-box">
+
+<h3>📍 LOCATION</h3>
+
+<p>
+Adventure Location — To Be Announced
+</p>
+
+</div>
+
+
+<div class="adventure-box">
+
+<h3>⏱️ DURATION</h3>
+
+<p>
+Full Day / Multi-Day Adventure
+</p>
+
+</div>
+
+
+<div class="adventure-box">
+
+<h3>👥 PARTICIPATION</h3>
+
+<p>
+Limited Participants
+</p>
+
+</div>
+
+
+<div class="adventure-box">
+
+<h3>🎫 REGISTRATION</h3>
+
+<p>
+Registration Required
+</p>
+
+</div>
+
+
+<div class="adventure-box">
+
+<h3>⚠️ SAFETY</h3>
+
+<p>
+All activities will be conducted under appropriate
+supervision and safety procedures.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- REGISTRATION -->
+
+<section class="registration-section"
+id="registration">
+
+<h2>
+ADVENTURE REGISTRATION
+</h2>
+
+<p class="registration-sub">
+
+Ready to challenge yourself?
+
+Register your interest for the upcoming
+THE APEX 99 Adventure.
+
+</p>
+
+
+<form class="registration-form"
+onsubmit="sendAdventureEmail(event)">
+
+
+<label>
+Full Name *
+</label>
+
+<input
+type="text"
+id="aname"
+required>
+
+
+<label>
+Age *
+</label>
+
+<input
+type="number"
+id="aage"
+required>
+
+
+<label>
+Mobile Number *
+</label>
+
+<input
+type="tel"
+id="amobile"
+required>
+
+
+<label>
+Email Address
+</label>
+
+<input
+type="email"
+id="aemail">
+
+
+<label>
+Adventure Experience
+</label>
+
+<select id="experience">
+
+<option value="">
+Select Experience
+</option>
+
+<option>
+Beginner
+</option>
+
+<option>
+Intermediate
+</option>
+
+<option>
+Experienced
+</option>
+
+</select>
+
+
+<label>
+Message
+</label>
+
+<textarea
+id="amessage"
+placeholder="Tell us why you want to join this adventure...">
+</textarea>
+
+
+<button
+type="submit"
+class="registration-submit">
+
+REGISTRATION NOW →
+
+</button>
+
+
+</form>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="adventure-cta">
+
+<h2>
+READY TO FACE THE <span class="gold">WILD?</span>
+</h2>
+
+<p>
+Challenge yourself. Discover nature. Create memories.
+</p>
+
+<a
+class="btn"
+href="#registration">
+
+REGISTRATION NOW →
+
+</a>
+
+</section>
+
+
+</div>
+
 </main>
-<footer><div class="container footer-grid"><div><div class="brand">THE APEX <span>99</span></div><p>WHO IS THE ONE</p><p>A Unit of SMPN RECORD MANAGEMENT.</p></div><div><h3 class="gold">Quick Links</h3><p><a href="events.html">Events</a><br><a href="afth.html">AFTH</a><br><a href="register.html">Registration</a><br><a href="booking.html">Booking</a></p></div><div><h3 class="gold">Contact</h3><p>+91 74397 01814<br>the99woarld@gmail.com</p></div></div><div class="container" style="margin-top:25px;border-top:1px solid #292929;padding-top:18px">© <span data-year></span> THE APEX 99. All rights reserved.</div></footer>
-<script src="script.js"></script></body></html>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer-grid">
+
+
+<div>
+
+<div class="brand">
+THE APEX <span>99</span>
+</div>
+
+<p>
+WHO IS THE ONE
+</p>
+
+<p>
+A Unit of SMPN RECORD MANAGEMENT.
+</p>
+
+</div>
+
+
+<div>
+
+<h4 class="gold">
+Quick Links
+</h4>
+
+<p>
+
+<a href="index.html">
+Home
+</a>
+
+<br>
+
+<a href="events.html">
+Events
+</a>
+
+<br>
+
+<a href="afth.html">
+AFTH
+</a>
+
+<br>
+
+<a href="tours.html">
+Tours
+</a>
+
+<br>
+
+<a href="partnership.html">
+Partnership
+</a>
+
+</p>
+
+</div>
+
+
+<div>
+
+<h4 class="gold">
+Contact
+</h4>
+
+<p>
++91 74397 01814
+</p>
+
+<p>
+the99world@gmail.com
+</p>
+
+</div>
+
+
+</div>
+
+
+<div
+class="container"
+style="margin-top:25px;border-top:1px solid #292929;padding-top:18px">
+
+© THE APEX 99. All rights reserved.
+
+</div>
+
+</footer>
+
+
+<script>
+
+function sendAdventureEmail(event){
+
+event.preventDefault();
+
+const name =
+document.getElementById("aname").value;
+
+const age =
+document.getElementById("aage").value;
+
+const mobile =
+document.getElementById("amobile").value;
+
+const email =
+document.getElementById("aemail").value;
+
+const experience =
+document.getElementById("experience").value;
+
+const message =
+document.getElementById("amessage").value;
+
+
+const subject =
+"THE APEX 99 Adventure Registration";
+
+
+const body =
+"Adventure Registration Request\n\n" +
+
+"Name: " + name +
+"\nAge: " + age +
+"\nMobile: " + mobile +
+"\nEmail: " + email +
+"\nExperience: " + experience +
+"\n\nMessage:\n" + message;
+
+
+window.location.href =
+"mailto:the99world@gmail.com?subject=" +
+encodeURIComponent(subject) +
+"&body=" +
+encodeURIComponent(body);
+
+}
+
+</script>
+
+
+</body>
+</html>
