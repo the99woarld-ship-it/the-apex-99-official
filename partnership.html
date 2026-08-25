@@ -409,11 +409,12 @@ THE APEX <span>99</span>
 
 </footer>
 
-<script>function selectPartner(partnerName) {
+<script>
+function selectPartner(partnerName) {
     const select = document.getElementById("type");
 
     for (let i = 0; i < select.options.length; i++) {
-        if (select.options[i].text === partnerName) {
+        if (select.options[i].text.trim() === partnerName.trim()) {
             select.selectedIndex = i;
             break;
         }
@@ -423,6 +424,7 @@ THE APEX <span>99</span>
         behavior: "smooth"
     });
 }
+</script>
 function sendPartnershipEmail(event){
 
 event.preventDefault();
