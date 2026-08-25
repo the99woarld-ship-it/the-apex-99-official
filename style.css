@@ -19,3 +19,79 @@ form{display:grid;gap:15px;max-width:760px}input,select,textarea{width:100%;padd
 footer{padding:40px 0;border-top:1px solid #292929;color:#aaa}.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}.gold{color:var(--gold2)}
 .notice{padding:18px;border-left:4px solid var(--gold);background:#17130c;color:#ddd;border-radius:8px;margin:20px 0}
 @media(max-width:850px){nav{display:none;position:absolute;top:72px;left:0;right:0;background:#0b0b0b;padding:18px;flex-direction:column;align-items:flex-start;border-bottom:1px solid #333}.menu{display:block}.grid{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr}.hero{min-height:70vh}}
+/* PARTNERSHIP DESIGN */
+
+.partnership-card{
+    text-align:left;
+}
+
+.partnership-card h3{
+    text-align:center;
+    color:#f5d27a;
+    margin-bottom:8px;
+}
+
+.partnership-card > p{
+    text-align:center;
+}
+
+.partnership-list{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+    margin:18px 0;
+}
+
+.partnership-list div{
+    padding:12px;
+    border:1px solid #3a3a3a;
+    border-radius:10px;
+    background:#151515;
+}
+
+.partnership-list strong{
+    display:block;
+    color:#f5d27a;
+    font-size:13px;
+    margin-bottom:4px;
+}
+
+.partnership-list span{
+    display:block;
+    color:#ddd;
+    font-size:12px;
+    line-height:1.5;
+}
+
+.partnership-card h4{
+    text-align:center;
+    color:#f5d27a;
+    margin:20px 0 10px;
+    font-size:14px;
+}
+
+.partnership-card .btn{
+    display:block;
+    width:max-content;
+    margin:18px auto 0;
+}
+
+@media(max-width:600px){
+
+    .partnership-list{
+        gap:8px;
+    }
+
+    .partnership-list div{
+        padding:10px;
+    }
+
+    .partnership-list strong{
+        font-size:12px;
+    }
+
+    .partnership-list span{
+        font-size:11px;
+    }
+
+}
