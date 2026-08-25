@@ -239,7 +239,7 @@ audience through our events and digital platforms.
 <li>Business Networking</li>
 <li>Digital Promotion</li>
 </ul>
-<a href="#application">Apply Now →</a>
+<a href="#application" onclick="selectPartner('Corporate Partner')">Apply Now →</a>
 </div>
 
 <div class="partner-box">
@@ -255,7 +255,7 @@ young talent and create new opportunities.
 <li>Talent Development</li>
 <li>Player Scouting</li>
 </ul>
-<a href="#application">Apply Now →</a>
+<a href="#application" onclick="selectPartner('Sports & Academy Partner')">Apply Now →</a>
 </div>
 
 <div class="partner-box">
@@ -271,7 +271,7 @@ and stories to a wider audience.
 <li>Social Media</li>
 <li>Event Coverage</li>
 </ul>
-<a href="#application">Apply Now →</a>
+<a href="#application" onclick="selectPartner('Media Partner')">Apply Now →</a>
 </div>
 
 <div class="partner-box">
@@ -287,7 +287,7 @@ sponsorship opportunities.
 <li>Event Sponsor</li>
 <li>Brand Activation</li>
 </ul>
-<a href="#application">Apply Now →</a>
+<a href="#application" onclick="selectPartner('Sponsorship Partner')">Apply Now →</a>
 </div>
 
 <div class="partner-box">
@@ -303,7 +303,7 @@ our events and activities.
 <li>Local Networking</li>
 <li>Business Opportunity</li>
 </ul>
-<a href="#application">Apply Now →</a>
+<a href="#application" onclick="selectPartner('District Partner')">Apply Now →</a>
 </div>
 
 <div class="partner-box">
@@ -319,7 +319,7 @@ hospitality partner.
 <li>Restaurants</li>
 <li>Travel Services</li>
 </ul>
-<a href="#application">Apply Now →</a>
+<a href="#application" onclick="selectPartner('Travel & Hospitality Partner')">Apply Now →</a>
 </div>
 
 </section>
@@ -409,7 +409,20 @@ THE APEX <span>99</span>
 
 </footer>
 
-<script>
+<script>function selectPartner(partnerName) {
+    const select = document.getElementById("type");
+
+    for (let i = 0; i < select.options.length; i++) {
+        if (select.options[i].text === partnerName) {
+            select.selectedIndex = i;
+            break;
+        }
+    }
+
+    document.getElementById("application").scrollIntoView({
+        behavior: "smooth"
+    });
+}
 function sendPartnershipEmail(event){
 
 event.preventDefault();
