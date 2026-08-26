@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Forest Survive Participation | THE APEX 99</title>
+<meta name="description" content="Participation form for THE APEX 99 12 Mile Forest Survive.">
+<link rel="stylesheet" href="style.css">
+<style>
+.form-wrap{max-width:900px;margin:auto}
+.form-card{padding:28px;border-radius:20px}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field.full{grid-column:1/-1}
+.field label{font-weight:700}
+.field input,.field select,.field textarea{width:100%;box-sizing:border-box;padding:13px 14px;border:1px solid #444;border-radius:10px;background:#111;color:inherit;font:inherit}
+.field textarea{min-height:110px;resize:vertical}
+.required{color:#d4af37}
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+.summary div{padding:18px;border-radius:14px;text-align:center}
+.summary strong{display:block;font-size:20px;margin-top:5px}
+.section-heading{margin:30px 0 15px;padding-bottom:10px;border-bottom:1px solid #333}
+.check{display:flex;gap:10px;align-items:flex-start;margin:15px 0}
+.check input{margin-top:5px}
+.success{display:none;margin-top:20px;padding:20px;border:1px solid #d4af37;border-radius:14px}
+.notice{padding:18px;border:1px solid #d4af37;border-radius:14px;margin:20px 0}
+@media(max-width:700px){.form-grid,.summary{grid-template-columns:1fr}.field.full{grid-column:auto}}
+</style>
+</head>
+<body>
+<header>
+<div class="container nav">
+<a class="brand" href="index.html">THE APEX <span>99</span></a>
+<button class="menu" aria-label="Menu">☰</button>
+<nav>
+<a href="index.html">Home</a><a href="about.html">About</a><a href="events.html">Events</a>
+<a href="afth.html">AFTH</a><a href="adventure.html">Adventure</a><a href="tours.html">Tours</a>
+<a href="competitions.html">Competitions</a><a href="register.html">Registration</a>
+<a href="booking.html">Booking</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="pagehero">
+<div class="container">
+<div class="eyebrow">THE APEX 99 ADVENTURE</div>
+<h1>12 MILE FOREST SURVIVE</h1>
+<p class="section-sub">PARTICIPATION FORM • UPCOMING EVENT • PRIZE ₹1,00,000</p>
+</div>
+</section>
+
+<section>
+<div class="container form-wrap">
+<div class="summary">
+<div class="card">EVENT<strong>FOREST SURVIVE</strong><small>12 Mile</small></div>
+<div class="card">PRIZE<strong>₹1,00,000</strong><small>Winner Prize</small></div>
+<div class="card">DATE<strong>UPCOMING</strong><small>To Be Announced</small></div>
+</div>
+
+<div class="notice"><strong>Before applying:</strong> The final event date, location, participation fee (if applicable), age/eligibility criteria and detailed rulebook will be announced by THE APEX 99. Submission of this form is a participation request and does not by itself confirm a seat.</div>
+
+<form class="card form-card" id="forestForm">
+<h2 class="section-heading">1. PARTICIPANT DETAILS</h2>
+<div class="form-grid">
+<div class="field"><label>Full Name <span class="required">*</span></label><input name="name" required></div>
+<div class="field"><label>Date of Birth <span class="required">*</span></label><input type="date" name="dob" required></div>
+<div class="field"><label>Gender <span class="required">*</span></label><select name="gender" required><option value="">Select</option><option>Male</option><option>Female</option><option>Other</option></select></div>
+<div class="field"><label>Mobile Number <span class="required">*</span></label><input type="tel" name="mobile" required></div>
+<div class="field"><label>WhatsApp Number</label><input type="tel" name="whatsapp"></div>
+<div class="field"><label>Email Address <span class="required">*</span></label><input type="email" name="email" required></div>
+<div class="field full"><label>Full Address <span class="required">*</span></label><textarea name="address" required></textarea></div>
+</div>
+
+<h2 class="section-heading">2. EMERGENCY CONTACT</h2>
+<div class="form-grid">
+<div class="field"><label>Emergency Contact Name <span class="required">*</span></label><input name="emergency_name" required></div>
+<div class="field"><label>Relationship <span class="required">*</span></label><input name="relationship" required></div>
+<div class="field"><label>Emergency Contact Number <span class="required">*</span></label><input type="tel" name="emergency_phone" required></div>
+</div>
+
+<h2 class="section-heading">3. IDENTITY DOCUMENT</h2>
+<div class="form-grid">
+<div class="field"><label>ID Proof Type <span class="required">*</span></label><select name="id_type" required><option value="">Select</option><option>Aadhaar Card</option><option>Passport</option><option>Voter ID</option><option>Driving Licence</option><option>Other Government ID</option></select></div>
+<div class="field"><label>ID Number <span class="required">*</span></label><input name="id_number" required></div>
+<div class="field full"><label>ID Proof Upload</label><input type="file" name="id_proof" accept="image/*,.pdf"></div>
+</div>
+
+<h2 class="section-heading">4. PARTICIPATION INFORMATION</h2>
+<div class="form-grid">
+<div class="field"><label>Previous Outdoor / Adventure Experience</label><select name="experience"><option>None</option><option>Basic</option><option>Intermediate</option><option>Advanced</option></select></div>
+<div class="field"><label>Do you require any special assistance?</label><select name="assistance"><option>No</option><option>Yes</option></select></div>
+<div class="field full"><label>Anything the event team should know?</label><textarea name="notes" placeholder="Optional"></textarea></div>
+</div>
+
+<h2 class="section-heading">5. DECLARATION & SAFETY</h2>
+<label class="check"><input type="checkbox" required><span>I confirm that the information provided is correct.</span></label>
+<label class="check"><input type="checkbox" required><span>I understand that this is an outdoor forest-survival challenge and I will follow the official safety instructions.</span></label>
+<label class="check"><input type="checkbox" required><span>I understand that fire, cutting equipment, water purification and food-identification tasks must only be performed under the event team's rules and supervision.</span></label>
+<label class="check"><input type="checkbox" required><span>I agree to the official event rules, eligibility conditions and participation terms when published.</span></label>
+
+<button class="btn" type="submit">SUBMIT PARTICIPATION →</button>
+<div class="success" id="successBox">
+<strong>Participation request prepared.</strong><br>
+The form can now be connected to your Google Forms/Google Sheets system so every application is stored for the THE APEX 99 team.
+</div>
+</form>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container footer-grid">
+<div><div class="brand">THE APEX <span>99</span></div><p>WHO IS THE ONE</p><p>A Unit of SMPN RECORD MANAGEMENT.</p></div>
+<div><h3 class="gold">Quick Links</h3><p><a href="index.html">Home</a><br><a href="adventure.html">Adventure</a><br><a href="forest-survive.html">Forest Survive</a><br><a href="contact.html">Contact</a></p></div>
+<div><h3 class="gold">Contact</h3><p>+91 74397 01814<br>the99woarld@gmail.com</p></div>
+</div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+document.getElementById('forestForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ document.getElementById('successBox').style.display='block';
+ document.getElementById('successBox').scrollIntoView({behavior:'smooth',block:'center'});
+});
+</script>
+</body>
+</html>
