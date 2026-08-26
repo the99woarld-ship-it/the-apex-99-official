@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Kashmir Tour Booking | THE APEX 99</title>
+<meta name="description" content="Book the upcoming THE APEX 99 Kashmir Tour. ₹16,000 per person. Only 400 seats.">
+<link rel="stylesheet" href="style.css">
+<style>
+.booking-wrap{max-width:900px;margin:auto}
+.form-card{padding:28px;border-radius:20px}
+.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.field{display:flex;flex-direction:column;gap:8px}
+.field.full{grid-column:1/-1}
+.field label{font-weight:700}
+.field input,.field select,.field textarea{width:100%;box-sizing:border-box;padding:13px 14px;border:1px solid #444;border-radius:10px;background:#111;color:inherit;font:inherit}
+.field textarea{min-height:110px;resize:vertical}
+.required{color:#d4af37}
+.section-heading{margin:30px 0 15px;padding-bottom:10px;border-bottom:1px solid #333}
+.summary{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}
+.summary div{padding:18px;border-radius:14px;text-align:center}
+.summary strong{display:block;font-size:20px;margin-top:5px}
+.check{display:flex;gap:10px;align-items:flex-start;margin:15px 0}
+.check input{margin-top:5px}
+.success{display:none;margin-top:20px;padding:20px;border:1px solid #d4af37;border-radius:14px}
+@media(max-width:700px){.form-grid,.summary{grid-template-columns:1fr}.field.full{grid-column:auto}}
+</style>
+</head>
+<body>
+<header>
+<div class="container nav">
+<a class="brand" href="index.html">THE APEX <span>99</span></a>
+<button class="menu" aria-label="Menu">☰</button>
+<nav>
+<a href="index.html">Home</a><a href="about.html">About</a><a href="events.html">Events</a>
+<a href="afth.html">AFTH</a><a href="adventure.html">Adventure</a><a href="tours.html">Tours</a>
+<a href="competitions.html">Competitions</a><a href="register.html">Registration</a>
+<a href="booking.html">Booking</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="pagehero">
+<div class="container">
+<div class="eyebrow">THE APEX 99 TOUR BOOKING</div>
+<h1>KASHMIR TOUR BOOKING</h1>
+<p class="section-sub">₹16,000 per person • Upcoming Tour • Only 400 Seats</p>
+</div>
+</section>
+
+<section>
+<div class="container booking-wrap">
+<div class="summary">
+<div class="card">PACKAGE<strong>₹16,000</strong><small>Per Person</small></div>
+<div class="card">SEATS<strong>400</strong><small>Maximum Seats</small></div>
+<div class="card">DATE<strong>TBA</strong><small>To Be Announced</small></div>
+</div>
+
+<form class="card form-card" id="kashmirBookingForm" action="#" method="post">
+<h2 class="section-heading">1. LEAD TRAVELLER DETAILS</h2>
+<div class="form-grid">
+<div class="field"><label>Full Name <span class="required">*</span></label><input name="full_name" required></div>
+<div class="field"><label>Date of Birth <span class="required">*</span></label><input type="date" name="dob" required></div>
+<div class="field"><label>Gender <span class="required">*</span></label><select name="gender" required><option value="">Select</option><option>Male</option><option>Female</option><option>Other</option></select></div>
+<div class="field"><label>Mobile Number <span class="required">*</span></label><input type="tel" name="mobile" required></div>
+<div class="field"><label>WhatsApp Number</label><input type="tel" name="whatsapp"></div>
+<div class="field"><label>Email Address <span class="required">*</span></label><input type="email" name="email" required></div>
+<div class="field full"><label>Full Address <span class="required">*</span></label><textarea name="address" required></textarea></div>
+<div class="field"><label>City <span class="required">*</span></label><input name="city" required></div>
+<div class="field"><label>State <span class="required">*</span></label><input name="state" required></div>
+<div class="field"><label>PIN Code <span class="required">*</span></label><input name="pin" required></div>
+</div>
+
+<h2 class="section-heading">2. TRAVEL DETAILS</h2>
+<div class="form-grid">
+<div class="field"><label>Total Travellers <span class="required">*</span></label><input type="number" name="travellers" min="1" max="400" required></div>
+<div class="field"><label>Adults <span class="required">*</span></label><input type="number" name="adults" min="1" required></div>
+<div class="field"><label>Children</label><input type="number" name="children" min="0" value="0"></div>
+<div class="field"><label>Preferred Travel Date</label><input type="date" name="preferred_date"></div>
+</div>
+
+<h2 class="section-heading">3. IDENTITY DETAILS</h2>
+<div class="form-grid">
+<div class="field"><label>ID Proof Type <span class="required">*</span></label><select name="id_type" required><option value="">Select</option><option>Aadhaar Card</option><option>Passport</option><option>Voter ID</option><option>Driving Licence</option><option>Other Government ID</option></select></div>
+<div class="field"><label>ID Number <span class="required">*</span></label><input name="id_number" required></div>
+<div class="field full"><label>Passport-size Photo</label><input type="file" name="photo" accept="image/*"></div>
+<div class="field full"><label>ID Proof Upload</label><input type="file" name="id_proof" accept="image/*,.pdf"></div>
+</div>
+
+<h2 class="section-heading">4. EMERGENCY CONTACT</h2>
+<div class="form-grid">
+<div class="field"><label>Emergency Contact Name <span class="required">*</span></label><input name="emergency_name" required></div>
+<div class="field"><label>Relationship <span class="required">*</span></label><input name="emergency_relation" required></div>
+<div class="field"><label>Emergency Contact Number <span class="required">*</span></label><input type="tel" name="emergency_phone" required></div>
+</div>
+
+<h2 class="section-heading">5. PAYMENT / BOOKING INFORMATION</h2>
+<div class="notice">
+<strong>Package Price:</strong> ₹16,000 per person.<br>
+<strong>Tour Date:</strong> Upcoming — final date will be announced.<br>
+<strong>Seat Limit:</strong> Only 400 seats.
+</div>
+<div class="form-grid" style="margin-top:18px">
+<div class="field"><label>Payment / Transaction ID</label><input name="transaction_id"></div>
+<div class="field"><label>Amount Paid</label><input type="number" name="amount_paid" min="0"></div>
+<div class="field full"><label>Payment Screenshot</label><input type="file" name="payment_screenshot" accept="image/*,.pdf"></div>
+</div>
+
+<h2 class="section-heading">6. DECLARATION</h2>
+<label class="check"><input type="checkbox" required><span>I confirm that the information provided by me is correct.</span></label>
+<label class="check"><input type="checkbox" required><span>I understand that the Kashmir tour date is currently not final and will be announced by THE APEX 99.</span></label>
+<label class="check"><input type="checkbox" required><span>I agree to the tour terms, booking conditions and applicable cancellation/refund policy of THE APEX 99.</span></label>
+
+<button class="btn" type="submit">SUBMIT BOOKING REQUEST →</button>
+<div class="success" id="successBox">
+<strong>Booking request form is ready.</strong><br>
+Your final submission system can be connected to Google Forms/Google Sheets so booking data is stored securely and can be managed by THE APEX 99.
+</div>
+</form>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container footer-grid">
+<div><div class="brand">THE APEX <span>99</span></div><p>WHO IS THE ONE</p><p>A Unit of SMPN RECORD MANAGEMENT.</p></div>
+<div><h3 class="gold">Quick Links</h3><p><a href="index.html">Home</a><br><a href="tours.html">Tours</a><br><a href="kashmir.html">Kashmir Tour</a><br><a href="contact.html">Contact</a></p></div>
+<div><h3 class="gold">Contact</h3><p>+91 74397 01814<br>the99woarld@gmail.com</p></div>
+</div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+document.getElementById('kashmirBookingForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  document.getElementById('successBox').style.display='block';
+  document.getElementById('successBox').scrollIntoView({behavior:'smooth',block:'center'});
+});
+</script>
+</body>
+</html>
