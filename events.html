@@ -7,20 +7,101 @@
 <title>Upcoming Events | THE APEX 99</title>
 
 <link rel="stylesheet" href="style.css">
+
+<style>
+
+.upcoming-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:22px;
+margin-top:25px;
+}
+
+.event-card{
+padding:30px;
+border-radius:18px;
+}
+
+.event-card h2{
+margin-top:10px;
+}
+
+.event-card h3{
+color:#f5d27a;
+}
+
+.event-badge{
+display:inline-block;
+padding:7px 13px;
+border:1px solid #f5d27a;
+border-radius:20px;
+color:#f5d27a;
+font-size:11px;
+font-weight:800;
+letter-spacing:1px;
+}
+
+.event-meta{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+margin:20px 0;
+}
+
+.meta-box{
+padding:15px;
+background:#111;
+border:1px solid #292929;
+border-radius:10px;
+}
+
+.meta-box strong{
+display:block;
+color:#f5d27a;
+margin-bottom:5px;
+}
+
+.event-card ul{
+line-height:1.9;
+color:#ccc;
+}
+
+.afth-main{
+border:1px solid #f5d27a;
+}
+
+@media(max-width:800px){
+
+.upcoming-grid{
+grid-template-columns:1fr;
+}
+
+.event-meta{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
 
 <header>
+
 <div class="container nav">
 
 <a class="brand" href="index.html">
 THE APEX <span>99</span>
 </a>
 
-<button class="menu" aria-label="Menu">☰</button>
+<button class="menu" aria-label="Menu">
+☰
+</button>
 
 <nav>
+
 <a href="index.html">Home</a>
 <a href="about.html">About</a>
 <a href="events.html">Events</a>
@@ -32,38 +113,56 @@ THE APEX <span>99</span>
 <a href="booking.html">Booking</a>
 <a href="gallery.html">Gallery</a>
 <a href="contact.html">Contact</a>
+
 </nav>
 
 </div>
+
 </header>
+
 
 <main>
 
+
+<!-- EVENTS HEADER -->
+
 <section class="pagehero">
+
 <div class="container">
 
-<div class="eyebrow">UPCOMING EVENT</div>
+<div class="eyebrow">
+UPCOMING EVENTS
+</div>
 
-<h1>AFTH – APEX FOOTBALL TALENT HUNT</h1>
+<h1>
+THE APEX 99 EVENTS
+</h1>
 
 <p class="section-sub">
-25 DECEMBER 2026
+Discover upcoming football talent hunts and major events by THE APEX 99.
 </p>
 
 </div>
+
 </section>
 
 
+
+<!-- EXISTING AFTH -->
+
 <section>
+
 <div class="container">
 
-<div class="card" style="padding:35px;">
+<div class="card afth-main" style="padding:35px;">
 
 <div class="eyebrow">
 25 DECEMBER 2026
 </div>
 
-<h2>AFTH – APEX FOOTBALL TALENT HUNT</h2>
+<h2>
+AFTH – APEX FOOTBALL TALENT HUNT
+</h2>
 
 <h3 class="gold">
 A Major Football Talent Hunt in India
@@ -78,146 +177,519 @@ football players-দের খুঁজে বের করে একটি ব�
 
 <p>
 দেশের বিভিন্ন জায়গা থেকে প্রতিভাবান খেলোয়াড়রা নিজেদের
-<strong>skill, speed, technique, shooting, passing,
-defending এবং football intelligence</strong> প্রদর্শনের
-সুযোগ পাবে।
+<strong>
+skill, speed, technique, shooting, passing,
+defending এবং football intelligence
+</strong>
+প্রদর্শনের সুযোগ পাবে।
 </p>
 
 
-<h2 class="gold">OUR MISSION</h2>
+<h2 class="gold">
+OUR MISSION
+</h2>
 
 <p>
+
 <strong>
 “To discover hidden football talent from every corner
 of India and provide them with a platform to showcase
 their potential.”
 </strong>
+
 </p>
 
 
-<h2>EVENT HIGHLIGHTS</h2>
+<h2>
+EVENT HIGHLIGHTS
+</h2>
 
 <ul>
+
 <li>⚽ Football Talent Hunt</li>
+
 <li>👦 Under 5 to Under 18</li>
+
 <li>👦👧 Male & Female Players Can Participate</li>
+
 <li>🏆 Talent Recognition & Awards</li>
+
 <li>🎯 Professional Scouting & Evaluation</li>
+
 <li>📺 Live Event Coverage</li>
+
 <li>🇮🇳 Opportunity to showcase football talent</li>
+
 </ul>
 
 
-<h2 class="gold">OUR VISION</h2>
+<h2 class="gold">
+OUR VISION
+</h2>
 
 <p>
+
 Our vision is to create a professional platform where
 young footballers from different parts of India can
 showcase their abilities, gain recognition and move
 one step closer towards their football dreams.
+
 </p>
 
 
-<h2>YOUR TALENT. YOUR OPPORTUNITY. YOUR MOMENT.</h2>
+<h2>
+YOUR TALENT. YOUR OPPORTUNITY. YOUR MOMENT.
+</h2>
 
 <p>
+
 <strong>
 25 December 2026 — The stage is ready.
 </strong>
+
 </p>
 
 
-<a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSceGktNM0lD15e4CgztxNRzBOnxOph4HBw-RJDtghie3-ohcA/viewform?usp=header" target="_blank">
+<!-- আপনার আগের Google Form -->
+
+<a
+class="btn"
+href="https://docs.google.com/forms/d/e/1FAIpQLSceGktNM0lD15e4CgztxNRzBOnxOph4HBw-RJDtghie3-ohcA/viewform?usp=header"
+target="_blank">
+
 REGISTER NOW
+
 </a>
 
-<a class="btn alt" href="afth.html">
+
+<a
+class="btn alt"
+href="afth.html">
+
 AFTH DETAILS
+
 </a>
 
-<a class="btn alt" href="booking.html">
+
+<a
+class="btn alt"
+href="booking.html">
+
 STADIUM PASS BOOKING
+
 </a>
 
+
 </div>
 
 </div>
+
 </section>
 
 
-<section class="banner">
+
+<!-- NEW UPCOMING EVENTS -->
+
+<section>
+
 <div class="container">
 
-<h2>
-AFTH — <span class="gold">WHO IS THE ONE?</span>
+<h2 class="section-title">
+MORE UPCOMING EVENTS
 </h2>
 
 <p class="section-sub">
-Powered by THE APEX 99
+New football opportunities coming soon from THE APEX 99.
 </p>
 
-<a class="btn" href="register.html">
-REGISTER NOW
+
+<div class="upcoming-grid">
+
+
+<!-- LADIES FOOTBALL -->
+
+<div class="card event-card">
+
+<span class="event-badge">
+UPCOMING EVENT
+</span>
+
+<h2>
+LADIES FOOTBALL TALENT HUNT
+</h2>
+
+<h3>
+Women's Football Talent Discovery
+</h3>
+
+<p>
+
+A dedicated football talent-hunt platform designed
+to discover and promote talented female football players.
+
+</p>
+
+
+<div class="event-meta">
+
+<div class="meta-box">
+
+<strong>
+SPORT
+</strong>
+
+Football
+
+</div>
+
+
+<div class="meta-box">
+
+<strong>
+PARTICIPANTS
+</strong>
+
+Female Players
+
+</div>
+
+
+<div class="meta-box">
+
+<strong>
+DATE
+</strong>
+
+Coming Soon
+
+</div>
+
+
+<div class="meta-box">
+
+<strong>
+VENUE
+</strong>
+
+To Be Announced
+
+</div>
+
+</div>
+
+
+<h3>
+TALENT AREAS
+</h3>
+
+<ul>
+
+<li>⚽ Ball Control & Skill</li>
+
+<li>🏃 Speed & Agility</li>
+
+<li>🎯 Shooting</li>
+
+<li>🤝 Passing & Teamwork</li>
+
+<li>🛡️ Defence</li>
+
+<li>🧠 Football Intelligence</li>
+
+</ul>
+
+
+<p>
+
+Selected players will get an opportunity to showcase
+their talent through the official THE APEX 99 platform.
+
+</p>
+
+
+<a
+class="btn"
+href="https://docs.google.com/forms/d/e/1FAIpQLSceGktNM0lD15e4CgztxNRzBOnxOph4HBw-RJDtghie3-ohcA/viewform?usp=header"
+target="_blank">
+
+REGISTRATION NOW →
+
 </a>
 
 </div>
+
+
+
+<!-- 18-25 FOOTBALL -->
+
+<div class="card event-card">
+
+<span class="event-badge">
+UPCOMING EVENT
+</span>
+
+
+<h2>
+18–25 YEARS FOOTBALL PLAYER TALENT HUNT
+</h2>
+
+
+<h3>
+Senior Youth Football Talent Search
+</h3>
+
+
+<p>
+
+A talent-hunt opportunity for football players aged
+18 to 25 who want to showcase their skills and get
+noticed through a professional evaluation platform.
+
+</p>
+
+
+<div class="event-meta">
+
+
+<div class="meta-box">
+
+<strong>
+AGE GROUP
+</strong>
+
+18–25 Years
+
+</div>
+
+
+<div class="meta-box">
+
+<strong>
+SPORT
+</strong>
+
+Football
+
+</div>
+
+
+<div class="meta-box">
+
+<strong>
+DATE
+</strong>
+
+Coming Soon
+
+</div>
+
+
+<div class="meta-box">
+
+<strong>
+VENUE
+</strong>
+
+To Be Announced
+
+</div>
+
+</div>
+
+
+<h3>
+TALENT AREAS
+</h3>
+
+
+<ul>
+
+<li>⚽ Technical Ability</li>
+
+<li>🏃 Speed & Fitness</li>
+
+<li>🎯 Shooting & Finishing</li>
+
+<li>🧠 Game Intelligence</li>
+
+<li>🛡️ Defensive Ability</li>
+
+<li>🤝 Passing & Team Play</li>
+
+</ul>
+
+
+<p>
+
+Players will be evaluated according to the official
+event format and selection criteria announced by
+THE APEX 99.
+
+</p>
+
+
+<a
+class="btn"
+href="https://docs.google.com/forms/d/e/1FAIpQLSceGktNM0lD15e4CgztxNRzBOnxOph4HBw-RJDtghie3-ohcA/viewform?usp=header"
+target="_blank">
+
+REGISTRATION NOW →
+
+</a>
+
+</div>
+
+
+</div>
+
+</div>
+
 </section>
+
+
+
+<!-- BOTTOM -->
+
+<section class="banner">
+
+<div class="container">
+
+<h2>
+
+THE APEX 99 —
+
+<span class="gold">
+WHO IS THE ONE?
+</span>
+
+</h2>
+
+
+<p class="section-sub">
+
+More events and talent opportunities are coming soon.
+
+</p>
+
+
+<a
+class="btn"
+href="register.html">
+
+REGISTRATION
+
+</a>
+
+</div>
+
+</section>
+
 
 </main>
 
+
+
+<!-- FOOTER -->
 
 <footer>
 
 <div class="container footer-grid">
 
+
 <div>
+
 <div class="brand">
 THE APEX <span>99</span>
 </div>
 
-<p>WHO IS THE ONE</p>
+<p>
+WHO IS THE ONE
+</p>
 
 <p>
 A Unit of SMPN RECORD MANAGEMENT.
 </p>
+
 </div>
 
 
 <div>
-<h3 class="gold">Quick Links</h3>
+
+<h3 class="gold">
+Quick Links
+</h3>
 
 <p>
-<a href="events.html">Events</a><br>
-<a href="afth.html">AFTH</a><br>
-<a href="register.html">Registration</a><br>
-<a href="booking.html">Booking</a>
+
+<a href="events.html">
+Events
+</a>
+
+<br>
+
+<a href="afth.html">
+AFTH
+</a>
+
+<br>
+
+<a href="register.html">
+Registration
+</a>
+
+<br>
+
+<a href="booking.html">
+Booking
+</a>
+
 </p>
+
 </div>
 
 
 <div>
-<h3 class="gold">Contact</h3>
+
+<h3 class="gold">
+Contact
+</h3>
 
 <p>
-+91 74397 01814<br>
+
++91 74397 01814
+
+<br>
+
 the99woarld@gmail.com
+
 </p>
-</div>
 
 </div>
 
 
-<div class="container"
-style="margin-top:25px;border-top:1px solid #292929;padding-top:18px">
+</div>
+
+
+<div
+class="container"
+style="
+margin-top:25px;
+border-top:1px solid #292929;
+padding-top:18px
+">
 
 © <span data-year></span>
-THE APEX 99. All rights reserved.
+
+THE APEX 99.
+All rights reserved.
 
 </div>
 
 </footer>
 
+
 <script src="script.js"></script>
 
 </body>
+
 </html>
