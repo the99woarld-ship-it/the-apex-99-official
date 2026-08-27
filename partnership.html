@@ -410,14 +410,25 @@ THE APEX <span>99</span>
 </footer>
 
 <script>
+
 function selectPartner(partnerName) {
-    const select = document.getElementById("type");
+
+    const select = document.getElementById("ptype");
 
     for (let i = 0; i < select.options.length; i++) {
+
         if (select.options[i].text.trim() === partnerName.trim()) {
+
             select.selectedIndex = i;
-            select.value = select.options[i].value || select.options[i].text;
-            select.dispatchEvent(new Event("change", { bubbles: true }));
+
+            select.value =
+                select.options[i].value ||
+                select.options[i].text;
+
+            select.dispatchEvent(
+                new Event("change", { bubbles: true })
+            );
+
             break;
         }
     }
@@ -427,34 +438,51 @@ function selectPartner(partnerName) {
         block: "start"
     });
 }
-</script>
-function sendPartnershipEmail(event){
 
-event.preventDefault();
 
-const name=document.getElementById("pname").value;
-const company=document.getElementById("pcompany").value;
-const mobile=document.getElementById("pmobile").value;
-const email=document.getElementById("pemail").value;
-const type=document.getElementById("ptype").value;
-const message=document.getElementById("pmessage").value;
+function sendPartnershipEmail(event) {
 
-const subject="THE APEX 99 Partnership Request - "+type;
+    event.preventDefault();
 
-const body=
-"Name: "+name+
-"\nCompany/Organisation: "+company+
-"\nMobile: "+mobile+
-"\nEmail: "+email+
-"\nPartnership Type: "+type+
-"\n\nMessage:\n"+message;
+    const name =
+        document.getElementById("pname").value;
 
-window.location.href=
-"mailto:the99world@gmail.com?subject="+
-encodeURIComponent(subject)+
-"&body="+
-encodeURIComponent(body);
+    const company =
+        document.getElementById("pcompany").value;
+
+    const mobile =
+        document.getElementById("pmobile").value;
+
+    const email =
+        document.getElementById("pemail").value;
+
+    const type =
+        document.getElementById("ptype").value;
+
+    const message =
+        document.getElementById("pmessage").value;
+
+
+    const subject =
+        "THE APEX 99 Partnership Request - " + type;
+
+
+    const body =
+        "Name: " + name +
+        "\nCompany/Organisation: " + company +
+        "\nMobile: " + mobile +
+        "\nEmail: " + email +
+        "\nPartnership Type: " + type +
+        "\n\nMessage:\n" + message;
+
+
+    window.location.href =
+        "mailto:the99world@gmail.com?subject=" +
+        encodeURIComponent(subject) +
+        "&body=" +
+        encodeURIComponent(body);
 }
+
 </script>
 
 </body>
