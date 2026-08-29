@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Digha Booking | THE APEX 99</title>
+<meta name="description" content="Digha tour booking request for THE APEX 99.">
+<link rel="stylesheet" href="style.css">
+<style>
+.booking-wrap{max-width:760px;margin:auto}.booking-card{padding:28px;border-radius:20px}.form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}label{display:block;font-weight:700;margin-bottom:7px}input,select,textarea{width:100%;box-sizing:border-box;padding:13px 14px;border:1px solid #555;border-radius:10px;background:#111;color:#fff;font-size:16px}textarea{min-height:110px;resize:vertical}.field{margin-bottom:16px}.small{font-size:13px;opacity:.75}.hero-mini{padding:55px 0}.success{display:none;margin-top:18px;padding:16px;border:1px solid #d4af37;border-radius:12px}
+</style>
+</head>
+<body>
+<header><div class="container nav"><a class="brand" href="index.html">THE APEX <span>99</span></a><button class="menu" aria-label="Menu">☰</button><nav>
+<a href="index.html">Home</a><a href="about.html">About</a><a href="events.html">Events</a><a href="afth.html">AFTH</a><a href="adventure.html">Adventure</a><a href="tours.html">Tours</a><a href="competitions.html">Competitions</a><a href="register.html">Registration</a><a href="booking.html">Booking</a><a href="gallery.html">Gallery</a><a href="contact.html">Contact</a>
+</nav></div></header>
+<main>
+<section class="hero-mini"><div class="container"><div class="eyebrow">THE APEX 99 TOUR</div><h1>DIGHA BOOKING</h1><p class="section-sub">Send your booking request. Our team will contact you to confirm availability, final price and payment details.</p></div></section>
+<section><div class="container booking-wrap"><div class="card booking-card">
+<form id="dighaForm">
+<div class="form-grid">
+<div class="field"><label for="name">Full Name *</label><input id="name" required></div>
+<div class="field"><label for="phone">Mobile Number *</label><input id="phone" type="tel" required></div>
+</div>
+<div class="form-grid">
+<div class="field"><label for="date">Travel Date *</label><input id="date" type="date" required></div>
+<div class="field"><label for="guests">Guests *</label><select id="guests" required><option value="">Select</option><option>2 Persons</option><option>4 Persons</option><option>6 Persons</option><option>8 Persons</option><option>10 Persons</option></select></div>
+</div>
+<div class="field"><label for="pickup">Pickup Location *</label><input id="pickup" value="Kolkata" required></div>
+<div class="field"><label for="message">Special Request</label><textarea id="message" placeholder="Hotel preference, food request, anniversary, etc."></textarea></div>
+<p class="small">Submitting this form creates a booking request only. Final confirmation depends on availability and quotation.</p>
+<button class="btn" type="submit">SEND BOOKING REQUEST →</button>
+<a class="btn alt" href="digha.html">BACK TO DIGHA</a>
+<div id="success" class="success"></div>
+</form>
+</div></div></section>
+</main>
+<footer><div class="container footer-grid"><div><div class="brand">THE APEX <span>99</span></div><p>WHO IS THE ONE</p><p>A Unit of SMPN RECORD MANAGEMENT.</p></div><div><h3 class="gold">Quick Links</h3><p><a href="index.html">Home</a><br><a href="tours.html">Tours</a><br><a href="digha.html">Digha</a><br><a href="contact.html">Contact</a></p></div><div><h3 class="gold">Contact</h3><p>+91 74397 01814<br>the99woarld@gmail.com</p></div></div></footer>
+<script src="script.js"></script>
+<script>
+const form=document.getElementById('dighaForm');
+form.addEventListener('submit',function(e){
+e.preventDefault();
+const name=document.getElementById('name').value.trim();
+const phone=document.getElementById('phone').value.trim();
+const date=document.getElementById('date').value;
+const guests=document.getElementById('guests').value;
+const pickup=document.getElementById('pickup').value.trim();
+const message=document.getElementById('message').value.trim();
+const subject=encodeURIComponent('Digha Tour Booking Request - '+name);
+const body=encodeURIComponent(
+'THE APEX 99 DIGHA TOUR BOOKING REQUEST\n\n'+
+'Name: '+name+'\nMobile: '+phone+'\nTravel Date: '+date+'\nGuests: '+guests+'\nPickup: '+pickup+'\nSpecial Request: '+message
+);
+window.location.href='mailto:the99woarld@gmail.com?subject='+subject+'&body='+body;
+const s=document.getElementById('success');s.style.display='block';s.textContent='Your email app will open with the booking request. Please send the email to complete the request.';
+});
+</script>
+</body>
+</html>
