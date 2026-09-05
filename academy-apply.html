@@ -1,1 +1,1051 @@
+<!doctype html>
+<html lang="en">
 
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>Academy Admission Application | THE APEX 99</title>
+
+<meta name="description"
+content="THE APEX 99 Academy Admission Application Form">
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#06101d;
+color:#fff;
+line-height:1.6;
+}
+
+.container{
+width:92%;
+max-width:1200px;
+margin:auto;
+}
+
+/* HEADER */
+
+header{
+background:#030a12;
+border-bottom:1px solid #1677ff;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.nav{
+min-height:70px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.brand{
+font-size:23px;
+font-weight:900;
+color:#fff;
+text-decoration:none;
+letter-spacing:1px;
+}
+
+.brand span{
+color:#20e070;
+}
+
+nav{
+display:flex;
+gap:15px;
+align-items:center;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+font-size:13px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#20e070;
+}
+
+.menu{
+display:none;
+background:none;
+border:0;
+color:#fff;
+font-size:28px;
+cursor:pointer;
+}
+
+/* PAGE */
+
+.page{
+padding:60px 0 80px;
+background:
+linear-gradient(135deg,#06101d,#101c31,#180d2b);
+min-height:calc(100vh - 70px);
+}
+
+.heading{
+text-align:center;
+max-width:800px;
+margin:0 auto 35px;
+}
+
+.badge{
+display:inline-block;
+padding:7px 16px;
+border:1px solid #20e070;
+border-radius:30px;
+color:#20e070;
+font-weight:bold;
+font-size:13px;
+margin-bottom:15px;
+}
+
+.heading h1{
+font-size:clamp(32px,5vw,52px);
+line-height:1.1;
+margin-bottom:12px;
+}
+
+.heading h1 span{
+background:linear-gradient(90deg,#1677ff,#20e070,#9d4edd);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.heading p{
+color:#b9c8d8;
+}
+
+/* FORM */
+
+.form-box{
+max-width:950px;
+margin:auto;
+background:#091727;
+border:1px solid #20e070;
+border-radius:20px;
+padding:35px;
+box-shadow:0 20px 50px rgba(0,0,0,.3);
+}
+
+.form-title{
+font-size:26px;
+margin-bottom:25px;
+color:#fff;
+}
+
+.form-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.form-group{
+display:flex;
+flex-direction:column;
+}
+
+.form-group.full{
+grid-column:1/-1;
+}
+
+.form-group label{
+font-size:14px;
+font-weight:bold;
+margin-bottom:7px;
+color:#fff;
+}
+
+.required{
+color:#ff5252;
+}
+
+input,
+select,
+textarea{
+width:100%;
+padding:14px;
+border-radius:8px;
+border:1px solid #30465e;
+background:#06101d;
+color:#fff;
+font-size:15px;
+outline:none;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+border-color:#20e070;
+}
+
+textarea{
+min-height:120px;
+resize:vertical;
+}
+
+/* CONSENT */
+
+.consent{
+margin-top:25px;
+padding:18px;
+background:#0d2032;
+border:1px solid #30465e;
+border-radius:10px;
+}
+
+.consent label{
+display:flex;
+gap:10px;
+align-items:flex-start;
+color:#c8d5e2;
+font-size:14px;
+}
+
+.consent input{
+width:auto;
+margin-top:5px;
+}
+
+/* SUBMIT */
+
+.submit-btn{
+width:100%;
+margin-top:25px;
+padding:16px;
+border:0;
+border-radius:9px;
+background:linear-gradient(90deg,#20e070,#1677ff);
+color:#00100a;
+font-size:17px;
+font-weight:900;
+cursor:pointer;
+}
+
+.submit-btn:hover{
+opacity:.92;
+}
+
+/* HELP */
+
+.help{
+margin-top:25px;
+padding:18px;
+background:#071c2b;
+border-left:4px solid #20e070;
+border-radius:8px;
+color:#b9c8d8;
+}
+
+.help strong{
+color:#fff;
+}
+
+.whatsapp{
+display:inline-block;
+margin-top:10px;
+color:#20e070;
+font-weight:bold;
+text-decoration:none;
+}
+
+/* BACK */
+
+.back{
+display:inline-block;
+margin-bottom:25px;
+color:#fff;
+text-decoration:none;
+font-weight:bold;
+}
+
+.back:hover{
+color:#20e070;
+}
+
+/* FOOTER */
+
+footer{
+background:#030911;
+padding:45px 0 25px;
+border-top:1px solid #1677ff;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:30px;
+}
+
+footer p{
+color:#9eafc2;
+margin-top:7px;
+}
+
+footer a{
+color:#fff;
+text-decoration:none;
+}
+
+footer a:hover{
+color:#20e070;
+}
+
+.copyright{
+border-top:1px solid #1d2b3a;
+margin-top:30px;
+padding-top:20px;
+font-size:13px;
+color:#8292a4;
+}
+
+/* MOBILE */
+
+@media(max-width:950px){
+
+nav{
+display:none;
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:#030a12;
+padding:20px;
+flex-direction:column;
+align-items:flex-start;
+border-bottom:1px solid #1677ff;
+}
+
+nav.show{
+display:flex;
+}
+
+.menu{
+display:block;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:650px){
+
+.page{
+padding:40px 0 60px;
+}
+
+.form-box{
+padding:22px 16px;
+}
+
+.form-grid{
+grid-template-columns:1fr;
+}
+
+.form-group.full{
+grid-column:auto;
+}
+
+.heading h1{
+font-size:34px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+<div class="container nav">
+
+<a class="brand" href="index.html">
+THE APEX <span>99</span>
+</a>
+
+<button class="menu"
+aria-label="Menu"
+onclick="toggleMenu()">
+☰
+</button>
+
+<nav id="nav">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="events.html">Events</a>
+<a href="afth.html">AFTH</a>
+<a href="academy.html">Academy</a>
+<a href="adventure.html">Adventure</a>
+<a href="tours.html">Tours</a>
+<a href="competitions.html">Competitions</a>
+<a href="register.html">Registration</a>
+<a href="booking.html">Booking</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- APPLICATION PAGE -->
+
+<main class="page">
+
+<div class="container">
+
+<a href="academy.html" class="back">
+← Back to Academy
+</a>
+
+
+<div class="heading">
+
+<div class="badge">
+THE APEX 99 SPORTS ACADEMY
+</div>
+
+<h1>
+ACADEMY <span>ADMISSION APPLICATION</span>
+</h1>
+
+<p>
+Please fill in the student's basic information carefully.
+After submission, our Academy team will review the application
+and contact the parent or guardian.
+</p>
+
+</div>
+
+
+<!-- FORM -->
+
+<div class="form-box">
+
+<h2 class="form-title">
+Student & Admission Details
+</h2>
+
+
+<form
+action="https://formsubmit.co/the99woarld@gmail.com"
+method="POST"
+>
+
+
+<!-- EMAIL SETTINGS -->
+
+<input
+type="hidden"
+name="_subject"
+value="NEW ACADEMY ADMISSION APPLICATION - THE APEX 99"
+>
+
+<input
+type="hidden"
+name="_template"
+value="table"
+>
+
+<input
+type="hidden"
+name="_captcha"
+value="false"
+>
+
+<input
+type="hidden"
+name="_next"
+value="https://theapex99official.com/academy-apply-success.html"
+>
+
+
+<div class="form-grid">
+
+
+<!-- STUDENT NAME -->
+
+<div class="form-group full">
+
+<label>
+Student Full Name
+<span class="required">*</span>
+</label>
+
+<input
+type="text"
+name="Student Full Name"
+placeholder="Enter student's full name"
+required
+>
+
+</div>
+
+
+<!-- DOB -->
+
+<div class="form-group">
+
+<label>
+Date of Birth
+<span class="required">*</span>
+</label>
+
+<input
+type="date"
+name="Date of Birth"
+required
+>
+
+</div>
+
+
+<!-- GENDER -->
+
+<div class="form-group">
+
+<label>
+Gender
+<span class="required">*</span>
+</label>
+
+<select name="Gender" required>
+
+<option value="">
+Select Gender
+</option>
+
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+
+</select>
+
+</div>
+
+
+<!-- GUARDIAN -->
+
+<div class="form-group">
+
+<label>
+Parent / Guardian Name
+<span class="required">*</span>
+</label>
+
+<input
+type="text"
+name="Parent Guardian Name"
+placeholder="Enter parent / guardian name"
+required
+>
+
+</div>
+
+
+<!-- GUARDIAN MOBILE -->
+
+<div class="form-group">
+
+<label>
+Guardian Mobile Number
+<span class="required">*</span>
+</label>
+
+<input
+type="tel"
+name="Guardian Mobile Number"
+placeholder="10 digit mobile number"
+pattern="[0-9]{10}"
+maxlength="10"
+required
+>
+
+</div>
+
+
+<!-- WHATSAPP -->
+
+<div class="form-group">
+
+<label>
+WhatsApp Number
+</label>
+
+<input
+type="tel"
+name="WhatsApp Number"
+placeholder="10 digit WhatsApp number"
+pattern="[0-9]{10}"
+maxlength="10"
+>
+
+</div>
+
+
+<!-- EMAIL -->
+
+<div class="form-group">
+
+<label>
+Email Address
+</label>
+
+<input
+type="email"
+name="Applicant Email"
+placeholder="Email address"
+>
+
+</div>
+
+
+<!-- SPORT -->
+
+<div class="form-group">
+
+<label>
+Select Sport
+<span class="required">*</span>
+</label>
+
+<select name="Sport" required>
+
+<option value="">
+Choose Sport
+</option>
+
+<option>Football</option>
+<option>Cricket</option>
+<option>Badminton</option>
+<option>Basketball</option>
+<option>Volleyball</option>
+<option>Athletics</option>
+<option>Other Sports</option>
+
+</select>
+
+</div>
+
+
+<!-- PROGRAMME -->
+
+<div class="form-group">
+
+<label>
+Admission Programme
+<span class="required">*</span>
+</label>
+
+<select name="Admission Programme" required>
+
+<option value="">
+Choose Programme
+</option>
+
+<option>Day Scholar</option>
+<option>Residential / Hostel</option>
+<option>Elite Training Programme</option>
+
+</select>
+
+</div>
+
+
+<!-- DISTRICT -->
+
+<div class="form-group">
+
+<label>
+District
+<span class="required">*</span>
+</label>
+
+<input
+type="text"
+name="District"
+placeholder="Enter district"
+required
+>
+
+</div>
+
+
+<!-- STATE -->
+
+<div class="form-group">
+
+<label>
+State
+<span class="required">*</span>
+</label>
+
+<input
+type="text"
+name="State"
+value="West Bengal"
+required
+>
+
+</div>
+
+
+<!-- PIN -->
+
+<div class="form-group">
+
+<label>
+PIN Code
+<span class="required">*</span>
+</label>
+
+<input
+type="text"
+name="PIN Code"
+placeholder="6 digit PIN code"
+pattern="[0-9]{6}"
+maxlength="6"
+required
+>
+
+</div>
+
+
+<!-- ADDRESS -->
+
+<div class="form-group full">
+
+<label>
+Full Address
+<span class="required">*</span>
+</label>
+
+<textarea
+name="Full Address"
+placeholder="House / Village / Road / Post Office / Police Station / District"
+required
+></textarea>
+
+</div>
+
+
+<!-- EXPERIENCE -->
+
+<div class="form-group">
+
+<label>
+Playing Experience
+</label>
+
+<select name="Playing Experience">
+
+<option>No Previous Experience</option>
+<option>Less Than 1 Year</option>
+<option>1 - 2 Years</option>
+<option>3 - 5 Years</option>
+<option>More Than 5 Years</option>
+
+</select>
+
+</div>
+
+
+<!-- PREVIOUS CLUB -->
+
+<div class="form-group">
+
+<label>
+Previous Academy / Club
+</label>
+
+<input
+type="text"
+name="Previous Academy Club"
+placeholder="If applicable"
+>
+
+</div>
+
+
+<!-- POSITION -->
+
+<div class="form-group">
+
+<label>
+Preferred Position / Role
+</label>
+
+<input
+type="text"
+name="Preferred Position"
+placeholder="Example: Striker / Goalkeeper / Batsman"
+>
+
+</div>
+
+
+<!-- AGE PROOF -->
+
+<div class="form-group">
+
+<label>
+Age Proof Available
+<span class="required">*</span>
+</label>
+
+<select name="Age Proof" required>
+
+<option value="">
+Select Document
+</option>
+
+<option>Birth Certificate</option>
+<option>Aadhaar Card</option>
+<option>School Certificate</option>
+<option>Passport</option>
+<option>Other</option>
+
+</select>
+
+</div>
+
+
+<!-- ACHIEVEMENT -->
+
+<div class="form-group full">
+
+<label>
+Sports Achievement
+</label>
+
+<textarea
+name="Sports Achievement"
+placeholder="Mention any tournament, medal, certificate, club or academy achievement."
+></textarea>
+
+</div>
+
+
+<!-- ADDITIONAL INFO -->
+
+<div class="form-group full">
+
+<label>
+Additional Information
+</label>
+
+<textarea
+name="Additional Information"
+placeholder="Any other information you want the Academy to know."
+></textarea>
+
+</div>
+
+
+</div>
+
+
+<!-- CONSENT -->
+
+<div class="consent">
+
+<label>
+
+<input
+type="checkbox"
+name="Guardian Consent"
+value="Yes"
+required
+>
+
+<span>
+I confirm that the information provided above is correct.
+I understand that submission of this application does not guarantee admission.
+Final admission will be subject to THE APEX 99 Academy's selection,
+document verification, programme availability and applicable terms and conditions.
+For minor students, parent/guardian consent is required.
+</span>
+
+</label>
+
+</div>
+
+
+<!-- SUBMIT -->
+
+<button
+type="submit"
+class="submit-btn"
+>
+
+SUBMIT ADMISSION APPLICATION
+
+</button>
+
+
+<!-- HELP -->
+
+<div class="help">
+
+<strong>Need Help with Admission?</strong>
+
+<br><br>
+
+Phone / WhatsApp:
+<strong>+91 7439718014</strong>
+
+<br>
+
+Email:
+<strong>the99woarld@gmail.com</strong>
+
+<br>
+
+<a
+class="whatsapp"
+href="https://wa.me/917439718014"
+target="_blank"
+rel="noopener"
+>
+💬 Chat with us on WhatsApp →
+</a>
+
+</div>
+
+
+</form>
+
+</div>
+
+</div>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer-grid">
+
+
+<div>
+
+<div class="brand">
+THE APEX <span>99</span>
+</div>
+
+<p>
+WHO IS THE ONE
+</p>
+
+<p>
+A Unit of SMPN RECORD MANAGEMENT.
+</p>
+
+</div>
+
+
+<div>
+
+<h3 style="color:#20e070;">
+Quick Links
+</h3>
+
+<p>
+
+<a href="index.html">Home</a>
+<br>
+
+<a href="academy.html">Academy</a>
+<br>
+
+<a href="afth.html">AFTH</a>
+<br>
+
+<a href="contact.html">Contact</a>
+
+</p>
+
+</div>
+
+
+<div>
+
+<h3 style="color:#20e070;">
+Academy Contact
+</h3>
+
+<p>
++91 7439718014
+<br>
+the99woarld@gmail.com
+</p>
+
+<a
+class="whatsapp"
+href="https://wa.me/917439718014"
+target="_blank"
+rel="noopener"
+>
+WhatsApp Us →
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="container copyright">
+
+© <span id="year"></span>
+THE APEX 99.
+All rights reserved.
+
+</div>
+
+</footer>
+
+
+<script>
+
+function toggleMenu(){
+
+var nav=document.getElementById("nav");
+
+nav.classList.toggle("show");
+
+}
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+</script>
+
+</body>
+
+</html>
