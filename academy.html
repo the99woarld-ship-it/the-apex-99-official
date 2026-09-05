@@ -1,1 +1,1474 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
+<title>THE APEX 99 ACADEMY | Professional Sports Academy</title>
+
+<meta name="description"
+content="THE APEX 99 Academy - Professional Football, Cricket and Multi Sports Residential Academy">
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#06101d;
+color:#fff;
+line-height:1.6;
+}
+
+.container{
+width:92%;
+max-width:1200px;
+margin:auto;
+}
+
+/* HEADER */
+
+header{
+position:sticky;
+top:0;
+z-index:999;
+background:rgba(3,10,18,.97);
+border-bottom:1px solid #1677ff;
+}
+
+.nav{
+min-height:70px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.brand{
+font-size:23px;
+font-weight:900;
+color:#fff;
+text-decoration:none;
+letter-spacing:1px;
+}
+
+.brand span{
+color:#20e070;
+}
+
+nav{
+display:flex;
+gap:16px;
+align-items:center;
+}
+
+nav a{
+color:#fff;
+text-decoration:none;
+font-size:13px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#20e070;
+}
+
+.menu{
+display:none;
+background:none;
+border:0;
+color:#fff;
+font-size:28px;
+}
+
+/* HERO */
+
+.hero{
+min-height:75vh;
+display:flex;
+align-items:center;
+background:
+linear-gradient(90deg,rgba(3,10,18,.95),rgba(3,10,18,.45)),
+url("https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1800&q=85");
+background-size:cover;
+background-position:center;
+}
+
+.hero-content{
+padding:80px 0;
+max-width:700px;
+}
+
+.badge{
+display:inline-block;
+padding:7px 16px;
+border:1px solid #20e070;
+border-radius:30px;
+color:#20e070;
+font-weight:bold;
+font-size:13px;
+margin-bottom:18px;
+}
+
+.hero h1{
+font-size:clamp(45px,7vw,85px);
+line-height:.95;
+font-weight:950;
+}
+
+.hero h1 span{
+background:linear-gradient(90deg,#1677ff,#20e070,#9d4edd);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.hero p{
+font-size:18px;
+color:#d7e4f2;
+margin-top:20px;
+}
+
+.buttons{
+margin-top:30px;
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.btn{
+display:inline-block;
+padding:13px 24px;
+border-radius:8px;
+background:linear-gradient(90deg,#20e070,#1677ff);
+color:#00100a;
+font-weight:900;
+text-decoration:none;
+border:0;
+cursor:pointer;
+}
+
+.btn.alt{
+background:transparent;
+border:1px solid #20e070;
+color:#fff;
+}
+
+/* SECTION */
+
+section{
+padding:70px 0;
+}
+
+.section-title{
+font-size:38px;
+font-weight:950;
+margin-bottom:8px;
+}
+
+.section-title span{
+color:#20e070;
+}
+
+.section-sub{
+color:#aebed1;
+margin-bottom:30px;
+}
+
+/* HIGHLIGHTS */
+
+.highlight-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.highlight{
+background:#0b1a2b;
+border:1px solid #1677ff;
+border-radius:15px;
+padding:25px;
+text-align:center;
+}
+
+.highlight:nth-child(2){
+border-color:#20e070;
+}
+
+.highlight:nth-child(3){
+border-color:#9d4edd;
+}
+
+.highlight:nth-child(4){
+border-color:#00d9ff;
+}
+
+.highlight .icon{
+font-size:38px;
+}
+
+.highlight h3{
+margin-top:8px;
+}
+
+/* SPORTS */
+
+.sports-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+}
+
+.sport-card{
+background:#0a1828;
+border-radius:18px;
+overflow:hidden;
+border:1px solid #1677ff;
+}
+
+.sport-card.cricket{
+border-color:#20e070;
+}
+
+.sport-img{
+height:300px;
+overflow:hidden;
+}
+
+.sport-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.5s;
+}
+
+.sport-card:hover img{
+transform:scale(1.06);
+}
+
+.sport-content{
+padding:28px;
+}
+
+.sport-content h3{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.sport-content p{
+color:#b9c8d8;
+}
+
+.list{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:8px;
+margin:20px 0;
+}
+
+.list div{
+font-size:14px;
+}
+
+.list div:before{
+content:"✓";
+color:#20e070;
+font-weight:bold;
+margin-right:8px;
+}
+
+/* OTHER SPORTS */
+
+.other-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.other-card{
+background:#0b1a2b;
+border-radius:16px;
+overflow:hidden;
+border:1px solid #354a62;
+}
+
+.other-img{
+height:200px;
+}
+
+.other-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.other-content{
+padding:20px;
+}
+
+.other-content h3{
+font-size:21px;
+}
+
+/* TRAINING */
+
+.training{
+background:#081522;
+}
+
+.training-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+}
+
+.training-box{
+background:#0b1a2b;
+padding:30px;
+border-radius:16px;
+border-left:4px solid #1677ff;
+}
+
+.training-box.green{
+border-left-color:#20e070;
+}
+
+.training-box h3{
+font-size:25px;
+margin-bottom:15px;
+}
+
+.training-box ul{
+list-style:none;
+}
+
+.training-box li{
+padding:7px 0;
+}
+
+.training-box li:before{
+content:"◆";
+color:#20e070;
+font-size:10px;
+margin-right:10px;
+}
+
+/* FACILITIES */
+
+.facility-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.facility{
+background:#0b1a2b;
+border-radius:16px;
+overflow:hidden;
+border:1px solid #263b52;
+}
+
+.facility-img{
+height:190px;
+}
+
+.facility-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.facility-content{
+padding:20px;
+}
+
+.facility-content h3{
+margin-bottom:5px;
+}
+
+.facility-content p{
+font-size:14px;
+color:#aebed1;
+}
+
+/* RESIDENTIAL */
+
+.residential{
+background:
+linear-gradient(90deg,rgba(4,13,23,.96),rgba(4,13,23,.75)),
+url("https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1800&q=85");
+background-size:cover;
+background-position:center;
+}
+
+.res-box{
+max-width:650px;
+background:rgba(5,15,27,.9);
+padding:35px;
+border:1px solid #9d4edd;
+border-radius:18px;
+}
+
+.res-box ul{
+list-style:none;
+margin-top:18px;
+}
+
+.res-box li{
+padding:8px 0;
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.res-box li:before{
+content:"✓";
+color:#20e070;
+font-weight:bold;
+margin-right:10px;
+}
+
+/* FOOD */
+
+.food-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.food-card{
+background:#0b1a2b;
+border:1px solid #20e070;
+border-radius:15px;
+overflow:hidden;
+}
+
+.food-img{
+height:170px;
+}
+
+.food-img img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.food-content{
+padding:18px;
+text-align:center;
+}
+
+.food-content h3{
+font-size:19px;
+}
+
+/* FEES */
+
+.fee-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.fee-card{
+background:#0b1a2b;
+border:1px solid #1677ff;
+border-radius:16px;
+padding:28px;
+text-align:center;
+}
+
+.fee-card.featured{
+border:2px solid #20e070;
+transform:translateY(-5px);
+}
+
+.fee-card h3{
+font-size:21px;
+}
+
+.price{
+font-size:36px;
+font-weight:950;
+color:#20e070;
+margin:15px 0;
+}
+
+.price small{
+font-size:13px;
+color:#aebed1;
+}
+
+.fee-card ul{
+list-style:none;
+text-align:left;
+margin:15px 0;
+}
+
+.fee-card li{
+padding:7px 0;
+border-bottom:1px solid rgba(255,255,255,.07);
+font-size:14px;
+}
+
+.fee-card li:before{
+content:"✓";
+color:#20e070;
+margin-right:8px;
+}
+
+/* ADMISSION */
+
+.admission-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.step{
+background:#0b1a2b;
+border:1px solid #1677ff;
+border-radius:15px;
+padding:25px;
+margin-bottom:15px;
+}
+
+.number{
+width:38px;
+height:38px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#1677ff;
+border-radius:50%;
+font-weight:900;
+margin-bottom:10px;
+}
+
+/* TERMS */
+
+.terms{
+background:#040b13;
+}
+
+.terms-box{
+background:#0b1a2b;
+border:1px solid #283d53;
+border-radius:15px;
+padding:30px;
+}
+
+.terms-box ol{
+padding-left:22px;
+}
+
+.terms-box li{
+margin:9px 0;
+color:#b9c8d8;
+}
+
+/* FORM */
+
+.form-section{
+background:linear-gradient(135deg,#07162a,#180d2b);
+}
+
+.form-box{
+max-width:900px;
+margin:auto;
+background:#091727;
+border:1px solid #20e070;
+border-radius:18px;
+padding:35px;
+}
+
+.form-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+}
+
+.form-group{
+display:flex;
+flex-direction:column;
+}
+
+.form-group.full{
+grid-column:1/-1;
+}
+
+label{
+font-weight:bold;
+font-size:14px;
+margin-bottom:7px;
+}
+
+input,
+select,
+textarea{
+width:100%;
+padding:13px;
+border-radius:8px;
+border:1px solid #30465e;
+background:#06101d;
+color:#fff;
+outline:none;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+border-color:#20e070;
+}
+
+textarea{
+min-height:110px;
+resize:vertical;
+}
+
+.checkbox{
+display:flex;
+gap:10px;
+margin-top:18px;
+align-items:flex-start;
+}
+
+.checkbox input{
+width:auto;
+margin-top:5px;
+}
+
+.submit{
+width:100%;
+padding:15px;
+margin-top:20px;
+border:0;
+border-radius:8px;
+font-size:16px;
+font-weight:900;
+background:linear-gradient(90deg,#20e070,#1677ff);
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+background:#030911;
+padding:45px 0 25px;
+border-top:1px solid #1677ff;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr;
+gap:30px;
+}
+
+footer p{
+color:#9eafc2;
+margin-top:7px;
+}
+
+footer a{
+color:#fff;
+text-decoration:none;
+}
+
+.copyright{
+border-top:1px solid #1d2b3a;
+margin-top:30px;
+padding-top:20px;
+font-size:13px;
+color:#8292a4;
+}
+
+/* MOBILE */
+
+@media(max-width:950px){
+
+nav{
+display:none;
+}
+
+.menu{
+display:block;
+}
+
+.highlight-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.sports-grid,
+.training-grid,
+.admission-grid{
+grid-template-columns:1fr;
+}
+
+.other-grid,
+.facility-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.food-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.fee-grid{
+grid-template-columns:1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+section{
+padding:50px 0;
+}
+
+.hero{
+min-height:78vh;
+}
+
+.hero-content{
+padding:50px 0;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.hero p{
+font-size:15px;
+}
+
+.highlight-grid,
+.other-grid,
+.facility-grid,
+.food-grid{
+grid-template-columns:1fr;
+}
+
+.sport-list,
+.form-grid{
+grid-template-columns:1fr;
+}
+
+.form-group.full{
+grid-column:auto;
+}
+
+.form-box{
+padding:22px;
+}
+
+.section-title{
+font-size:30px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="container nav">
+
+<a class="brand" href="index.html">
+THE APEX <span>99</span>
+</a>
+
+<button class="menu" onclick="toggleMenu()">☰</button>
+
+<nav id="nav">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="events.html">Events</a>
+<a href="afth.html">AFTH</a>
+<a href="academy.html">Academy</a>
+<a href="adventure.html">Adventure</a>
+<a href="tours.html">Tours</a>
+<a href="competitions.html">Competitions</a>
+<a href="register.html">Registration</a>
+<a href="booking.html">Booking</a>
+<a href="gallery.html">Gallery</a>
+<a href="contact.html">Contact</a>
+
+</nav>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="badge">
+THE APEX 99 SPORTS ACADEMY
+</div>
+
+<h1>
+TRAIN.<br>
+<span>PLAY. GROW.</span>
+</h1>
+
+<p>
+Professional sports training, residential accommodation,
+nutrition, fitness and complete player development
+under one platform.
+</p>
+
+<div class="buttons">
+
+<a href="#sports" class="btn">
+EXPLORE SPORTS
+</a>
+
+<a href="#apply" class="btn alt">
+APPLY NOW
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HIGHLIGHTS -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+MORE THAN <span>AN ACADEMY</span>
+</h2>
+
+<p class="section-sub">
+A complete environment for developing disciplined,
+fit and competitive athletes.
+</p>
+
+<div class="highlight-grid">
+
+<div class="highlight">
+<div class="icon">👨‍🏫</div>
+<h3>Professional Training</h3>
+<p>Structured coaching and development.</p>
+</div>
+
+<div class="highlight">
+<div class="icon">🏠</div>
+<h3>Residential</h3>
+<p>Safe accommodation and support.</p>
+</div>
+
+<div class="highlight">
+<div class="icon">🍽️</div>
+<h3>Food & Nutrition</h3>
+<p>Healthy meals for athletes.</p>
+</div>
+
+<div class="highlight">
+<div class="icon">🏆</div>
+<h3>Player Development</h3>
+<p>Complete performance development.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTBALL & CRICKET -->
+
+<section id="sports">
+
+<div class="container">
+
+<h2 class="section-title">
+OUR <span>SPORTS</span>
+</h2>
+
+<p class="section-sub">
+Professional training programmes for aspiring athletes.
+</p>
+
+<div class="sports-grid">
+
+
+<!-- FOOTBALL -->
+
+<div class="sport-card">
+
+<div class="sport-img">
+
+<img
+src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1200&q=85"
+alt="Football Training">
+
+</div>
+
+<div class="sport-content">
+
+<h3>⚽ Football Academy</h3>
+
+<p>
+Professional football development programme focused on
+technical skills, fitness, tactics and match performance.
+</p>
+
+<div class="list">
+
+<div>Ball Control</div>
+<div>Passing</div>
+<div>Dribbling</div>
+<div>Shooting</div>
+<div>Speed & Agility</div>
+<div>Fitness</div>
+<div>Tactical Training</div>
+<div>Match Practice</div>
+
+</div>
+
+<a href="#fees" class="btn">
+VIEW FEES
+</a>
+
+</div>
+
+</div>
+
+
+<!-- CRICKET -->
+
+<div class="sport-card cricket">
+
+<div class="sport-img">
+
+<img
+src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=1200&q=85"
+alt="Cricket Training">
+
+</div>
+
+<div class="sport-content">
+
+<h3>🏏 Cricket Academy</h3>
+
+<p>
+Complete cricket development programme covering batting,
+bowling, fielding, fitness and match preparation.
+</p>
+
+<div class="list">
+
+<div>Batting</div>
+<div>Bowling</div>
+<div>Fielding</div>
+<div>Wicket Keeping</div>
+<div>Fitness</div>
+<div>Agility</div>
+<div>Match Practice</div>
+<div>Game Strategy</div>
+
+</div>
+
+<a href="#fees" class="btn">
+VIEW FEES
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- OTHER SPORTS -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+OTHER <span>SPORTS</span>
+</h2>
+
+<div class="other-grid">
+
+
+<div class="other-card">
+
+<div class="other-img">
+<img
+src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=900&q=85"
+alt="Badminton">
+</div>
+
+<div class="other-content">
+<h3>🏸 Badminton</h3>
+<p>Speed, movement, technique and match training.</p>
+</div>
+
+</div>
+
+
+<div class="other-card">
+
+<div class="other-img">
+<img
+src="https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=900&q=85"
+alt="Basketball">
+</div>
+
+<div class="other-content">
+<h3>🏀 Basketball</h3>
+<p>Skills, fitness, teamwork and competition.</p>
+</div>
+
+</div>
+
+
+<div class="other-card">
+
+<div class="other-img">
+<img
+src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=900&q=85"
+alt="Volleyball">
+</div>
+
+<div class="other-content">
+<h3>🏐 Volleyball</h3>
+<p>Technique, teamwork and match preparation.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROFESSIONAL TRAINING -->
+
+<section class="training">
+
+<div class="container">
+
+<h2 class="section-title">
+PROFESSIONAL <span>TRAINING</span>
+</h2>
+
+<div class="training-grid">
+
+<div class="training-box">
+
+<h3>Technical Development</h3>
+
+<ul>
+<li>Sport-specific technical training</li>
+<li>Individual skill development</li>
+<li>Position-specific training</li>
+<li>Match simulation</li>
+<li>Performance assessment</li>
+<li>Regular practice sessions</li>
+</ul>
+
+</div>
+
+<div class="training-box green">
+
+<h3>Physical Development</h3>
+
+<ul>
+<li>Strength & conditioning</li>
+<li>Speed & agility</li>
+<li>Endurance training</li>
+<li>Flexibility</li>
+<li>Fitness assessment</li>
+<li>Recovery management</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FACILITIES -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+ACADEMY <span>FACILITIES</span>
+</h2>
+
+<div class="facility-grid">
+
+
+<div class="facility">
+
+<div class="facility-img">
+<img
+src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=900&q=85"
+alt="Sports Ground">
+</div>
+
+<div class="facility-content">
+<h3>🏟️ Professional Ground</h3>
+<p>Dedicated sports practice and training areas.</p>
+</div>
+
+</div>
+
+
+<div class="facility">
+
+<div class="facility-img">
+<img
+src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=900&q=85"
+alt="Cricket Facility">
+</div>
+
+<div class="facility-content">
+<h3>🏏 Cricket Practice</h3>
+<p>Dedicated cricket skill development area.</p>
+</div>
+
+</div>
+
+
+<div class="facility">
+
+<div class="facility-img">
+<img
+src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=900&q=85"
+alt="Gym">
+</div>
+
+<div class="facility-content">
+<h3>🏋️ Gym & Fitness</h3>
+<p>Strength and conditioning facilities.</p>
+</div>
+
+</div>
+
+
+<div class="facility">
+
+<div class="facility-img">
+<img
+src="https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&w=900&q=85"
+alt="Running Training">
+</div>
+
+<div class="facility-content">
+<h3>🏃 Fitness Area</h3>
+<p>Speed, endurance and agility training.</p>
+</div>
+
+</div>
+
+
+<div class="facility">
+
+<div class="facility-img">
+<img
+src="https://images.unsplash.com/photo-1558611848-73f7eb4001a1?auto=format&fit=crop&w=900&q=85"
+alt="Training">
+</div>
+
+<div class="facility-content">
+<h3>💪 Strength Training</h3>
+<p>Physical preparation and conditioning.</p>
+</div>
+
+</div>
+
+
+<div class="facility">
+
+<div class="facility-img">
+<img
+src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=900&q=85"
+alt="Player Training">
+</div>
+
+<div class="facility-content">
+<h3>📹 Performance Development</h3>
+<p>Training review and player development.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RESIDENTIAL -->
+
+<section class="residential">
+
+<div class="container">
+
+<div class="res-box">
+
+<h2 class="section-title">
+RESIDENTIAL <span>ACADEMY</span>
+</h2>
+
+<p class="section-sub">
+Comfortable, safe and disciplined residential environment
+for athletes.
+</p>
+
+<ul>
+
+<li>Fully furnished accommodation</li>
+<li>Separate accommodation arrangements</li>
+<li>24×7 security</li>
+<li>CCTV surveillance</li>
+<li>Study area</li>
+<li>Common room</li>
+<li>Laundry support</li>
+<li>First-aid support</li>
+<li>Clean drinking water</li>
+<li>Housekeeping support</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOD -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+FOOD & <span>NUTRITION</span>
+</h2>
+
+<p class="section-sub">
+Healthy food designed to support athlete training.
+</p>
+
+<div class="food-grid">
+
+
+<div class="food-card">
+
+<div class="food-img">
+<img
+src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=800&q=85"
+alt="Breakfast">
+</div>
+
+<div class="food-content">
+<h3>🍳 Breakfast</h3>
+<p>Healthy morning meal.</p>
+</div>
+
+</div>
+
+
+<div class="food-card">
+
+<div class="food-img">
+<img
+src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=85"
+alt="Lunch">
+</div>
+
+<div class="food-content">
+<h3>🍛 Lunch</h3>
+<p>Balanced lunch meal.</p>
+</div>
+
+</div>
+
+
+<div class="food-card">
+
+<div class="food-img">
+<img
+src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=85"
+alt="Healthy Food">
+</div>
+
+<div class="food-content">
+<h3>🥗 Snacks</h3>
+<p>Nutritious food options.</p>
+</div>
+
+</div>
+
+
+<div class="food-card">
+
+<div class="food-img">
+<img
+src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=800&q=85"
+alt="Dinner">
+</div>
+
+<div class="food-content">
+<h3>🍗 Dinner</h3>
+<p>Balanced evening meal.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FEES -->
+
+<section id="fees">
+
+<div class="container">
+
+<h2 class="section-title">
+ADMISSION & <span>FEES</span>
+</h2>
+
+<p class="section-sub">
+Sample structure. Final fees can be updated by the academy.
+</p>
+
+<div class="fee-grid">
+
+
+<div class="fee-card">
+
+<h3>DAY SCHOLAR</h3>
+
+<div class="price">
+₹5,000
+<small>/ Month</small>
+</div>
+
+<ul>
+<li>Professional Coaching</li>
+<li>Regular Training</li>
+<li>Fitness Training</li>
+<li>Performance Assessment</li>
+<li>Practice Sessions</li>
+</ul>
+
+<a href="#apply" class="btn">
+APPLY NOW
+</a>
+
+</div>
+
+
+<div class="fee-card featured">
+
+<h3>RESIDENTIAL</h3>
+
+<div class="price">
+₹15,000
+<small>/ Month</small>
+</div>
+
+<ul>
+<li>Professional Coaching</li>
+<li>Accommodation</li>
+<li>Food & Nutrition</li>
+<li>Fitness Training</li>
+<li>Practice Sessions</li>
+<li>Housekeeping Support</li>
+</ul>
+
+<a href="#apply" class="btn">
+APPLY NOW
+</a>
+
+</div>
+
+
+<div class="fee-card">
+
+<h3>ELITE PROGRAM</h3>
+
+<div class="price">
+₹20,000
+<small>/ Month</small>
+</div>
+
+<ul>
+<li>Advanced Coaching</li>
+<li>Residential Facility</li>
+<li>Food & Nutrition</li>
+<li>Advanced Fitness</li>
+<li>Performance Analysis</li>
+<li>Match Preparation</li>
+</ul>
+
+<a href="#apply" class="btn">
+APPLY NOW
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ADMISSION PROCESS -->
+
+<section>
+
+<div clas
