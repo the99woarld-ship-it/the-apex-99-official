@@ -9,44 +9,245 @@
 <meta name="description" content="THE APEX 99 — Professional Event, Competition, Adventure and Tour Organizer">
 
 <link rel="stylesheet" href="style.css">
+
+<style>
+
+/* =====================================================
+   THE APEX 99 HOME PAGE MOVING SLIDER
+   ===================================================== */
+
+.apex-slider-section{
+    padding:70px 0;
+    background:#0a0a0a;
+    overflow:hidden;
+}
+
+.apex-slider-heading{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.apex-slider-heading h2{
+    margin:0 0 10px;
+    font-size:34px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.apex-slider-heading p{
+    color:#aaa;
+    margin:0;
+    font-size:15px;
+}
+
+.apex-slider{
+    width:100%;
+    overflow:hidden;
+    position:relative;
+}
+
+.apex-track{
+    display:flex;
+    width:max-content;
+    gap:22px;
+    animation:apexMove 28s linear infinite;
+}
+
+.apex-slider:hover .apex-track{
+    animation-play-state:paused;
+}
+
+.apex-card{
+    width:300px;
+    min-width:300px;
+    background:#151515;
+    border:1px solid rgba(216,170,69,.35);
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.45);
+    transition:.3s ease;
+}
+
+.apex-card:hover{
+    transform:translateY(-8px);
+    border-color:#d8aa45;
+}
+
+.apex-card-image{
+    width:100%;
+    height:190px;
+    overflow:hidden;
+    background:#111;
+}
+
+.apex-card-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:transform .5s ease;
+}
+
+.apex-card:hover .apex-card-image img{
+    transform:scale(1.08);
+}
+
+.apex-card-content{
+    padding:20px;
+}
+
+.apex-card-content h3{
+    margin:0 0 9px;
+    color:#f5d27a;
+    font-size:21px;
+}
+
+.apex-card-content p{
+    color:#bbb;
+    font-size:14px;
+    line-height:1.6;
+    margin:0 0 16px;
+}
+
+.apex-card-btn{
+    display:inline-block;
+    text-decoration:none;
+    color:#111;
+    background:#d8aa45;
+    padding:10px 17px;
+    border-radius:7px;
+    font-size:13px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.apex-card-btn:hover{
+    background:#f5d27a;
+}
+
+@keyframes apexMove{
+
+    from{
+        transform:translateX(0);
+    }
+
+    to{
+        transform:translateX(-50%);
+    }
+
+}
+
+/* TOUR SLIDER */
+
+.apex-track.tours-track{
+    animation-duration:31s;
+    animation-direction:reverse;
+}
+
+/* COMPETITION SLIDER */
+
+.apex-track.competition-track{
+    animation-duration:27s;
+}
+
+/* ACADEMY SLIDER */
+
+.apex-track.academy-track{
+    animation-duration:30s;
+    animation-direction:reverse;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .apex-slider-section{
+        padding:50px 0;
+    }
+
+    .apex-slider-heading h2{
+        font-size:27px;
+    }
+
+    .apex-card{
+        width:260px;
+        min-width:260px;
+    }
+
+    .apex-card-image{
+        height:165px;
+    }
+
+    .apex-track{
+        gap:15px;
+        animation-duration:24s;
+    }
+
+}
+
+</style>
+
 </head>
 
 <body>
 
+
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
+
 <header>
+
 <div class="container nav">
 
 <a class="brand" href="index.html">
 THE APEX <span>99</span>
 </a>
 
-<button class="menu" aria-label="Menu">☰</button>
+<button class="menu" aria-label="Menu">
+☰
+</button>
 
 <nav>
+
 <a href="index.html">Home</a>
+
 <a href="about.html">About</a>
+
 <a href="events.html">Events</a>
+
 <a href="afth.html">AFTH</a>
 
-<!-- ACADEMY -->
 <a href="academy.html">Academy</a>
 
 <a href="adventure.html">Adventure</a>
+
 <a href="tours.html">Tours</a>
+
 <a href="competitions.html">Competitions</a>
+
 <a href="register.html">Registration</a>
+
 <a href="booking.html">Booking</a>
+
 <a href="gallery.html">Gallery</a>
+
 <a href="contact.html">Contact</a>
+
 </nav>
 
 </div>
+
 </header>
+
 
 
 <main>
 
-<!-- MAIN WEBSITE HERO IMAGE -->
+
+<!-- =====================================================
+     MAIN WEBSITE HERO IMAGE
+     ===================================================== -->
 
 <section
 class="hero"
@@ -68,7 +269,10 @@ padding-bottom:60px;
 </section>
 
 
-<!-- WHAT WE DO -->
+
+<!-- =====================================================
+     WHAT WE DO
+     ===================================================== -->
 
 <section>
 
@@ -90,7 +294,9 @@ adventure challenges, tours and professionally managed events.
 
 <div class="card">
 
-<div class="icon">🏆</div>
+<div class="icon">
+🏆
+</div>
 
 <h3>
 Competitions
@@ -108,11 +314,14 @@ View Competitions →
 </div>
 
 
+
 <!-- AFTH -->
 
 <div class="card">
 
-<div class="icon">⚽</div>
+<div class="icon">
+⚽
+</div>
 
 <h3>
 AFTH
@@ -129,11 +338,14 @@ Explore AFTH →
 </div>
 
 
+
 <!-- ACADEMY -->
 
 <div class="card">
 
-<div class="icon">🏅</div>
+<div class="icon">
+🏅
+</div>
 
 <h3>
 THE APEX 99 Academy
@@ -152,11 +364,14 @@ Explore Academy →
 </div>
 
 
+
 <!-- ADVENTURE -->
 
 <div class="card">
 
-<div class="icon">🏕️</div>
+<div class="icon">
+🏕️
+</div>
 
 <h3>
 Adventure
@@ -174,11 +389,14 @@ Explore Adventure →
 </div>
 
 
+
 <!-- TOURS -->
 
 <div class="card">
 
-<div class="icon">✈️</div>
+<div class="icon">
+✈️
+</div>
 
 <h3>
 Tours
@@ -196,11 +414,14 @@ View Tours →
 </div>
 
 
+
 <!-- BOOKING -->
 
 <div class="card">
 
-<div class="icon">🎟️</div>
+<div class="icon">
+🎟️
+</div>
 
 <h3>
 Booking
@@ -218,11 +439,14 @@ Book Now →
 </div>
 
 
+
 <!-- PARTNERSHIP -->
 
 <div class="card partnership-card">
 
-<div class="icon">🤝</div>
+<div class="icon">
+🤝
+</div>
 
 <h3>
 PARTNERSHIP
@@ -289,28 +513,1054 @@ BECOME A PARTNER →
 </section>
 
 
-<!-- BOTTOM BANNER -->
+
+<!-- =====================================================
+     EVENTS MOVING SLIDER
+     ===================================================== -->
+
+<section class="apex-slider-section">
+
+<div class="container">
+
+<div class="apex-slider-heading">
+
+<h2>
+<span class="gold">
+EVENTS
+</span>
+</h2>
+
+<p>
+Discover upcoming events by THE APEX 99
+</p>
+
+</div>
+
+</div>
+
+
+<div class="apex-slider">
+
+<div class="apex-track">
+
+
+<!-- EVENT 1 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="event1.jpg"
+alt="THE APEX 99 Event"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+THE APEX 99 EVENTS
+</h3>
+
+<p>
+Professional events and experiences organized by THE APEX 99.
+</p>
+
+<a
+class="apex-card-btn"
+href="events.html"
+>
+VIEW EVENTS →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- EVENT 2 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="event2.jpg"
+alt="AFTH Football Event"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+AFTH
+</h3>
+
+<p>
+APEX Football Talent Hunt — discover the next football talent.
+</p>
+
+<a
+class="apex-card-btn"
+href="afth.html"
+>
+EXPLORE AFTH →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- EVENT 3 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="event3.jpg"
+alt="Adventure Event"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+ADVENTURE
+</h3>
+
+<p>
+Challenge yourself with adventure and survival experiences.
+</p>
+
+<a
+class="apex-card-btn"
+href="adventure.html"
+>
+EXPLORE →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- DUPLICATE EVENT 1 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="event1.jpg"
+alt="THE APEX 99 Event"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+THE APEX 99 EVENTS
+</h3>
+
+<p>
+Professional events and experiences organized by THE APEX 99.
+</p>
+
+<a
+class="apex-card-btn"
+href="events.html"
+>
+VIEW EVENTS →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- DUPLICATE EVENT 2 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="event2.jpg"
+alt="AFTH Football Event"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+AFTH
+</h3>
+
+<p>
+APEX Football Talent Hunt — discover the next football talent.
+</p>
+
+<a
+class="apex-card-btn"
+href="afth.html"
+>
+EXPLORE AFTH →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- DUPLICATE EVENT 3 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="event3.jpg"
+alt="Adventure Event"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+ADVENTURE
+</h3>
+
+<p>
+Challenge yourself with adventure and survival experiences.
+</p>
+
+<a
+class="apex-card-btn"
+href="adventure.html"
+>
+EXPLORE →
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TOURS MOVING SLIDER
+     ===================================================== -->
+
+<section class="apex-slider-section">
+
+<div class="container">
+
+<div class="apex-slider-heading">
+
+<h2>
+<span class="gold">
+TOURS
+</span>
+</h2>
+
+<p>
+Explore unforgettable travel experiences
+</p>
+
+</div>
+
+</div>
+
+
+<div class="apex-slider">
+
+<div class="apex-track tours-track">
+
+
+<!-- TOUR 1 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="tour1.jpg"
+alt="Kashmir Tour"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+KASHMIR TOUR
+</h3>
+
+<p>
+Beautiful Kashmir travel experience with THE APEX 99.
+</p>
+
+<a
+class="apex-card-btn"
+href="tours.html"
+>
+VIEW TOUR →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- TOUR 2 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="tour2.jpg"
+alt="Digha Tour"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+DIGHA TOUR
+</h3>
+
+<p>
+Enjoy a memorable beach holiday with our travel packages.
+</p>
+
+<a
+class="apex-card-btn"
+href="tours.html"
+>
+VIEW TOUR →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- TOUR 3 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="tour3.jpg"
+alt="THE APEX 99 Travel"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+MORE TOURS
+</h3>
+
+<p>
+Discover more destinations and travel packages.
+</p>
+
+<a
+class="apex-card-btn"
+href="tours.html"
+>
+VIEW TOURS →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- DUPLICATE TOUR 1 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="tour1.jpg"
+alt="Kashmir Tour"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+KASHMIR TOUR
+</h3>
+
+<p>
+Beautiful Kashmir travel experience with THE APEX 99.
+</p>
+
+<a
+class="apex-card-btn"
+href="tours.html"
+>
+VIEW TOUR →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- DUPLICATE TOUR 2 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="tour2.jpg"
+alt="Digha Tour"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+DIGHA TOUR
+</h3>
+
+<p>
+Enjoy a memorable beach holiday with our travel packages.
+</p>
+
+<a
+class="apex-card-btn"
+href="tours.html"
+>
+VIEW TOUR →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- DUPLICATE TOUR 3 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="tour3.jpg"
+alt="THE APEX 99 Travel"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+MORE TOURS
+</h3>
+
+<p>
+Discover more destinations and travel packages.
+</p>
+
+<a
+class="apex-card-btn"
+href="tours.html"
+>
+VIEW TOURS →
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     COMPETITIONS MOVING SLIDER
+     ===================================================== -->
+
+<section class="apex-slider-section">
+
+<div class="container">
+
+<div class="apex-slider-heading">
+
+<h2>
+<span class="gold">
+COMPETITIONS
+</span>
+</h2>
+
+<p>
+Compete. Perform. Become THE ONE.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="apex-slider">
+
+<div class="apex-track competition-track">
+
+
+<!-- COMPETITION 1 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="competition1.jpg"
+alt="Football Competition"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+FOOTBALL COMPETITION
+</h3>
+
+<p>
+Show your skills and compete with talented players.
+</p>
+
+<a
+class="apex-card-btn"
+href="competitions.html"
+>
+VIEW DETAILS →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- COMPETITION 2 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="competition2.jpg"
+alt="Sports Competition"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+SPORTS COMPETITION
+</h3>
+
+<p>
+Professional competitions created to identify talent.
+</p>
+
+<a
+class="apex-card-btn"
+href="competitions.html"
+>
+VIEW DETAILS →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- COMPETITION 3 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="competition3.jpg"
+alt="THE APEX 99 Competition"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+THE APEX 99
+</h3>
+
+<p>
+Participate, perform and prove that you are THE ONE.
+</p>
+
+<a
+class="apex-card-btn"
+href="competitions.html"
+>
+VIEW COMPETITIONS →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- DUPLICATE 1 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="competition1.jpg"
+alt="Football Competition"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+FOOTBALL COMPETITION
+</h3>
+
+<p>
+Show your skills and compete with talented players.
+</p>
+
+<a
+class="apex-card-btn"
+href="competitions.html"
+>
+VIEW DETAILS →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- DUPLICATE 2 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="competition2.jpg"
+alt="Sports Competition"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+SPORTS COMPETITION
+</h3>
+
+<p>
+Professional competitions created to identify talent.
+</p>
+
+<a
+class="apex-card-btn"
+href="competitions.html"
+>
+VIEW DETAILS →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- DUPLICATE 3 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="competition3.jpg"
+alt="THE APEX 99 Competition"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+THE APEX 99
+</h3>
+
+<p>
+Participate, perform and prove that you are THE ONE.
+</p>
+
+<a
+class="apex-card-btn"
+href="competitions.html"
+>
+VIEW COMPETITIONS →
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ACADEMY MOVING SLIDER
+     ===================================================== -->
+
+<section class="apex-slider-section">
+
+<div class="container">
+
+<div class="apex-slider-heading">
+
+<h2>
+<span class="gold">
+ACADEMY
+</span>
+</h2>
+
+<p>
+Train. Improve. Become a Champion.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="apex-slider">
+
+<div class="apex-track academy-track">
+
+
+<!-- ACADEMY 1 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="academy1.jpg"
+alt="Football Academy"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+FOOTBALL ACADEMY
+</h3>
+
+<p>
+Professional football training with expert coaching.
+</p>
+
+<a
+class="apex-card-btn"
+href="academy.html"
+>
+EXPLORE ACADEMY →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- ACADEMY 2 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="academy2.jpg"
+alt="Cricket Academy"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+CRICKET ACADEMY
+</h3>
+
+<p>
+Structured cricket training for developing players.
+</p>
+
+<a
+class="apex-card-btn"
+href="academy.html"
+>
+EXPLORE ACADEMY →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- ACADEMY 3 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="academy3.jpg"
+alt="Residential Sports Academy"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+RESIDENTIAL ACADEMY
+</h3>
+
+<p>
+Training, accommodation, fitness, nutrition and expert coaching.
+</p>
+
+<a
+class="apex-card-btn"
+href="academy.html"
+>
+APPLY NOW →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- DUPLICATE 1 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="academy1.jpg"
+alt="Football Academy"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+FOOTBALL ACADEMY
+</h3>
+
+<p>
+Professional football training with expert coaching.
+</p>
+
+<a
+class="apex-card-btn"
+href="academy.html"
+>
+EXPLORE ACADEMY →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- DUPLICATE 2 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="academy2.jpg"
+alt="Cricket Academy"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+CRICKET ACADEMY
+</h3>
+
+<p>
+Structured cricket training for developing players.
+</p>
+
+<a
+class="apex-card-btn"
+href="academy.html"
+>
+EXPLORE ACADEMY →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- DUPLICATE 3 -->
+
+<div class="apex-card">
+
+<div class="apex-card-image">
+
+<img
+src="academy3.jpg"
+alt="Residential Sports Academy"
+>
+
+</div>
+
+<div class="apex-card-content">
+
+<h3>
+RESIDENTIAL ACADEMY
+</h3>
+
+<p>
+Training, accommodation, fitness, nutrition and expert coaching.
+</p>
+
+<a
+class="apex-card-btn"
+href="academy.html"
+>
+APPLY NOW →
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BOTTOM BANNER
+     ===================================================== -->
 
 <section class="banner">
 
 <div class="container">
 
 <h2>
+
 Ready to discover
+
 <span class="gold">
 WHO IS THE ONE?
 </span>
+
 </h2>
 
 <p class="section-sub">
+
 Choose an event, complete registration or make a booking.
+
 </p>
 
-<a class="btn" href="register.html">
+<a
+class="btn"
+href="register.html"
+>
 Register
 </a>
 
-<a class="btn alt" href="booking.html">
+<a
+class="btn alt"
+href="booking.html"
+>
 Book Now
 </a>
 
@@ -321,7 +1571,10 @@ Book Now
 </main>
 
 
-<!-- FOOTER -->
+
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
 
 <footer>
 
@@ -347,6 +1600,7 @@ A Unit of SMPN RECORD MANAGEMENT.
 </div>
 
 
+
 <!-- QUICK LINKS -->
 
 <div>
@@ -356,5 +1610,110 @@ Quick Links
 </h3>
 
 <p>
+<a href="events.html">
+Events
+</a>
+</p>
 
-<a href="events
+<p>
+<a href="afth.html">
+AFTH
+</a>
+</p>
+
+<p>
+<a href="academy.html">
+Academy
+</a>
+</p>
+
+<p>
+<a href="adventure.html">
+Adventure
+</a>
+</p>
+
+<p>
+<a href="tours.html">
+Tours
+</a>
+</p>
+
+<p>
+<a href="competitions.html">
+Competitions
+</a>
+</p>
+
+<p>
+<a href="register.html">
+Registration
+</a>
+</p>
+
+<p>
+<a href="booking.html">
+Booking
+</a>
+</p>
+
+</div>
+
+
+
+<!-- CONTACT -->
+
+<div>
+
+<h3 class="gold">
+Contact
+</h3>
+
+<p>
+THE APEX 99
+</p>
+
+<p>
+Professional Event, Competition,
+Adventure & Tour Organizer
+</p>
+
+<a
+class="gold"
+href="contact.html"
+>
+Contact Us →
+</a>
+
+</div>
+
+
+</div>
+
+
+
+<!-- COPYRIGHT -->
+
+<div
+class="container"
+style="
+text-align:center;
+padding:25px 0;
+border-top:1px solid rgba(255,255,255,.08);
+margin-top:30px;
+">
+
+<p style="margin:0;color:#888;">
+
+© 2026 THE APEX 99. All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+
+
+
+</body>
+</html>
