@@ -1,21 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>THE APEX 99 | WHO IS THE ONE</title>
 
-<meta name="description"
-content="THE APEX 99 - Events, Tours, Media, Adventure and Academy">
+<meta name="description" content="THE APEX 99 - Events, Tours, Academy, Adventure and Media">
 
 <style>
-
-/* =====================================================
-   RESET
-===================================================== */
-
 *{
     margin:0;
     padding:0;
@@ -29,8 +22,16 @@ html{
 body{
     font-family:Arial,Helvetica,sans-serif;
     background:#050505;
-    color:white;
+    color:#fff;
     overflow-x:hidden;
+}
+
+:root{
+    --gold:#f4b51c;
+    --gold2:#ffd75b;
+    --black:#030303;
+    --dark:#0b0b0b;
+    --gray:#aaa;
 }
 
 a{
@@ -38,197 +39,151 @@ a{
     color:inherit;
 }
 
-
-/* =====================================================
-   COLORS
-===================================================== */
-
-:root{
-    --gold:#d6aa45;
-    --lightgold:#f4d985;
-    --dark:#050505;
-    --dark2:#101010;
-    --grey:#bcbcbc;
+button{
+    font-family:inherit;
 }
 
+img{
+    max-width:100%;
+}
 
-/* =====================================================
-   HEADER
-===================================================== */
+/* ================= HEADER ================= */
 
-header{
+.header{
     position:fixed;
     top:0;
     left:0;
     width:100%;
-    height:78px;
+    height:76px;
+    background:rgba(0,0,0,.94);
+    border-bottom:1px solid rgba(244,181,28,.45);
     z-index:9999;
-
-    background:rgba(5,5,5,.92);
-    backdrop-filter:blur(15px);
-
-    border-bottom:
-    1px solid rgba(214,170,69,.35);
+    backdrop-filter:blur(12px);
 }
 
-.nav{
-    width:94%;
+.header-inner{
+    width:95%;
     max-width:1450px;
-    height:78px;
+    height:100%;
     margin:auto;
-
     display:flex;
     align-items:center;
+    justify-content:space-between;
 }
-
-
-/* LOGO */
 
 .logo{
     display:flex;
     align-items:center;
     gap:10px;
-
-    min-width:240px;
+    min-width:190px;
 }
 
-.logo-mark{
-    font-size:48px;
-    font-weight:900;
-    font-style:italic;
-
-    color:var(--gold);
-
-    text-shadow:
-    0 0 20px rgba(214,170,69,.25);
-}
-
-.logo-text strong{
-    display:block;
-    font-size:18px;
-    letter-spacing:1px;
-}
-
-.logo-text small{
-    display:block;
-    margin-top:3px;
-
-    color:#aaa;
-
-    font-size:7px;
-    letter-spacing:3px;
-}
-
-
-/* MENU */
-
-.menu{
-    margin-left:auto;
-
+.logo-symbol{
+    width:50px;
+    height:55px;
     display:flex;
     align-items:center;
-    gap:3px;
+    justify-content:center;
+    color:var(--gold);
+    font-size:39px;
+    font-weight:900;
+    font-style:italic;
+    position:relative;
 }
 
-.menu a{
+.logo-symbol:before{
+    content:"";
+    position:absolute;
+    width:31px;
+    height:31px;
+    border-left:4px solid var(--gold);
+    border-top:4px solid var(--gold);
+    transform:rotate(45deg);
+}
+
+.logo-name{
+    font-size:15px;
+    font-weight:bold;
+    letter-spacing:.5px;
+}
+
+.logo-tag{
+    font-size:6px;
+    color:#bbb;
+    letter-spacing:2px;
+    margin-top:5px;
+}
+
+.nav{
+    display:flex;
+    align-items:center;
+    gap:2px;
+}
+
+.nav a{
     padding:11px 13px;
-
-    border-radius:6px;
-
     font-size:11px;
-    font-weight:900;
-
-    text-transform:uppercase;
-
+    color:#eee;
+    border-radius:6px;
     transition:.3s;
 }
 
-.menu a:hover,
-.menu a.active{
-    color:#000;
-
-    background:
-    linear-gradient(
-        135deg,
-        var(--lightgold),
-        var(--gold)
-    );
+.nav a:hover,
+.nav a.active{
+    background:linear-gradient(135deg,#654a0b,#dba617);
+    color:#fff;
 }
-
-
-/* CONTACT */
 
 .header-contact{
-    margin-left:15px;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+}
 
-    padding:8px 13px;
+.unit{
+    font-size:7px;
+    color:#aaa;
+    letter-spacing:1px;
+    margin-bottom:4px;
+}
 
-    background:var(--gold);
-
+.whatsapp{
+    background:linear-gradient(135deg,#ffd24c,#9b6900);
     color:#000;
-
-    border-radius:30px;
-
+    padding:7px 13px;
+    border-radius:20px;
     font-size:11px;
-    font-weight:900;
+    font-weight:bold;
 }
 
-
-/* MOBILE BUTTON */
-
-.mobile-menu{
+.menu{
     display:none;
-
-    margin-left:auto;
-
-    border:0;
-
-    background:none;
-
-    color:white;
-
-    font-size:30px;
-
-    cursor:pointer;
+    width:42px;
+    height:38px;
+    border:1px solid var(--gold);
+    background:#080808;
+    color:var(--gold);
+    border-radius:6px;
+    font-size:21px;
 }
 
-
-/* =====================================================
-   HERO
-===================================================== */
+/* ================= HERO ================= */
 
 .hero{
-
+    margin-top:76px;
+    height:calc(100vh - 76px);
+    min-height:590px;
+    max-height:780px;
     position:relative;
-
-    height:100vh;
-
-    min-height:650px;
-
-    padding-top:78px;
-
     overflow:hidden;
 }
 
-
-/* SLIDES */
-
 .slide{
-
     position:absolute;
-
     inset:0;
-
-    padding-top:78px;
-
     opacity:0;
-
-    transform:scale(1.08);
-
-    transition:
-    opacity 1s ease,
-    transform 6s ease;
-
+    transform:scale(1.04);
+    transition:opacity 1s ease,transform 5s ease;
     background-size:cover;
     background-position:center;
 }
@@ -238,1032 +193,892 @@ header{
     transform:scale(1);
 }
 
-
-/* DARK OVERLAY */
-
-.slide::before{
-
+.slide:after{
     content:"";
-
     position:absolute;
-
     inset:0;
-
     background:
-    linear-gradient(
-        90deg,
-        rgba(0,0,0,.82),
-        rgba(0,0,0,.28),
-        rgba(0,0,0,.55)
-    );
-
+        linear-gradient(90deg,
+        rgba(0,0,0,.88),
+        rgba(0,0,0,.48),
+        rgba(0,0,0,.18)),
+        linear-gradient(0deg,
+        rgba(0,0,0,.8),
+        transparent 55%);
 }
 
-.slide::after{
+/* REAL ONLINE IMAGES */
 
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    right:0;
-    bottom:0;
-
-    height:35%;
-
-    background:
-    linear-gradient(
-        transparent,
-        rgba(0,0,0,.8)
-    );
-
+.slide1{
+    background-image:url("https://www.nathanhortonphotography.com/wp-content/uploads/2023/01/Kashmir.jpg");
 }
 
+.slide2{
+    background-image:url("https://media.bolatimes.com/thumbs/2022/06/24/84897-timnas-india/730x480-img-84897-timnas-india.jpg");
+}
 
-/* HERO TEXT */
+.slide3{
+    background-image:url("https://www.pelago.com/img/products/IN-India/72-hours-jungle-survival-learn-to-thrive/f201a080-4a4e-41bb-9329-94e8f49f7e91_72-hours-jungle-survival-learn-to-thrive-xlarge.jpg");
+}
 
 .hero-content{
-
-    position:absolute;
-
-    z-index:5;
-
-    left:8%;
-
-    top:50%;
-
-    transform:translateY(-45%);
-
-    max-width:700px;
+    position:relative;
+    z-index:2;
+    width:90%;
+    max-width:1300px;
+    height:100%;
+    margin:auto;
+    display:flex;
+    align-items:center;
 }
 
-.hero-small{
+.hero-text{
+    max-width:590px;
+}
 
-    color:var(--lightgold);
-
+.hand{
+    color:var(--gold);
     font-family:cursive;
-
-    font-size:clamp(38px,5vw,70px);
-
     font-style:italic;
-
-    margin-bottom:10px;
-}
-
-.hero-title{
-
-    font-size:
-    clamp(55px,8vw,105px);
-
-    line-height:.88;
-
-    font-weight:1000;
-
-    letter-spacing:2px;
-
-    text-transform:uppercase;
-
-    text-shadow:
-    0 5px 25px rgba(0,0,0,.7);
-}
-
-.hero-title span{
-    color:var(--lightgold);
-}
-
-.hero-line{
-
-    width:90px;
-
-    height:3px;
-
-    margin:22px 0;
-
-    background:
-    linear-gradient(
-        90deg,
-        var(--gold),
-        transparent
-    );
-}
-
-.hero-description{
-
-    max-width:480px;
-
-    color:#eee;
-
-    font-size:15px;
-
-    line-height:1.7;
-}
-
-.hero-button{
-
+    font-size:clamp(40px,6vw,78px);
+    transform:rotate(-5deg);
     display:inline-block;
+}
 
+.hero h1{
+    font-size:clamp(48px,7vw,90px);
+    line-height:.9;
+    margin:5px 0 20px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    text-shadow:4px 5px 12px #000;
+}
+
+.hero h1 span{
+    color:var(--gold);
+}
+
+.hero-sub{
+    font-size:13px;
+    letter-spacing:3px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.hero-text p{
+    font-size:16px;
+    line-height:1.6;
+    color:#ddd;
+    font-style:italic;
+    max-width:430px;
+}
+
+.gold-btn{
+    display:inline-flex;
     margin-top:25px;
-
-    padding:14px 27px;
-
+    padding:12px 22px;
+    border:1px solid var(--gold);
     border-radius:30px;
-
-    border:
-    1px solid var(--lightgold);
-
-    background:
-    linear-gradient(
-        135deg,
-        var(--lightgold),
-        var(--gold)
-    );
-
-    color:#080808;
-
-    font-size:12px;
-
-    font-weight:1000;
-
-    letter-spacing:1px;
-
+    background:rgba(0,0,0,.5);
+    color:#fff;
+    font-size:11px;
+    font-weight:bold;
     transition:.3s;
 }
 
-.hero-button:hover{
-
-    transform:
-    translateY(-4px);
-
-    box-shadow:
-    0 10px 30px
-    rgba(214,170,69,.3);
-}
-
-
-/* HERO ARROWS */
-
-.hero-arrow{
-
-    position:absolute;
-
-    z-index:10;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-    width:45px;
-    height:45px;
-
-    border:
-    1px solid rgba(255,255,255,.7);
-
-    border-radius:50%;
-
-    background:
-    rgba(0,0,0,.35);
-
-    color:white;
-
-    font-size:25px;
-
-    cursor:pointer;
-
-    transition:.3s;
-}
-
-.hero-arrow:hover{
+.gold-btn:hover{
     background:var(--gold);
     color:#000;
 }
 
-.hero-left{
-    left:22px;
-}
-
-.hero-right{
-    right:22px;
-}
-
-
-/* HERO DOTS */
-
-.hero-dots{
-
+.hero-arrow{
     position:absolute;
+    z-index:5;
+    top:50%;
+    transform:translateY(-50%);
+    width:43px;
+    height:43px;
+    border:1px solid #fff;
+    border-radius:50%;
+    background:rgba(0,0,0,.45);
+    color:#fff;
+    cursor:pointer;
+    font-size:23px;
+}
 
-    z-index:10;
+.hero-arrow:hover{
+    color:var(--gold);
+    border-color:var(--gold);
+}
 
-    bottom:35px;
+.prev{
+    left:20px;
+}
 
-    left:8%;
+.next{
+    right:20px;
+}
 
+.dots{
+    position:absolute;
+    z-index:5;
+    bottom:22px;
+    left:50%;
+    transform:translateX(-50%);
     display:flex;
-
     gap:8px;
 }
 
-.hero-dots span{
-
-    width:8px;
-    height:8px;
-
-    border-radius:20px;
-
-    background:white;
-
-    opacity:.5;
-
+.dot{
+    width:9px;
+    height:9px;
+    border:1px solid #fff;
+    border-radius:50%;
+    background:transparent;
     cursor:pointer;
-
-    transition:.3s;
 }
 
-.hero-dots span.active{
-
-    width:35px;
-
-    opacity:1;
-
+.dot.active{
     background:var(--gold);
+    border-color:var(--gold);
 }
 
-
-/* =====================================================
-   STATS
-===================================================== */
+/* ================= STATS ================= */
 
 .stats{
+    background:#050505;
+    border-top:1px solid rgba(244,181,28,.4);
+    border-bottom:1px solid rgba(244,181,28,.4);
+}
 
+.stats-inner{
+    max-width:1250px;
+    margin:auto;
     display:grid;
-
-    grid-template-columns:
-    repeat(5,1fr);
-
-    background:#080808;
-
-    border-top:
-    1px solid rgba(214,170,69,.25);
-
-    border-bottom:
-    1px solid rgba(214,170,69,.25);
+    grid-template-columns:repeat(5,1fr);
 }
 
 .stat{
+    min-height:105px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    border-right:1px solid rgba(244,181,28,.3);
+}
 
-    text-align:center;
+.stat:last-child{
+    border-right:none;
+}
 
-    padding:22px 10px;
-
-    border-right:
-    1px solid rgba(214,170,69,.18);
+.stat-icon{
+    font-size:24px;
+    color:var(--gold);
+    margin-bottom:5px;
 }
 
 .stat strong{
-
-    display:block;
-
-    color:var(--lightgold);
-
-    font-size:28px;
-
-    font-weight:1000;
+    font-size:18px;
 }
 
 .stat span{
-
-    display:block;
-
-    margin-top:5px;
-
-    color:#aaa;
-
-    font-size:9px;
-
-    letter-spacing:2px;
-
-    font-weight:800;
+    font-size:8px;
+    color:#999;
+    letter-spacing:1px;
+    margin-top:4px;
 }
 
-
-/* =====================================================
-   SECTION
-===================================================== */
+/* ================= COMMON ================= */
 
 .section{
-
-    padding:65px 0;
-
-    background:#070707;
-
-    border-bottom:
-    1px solid rgba(214,170,69,.15);
+    padding:55px 20px;
+    background:
+    radial-gradient(circle at 50% 0%,rgba(244,181,28,.08),transparent 35%),
+    #050505;
 }
 
-.section-title{
-
+.title{
     text-align:center;
-
-    margin-bottom:35px;
+    margin-bottom:30px;
 }
 
-.section-title h2{
-
-    font-size:
-    clamp(30px,4vw,48px);
-
-    font-weight:1000;
-
-    letter-spacing:2px;
-
+.title h2{
+    font-size:clamp(28px,4vw,44px);
     text-transform:uppercase;
-}
-
-.section-title h2 span{
-    color:var(--gold);
-}
-
-.section-title p{
-
-    margin-top:9px;
-
-    color:#999;
-
-    font-size:10px;
-
-    letter-spacing:4px;
-
-    font-weight:800;
-}
-
-
-/* =====================================================
-   WORLD CARDS
-===================================================== */
-
-.world-slider{
-
-    width:92%;
-
-    max-width:1350px;
-
-    margin:auto;
-
-    position:relative;
-}
-
-.world-track{
-
-    display:flex;
-
-    gap:20px;
-
-    overflow-x:auto;
-
-    scroll-behavior:smooth;
-
-    scrollbar-width:none;
-}
-
-.world-track::-webkit-scrollbar{
-    display:none;
-}
-
-.world-card{
-
-    position:relative;
-
-    flex:
-    0 0 285px;
-
-    height:365px;
-
-    overflow:hidden;
-
-    border-radius:12px;
-
-    border:
-    1px solid rgba(214,170,69,.35);
-
-    background:#111;
-
-    transition:.4s;
-}
-
-.world-card:hover{
-
-    transform:
-    translateY(-10px);
-
-    border-color:
-    var(--lightgold);
-}
-
-.world-card img{
-
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-
-    transition:
-    transform .6s;
-}
-
-.world-card:hover img{
-    transform:scale(1.1);
-}
-
-.world-overlay{
-
-    position:absolute;
-
-    inset:0;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:flex-end;
-
-    padding:25px;
-
-    background:
-    linear-gradient(
-        transparent 25%,
-        rgba(0,0,0,.9)
-    );
-}
-
-.world-number{
-
-    color:var(--gold);
-
-    font-size:11px;
-
     letter-spacing:3px;
-
-    font-weight:900;
 }
 
-.world-overlay h3{
-
-    margin:7px 0;
-
-    font-size:28px;
-
-    font-weight:1000;
-
-    letter-spacing:1px;
-}
-
-.world-overlay p{
-
-    color:#ccc;
-
-    font-size:11px;
-
-    line-height:1.5;
-
-    margin-bottom:15px;
-}
-
-.explore{
-
-    display:inline-block;
-
-    width:max-content;
-
-    padding:9px 16px;
-
-    border:
-    1px solid var(--gold);
-
-    border-radius:20px;
-
-    color:var(--lightgold);
-
-    font-size:9px;
-
-    font-weight:900;
-
-    letter-spacing:1px;
-}
-
-.world-arrow{
-
-    position:absolute;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-    z-index:5;
-
-    width:38px;
-    height:38px;
-
-    border-radius:50%;
-
-    border:1px solid white;
-
-    background:#050505;
-
-    color:white;
-
-    cursor:pointer;
-
-}
-
-.world-arrow.left{
-    left:-18px;
-}
-
-.world-arrow.right{
-    right:-18px;
-}
-
-
-/* =====================================================
-   BIG BANNER
-===================================================== */
-
-.big-banner{
-
-    min-height:330px;
-
-    position:relative;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    text-align:center;
-
-    background-size:cover;
-
-    background-position:center;
-
-    overflow:hidden;
-}
-
-.big-banner::before{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-    linear-gradient(
-        rgba(0,0,0,.65),
-        rgba(0,0,0,.65)
-    );
-}
-
-.banner-content{
-
-    position:relative;
-
-    z-index:2;
-
-}
-
-.banner-content h2{
-
-    font-size:
-    clamp(35px,5vw,65px);
-
-    font-weight:1000;
-
-    line-height:1;
-}
-
-.banner-content h2 span{
+.title h2 span{
     color:var(--gold);
 }
 
-.banner-content p{
-
-    margin-top:15px;
-
-    color:#ddd;
-
-    font-size:11px;
-
+.title p{
+    margin-top:8px;
+    color:#999;
+    font-size:9px;
     letter-spacing:4px;
 }
 
+/* ================= WORLDS ================= */
 
-/* =====================================================
-   HIGHLIGHT CARDS
-===================================================== */
-
-.highlight-grid{
-
-    width:92%;
-
-    max-width:1350px;
-
+.worlds{
+    max-width:1270px;
     margin:auto;
-
     display:grid;
-
-    grid-template-columns:
-    repeat(3,1fr);
-
-    gap:20px;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
 }
 
-.highlight{
-
-    min-height:270px;
-
-    position:relative;
-
+.world{
+    height:245px;
+    border:1px solid rgba(244,181,28,.45);
+    border-radius:7px;
     overflow:hidden;
-
-    border-radius:10px;
-
-    border:
-    1px solid rgba(214,170,69,.3);
+    position:relative;
+    background:#111;
+    transition:.35s;
 }
 
-.highlight img{
-
-    width:100%;
-    height:100%;
-
-    object-fit:cover;
-
-    transition:.6s;
+.world:hover{
+    transform:translateY(-7px);
+    border-color:var(--gold);
+    box-shadow:0 15px 35px rgba(0,0,0,.7);
 }
 
-.highlight:hover img{
-    transform:scale(1.08);
-}
-
-.highlight-content{
-
+.world-bg{
     position:absolute;
-
-    left:0;
-    right:0;
-    bottom:0;
-
-    padding:25px;
-
-    background:
-    linear-gradient(
-        transparent,
-        rgba(0,0,0,.95)
-    );
-}
-
-.highlight-content h3{
-
-    font-size:23px;
-
-    font-weight:1000;
-}
-
-.highlight-content p{
-
-    color:#bbb;
-
-    font-size:10px;
-
-    margin-top:5px;
-}
-
-
-/* =====================================================
-   STORY
-===================================================== */
-
-.story{
-
-    min-height:430px;
-
-    background:
-    url(
-    'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1800&q=90'
-    );
-
+    inset:0;
     background-size:cover;
-
     background-position:center;
 }
 
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer{
-
-    background:#030303;
-
-    padding:55px 6% 20px;
-
-    border-top:
-    1px solid rgba(214,170,69,.3);
+.world-bg:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(0deg,#000,transparent 70%);
 }
 
-.footer-grid{
-
-    max-width:1350px;
-
-    margin:auto;
-
-    display:grid;
-
-    grid-template-columns:
-    1.4fr 1fr 1fr 1fr;
-
-    gap:40px;
+.event{
+    background-image:url("https://images.bhaskarassets.com/web2images/1884/2025/08/16/pant-7_1755364337.png");
 }
 
-.footer-logo{
-
-    font-size:28px;
-
-    font-weight:1000;
+.academy{
+    background-image:url("https://cdn.nemzetisport.hu/2024/03/zoxMzhDLLFiJfv0jsBzRF6omrelbe_nCEG743kDZ7Zw/fill/1347/758/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50LzZhNDQ5NmNkMTAxMTRlZTc5MmFmZjZmZWRlOWFlNmNh.webp");
 }
 
-.footer-logo span{
-    color:var(--gold);
+.adventure{
+    background-image:url("https://www.pelago.com/img/products/IN-India/72-hours-jungle-survival-learn-to-thrive/f201a080-4a4e-41bb-9329-94e8f49f7e91_72-hours-jungle-survival-learn-to-thrive-xlarge.jpg");
 }
 
-footer h3{
-
-    color:var(--gold);
-
-    font-size:12px;
-
-    letter-spacing:2px;
-
-    margin-bottom:15px;
+.tours{
+    background-image:url("https://storage.justwravel.com/listing-seo/original/cropped/-JustWravel-1734446141-buran-ghati-trek-JustWravel-1720683139-bhuran-ghati4.png.webp");
 }
 
-footer p,
-footer a{
-
-    color:#999;
-
-    font-size:11px;
-
-    line-height:1.9;
+.media{
+    background-image:url("https://dt7v1i9vyp3mf.cloudfront.net/styles/news_large/s3/imagelibrary/L/Laura_03-PRVWJRPFVb_jLQtRuUUW10BvPTa990eg.jpg");
 }
 
-.social{
+.world-info{
+    position:absolute;
+    z-index:2;
+    left:10px;
+    right:10px;
+    bottom:12px;
+    text-align:center;
+}
 
+.world-info h3{
+    font-size:16px;
+}
+
+.world-info p{
+    font-size:8px;
+    color:#ccc;
+    margin:6px 0 10px;
+    letter-spacing:1px;
+}
+
+.mini{
+    display:inline-block;
+    padding:7px 17px;
+    border:1px solid var(--gold);
+    border-radius:20px;
+    font-size:9px;
+}
+
+.mini:hover{
+    background:var(--gold);
+    color:#000;
+}
+
+/* ================= MOVEMENT ================= */
+
+.movement{
+    min-height:290px;
     display:flex;
-
-    gap:8px;
-
-    margin-top:10px;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background-image:
+        linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.75)),
+        url("https://static.justwravel.com/images/cgnfe1hd/production/18d6ab89f240f7d2b1f0ab71191b422eccd27f3a-938x850.webp?fm=webp");
+    background-size:cover;
+    background-position:center;
+    border-top:1px solid rgba(244,181,28,.4);
+    border-bottom:1px solid rgba(244,181,28,.4);
 }
 
-.social a{
+.movement-content{
+    padding:20px;
+}
 
-    width:32px;
-    height:32px;
+.movement-small{
+    font-size:17px;
+    letter-spacing:2px;
+}
 
-    border:
-    1px solid #555;
+.movement h2{
+    font-size:clamp(42px,6vw,72px);
+    line-height:1;
+    margin:7px 0 12px;
+}
 
-    border-radius:50%;
+.movement h2 span{
+    color:var(--gold);
+}
 
-    display:grid;
+.movement p{
+    color:#ddd;
+    font-size:9px;
+    letter-spacing:3px;
+}
 
-    place-items:center;
-
-    color:white;
-
+.watch{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin-top:20px;
+    font-size:10px;
     font-weight:bold;
 }
 
-.copyright{
-
-    max-width:1350px;
-
-    margin:35px auto 0;
-
-    padding-top:18px;
-
-    border-top:1px solid #222;
-
-    text-align:center;
-
-    color:#666;
-
-    font-size:9px;
+.play{
+    width:38px;
+    height:38px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid var(--gold);
+    border-radius:50%;
+    color:var(--gold);
 }
 
+/* ================= HIGHLIGHTS ================= */
 
-/* =====================================================
-   SCROLL ANIMATION
-===================================================== */
+.highlight-grid{
+    max-width:1270px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
+}
+
+.highlight{
+    height:175px;
+    position:relative;
+    overflow:hidden;
+    border:1px solid rgba(244,181,28,.45);
+    border-radius:6px;
+}
+
+.highlight-bg{
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+}
+
+.highlight-bg:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(0deg,#000,transparent 70%);
+}
+
+.afth{
+    background-image:url("https://media.bolatimes.com/thumbs/2022/06/24/84897-timnas-india/730x480-img-84897-timnas-india.jpg");
+}
+
+.kashmir{
+    background-image:url("https://www.nathanhortonphotography.com/wp-content/uploads/2023/01/Kashmir.jpg");
+}
+
+.nature{
+    background-image:url("https://www.pelago.com/img/products/IN-India/72-hours-jungle-survival-learn-to-thrive/f201a080-4a4e-41bb-9329-94e8f49f7e91_72-hours-jungle-survival-learn-to-thrive-xlarge.jpg");
+}
+
+.songs{
+    background-image:url("https://dt7v1i9vyp3mf.cloudfront.net/styles/news_large/s3/imagelibrary/L/Laura_03-PRVWJRPFVb_jLQtRuUUW10BvPTa990eg.jpg");
+}
+
+.films{
+    background-image:url("https://images.squarespace-cdn.com/content/v1/61293ed44bb2be424728402e/1655543945581-VVKJ4FP9BS860I7ZP2RT/ARC-Green-Production-Services-reduced-v2.jpeg");
+}
+
+.highlight-play{
+    position:absolute;
+    z-index:3;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:34px;
+    height:34px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid #fff;
+    border-radius:50%;
+}
+
+.highlight-info{
+    position:absolute;
+    z-index:4;
+    left:10px;
+    right:10px;
+    bottom:10px;
+    text-align:center;
+}
+
+.highlight-info h3{
+    font-size:13px;
+}
+
+.highlight-info p{
+    font-size:8px;
+    color:var(--gold);
+    margin-top:5px;
+}
+
+/* ================= BIG BANNER ================= */
+
+.bigger{
+    min-height:280px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    background-image:
+        linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.75)),
+        url("https://storage.justwravel.com/listing-seo/original/cropped/-JustWravel-1734446141-buran-ghati-trek-JustWravel-1720683139-bhuran-ghati4.png.webp");
+    background-size:cover;
+    background-position:center;
+    border-top:1px solid rgba(244,181,28,.4);
+    border-bottom:1px solid rgba(244,181,28,.4);
+}
+
+.bigger h2{
+    font-size:clamp(34px,5vw,62px);
+    line-height:1;
+}
+
+.bigger h2 span{
+    color:var(--gold);
+}
+
+.bigger p{
+    color:#ddd;
+    font-size:9px;
+    letter-spacing:3px;
+    margin:12px 0;
+}
+
+/* ================= STORIES ================= */
+
+.story-grid{
+    max-width:1270px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:10px;
+}
+
+.story{
+    height:210px;
+    position:relative;
+    overflow:hidden;
+    border:1px solid rgba(244,181,28,.4);
+    border-radius:6px;
+}
+
+.story-bg{
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-position:center;
+}
+
+.story-bg:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(0deg,#000,transparent 70%);
+}
+
+.story1{
+    background-image:url("https://images.bhaskarassets.com/web2images/1884/2025/08/16/pant-7_1755364337.png");
+}
+
+.story2{
+    background-image:url("https://www.yhaindia.org/assets/images/hero-img2-trimmed.jpg");
+}
+
+.story3{
+    background-image:url("https://www.pelago.com/img/products/IN-India/72-hours-jungle-survival-learn-to-thrive/f201a080-4a4e-41bb-9329-94e8f49f7e91_72-hours-jungle-survival-learn-to-thrive-xlarge.jpg");
+}
+
+.story4{
+    background-image:url("https://media.bolatimes.com/thumbs/2022/06/24/84897-timnas-india/730x480-img-84897-timnas-india.jpg");
+}
+
+.story5{
+    background-image:url("https://images.squarespace-cdn.com/content/v1/61293ed44bb2be424728402e/1655543945581-VVKJ4FP9BS860I7ZP2RT/ARC-Green-Production-Services-reduced-v2.jpeg");
+}
+
+.story-play{
+    position:absolute;
+    z-index:3;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:36px;
+    height:36px;
+    border:1px solid #fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.story-info{
+    position:absolute;
+    z-index:4;
+    bottom:10px;
+    left:10px;
+    right:10px;
+    text-align:center;
+}
+
+.story-info p{
+    font-size:9px;
+    font-style:italic;
+}
+
+.story-info small{
+    color:var(--gold);
+    font-size:8px;
+}
+
+/* ================= PARTNERS ================= */
+
+.partners{
+    background:#050505;
+}
+
+.partner-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:12px;
+}
+
+.partner{
+    height:90px;
+    background:#fff;
+    color:#333;
+    border-radius:6px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    font-weight:bold;
+    font-size:12px;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+    background:#020202;
+    border-top:1px solid rgba(244,181,28,.4);
+    padding:45px 20px 15px;
+}
+
+.footer-grid{
+    max-width:1250px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.2fr 1.4fr 1fr 1.2fr;
+    gap:30px;
+}
+
+.footer-title{
+    color:var(--gold);
+    font-size:11px;
+    letter-spacing:2px;
+    margin-bottom:15px;
+}
+
+.footer p,
+.footer-contact{
+    font-size:10px;
+    line-height:1.7;
+    color:#aaa;
+}
+
+.footer-contact{
+    margin-bottom:9px;
+}
+
+.footer-social{
+    display:flex;
+    gap:8px;
+}
+
+.footer-social a{
+    width:34px;
+    height:34px;
+    background:#fff;
+    color:#111;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:6px;
+    font-weight:bold;
+}
+
+.footer-note{
+    color:var(--gold);
+    font-family:cursive;
+    font-size:24px;
+    font-style:italic;
+    transform:rotate(-4deg);
+    margin-top:15px;
+}
+
+.copyright{
+    max-width:1250px;
+    margin:25px auto 0;
+    padding-top:15px;
+    border-top:1px solid #222;
+    display:flex;
+    justify-content:space-between;
+    color:#666;
+    font-size:8px;
+}
+
+/* ================= TOP ================= */
+
+.top{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:1px solid var(--gold);
+    background:#050505;
+    color:var(--gold);
+    cursor:pointer;
+    z-index:999;
+    display:none;
+}
+
+/* ================= REVEAL ================= */
 
 .reveal{
-
     opacity:0;
-
-    transform:
-    translateY(45px);
-
-    transition:
-    opacity .9s ease,
-    transform .9s ease;
+    transform:translateY(25px);
+    transition:.7s;
 }
 
 .reveal.show{
-
     opacity:1;
-
-    transform:
-    translateY(0);
+    transform:translateY(0);
 }
 
+/* ================= TABLET ================= */
 
-/* =====================================================
-   MOBILE
-===================================================== */
-
-@media(max-width:1000px){
-
-    .menu{
-        gap:0;
-    }
-
-    .menu a{
-        padding:9px 7px;
-        font-size:9px;
-    }
+@media(max-width:1100px){
 
     .header-contact{
         display:none;
     }
 
-    .logo{
-        min-width:190px;
+    .nav a{
+        padding:9px 7px;
+        font-size:9px;
     }
 
-    .stats{
-        grid-template-columns:
-        repeat(3,1fr);
+    .worlds,
+    .highlight-grid,
+    .story-grid{
+        grid-template-columns:repeat(3,1fr);
     }
 
-    .highlight-grid{
-        grid-template-columns:
-        repeat(2,1fr);
+    .partner-grid{
+        grid-template-columns:repeat(3,1fr);
     }
 
     .footer-grid{
-        grid-template-columns:
-        repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
     }
-
 }
 
+/* ================= MOBILE ================= */
 
-@media(max-width:700px){
+@media(max-width:750px){
 
-    header{
-        height:70px;
+    .header{
+        height:64px;
     }
 
-    .nav{
-        height:70px;
-    }
-
-    .logo-mark{
-        font-size:38px;
-    }
-
-    .logo-text strong{
-        font-size:14px;
-    }
-
-    .mobile-menu{
-        display:block;
+    .header-inner{
+        width:94%;
     }
 
     .menu{
-
-        display:none;
-
-        position:absolute;
-
-        top:70px;
-
-        left:0;
-
-        width:100%;
-
-        padding:10px 20px 20px;
-
-        background:
-        rgba(5,5,5,.98);
-
-        flex-direction:column;
-
-        align-items:stretch;
-
-        border-bottom:
-        1px solid var(--gold);
+        display:block;
     }
 
-    .menu.open{
+    .nav{
+        display:none;
+        position:absolute;
+        top:64px;
+        left:0;
+        width:100%;
+        background:#050505;
+        border-bottom:1px solid var(--gold);
+        flex-direction:column;
+        padding:8px 0;
+    }
+
+    .nav.open{
         display:flex;
     }
 
-    .menu a{
-        padding:14px;
-
-        font-size:12px;
-
-        border-bottom:
-        1px solid #222;
+    .nav a{
+        width:100%;
+        text-align:center;
+        padding:13px;
+        font-size:11px;
     }
 
     .hero{
-        padding-top:70px;
-        min-height:600px;
-    }
-
-    .slide{
-        padding-top:70px;
+        margin-top:64px;
+        height:560px;
+        min-height:560px;
     }
 
     .hero-content{
-        left:8%;
-        right:8%;
+        align-items:flex-end;
+        padding-bottom:65px;
     }
 
-    .hero-title{
-        font-size:55px;
+    .hero h1{
+        font-size:48px;
     }
 
-    .hero-small{
-        font-size:43px;
+    .hero-text p{
+        font-size:13px;
+        max-width:320px;
     }
 
-    .stats{
-        grid-template-columns:
-        repeat(2,1fr);
+    .stats-inner{
+        grid-template-columns:repeat(2,1fr);
     }
 
     .stat{
-        border-bottom:
-        1px solid rgba(214,170,69,.18);
+        min-height:85px;
     }
 
-    .world-card{
-        flex-basis:245px;
-        height:330px;
+    .stat:last-child{
+        grid-column:span 2;
     }
 
-    .highlight-grid{
-        grid-template-columns:1fr;
+    .section{
+        padding:40px 14px;
+    }
+
+    .worlds,
+    .highlight-grid,
+    .story-grid{
+        display:flex;
+        overflow-x:auto;
+        scrollbar-width:none;
+    }
+
+    .worlds::-webkit-scrollbar,
+    .highlight-grid::-webkit-scrollbar,
+    .story-grid::-webkit-scrollbar{
+        display:none;
+    }
+
+    .world{
+        min-width:235px;
+    }
+
+    .highlight{
+        min-width:240px;
+    }
+
+    .story{
+        min-width:240px;
+    }
+
+    .partner-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 
     .footer-grid{
         grid-template-columns:1fr;
     }
 
+    .copyright{
+        flex-direction:column;
+        gap:8px;
+        text-align:center;
+    }
 }
 
+/* ================= SMALL PHONE ================= */
 
-@media(max-width:450px){
+@media(max-width:420px){
 
-    .hero-title{
-        font-size:45px;
+    .logo-name{
+        font-size:12px;
     }
 
-    .hero-description{
-        font-size:13px;
+    .logo-symbol{
+        width:38px;
+        font-size:31px;
     }
 
-    .hero-arrow{
-        width:36px;
-        height:36px;
+    .hero h1{
+        font-size:42px;
     }
 
-    .hero-left{
-        left:10px;
+    .hand{
+        font-size:37px;
     }
 
-    .hero-right{
-        right:10px;
+    .hero{
+        height:530px;
+        min-height:530px;
     }
 
-    .section{
-        padding:50px 0;
+    .movement h2{
+        font-size:40px;
     }
 
 }
@@ -1271,467 +1086,27 @@ footer a{
 </style>
 </head>
 
-
 <body>
 
+<!-- ================= HEADER ================= -->
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+<header class="header">
 
-<header>
-
-<div class="nav">
-
+<div class="header-inner">
 
 <a href="index.html" class="logo">
 
-<div class="logo-mark">
-A
-</div>
+<div class="logo-symbol">A</div>
 
-<div class="logo-text">
-
-<strong>
-THE APEX 99
-</strong>
-
-<small>
-WHO IS THE ONE
-</small>
-
+<div>
+<div class="logo-name">THE APEX 99</div>
+<div class="logo-tag">WHO IS THE ONE</div>
 </div>
 
 </a>
 
-
-<button
-class="mobile-menu"
-id="mobileMenu">
-
-☰
-
-</button>
-
-
-<nav class="menu" id="mainMenu">
-
-<a
-class="active"
-href="index.html">
-HOME
-</a>
-
-<a href="about.html">
-ABOUT
-</a>
-
-<a href="events.html">
-EVENTS
-</a>
-
-<a href="tours.html">
-TOURS
-</a>
-
-<a href="media.html">
-MEDIA
-</a>
-
-<a href="academy.html">
-ACADEMY
-</a>
-
-<a href="adventure.html">
-ADVENTURE
-</a>
-
-<a href="contact.html">
-CONTACT
-</a>
-
-</nav>
-
-
-<a
-class="header-contact"
-href="https://wa.me/917439718014">
-
-WHATSAPP
-
-</a>
-
-
-</div>
-
-</header>
-
-
-
-<!-- =====================================================
-     HERO SLIDER
-===================================================== -->
-
-<section class="hero">
-
-
-<!-- SLIDE 1 -->
-
-<div
-class="slide active"
-style="
-background-image:url(
-'https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=90'
-);
-">
-
-<div class="hero-content">
-
-<div class="hero-small">
-Explore
-</div>
-
-<h1 class="hero-title">
-THE
-<br>
-<span>WORLD</span>
-</h1>
-
-<div class="hero-line"></div>
-
-<p class="hero-description">
-Discover places, people and unforgettable experiences with
-THE APEX 99.
-</p>
-
-<a
-href="tours.html"
-class="hero-button">
-
-EXPLORE TOURS →
-
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- SLIDE 2 -->
-
-<div
-class="slide"
-style="
-background-image:url(
-'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=2000&q=90'
-);
-">
-
-<div class="hero-content">
-
-<div class="hero-small">
-Experience
-</div>
-
-<h1 class="hero-title">
-THE
-<br>
-<span>EVENT</span>
-</h1>
-
-<div class="hero-line"></div>
-
-<p class="hero-description">
-Where talent meets opportunity. Be part of exciting events
-and competitions.
-</p>
-
-<a
-href="events.html"
-class="hero-button">
-
-VIEW EVENTS →
-
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- SLIDE 3 -->
-
-<div
-class="slide"
-style="
-background-image:url(
-'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=2000&q=90'
-);
-">
-
-<div class="hero-content">
-
-<div class="hero-small">
-Create
-</div>
-
-<h1 class="hero-title">
-YOUR
-<br>
-<span>STORY</span>
-</h1>
-
-<div class="hero-line"></div>
-
-<p class="hero-description">
-Music, films, podcasts, interviews and professional
-creative production.
-</p>
-
-<a
-href="media.html"
-class="hero-button">
-
-EXPLORE MEDIA →
-
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- ARROWS -->
-
-<button
-class="hero-arrow hero-left"
-id="prev">
-
-‹
-
-</button>
-
-
-<button
-class="hero-arrow hero-right"
-id="next">
-
-›
-
-</button>
-
-
-<!-- DOTS -->
-
-<div class="hero-dots">
-
-<span class="active"></span>
-
-<span></span>
-
-<span></span>
-
-</div>
-
-
-</section>
-
-
-
-<!-- =====================================================
-     STATS
-===================================================== -->
-
-<section class="stats reveal">
-
-<div class="stat">
-
-<strong>
-10000+
-</strong>
-
-<span>
-PEOPLE CONNECTED
-</span>
-
-</div>
-
-
-<div class="stat">
-
-<strong>
-50+
-</strong>
-
-<span>
-EVENTS
-</span>
-
-</div>
-
-
-<div class="stat">
-
-<strong>
-5000+
-</strong>
-
-<span>
-OPPORTUNITIES
-</span>
-
-</div>
-
-
-<div class="stat">
-
-<strong>
-100+
-</strong>
-
-<span>
-EXPERIENCES
-</span>
-
-</div>
-
-
-<div class="stat">
-
-<strong>
-99
-</strong>
-
-<span>
-ONE VISION
-</span>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     EXPLORE OUR WORLDS
-===================================================== -->
-
-<section class="section reveal">
-
-<div class="section-title">
-
-<h2>
-EXPLORE
-<span>
-OUR WORLDS
-</span>
-</h2>
-
-<p>
-ONE BRAND • MANY EXPERIENCES
-</p>
-
-</div>
-
-
-<div class="world-slider">
-
-
-<button
-class="world-arrow left"
-onclick="slideCards('worldTrack',-1)">
-
-‹
-
-</button>
-
-
-<div
-class="world-track"
-id="worldTrack">
-
-
-<!-- EVENT -->
-
-<article class="world-card">
-
-<img
-src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=900&q=90"
-alt="Event">
-
-<div class="world-overlay">
-
-<div class="world-number">
-01 / EXPERIENCE
-</div>
-
-<h3>
-EVENT
-</h3>
-
-<p>
-Events, competitions and opportunities.
-</p>
-
-<a
-class="explore"
-href="events.html">
-
-EXPLORE →
-
-</a>
-
-</div>
-
-</article>
-
-
-
-<!-- TOUR -->
-
-<article class="world-card">
-
-<img
-src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=90"
-alt="Tour">
-
-<div class="world-overlay">
-
-<div class="world-number">
-02 / JOURNEY
-</div>
-
-<h3>
-TOUR
-</h3>
-
-<p>
-Travel. Discover. Create memories.
-</p>
-
-<a
-class="explore"
-href="tours.html">
-
-EXPLORE →
-
-</a>
-
-</div>
-
-</article>
-
-
-
-<!-- MEDIA -->
-
-<article class="world-card">
-
-<img
-src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=900&q=90"
-alt="Media">
-
-<div class="world-overl
+<nav class="nav" id="nav">
+
+<a href="index.html" class="active">HOME</a>
+<a href="about.html">ABOUT</a>
+<a href="events.html">EVENT
