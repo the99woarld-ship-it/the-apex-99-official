@@ -1,34 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>THE APEX 99 | WHO IS THE ONE</title>
 
 <meta name="description"
-content="THE APEX 99 — Events, Tours, Media, Adventure and Academy">
-
-<link rel="stylesheet" href="style.css">
+content="THE APEX 99 - Events, Tours, Media, Adventure and Academy">
 
 <style>
 
-/* =========================================================
-   THE APEX 99 - HOME PAGE
-   CINEMATIC • BLACK • GOLD • PROFESSIONAL
-   ========================================================= */
-
-:root{
-    --gold:#d8a83e;
-    --gold2:#f4d77e;
-    --black:#050505;
-    --dark:#0b0d10;
-    --white:#fff;
-    --muted:#b9bec5;
-    --line:rgba(216,168,62,.38);
-}
+/* =====================================================
+   RESET
+===================================================== */
 
 *{
+    margin:0;
+    padding:0;
     box-sizing:border-box;
 }
 
@@ -37,10 +27,9 @@ html{
 }
 
 body{
-    margin:0;
-    background:#050505;
-    color:#fff;
     font-family:Arial,Helvetica,sans-serif;
+    background:#050505;
+    color:white;
     overflow-x:hidden;
 }
 
@@ -50,246 +39,103 @@ a{
 }
 
 
-/* =========================================================
-   HEADER
-   ========================================================= */
+/* =====================================================
+   COLORS
+===================================================== */
 
-.apex-header{
+:root{
+    --gold:#d6aa45;
+    --lightgold:#f4d985;
+    --dark:#050505;
+    --dark2:#101010;
+    --grey:#bcbcbc;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
     position:fixed;
-    z-index:9999;
     top:0;
     left:0;
     width:100%;
-    height:72px;
-    background:rgba(3,4,5,.93);
-    backdrop-filter:blur(12px);
-    border-bottom:1px solid rgba(216,168,62,.28);
+    height:78px;
+    z-index:9999;
+
+    background:rgba(5,5,5,.92);
+    backdrop-filter:blur(15px);
+
+    border-bottom:
+    1px solid rgba(214,170,69,.35);
 }
 
-.apex-nav{
-    height:72px;
+.nav{
     width:94%;
     max-width:1450px;
+    height:78px;
     margin:auto;
+
     display:flex;
     align-items:center;
-    gap:25px;
 }
 
-.apex-brand{
+
+/* LOGO */
+
+.logo{
     display:flex;
     align-items:center;
-    gap:9px;
-    min-width:230px;
+    gap:10px;
+
+    min-width:240px;
 }
 
-.apex-mark{
-    font-size:43px;
-    line-height:1;
-    font-weight:1000;
-    color:var(--gold);
-    font-style:italic;
-    text-shadow:0 0 14px rgba(216,168,62,.25);
-}
-
-.apex-brand strong{
-    display:block;
-    font-size:17px;
-    letter-spacing:.7px;
-}
-
-.apex-brand small{
-    display:block;
-    font-size:7px;
-    letter-spacing:2px;
-    color:#ddd;
-    margin-top:3px;
-}
-
-.apex-menu{
-    display:flex;
-    align-items:center;
-    gap:4px;
-    margin-left:auto;
-}
-
-.apex-menu a{
-    font-size:11px;
-    font-weight:800;
-    text-transform:uppercase;
-    padding:11px 13px;
-    border-radius:7px;
-    transition:.25s;
-}
-
-.apex-menu a:hover,
-.apex-menu a.active{
-    background:linear-gradient(#e3b94f,#b7831d);
-    color:#090909;
-}
-
-.apex-contact{
-    margin-left:10px;
-    display:flex;
-    align-items:center;
-    gap:8px;
-    color:#111;
-    background:#e7b942;
-    border-radius:20px;
-    padding:7px 12px;
+.logo-mark{
+    font-size:48px;
     font-weight:900;
-    font-size:12px;
-}
-
-.apex-contact span{
-    background:#111;
-    color:#fff;
-    border-radius:50%;
-    width:24px;
-    height:24px;
-    display:grid;
-    place-items:center;
-}
-
-.apex-toggle{
-    display:none;
-    background:none;
-    border:0;
-    color:#fff;
-    font-size:28px;
-    margin-left:auto;
-}
-
-
-/* =========================================================
-   HERO SLIDER
-   ========================================================= */
-
-.apex-hero{
-    position:relative;
-    height:calc(100vh - 72px);
-    min-height:560px;
-    margin-top:72px;
-    overflow:hidden;
-}
-
-.apex-slide{
-    position:absolute;
-    inset:0;
-    opacity:0;
-    transform:scale(1.07);
-    transition:
-        opacity .9s ease,
-        transform 5s ease;
-
-    background-size:cover;
-    background-position:center;
-}
-
-.apex-slide.active{
-    opacity:1;
-    transform:scale(1);
-}
-
-.apex-slide:after{
-    content:"";
-    position:absolute;
-    inset:0;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,.75),
-            rgba(0,0,0,.15) 62%,
-            rgba(0,0,0,.45)
-        ),
-
-        linear-gradient(
-            0deg,
-            rgba(0,0,0,.6),
-            transparent 35%
-        );
-}
-
-
-/* HERO CONTENT */
-
-.hero-content{
-    position:absolute;
-    z-index:2;
-
-    left:7%;
-    top:50%;
-
-    transform:translateY(-50%);
-
-    max-width:610px;
-}
-
-.script{
-    font-family:cursive;
     font-style:italic;
 
-    color:var(--gold2);
+    color:var(--gold);
 
-    font-size:clamp(38px,5vw,72px);
-
-    line-height:.9;
+    text-shadow:
+    0 0 20px rgba(214,170,69,.25);
 }
 
-.hero-content h1{
-    font-size:clamp(48px,7vw,90px);
-
-    line-height:.9;
-
-    margin:8px 0 18px;
-
-    font-weight:1000;
-
+.logo-text strong{
+    display:block;
+    font-size:18px;
     letter-spacing:1px;
 }
 
-.hero-content h1 span{
-    color:#fff;
-}
+.logo-text small{
+    display:block;
+    margin-top:3px;
 
-.hero-content p{
-    font-weight:800;
+    color:#aaa;
+
+    font-size:7px;
     letter-spacing:3px;
-    font-size:13px;
-}
-
-.hero-content .quote{
-    font-size:15px;
-    line-height:1.6;
-    letter-spacing:0;
-    font-weight:500;
-
-    color:#eee;
-
-    max-width:410px;
 }
 
 
-/* BUTTON */
+/* MENU */
 
-.gold-btn{
-    display:inline-block;
+.menu{
+    margin-left:auto;
 
-    margin-top:18px;
+    display:flex;
+    align-items:center;
+    gap:3px;
+}
 
-    padding:12px 21px;
+.menu a{
+    padding:11px 13px;
 
-    border:1px solid var(--gold2);
+    border-radius:6px;
 
-    border-radius:22px;
-
-    background:rgba(0,0,0,.35);
-
-    color:#fff;
-
-    font-size:12px;
-
+    font-size:11px;
     font-weight:900;
 
     text-transform:uppercase;
@@ -297,339 +143,656 @@ a{
     transition:.3s;
 }
 
-.gold-btn:hover{
-    background:var(--gold);
-    color:#090909;
+.menu a:hover,
+.menu a.active{
+    color:#000;
 
-    transform:translateY(-2px);
+    background:
+    linear-gradient(
+        135deg,
+        var(--lightgold),
+        var(--gold)
+    );
+}
+
+
+/* CONTACT */
+
+.header-contact{
+    margin-left:15px;
+
+    padding:8px 13px;
+
+    background:var(--gold);
+
+    color:#000;
+
+    border-radius:30px;
+
+    font-size:11px;
+    font-weight:900;
+}
+
+
+/* MOBILE BUTTON */
+
+.mobile-menu{
+    display:none;
+
+    margin-left:auto;
+
+    border:0;
+
+    background:none;
+
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+
+    position:relative;
+
+    height:100vh;
+
+    min-height:650px;
+
+    padding-top:78px;
+
+    overflow:hidden;
+}
+
+
+/* SLIDES */
+
+.slide{
+
+    position:absolute;
+
+    inset:0;
+
+    padding-top:78px;
+
+    opacity:0;
+
+    transform:scale(1.08);
+
+    transition:
+    opacity 1s ease,
+    transform 6s ease;
+
+    background-size:cover;
+    background-position:center;
+}
+
+.slide.active{
+    opacity:1;
+    transform:scale(1);
+}
+
+
+/* DARK OVERLAY */
+
+.slide::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(0,0,0,.82),
+        rgba(0,0,0,.28),
+        rgba(0,0,0,.55)
+    );
+
+}
+
+.slide::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:35%;
+
+    background:
+    linear-gradient(
+        transparent,
+        rgba(0,0,0,.8)
+    );
+
+}
+
+
+/* HERO TEXT */
+
+.hero-content{
+
+    position:absolute;
+
+    z-index:5;
+
+    left:8%;
+
+    top:50%;
+
+    transform:translateY(-45%);
+
+    max-width:700px;
+}
+
+.hero-small{
+
+    color:var(--lightgold);
+
+    font-family:cursive;
+
+    font-size:clamp(38px,5vw,70px);
+
+    font-style:italic;
+
+    margin-bottom:10px;
+}
+
+.hero-title{
+
+    font-size:
+    clamp(55px,8vw,105px);
+
+    line-height:.88;
+
+    font-weight:1000;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    text-shadow:
+    0 5px 25px rgba(0,0,0,.7);
+}
+
+.hero-title span{
+    color:var(--lightgold);
+}
+
+.hero-line{
+
+    width:90px;
+
+    height:3px;
+
+    margin:22px 0;
+
+    background:
+    linear-gradient(
+        90deg,
+        var(--gold),
+        transparent
+    );
+}
+
+.hero-description{
+
+    max-width:480px;
+
+    color:#eee;
+
+    font-size:15px;
+
+    line-height:1.7;
+}
+
+.hero-button{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:14px 27px;
+
+    border-radius:30px;
+
+    border:
+    1px solid var(--lightgold);
+
+    background:
+    linear-gradient(
+        135deg,
+        var(--lightgold),
+        var(--gold)
+    );
+
+    color:#080808;
+
+    font-size:12px;
+
+    font-weight:1000;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+}
+
+.hero-button:hover{
+
+    transform:
+    translateY(-4px);
+
+    box-shadow:
+    0 10px 30px
+    rgba(214,170,69,.3);
 }
 
 
 /* HERO ARROWS */
 
-.slide-arrow{
+.hero-arrow{
+
     position:absolute;
 
-    z-index:4;
+    z-index:10;
 
     top:50%;
 
     transform:translateY(-50%);
 
-    width:42px;
-    height:42px;
+    width:45px;
+    height:45px;
 
-    border:1px solid #fff;
+    border:
+    1px solid rgba(255,255,255,.7);
 
     border-radius:50%;
 
-    background:rgba(0,0,0,.3);
+    background:
+    rgba(0,0,0,.35);
 
-    color:#fff;
+    color:white;
 
-    font-size:22px;
+    font-size:25px;
 
     cursor:pointer;
+
+    transition:.3s;
 }
 
-.slide-arrow.left{
-    left:18px;
+.hero-arrow:hover{
+    background:var(--gold);
+    color:#000;
 }
 
-.slide-arrow.right{
-    right:18px;
+.hero-left{
+    left:22px;
+}
+
+.hero-right{
+    right:22px;
 }
 
 
 /* HERO DOTS */
 
 .hero-dots{
+
     position:absolute;
 
-    z-index:4;
+    z-index:10;
 
-    bottom:20px;
+    bottom:35px;
 
-    left:50%;
-
-    transform:translateX(-50%);
+    left:8%;
 
     display:flex;
 
-    gap:7px;
+    gap:8px;
 }
 
-.hero-dots i{
+.hero-dots span{
+
     width:8px;
     height:8px;
 
-    border-radius:50%;
+    border-radius:20px;
 
-    background:#fff;
+    background:white;
 
-    opacity:.45;
+    opacity:.5;
 
     cursor:pointer;
+
+    transition:.3s;
 }
 
-.hero-dots i.active{
-    background:var(--gold2);
+.hero-dots span.active{
+
+    width:35px;
 
     opacity:1;
 
-    width:24px;
-
-    border-radius:10px;
+    background:var(--gold);
 }
 
 
-/* =========================================================
-   STATISTICS
-   ========================================================= */
+/* =====================================================
+   STATS
+===================================================== */
 
 .stats{
+
     display:grid;
 
     grid-template-columns:
-        repeat(6,1fr);
+    repeat(5,1fr);
 
-    background:#050505;
+    background:#080808;
 
-    border-top:1px solid var(--line);
+    border-top:
+    1px solid rgba(214,170,69,.25);
 
-    border-bottom:1px solid var(--line);
+    border-bottom:
+    1px solid rgba(214,170,69,.25);
 }
 
 .stat{
-    padding:17px 8px;
 
     text-align:center;
 
-    border-right:1px solid var(--line);
+    padding:22px 10px;
 
-    min-height:78px;
+    border-right:
+    1px solid rgba(214,170,69,.18);
 }
 
-.stat b{
+.stat strong{
+
     display:block;
 
-    color:var(--gold2);
+    color:var(--lightgold);
 
-    font-size:25px;
+    font-size:28px;
 
     font-weight:1000;
 }
 
 .stat span{
+
     display:block;
+
+    margin-top:5px;
+
+    color:#aaa;
 
     font-size:9px;
 
-    letter-spacing:1px;
-
-    color:#ddd;
-
-    font-weight:800;
-
-    margin-top:4px;
-}
-
-
-/* =========================================================
-   GENERAL SECTIONS
-   ========================================================= */
-
-.section{
-    background:#050505;
-
-    padding:35px 0 42px;
-
-    border-bottom:
-        1px solid rgba(216,168,62,.2);
-}
-
-.section-head{
-    text-align:center;
-
-    margin-bottom:23px;
-}
-
-.section-head h2{
-    margin:0;
-
-    color:#f1c95c;
-
-    font-size:30px;
-
     letter-spacing:2px;
 
+    font-weight:800;
+}
+
+
+/* =====================================================
+   SECTION
+===================================================== */
+
+.section{
+
+    padding:65px 0;
+
+    background:#070707;
+
+    border-bottom:
+    1px solid rgba(214,170,69,.15);
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:35px;
+}
+
+.section-title h2{
+
+    font-size:
+    clamp(30px,4vw,48px);
+
     font-weight:1000;
+
+    letter-spacing:2px;
 
     text-transform:uppercase;
 }
 
-.section-head h2 span{
-    color:#fff;
+.section-title h2 span{
+    color:var(--gold);
 }
 
-.section-head p{
-    margin:7px 0 0;
+.section-title p{
 
-    color:#bbb;
+    margin-top:9px;
+
+    color:#999;
 
     font-size:10px;
 
-    letter-spacing:3px;
+    letter-spacing:4px;
 
     font-weight:800;
 }
 
 
-/* =========================================================
-   CARD CAROUSEL
-   ========================================================= */
+/* =====================================================
+   WORLD CARDS
+===================================================== */
 
-.carousel-wrap{
-    position:relative;
+.world-slider{
 
-    width:94%;
+    width:92%;
 
-    max-width:1400px;
+    max-width:1350px;
 
     margin:auto;
+
+    position:relative;
 }
 
-.cards{
+.world-track{
+
     display:flex;
 
-    gap:12px;
+    gap:20px;
 
     overflow-x:auto;
 
     scroll-behavior:smooth;
 
     scrollbar-width:none;
-
-    padding:2px 2px 8px;
 }
 
-.cards::-webkit-scrollbar{
+.world-track::-webkit-scrollbar{
     display:none;
 }
 
-.card{
-    flex:0 0 220px;
-
-    background:#0c0d0f;
-
-    border:
-        1px solid rgba(216,168,62,.35);
-
-    border-radius:8px;
-
-    overflow:hidden;
-
-    box-shadow:
-        0 8px 25px #000;
-
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-6px);
-
-    border-color:var(--gold2);
-}
-
-.card img{
-    width:100%;
-
-    height:142px;
-
-    object-fit:cover;
-
-    display:block;
-}
-
-.card-body{
-    text-align:center;
-
-    padding:12px 8px 15px;
-}
-
-.card h3{
-    font-size:14px;
-
-    margin:0 0 5px;
-
-    font-weight:1000;
-}
-
-.card p{
-    font-size:8px;
-
-    color:#bbb;
-
-    letter-spacing:.8px;
-
-    margin:0 0 10px;
-}
-
-.card .gold-btn{
-    margin:0;
-
-    padding:7px 14px;
-
-    font-size:9px;
-}
-
-
-/* CARD ARROWS */
-
-.car-arrow{
-    position:absolute;
-
-    top:45%;
-
-    transform:translateY(-50%);
-
-    z-index:3;
-
-    width:31px;
-    height:31px;
-
-    border-radius:50%;
-
-    border:1px solid #fff;
-
-    background:#080808;
-
-    color:#fff;
-
-    cursor:pointer;
-}
-
-.car-arrow.l{
-    left:-4px;
-}
-
-.car-arrow.r{
-    right:-4px;
-}
-
-
-/* =========================================================
-   LARGE STORY BANNER
-   ========================================================= */
-
-.banner{
-    min-height:250px;
+.world-card{
 
     position:relative;
 
-    background-size:cover;
+    flex:
+    0 0 285px;
 
-    background-position:center;
+    height:365px;
+
+    overflow:hidden;
+
+    border-radius:12px;
+
+    border:
+    1px solid rgba(214,170,69,.35);
+
+    background:#111;
+
+    transition:.4s;
+}
+
+.world-card:hover{
+
+    transform:
+    translateY(-10px);
+
+    border-color:
+    var(--lightgold);
+}
+
+.world-card img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:
+    transform .6s;
+}
+
+.world-card:hover img{
+    transform:scale(1.1);
+}
+
+.world-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    padding:25px;
+
+    background:
+    linear-gradient(
+        transparent 25%,
+        rgba(0,0,0,.9)
+    );
+}
+
+.world-number{
+
+    color:var(--gold);
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    font-weight:900;
+}
+
+.world-overlay h3{
+
+    margin:7px 0;
+
+    font-size:28px;
+
+    font-weight:1000;
+
+    letter-spacing:1px;
+}
+
+.world-overlay p{
+
+    color:#ccc;
+
+    font-size:11px;
+
+    line-height:1.5;
+
+    margin-bottom:15px;
+}
+
+.explore{
+
+    display:inline-block;
+
+    width:max-content;
+
+    padding:9px 16px;
+
+    border:
+    1px solid var(--gold);
+
+    border-radius:20px;
+
+    color:var(--lightgold);
+
+    font-size:9px;
+
+    font-weight:900;
+
+    letter-spacing:1px;
+}
+
+.world-arrow{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    z-index:5;
+
+    width:38px;
+    height:38px;
+
+    border-radius:50%;
+
+    border:1px solid white;
+
+    background:#050505;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+.world-arrow.left{
+    left:-18px;
+}
+
+.world-arrow.right{
+    right:-18px;
+}
+
+
+/* =====================================================
+   BIG BANNER
+===================================================== */
+
+.big-banner{
+
+    min-height:330px;
+
+    position:relative;
 
     display:flex;
 
@@ -639,314 +802,402 @@ a{
 
     text-align:center;
 
-    padding:35px 20px;
+    background-size:cover;
 
-    border-bottom:
-        1px solid var(--line);
+    background-position:center;
+
+    overflow:hidden;
 }
 
-.banner:before{
+.big-banner::before{
+
     content:"";
 
     position:absolute;
 
     inset:0;
 
-    background:rgba(0,0,0,.52);
+    background:
+    linear-gradient(
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.65)
+    );
 }
 
 .banner-content{
+
     position:relative;
 
     z-index:2;
+
 }
 
-.banner h2{
-    margin:0;
+.banner-content h2{
 
-    font-size:34px;
+    font-size:
+    clamp(35px,5vw,65px);
 
     font-weight:1000;
+
+    line-height:1;
 }
 
-.banner h2 span{
-    color:var(--gold2);
+.banner-content h2 span{
+    color:var(--gold);
 }
 
-.banner p{
+.banner-content p{
+
+    margin-top:15px;
+
+    color:#ddd;
+
     font-size:11px;
 
-    letter-spacing:3px;
-
-    color:#eee;
-
-    font-weight:800;
-}
-
-.banner .gold-btn{
-    margin-top:8px;
-}
-
-.story{
-    min-height:280px;
-
-    background-image:
-        url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85');
+    letter-spacing:4px;
 }
 
 
-/* =========================================================
-   PEOPLE
-   ========================================================= */
+/* =====================================================
+   HIGHLIGHT CARDS
+===================================================== */
 
-.people-card img{
-    height:145px;
-}
+.highlight-grid{
 
-.people-card .card-body{
-    min-height:86px;
-}
+    width:92%;
 
-.people-card p{
-    font-size:10px;
-
-    color:#fff;
-
-    letter-spacing:0;
-
-    line-height:1.4;
-}
-
-
-/* =========================================================
-   PARTNERS
-   ========================================================= */
-
-.partners .card{
-    background:#fff;
-
-    border-color:#ddd;
-}
-
-.partners .card img{
-    height:100px;
-
-    object-fit:contain;
-
-    padding:12px;
-
-    background:#fff;
-}
-
-.partners .card-body{
-    display:none;
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-.footer{
-    background:#050505;
-
-    padding:45px 5% 18px;
-
-    border-top:
-        1px solid var(--line);
-}
-
-.footer-grid{
-    max-width:1300px;
+    max-width:1350px;
 
     margin:auto;
 
     display:grid;
 
     grid-template-columns:
-        1.2fr 1.3fr 1fr 1fr;
+    repeat(3,1fr);
 
-    gap:35px;
+    gap:20px;
 }
 
-.footer h3{
-    color:var(--gold2);
+.highlight{
 
-    font-size:13px;
+    min-height:270px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:10px;
+
+    border:
+    1px solid rgba(214,170,69,.3);
+}
+
+.highlight img{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.6s;
+}
+
+.highlight:hover img{
+    transform:scale(1.08);
+}
+
+.highlight-content{
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    padding:25px;
+
+    background:
+    linear-gradient(
+        transparent,
+        rgba(0,0,0,.95)
+    );
+}
+
+.highlight-content h3{
+
+    font-size:23px;
+
+    font-weight:1000;
+}
+
+.highlight-content p{
+
+    color:#bbb;
+
+    font-size:10px;
+
+    margin-top:5px;
+}
+
+
+/* =====================================================
+   STORY
+===================================================== */
+
+.story{
+
+    min-height:430px;
+
+    background:
+    url(
+    'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1800&q=90'
+    );
+
+    background-size:cover;
+
+    background-position:center;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+    background:#030303;
+
+    padding:55px 6% 20px;
+
+    border-top:
+    1px solid rgba(214,170,69,.3);
+}
+
+.footer-grid{
+
+    max-width:1350px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    1.4fr 1fr 1fr 1fr;
+
+    gap:40px;
+}
+
+.footer-logo{
+
+    font-size:28px;
+
+    font-weight:1000;
+}
+
+.footer-logo span{
+    color:var(--gold);
+}
+
+footer h3{
+
+    color:var(--gold);
+
+    font-size:12px;
 
     letter-spacing:2px;
+
+    margin-bottom:15px;
 }
 
-.footer p,
-.footer a{
-    color:#bbb;
+footer p,
+footer a{
+
+    color:#999;
 
     font-size:11px;
 
     line-height:1.9;
 }
 
-.footer-brand{
-    font-size:25px;
+.social{
 
-    font-weight:1000;
-}
+    display:flex;
 
-.footer-brand span{
-    color:var(--gold2);
+    gap:8px;
+
+    margin-top:10px;
 }
 
 .social a{
-    display:inline-grid;
 
-    place-items:center;
-
-    width:31px;
-    height:31px;
+    width:32px;
+    height:32px;
 
     border:
-        1px solid #555;
+    1px solid #555;
 
     border-radius:50%;
 
-    margin-right:5px;
+    display:grid;
 
-    color:#fff;
+    place-items:center;
+
+    color:white;
+
+    font-weight:bold;
 }
 
-.copy{
+.copyright{
+
+    max-width:1350px;
+
+    margin:35px auto 0;
+
+    padding-top:18px;
+
     border-top:1px solid #222;
-
-    margin-top:28px;
-
-    padding-top:15px;
 
     text-align:center;
 
-    color:#777;
+    color:#666;
 
     font-size:9px;
 }
 
 
-/* =========================================================
-   REVEAL ANIMATION
-   ========================================================= */
+/* =====================================================
+   SCROLL ANIMATION
+===================================================== */
 
 .reveal{
+
     opacity:0;
 
-    transform:translateY(35px);
+    transform:
+    translateY(45px);
 
     transition:
-        opacity .8s ease,
-        transform .8s ease;
+    opacity .9s ease,
+    transform .9s ease;
 }
 
 .reveal.show{
+
     opacity:1;
 
-    transform:none;
+    transform:
+    translateY(0);
 }
 
 
-/* =========================================================
-   TABLET
-   ========================================================= */
+/* =====================================================
+   MOBILE
+===================================================== */
 
-@media(max-width:1050px){
+@media(max-width:1000px){
 
-    .apex-brand{
-        min-width:190px;
-    }
-
-    .apex-menu{
+    .menu{
         gap:0;
     }
 
-    .apex-menu a{
-        padding:10px 8px;
-
+    .menu a{
+        padding:9px 7px;
         font-size:9px;
     }
 
-    .apex-contact{
+    .header-contact{
         display:none;
+    }
+
+    .logo{
+        min-width:190px;
+    }
+
+    .stats{
+        grid-template-columns:
+        repeat(3,1fr);
+    }
+
+    .highlight-grid{
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns:
+        repeat(2,1fr);
     }
 
 }
 
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
+@media(max-width:700px){
 
-@media(max-width:800px){
-
-    .apex-nav{
-        width:92%;
+    header{
+        height:70px;
     }
 
-    .apex-brand{
-        min-width:auto;
+    .nav{
+        height:70px;
     }
 
-    .apex-brand strong{
+    .logo-mark{
+        font-size:38px;
+    }
+
+    .logo-text strong{
         font-size:14px;
     }
 
-    .apex-mark{
-        font-size:34px;
-    }
-
-    .apex-toggle{
+    .mobile-menu{
         display:block;
     }
 
-    .apex-menu{
+    .menu{
+
         display:none;
 
         position:absolute;
 
-        top:72px;
+        top:70px;
 
         left:0;
 
         width:100%;
 
-        background:#080808;
+        padding:10px 20px 20px;
 
-        padding:10px 20px;
+        background:
+        rgba(5,5,5,.98);
 
         flex-direction:column;
 
         align-items:stretch;
 
         border-bottom:
-            1px solid var(--line);
+        1px solid var(--gold);
     }
 
-    .apex-menu.open{
+    .menu.open{
         display:flex;
     }
 
-    .apex-menu a{
+    .menu a{
+        padding:14px;
+
         font-size:12px;
 
-        padding:13px;
-
         border-bottom:
-            1px solid #222;
+        1px solid #222;
     }
 
-    .stats{
-        grid-template-columns:
-            repeat(3,1fr);
+    .hero{
+        padding-top:70px;
+        min-height:600px;
     }
 
-    .stat{
-        border-bottom:
-            1px solid var(--line);
+    .slide{
+        padding-top:70px;
     }
 
     .hero-content{
@@ -954,84 +1205,65 @@ a{
         right:8%;
     }
 
-    .hero-content h1{
-        font-size:54px;
+    .hero-title{
+        font-size:55px;
     }
 
-    .script{
-        font-size:48px;
+    .hero-small{
+        font-size:43px;
     }
 
-    .card{
-        flex-basis:185px;
-    }
-
-    .card img{
-        height:120px;
-    }
-
-    .footer-grid{
+    .stats{
         grid-template-columns:
-            1fr 1fr;
+        repeat(2,1fr);
     }
 
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
-
-@media(max-width:520px){
-
-    .apex-hero{
-        min-height:520px;
+    .stat{
+        border-bottom:
+        1px solid rgba(214,170,69,.18);
     }
 
-    .hero-content h1{
-        font-size:46px;
+    .world-card{
+        flex-basis:245px;
+        height:330px;
     }
 
-    .hero-content p{
-        font-size:10px;
-
-        letter-spacing:2px;
-    }
-
-    .hero-content .quote{
-        font-size:13px;
-    }
-
-    .section{
-        padding:28px 0 35px;
-    }
-
-    .section-head h2{
-        font-size:24px;
-    }
-
-    .section-head p{
-        font-size:8px;
-    }
-
-    .card{
-        flex-basis:165px;
-    }
-
-    .card img{
-        height:105px;
-    }
-
-    .card h3{
-        font-size:12px;
+    .highlight-grid{
+        grid-template-columns:1fr;
     }
 
     .footer-grid{
         grid-template-columns:1fr;
     }
 
-    .footer{
-        padding-top:35px;
+}
+
+
+@media(max-width:450px){
+
+    .hero-title{
+        font-size:45px;
+    }
+
+    .hero-description{
+        font-size:13px;
+    }
+
+    .hero-arrow{
+        width:36px;
+        height:36px;
+    }
+
+    .hero-left{
+        left:10px;
+    }
+
+    .hero-right{
+        right:10px;
+    }
+
+    .section{
+        padding:50px 0;
     }
 
 }
@@ -1045,99 +1277,90 @@ a{
 
 <!-- =====================================================
      HEADER
-     ===================================================== -->
+===================================================== -->
 
-<header class="apex-header">
+<header>
 
-<div class="apex-nav">
+<div class="nav">
 
-<a class="apex-brand" href="index.html">
 
-<span class="apex-mark">A</span>
+<a href="index.html" class="logo">
 
-<span>
+<div class="logo-mark">
+A
+</div>
 
-<strong>THE APEX 99</strong>
+<div class="logo-text">
 
-<small>WHO IS THE ONE</small>
+<strong>
+THE APEX 99
+</strong>
 
-</span>
+<small>
+WHO IS THE ONE
+</small>
+
+</div>
 
 </a>
 
 
 <button
-class="apex-toggle"
-id="menuBtn">
+class="mobile-menu"
+id="mobileMenu">
 
 ☰
 
 </button>
 
 
-<nav class="apex-menu" id="menu">
+<nav class="menu" id="mainMenu">
 
-<a class="active"
+<a
+class="active"
 href="index.html">
-
-Home
-
+HOME
 </a>
 
 <a href="about.html">
-
-About
-
+ABOUT
 </a>
 
 <a href="events.html">
-
-Events
-
-</a>
-
-<a href="academy.html">
-
-Academy
-
-</a>
-
-<a href="adventure.html">
-
-Adventure
-
+EVENTS
 </a>
 
 <a href="tours.html">
-
-Tours
-
+TOURS
 </a>
 
 <a href="media.html">
+MEDIA
+</a>
 
-Media
+<a href="academy.html">
+ACADEMY
+</a>
 
+<a href="adventure.html">
+ADVENTURE
 </a>
 
 <a href="contact.html">
-
-Contact
-
+CONTACT
 </a>
 
 </nav>
 
 
 <a
-class="apex-contact"
+class="header-contact"
 href="https://wa.me/917439718014">
 
-<span>☎</span>
-
-7439718014
+WHATSAPP
 
 </a>
+
 
 </div>
 
@@ -1147,45 +1370,43 @@ href="https://wa.me/917439718014">
 
 <!-- =====================================================
      HERO SLIDER
-     ===================================================== -->
+===================================================== -->
 
-<section
-class="apex-hero"
-id="hero">
+<section class="hero">
 
 
 <!-- SLIDE 1 -->
 
 <div
-class="apex-slide active"
+class="slide active"
 style="
-background-image:url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=90');
+background-image:url(
+'https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=90'
+);
 ">
 
 <div class="hero-content">
 
-<div class="script">
+<div class="hero-small">
 Explore
 </div>
 
-<h1>
-THE <span>WORLD</span>
+<h1 class="hero-title">
+THE
+<br>
+<span>WORLD</span>
 </h1>
 
-<p>
-TRAVEL | PEOPLE | MEMORIES
+<div class="hero-line"></div>
+
+<p class="hero-description">
+Discover places, people and unforgettable experiences with
+THE APEX 99.
 </p>
 
-<div class="quote">
-
-“Not just destinations,
-but a bigger perspective.”
-
-</div>
-
 <a
-class="gold-btn"
-href="tours.html">
+href="tours.html"
+class="hero-button">
 
 EXPLORE TOURS →
 
@@ -1200,34 +1421,35 @@ EXPLORE TOURS →
 <!-- SLIDE 2 -->
 
 <div
-class="apex-slide"
+class="slide"
 style="
-background-image:url('https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=2000&q=90');
+background-image:url(
+'https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=2000&q=90'
+);
 ">
 
 <div class="hero-content">
 
-<div class="script">
-Create
+<div class="hero-small">
+Experience
 </div>
 
-<h1>
-THE <span>EXPERIENCE</span>
+<h1 class="hero-title">
+THE
+<br>
+<span>EVENT</span>
 </h1>
 
-<p>
-EVENTS | TALENT | OPPORTUNITIES
+<div class="hero-line"></div>
+
+<p class="hero-description">
+Where talent meets opportunity. Be part of exciting events
+and competitions.
 </p>
 
-<div class="quote">
-
-“Where talent meets opportunity.”
-
-</div>
-
 <a
-class="gold-btn"
-href="events.html">
+href="events.html"
+class="hero-button">
 
 VIEW EVENTS →
 
@@ -1242,34 +1464,35 @@ VIEW EVENTS →
 <!-- SLIDE 3 -->
 
 <div
-class="apex-slide"
+class="slide"
 style="
-background-image:url('https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=2000&q=90');
+background-image:url(
+'https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=2000&q=90'
+);
 ">
 
 <div class="hero-content">
 
-<div class="script">
+<div class="hero-small">
 Create
 </div>
 
-<h1>
-YOUR <span>STORY</span>
+<h1 class="hero-title">
+YOUR
+<br>
+<span>STORY</span>
 </h1>
 
-<p>
-MEDIA | MUSIC | FILM | PODCAST
+<div class="hero-line"></div>
+
+<p class="hero-description">
+Music, films, podcasts, interviews and professional
+creative production.
 </p>
 
-<div class="quote">
-
-“Stories have the power to move people.”
-
-</div>
-
 <a
-class="gold-btn"
-href="media.html">
+href="media.html"
+class="hero-button">
 
 EXPLORE MEDIA →
 
@@ -1280,8 +1503,11 @@ EXPLORE MEDIA →
 </div>
 
 
+
+<!-- ARROWS -->
+
 <button
-class="slide-arrow left"
+class="hero-arrow hero-left"
 id="prev">
 
 ‹
@@ -1290,7 +1516,7 @@ id="prev">
 
 
 <button
-class="slide-arrow right"
+class="hero-arrow hero-right"
 id="next">
 
 ›
@@ -1298,31 +1524,34 @@ id="next">
 </button>
 
 
-<div
-class="hero-dots"
-id="dots">
+<!-- DOTS -->
 
-<i class="active"></i>
+<div class="hero-dots">
 
-<i></i>
+<span class="active"></span>
 
-<i></i>
+<span></span>
+
+<span></span>
 
 </div>
+
 
 </section>
 
 
 
 <!-- =====================================================
-     STATISTICS
-     ===================================================== -->
+     STATS
+===================================================== -->
 
 <section class="stats reveal">
 
 <div class="stat">
 
-<b>10000+</b>
+<strong>
+10000+
+</strong>
 
 <span>
 PEOPLE CONNECTED
@@ -1333,7 +1562,9 @@ PEOPLE CONNECTED
 
 <div class="stat">
 
-<b>50+</b>
+<strong>
+50+
+</strong>
 
 <span>
 EVENTS
@@ -1344,7 +1575,9 @@ EVENTS
 
 <div class="stat">
 
-<b>5000+</b>
+<strong>
+5000+
+</strong>
 
 <span>
 OPPORTUNITIES
@@ -1355,10 +1588,12 @@ OPPORTUNITIES
 
 <div class="stat">
 
-<b>★</b>
+<strong>
+100+
+</strong>
 
 <span>
-REAL EXPERIENCES
+EXPERIENCES
 </span>
 
 </div>
@@ -1366,21 +1601,12 @@ REAL EXPERIENCES
 
 <div class="stat">
 
-<b>◉</b>
+<strong>
+99
+</strong>
 
 <span>
-BIGGER IMPACT
-</span>
-
-</div>
-
-
-<div class="stat">
-
-<b>∞</b>
-
-<span>
-TOGETHER
+ONE VISION
 </span>
 
 </div>
@@ -1391,28 +1617,32 @@ TOGETHER
 
 <!-- =====================================================
      EXPLORE OUR WORLDS
-     ===================================================== -->
+===================================================== -->
 
 <section class="section reveal">
 
-<div class="section-head">
+<div class="section-title">
 
 <h2>
-EXPLORE <span>OUR WORLDS</span>
+EXPLORE
+<span>
+OUR WORLDS
+</span>
 </h2>
 
 <p>
-DIFFERENT PATHS. ONE VISION.
+ONE BRAND • MANY EXPERIENCES
 </p>
 
 </div>
 
 
-<div class="carousel-wrap">
+<div class="world-slider">
+
 
 <button
-class="car-arrow l"
-onclick="move('worlds',-1)">
+class="world-arrow left"
+onclick="slideCards('worldTrack',-1)">
 
 ‹
 
@@ -1420,30 +1650,34 @@ onclick="move('worlds',-1)">
 
 
 <div
-class="cards"
-id="worlds">
+class="world-track"
+id="worldTrack">
 
 
 <!-- EVENT -->
 
-<article class="card">
+<article class="world-card">
 
 <img
-src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=700&q=85"
-alt="Events">
+src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=900&q=90"
+alt="Event">
 
-<div class="card-body">
+<div class="world-overlay">
+
+<div class="world-number">
+01 / EXPERIENCE
+</div>
 
 <h3>
-EVENTS
+EVENT
 </h3>
 
 <p>
-WHERE TALENT MEETS OPPORTUNITY
+Events, competitions and opportunities.
 </p>
 
 <a
-class="gold-btn"
+class="explore"
 href="events.html">
 
 EXPLORE →
@@ -1455,88 +1689,31 @@ EXPLORE →
 </article>
 
 
-<!-- ACADEMY -->
 
-<article class="card">
+<!-- TOUR -->
+
+<article class="world-card">
 
 <img
-src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=85"
-alt="Academy">
+src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=90"
+alt="Tour">
 
-<div class="card-body">
+<div class="world-overlay">
 
-<h3>
-ACADEMY
-</h3>
-
-<p>
-TRAIN | LEARN | GROW
-</p>
-
-<a
-class="gold-btn"
-href="academy.html">
-
-EXPLORE →
-
-</a>
-
+<div class="world-number">
+02 / JOURNEY
 </div>
 
-</article>
-
-
-<!-- ADVENTURE -->
-
-<article class="card">
-
-<img
-src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=700&q=85"
-alt="Adventure">
-
-<div class="card-body">
-
 <h3>
-ADVENTURE
+TOUR
 </h3>
 
 <p>
-CHALLENGE | EXPLORE | SURVIVE
+Travel. Discover. Create memories.
 </p>
 
 <a
-class="gold-btn"
-href="adventure.html">
-
-EXPLORE →
-
-</a>
-
-</div>
-
-</article>
-
-
-<!-- TOURS -->
-
-<article class="card">
-
-<img
-src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=85"
-alt="Tours">
-
-<div class="card-body">
-
-<h3>
-TOURS
-</h3>
-
-<p>
-PLACES | PEOPLE | MEMORIES
-</p>
-
-<a
-class="gold-btn"
+class="explore"
 href="tours.html">
 
 EXPLORE →
@@ -1548,92 +1725,13 @@ EXPLORE →
 </article>
 
 
+
 <!-- MEDIA -->
 
-<article class="card">
+<article class="world-card">
 
 <img
-src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=700&q=85"
+src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=900&q=90"
 alt="Media">
 
-<div class="card-body">
-
-<h3>
-MEDIA
-</h3>
-
-<p>
-STORIES | MUSIC | PODCAST | PRODUCTION
-</p>
-
-<a
-class="gold-btn"
-href="media.html">
-
-EXPLORE →
-
-</a>
-
-</div>
-
-</article>
-
-
-</div>
-
-
-<button
-class="car-arrow r"
-onclick="move('worlds',1)">
-
-›
-
-</button>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     MOVEMENT BANNER
-     ===================================================== -->
-
-<section
-class="banner story reveal">
-
-<div class="banner-content">
-
-<h2>
-
-MORE THAN A BRAND
-
-<br>
-
-<span>
-A MOVEMENT
-</span>
-
-</h2>
-
-<p>
-PEOPLE • PASSION • PURPOSE • IMPACT
-</p>
-
-<a
-class="gold-btn"
-href="about.html">
-
-▶ WATCH OUR STORY
-
-</a>
-
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     UPCOMING H
+<div class="world-overl
