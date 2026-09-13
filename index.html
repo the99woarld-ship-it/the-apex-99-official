@@ -1,350 +1,574 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>THE APEX 99 | THE APEX 99</title>
+<title>THE APEX 99 | WHO IS THE ONE</title>
 
-<meta name="description" content="THE APEX 99 — Professional Event, Competition, Adventure and Tour Organizer">
+<meta name="description"
+content="THE APEX 99 — Events, Tours, Media, Adventure and Sports Academy">
 
 <link rel="stylesheet" href="style.css">
 
 <style>
 
-/* =====================================================
-   THE APEX 99 HOME PAGE MOVING SLIDER
-   ===================================================== */
+/* =========================================================
+   THE APEX 99 - NEW HOME PAGE
+   LIGHT • PREMIUM • CINEMATIC
+   ========================================================= */
 
-.apex-slider-section{
-    padding:70px 0;
-    background:#0a0a0a;
-    overflow:hidden;
+:root{
+    --gold:#d6a84f;
+    --gold-light:#f1d58a;
+    --blue:#1267b1;
+    --dark:#111827;
+    --white:#ffffff;
+    --light:#f7f8fa;
 }
 
-.apex-slider-heading{
-    text-align:center;
-    margin-bottom:35px;
+*{
+    box-sizing:border-box;
 }
 
-.apex-slider-heading h2{
-    margin:0 0 10px;
-    font-size:34px;
-    font-weight:800;
-    letter-spacing:1px;
+html{
+    scroll-behavior:smooth;
 }
 
-.apex-slider-heading p{
-    color:#aaa;
+body{
     margin:0;
-    font-size:15px;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff;
+    color:#172033;
+    overflow-x:hidden;
 }
 
-.apex-slider{
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.apex-header{
+    position:fixed;
+    top:0;
+    left:0;
     width:100%;
-    overflow:hidden;
-    position:relative;
+    z-index:9999;
+    background:rgba(255,255,255,.94);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid rgba(0,0,0,.08);
+    box-shadow:0 5px 25px rgba(0,0,0,.08);
 }
 
-.apex-track{
+.apex-nav{
+    width:92%;
+    max-width:1400px;
+    margin:auto;
+    height:78px;
     display:flex;
-    width:max-content;
-    gap:22px;
-    animation:apexMove 28s linear infinite;
+    align-items:center;
+    justify-content:space-between;
 }
 
-.apex-slider:hover .apex-track{
-    animation-play-state:paused;
-}
-
-.apex-card{
-    width:300px;
-    min-width:300px;
-    background:#151515;
-    border:1px solid rgba(216,170,69,.35);
-    border-radius:16px;
-    overflow:hidden;
-    box-shadow:0 10px 30px rgba(0,0,0,.45);
-    transition:.3s ease;
-}
-
-.apex-card:hover{
-    transform:translateY(-8px);
-    border-color:#d8aa45;
-}
-
-.apex-card-image{
-    width:100%;
-    height:190px;
-    overflow:hidden;
-    background:#111;
-}
-
-.apex-card-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
-    transition:transform .5s ease;
-}
-
-.apex-card:hover .apex-card-image img{
-    transform:scale(1.08);
-}
-
-.apex-card-content{
-    padding:20px;
-}
-
-.apex-card-content h3{
-    margin:0 0 9px;
-    color:#f5d27a;
-    font-size:21px;
-}
-
-.apex-card-content p{
-    color:#bbb;
-    font-size:14px;
-    line-height:1.6;
-    margin:0 0 16px;
-}
-
-.apex-card-btn{
-    display:inline-block;
+.apex-logo{
     text-decoration:none;
-    color:#111;
-    background:#d8aa45;
-    padding:10px 17px;
-    border-radius:7px;
-    font-size:13px;
-    font-weight:700;
+    font-size:25px;
+    font-weight:900;
+    letter-spacing:1px;
+    color:#111827;
+    white-space:nowrap;
+}
+
+.apex-logo span{
+    color:var(--gold);
+}
+
+.apex-menu{
+    display:flex;
+    align-items:center;
+    gap:27px;
+}
+
+.apex-menu a{
+    text-decoration:none;
+    color:#182235;
+    font-size:14px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:.6px;
+    position:relative;
+    padding:8px 0;
     transition:.3s;
 }
 
-.apex-card-btn:hover{
-    background:#f5d27a;
+.apex-menu a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:0;
+    height:2px;
+    background:var(--gold);
+    transition:.3s;
 }
 
-@keyframes apexMove{
-
-    from{
-        transform:translateX(0);
-    }
-
-    to{
-        transform:translateX(-50%);
-    }
-
+.apex-menu a:hover{
+    color:#b48732;
 }
 
-/* TOUR SLIDER */
-
-.apex-track.tours-track{
-    animation-duration:31s;
-    animation-direction:reverse;
-}
-
-/* COMPETITION SLIDER */
-
-.apex-track.competition-track{
-    animation-duration:27s;
-}
-
-/* ACADEMY SLIDER */
-
-.apex-track.academy-track{
-    animation-duration:30s;
-    animation-direction:reverse;
-}
-
-
-/* =====================================================
-   CUSTOMER REVIEW SLIDER
-   ===================================================== */
-
-.apex-reviews-section{
-    padding:80px 0;
-    background:#080808;
-    overflow:hidden;
-    border-top:1px solid rgba(216,170,69,.15);
-    border-bottom:1px solid rgba(216,170,69,.15);
-}
-
-.apex-reviews-heading{
-    text-align:center;
-    margin-bottom:40px;
-}
-
-.apex-reviews-heading .review-stars-top{
-    color:#f5d27a;
-    font-size:25px;
-    letter-spacing:5px;
-    margin-bottom:12px;
-}
-
-.apex-reviews-heading h2{
-    margin:0 0 10px;
-    color:#fff;
-    font-size:34px;
-    font-weight:800;
-    letter-spacing:1px;
-}
-
-.apex-reviews-heading p{
-    color:#aaa;
-    margin:0;
-    font-size:15px;
-}
-
-.apex-review-slider{
+.apex-menu a:hover::after{
     width:100%;
-    overflow:hidden;
 }
 
-.apex-review-track{
+.apex-hamburger{
+    display:none;
+    border:0;
+    background:none;
+    font-size:30px;
+    cursor:pointer;
+    color:#172033;
+}
+
+
+/* =========================================================
+   MAIN CINEMATIC SECTIONS
+   ========================================================= */
+
+.apex-home{
+    width:100%;
+}
+
+.apex-scene{
+    position:relative;
+    min-height:100vh;
+    width:100%;
     display:flex;
-    width:max-content;
-    gap:22px;
-    animation:apexReviewMove 32s linear infinite;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    scroll-margin-top:78px;
 }
 
-.apex-review-slider:hover .apex-review-track{
-    animation-play-state:paused;
+.apex-scene-bg{
+    position:absolute;
+    inset:-7%;
+    background-size:cover;
+    background-position:center;
+    z-index:0;
+    transform:scale(1.04);
+    transition:
+        transform 1.4s cubic-bezier(.2,.7,.2,1),
+        filter 1.4s ease;
 }
 
-.apex-review-card{
-    width:330px;
-    min-width:330px;
-    min-height:245px;
-    background:linear-gradient(145deg,#171717,#0e0e0e);
-    border:1px solid rgba(216,170,69,.35);
-    border-radius:18px;
-    padding:28px 24px;
-    box-sizing:border-box;
-    box-shadow:0 10px 30px rgba(0,0,0,.45);
+.apex-scene.active .apex-scene-bg{
+    transform:scale(1);
+}
+
+/* light cinematic overlay */
+
+.apex-scene::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    z-index:1;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.55) 0%,
+            rgba(0,0,0,.22) 48%,
+            rgba(0,0,0,.48) 100%
+        );
+}
+
+.apex-scene::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:35%;
+    z-index:1;
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.32)
+    );
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.apex-content{
+    position:relative;
+    z-index:3;
+    width:92%;
+    max-width:1150px;
+    margin:auto;
     text-align:center;
-    transition:.3s ease;
+    color:white;
+    padding:120px 20px 80px;
 }
 
-.apex-review-card:hover{
-    transform:translateY(-7px);
-    border-color:#d8aa45;
-}
-
-.apex-review-stars{
-    color:#f5d27a;
-    font-size:23px;
-    letter-spacing:3px;
+.apex-small-title{
+    font-size:16px;
+    font-weight:900;
+    letter-spacing:5px;
+    text-transform:uppercase;
     margin-bottom:18px;
-}
-
-.apex-review-card p{
-    color:#ddd;
-    font-size:14px;
-    line-height:1.7;
-    margin:0 0 18px;
-}
-
-.apex-review-card h3{
     color:#fff;
-    font-size:17px;
-    margin:0 0 5px;
+    text-shadow:0 2px 12px rgba(0,0,0,.4);
 }
 
-.apex-review-card small{
-    color:#d8aa45;
-    font-size:12px;
-    letter-spacing:1px;
+.apex-title{
+    margin:0;
+    font-size:clamp(48px,8vw,105px);
+    line-height:.95;
+    font-weight:1000;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    text-shadow:
+        0 4px 20px rgba(0,0,0,.5),
+        0 2px 4px rgba(0,0,0,.4);
 }
 
-.apex-review-button-area{
-    text-align:center;
-    margin-top:42px;
+.apex-title span{
+    color:var(--gold-light);
 }
 
-.apex-review-button{
-    display:inline-block;
+.apex-description{
+    max-width:720px;
+    margin:25px auto 32px;
+    font-size:18px;
+    line-height:1.7;
+    font-weight:600;
+    color:#fff;
+    text-shadow:0 2px 10px rgba(0,0,0,.5);
+}
+
+.apex-button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:185px;
+    padding:15px 27px;
+    border-radius:50px;
     text-decoration:none;
-    color:#111;
-    background:#d8aa45;
-    padding:14px 28px;
-    border-radius:8px;
+    color:#151515;
+    background:linear-gradient(
+        135deg,
+        #f5df9c,
+        #d4a746
+    );
     font-size:14px;
+    font-weight:900;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+    transition:.35s ease;
+}
+
+.apex-button:hover{
+    transform:translateY(-5px) scale(1.03);
+    box-shadow:0 16px 35px rgba(0,0,0,.35);
+}
+
+.apex-button-light{
+    margin-left:10px;
+    color:#fff;
+    background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.7);
+    backdrop-filter:blur(8px);
+}
+
+.apex-button-light:hover{
+    background:#fff;
+    color:#182235;
+}
+
+
+/* =========================================================
+   INDIVIDUAL SECTION LABEL
+   ========================================================= */
+
+.apex-section-label{
+    position:absolute;
+    top:110px;
+    left:5%;
+    z-index:4;
+    font-size:13px;
+    font-weight:900;
+    letter-spacing:3px;
+    color:#fff;
+    text-transform:uppercase;
+    padding:10px 17px;
+    border-radius:30px;
+    background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.45);
+    backdrop-filter:blur(8px);
+}
+
+
+/* =========================================================
+   SCROLL INDICATOR
+   ========================================================= */
+
+.apex-scroll{
+    position:absolute;
+    bottom:28px;
+    left:50%;
+    transform:translateX(-50%);
+    z-index:5;
+    color:#fff;
+    text-align:center;
+    font-size:11px;
     font-weight:800;
-    letter-spacing:.5px;
-    transition:.3s ease;
+    letter-spacing:3px;
+    text-transform:uppercase;
+    opacity:.9;
 }
 
-.apex-review-button:hover{
-    background:#f5d27a;
-    transform:translateY(-2px);
+.apex-scroll-line{
+    width:1px;
+    height:40px;
+    background:rgba(255,255,255,.75);
+    margin:8px auto 0;
+    animation:scrollLine 1.6s infinite;
 }
 
-@keyframes apexReviewMove{
+@keyframes scrollLine{
 
-    from{
-        transform:translateX(0);
+    0%{
+        transform:scaleY(.3);
+        transform-origin:top;
+        opacity:.3;
     }
 
-    to{
-        transform:translateX(-50%);
+    50%{
+        transform:scaleY(1);
+        opacity:1;
     }
 
+    100%{
+        transform:scaleY(.3);
+        transform-origin:bottom;
+        opacity:.3;
+    }
 }
 
 
-/* =====================================================
+/* =========================================================
+   RIGHT SIDE DOT NAVIGATION
+   ========================================================= */
+
+.apex-dots{
+    position:fixed;
+    right:24px;
+    top:50%;
+    transform:translateY(-50%);
+    z-index:100;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.apex-dot{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:rgba(255,255,255,.6);
+    border:1px solid rgba(0,0,0,.2);
+    cursor:pointer;
+    transition:.3s;
+}
+
+.apex-dot.active{
+    background:var(--gold-light);
+    transform:scale(1.5);
+}
+
+
+/* =========================================================
+   BOTTOM BRAND STRIP
+   ========================================================= */
+
+.apex-brand-strip{
+    background:#fff;
+    text-align:center;
+    padding:30px 15px;
+    border-top:1px solid #eee;
+}
+
+.apex-brand-strip h2{
+    margin:0;
+    font-size:25px;
+    font-weight:1000;
+    letter-spacing:2px;
+    color:#172033;
+}
+
+.apex-brand-strip span{
+    color:var(--gold);
+}
+
+.apex-brand-strip p{
+    margin:8px 0 0;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:2px;
+    color:#777;
+}
+
+
+/* =========================================================
    MOBILE
-   ===================================================== */
+   ========================================================= */
 
-@media(max-width:600px){
+@media(max-width:900px){
 
-    .apex-slider-section{
-        padding:50px 0;
+    .apex-nav{
+        height:70px;
     }
 
-    .apex-slider-heading h2{
-        font-size:27px;
+    .apex-menu{
+        position:absolute;
+        top:70px;
+        left:0;
+        width:100%;
+        background:rgba(255,255,255,.98);
+        backdrop-filter:blur(15px);
+        display:none;
+        flex-direction:column;
+        align-items:stretch;
+        gap:0;
+        padding:10px 25px 20px;
+        box-shadow:0 10px 25px rgba(0,0,0,.1);
     }
 
-    .apex-card{
-        width:260px;
-        min-width:260px;
+    .apex-menu.open{
+        display:flex;
     }
 
-    .apex-card-image{
-        height:165px;
+    .apex-menu a{
+        padding:15px 5px;
+        border-bottom:1px solid #eee;
+        font-size:14px;
     }
 
-    .apex-track{
-        gap:15px;
-        animation-duration:24s;
+    .apex-hamburger{
+        display:block;
     }
 
-    .apex-reviews-section{
-        padding:60px 0;
+    .apex-dots{
+        right:12px;
     }
 
-    .apex-reviews-heading h2{
-        font-size:27px;
+    .apex-section-label{
+        top:92px;
+        left:20px;
+        font-size:10px;
+        letter-spacing:2px;
     }
 
-    .apex-review-track{
-        gap:15px;
-        animation-duration:28s;
+    .apex-content{
+        padding-left:35px;
+        padding-right:35px;
     }
 
-    .apex-review-card{
-        width:285px;
-        min-width:285px;
-        min-height:250px;
+    .apex-title{
+        font-size:clamp(42px,13vw,75px);
+        letter-spacing:1px;
+    }
+
+    .apex-description{
+        font-size:15px;
+        line-height:1.6;
+    }
+
+    .apex-button{
+        min-width:160px;
+        padding:13px 20px;
+        font-size:12px;
+    }
+
+    .apex-button-light{
+        margin-left:4px;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media(max-width:520px){
+
+    .apex-logo{
+        font-size:20px;
+    }
+
+    .apex-content{
+        padding-top:120px;
+    }
+
+    .apex-small-title{
+        font-size:11px;
+        letter-spacing:3px;
+    }
+
+    .apex-title{
+        font-size:45px;
+    }
+
+    .apex-description{
+        font-size:14px;
+        margin-top:20px;
+        margin-bottom:25px;
+    }
+
+    .apex-button{
+        display:flex;
+        width:100%;
+        max-width:250px;
+        margin:8px auto;
+    }
+
+    .apex-button-light{
+        margin:8px auto;
+    }
+
+    .apex-dots{
+        display:none;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media(prefers-reduced-motion:reduce){
+
+    html{
+        scroll-behavior:auto;
+    }
+
+    .apex-scene-bg{
+        transition:none;
+    }
+
+    .apex-scroll-line{
+        animation:none;
     }
 
 }
 
 </style>
-
 </head>
+
 
 <body>
 
@@ -353,1157 +577,490 @@
      HEADER
      ===================================================== -->
 
-<header>
+<header class="apex-header">
 
-<div class="container nav">
+    <div class="apex-nav">
 
-<a class="brand" href="index.html">
-THE APEX <span>99</span>
-</a>
+        <a href="index.html" class="apex-logo">
+            THE APEX <span>99</span>
+        </a>
 
-<button class="menu" aria-label="Menu">
-☰
-</button>
+        <button
+            class="apex-hamburger"
+            id="apexHamburger"
+            aria-label="Open Menu">
+            ☰
+        </button>
 
-<nav>
+        <nav class="apex-menu" id="apexMenu">
 
-<a href="index.html">Home</a>
+            <a href="index.html">Home</a>
 
-<a href="about.html">About</a>
+            <a href="about.html">About</a>
 
-<a href="events.html">Events</a>
+            <a href="events.html">Event</a>
 
-<a href="afth.html">AFTH</a>
+            <a href="tours.html">Tour</a>
 
-<a href="academy.html">Academy</a>
+            <a href="media.html">Media</a>
 
-<a href="adventure.html">Adventure</a>
+            <a href="academy.html">Academy</a>
 
-<a href="tours.html">Tours</a>
+            <a href="adventure.html">Adventure</a>
 
-<a href="competitions.html">Competitions</a>
+            <a href="contact.html">Contact</a>
 
-<a href="register.html">Registration</a>
+        </nav>
 
-<a href="booking.html">Booking</a>
-
-<a href="gallery.html">Gallery</a>
-
-<a href="contact.html">Contact</a>
-
-</nav>
-
-</div>
+    </div>
 
 </header>
 
 
 
-<main>
+<!-- =====================================================
+     RIGHT SIDE DOTS
+     ===================================================== -->
+
+<div class="apex-dots">
+
+    <div class="apex-dot active" data-target="apex-home"></div>
+
+    <div class="apex-dot" data-target="apex-tour"></div>
+
+    <div class="apex-dot" data-target="apex-media"></div>
+
+    <div class="apex-dot" data-target="apex-event"></div>
+
+    <div class="apex-dot" data-target="apex-adventure"></div>
+
+    <div class="apex-dot" data-target="apex-academy"></div>
+
+</div>
+
+
+
+<main class="apex-home">
 
 
 <!-- =====================================================
-     MAIN WEBSITE HERO IMAGE
+     01 - THE APEX 99
      ===================================================== -->
 
 <section
-class="hero"
-style="
-background-image:url('hero.png');
-background-size:cover;
-background-position:center;
-min-height:78vh;
-">
+    class="apex-scene active"
+    id="apex-home">
 
-<div class="container" style="
-min-height:78vh;
-display:flex;
-align-items:flex-end;
-padding-bottom:60px;
-">
-</div>
+    <div
+        class="apex-scene-bg"
+        style="background-image:url('hero.png');">
+    </div>
+
+    <div class="apex-section-label">
+        01 / THE APEX 99
+    </div>
+
+    <div class="apex-content">
+
+        <div class="apex-small-title">
+            WELCOME TO
+        </div>
+
+        <h1 class="apex-title">
+            THE APEX <span>99</span>
+        </h1>
+
+        <p class="apex-description">
+            Events • Tours • Media • Adventure • Academy
+        </p>
+
+        <a
+            href="about.html"
+            class="apex-button">
+            EXPLORE APEX 99 →
+        </a>
+
+    </div>
+
+    <div class="apex-scroll">
+        SCROLL
+        <div class="apex-scroll-line"></div>
+    </div>
 
 </section>
 
 
 
 <!-- =====================================================
-     WHAT WE DO
+     02 - TOUR
      ===================================================== -->
 
-<section>
-
-<div class="container">
-
-<h2 class="section-title">
-What We Do
-</h2>
-
-<p class="section-sub">
-One platform for competitions, football talent hunts,
-adventure challenges, tours and professionally managed events.
-</p>
-
-<div class="grid">
-
-
-<!-- COMPETITIONS -->
-
-<div class="card">
-
-<div class="icon">
-🏆
-</div>
-
-<h3>
-Competitions
-</h3>
-
-<p>
-Talent-focused competitions with structured categories,
-rules and recognition.
-</p>
-
-<a class="gold" href="competitions.html">
-View Competitions →
-</a>
-
-</div>
-
-
-
-<!-- AFTH -->
-
-<div class="card">
-
-<div class="icon">
-⚽
-</div>
-
-<h3>
-AFTH
-</h3>
-
-<p>
-APEX Football Talent Hunt — a platform built to discover football talent.
-</p>
-
-<a class="gold" href="afth.html">
-Explore AFTH →
-</a>
-
-</div>
-
-
-
-<!-- ACADEMY -->
-
-<div class="card">
-
-<div class="icon">
-🏅
-</div>
-
-<h3>
-THE APEX 99 Academy
-</h3>
-
-<p>
-Professional sports training academy with Football,
-Cricket and other sports, residential accommodation,
-fitness, nutrition and expert coaching.
-</p>
-
-<a class="gold" href="academy.html">
-Explore Academy →
-</a>
-
-</div>
-
-
-
-<!-- ADVENTURE -->
-
-<div class="card">
-
-<div class="icon">
-🏕️
-</div>
-
-<h3>
-Adventure
-</h3>
-
-<p>
-Adventure and survival experiences designed for challenge,
-teamwork and memories.
-</p>
-
-<a class="gold" href="adventure.html">
-Explore Adventure →
-</a>
-
-</div>
-
-
-
-<!-- TOURS -->
-
-<div class="card">
-
-<div class="icon">
-✈️
-</div>
-
-<h3>
-Tours
-</h3>
-
-<p>
-Curated travel experiences with packages,
-schedules and booking support.
-</p>
-
-<a class="gold" href="tours.html">
-View Tours →
-</a>
-
-</div>
-
-
-
-<!-- BOOKING -->
-
-<div class="card">
-
-<div class="icon">
-🎟️
-</div>
-
-<h3>
-Booking
-</h3>
-
-<p>
-Book available event passes, tours and other experiences
-from one place.
-</p>
-
-<a class="gold" href="booking.html">
-Book Now →
-</a>
-
-</div>
-
-
-
-<!-- PARTNERSHIP -->
-
-<div class="card partnership-card">
-
-<div class="icon">
-🤝
-</div>
-
-<h3>
-PARTNERSHIP
-</h3>
-
-<p>
-Let's Build Opportunities Together
-</p>
-
-<div class="partnership-list">
-
-<div>
-<strong>🏢 Corporate Partner</strong>
-<span>Brand & business partnership opportunities.</span>
-</div>
-
-<div>
-<strong>⚽ Sports & Academy Partner</strong>
-<span>Football academy, club & sports organisation partnership.</span>
-</div>
-
-<div>
-<strong>📢 Media Partner</strong>
-<span>TV, newspaper, digital media & online promotion.</span>
-</div>
-
-<div>
-<strong>💰 Sponsorship Partner</strong>
-<span>Title Sponsor, Co-Sponsor & Event Sponsor opportunities.</span>
-</div>
-
-<div>
-<strong>📍 District Partner</strong>
-<span>Official District Partner opportunities across different districts.</span>
-</div>
-
-<div>
-<strong>✈️ Travel & Hospitality Partner</strong>
-<span>Hotels, resorts, transport, restaurants & travel partners.</span>
-</div>
-
-</div>
-
-<h4 class="gold">
-WHY PARTNER WITH US?
-</h4>
-
-<p>
-Brand Promotion • Event Visibility • Digital Marketing •
-Live Event Branding • Social Media Promotion • Business Networking
-</p>
-
-<a class="btn" href="partnership.html">
-BECOME A PARTNER →
-</a>
-
-</div>
-
-
-</div>
-
-</div>
+<section
+    class="apex-scene"
+    id="apex-tour">
+
+    <div
+        class="apex-scene-bg"
+        style="background-image:url('tour1.jpg');">
+    </div>
+
+    <div class="apex-section-label">
+        02 / TOUR
+    </div>
+
+    <div class="apex-content">
+
+        <div class="apex-small-title">
+            DISCOVER • TRAVEL • EXPERIENCE
+        </div>
+
+        <h2 class="apex-title">
+            <span>TOUR</span>
+        </h2>
+
+        <p class="apex-description">
+            Discover amazing destinations, unforgettable journeys
+            and experiences with THE APEX 99.
+        </p>
+
+        <a
+            href="tours.html"
+            class="apex-button">
+            EXPLORE TOURS →
+        </a>
+
+    </div>
+
+    <div class="apex-scroll">
+        SCROLL
+        <div class="apex-scroll-line"></div>
+    </div>
 
 </section>
 
 
 
 <!-- =====================================================
-     EVENTS MOVING SLIDER
+     03 - MEDIA
      ===================================================== -->
 
-<section class="apex-slider-section">
-
-<div class="container">
-
-<div class="apex-slider-heading">
-
-<h2>
-<span class="gold">
-EVENTS
-</span>
-</h2>
-
-<p>
-Discover upcoming events by THE APEX 99
-</p>
-
-</div>
-
-</div>
-
-
-<div class="apex-slider">
-
-<div class="apex-track">
-
-
-<!-- EVENT 1 -->
-
-<div class="apex-card">
-
-<div class="apex-card-image">
-
-<img src="event1.jpg" alt="THE APEX 99 Event">
-
-</div>
-
-<div class="apex-card-content">
-
-<h3>
-THE APEX 99 EVENTS
-</h3>
-
-<p>
-Professional events and experiences organized by THE APEX 99.
-</p>
-
-<a class="apex-card-btn" href="events.html">
-VIEW EVENTS →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- EVENT 2 -->
-
-<div class="apex-card">
-
-<div class="apex-card-image">
-
-<img src="event2.jpg" alt="AFTH Football Event">
-
-</div>
-
-<div class="apex-card-content">
-
-<h3>
-AFTH
-</h3>
-
-<p>
-APEX Football Talent Hunt — discover the next football talent.
-</p>
-
-<a class="apex-card-btn" href="afth.html">
-EXPLORE AFTH →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- EVENT 3 -->
-
-<div class="apex-card">
-
-<div class="apex-card-image">
-
-<img src="event3.jpg" alt="Adventure Event">
-
-</div>
-
-<div class="apex-card-content">
-
-<h3>
-ADVENTURE
-</h3>
-
-<p>
-Challenge yourself with adventure and survival experiences.
-</p>
-
-<a class="apex-card-btn" href="adventure.html">
-EXPLORE →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- DUPLICATE EVENT 1 -->
-
-<div class="apex-card">
-
-<div class="apex-card-image">
-
-<img src="event1.jpg" alt="THE APEX 99 Event">
-
-</div>
-
-<div class="apex-card-content">
-
-<h3>
-THE APEX 99 EVENTS
-</h3>
-
-<p>
-Professional events and experiences organized by THE APEX 99.
-</p>
-
-<a class="apex-card-btn" href="events.html">
-VIEW EVENTS →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- DUPLICATE EVENT 2 -->
-
-<div class="apex-card">
-
-<div class="apex-card-image">
-
-<img src="event2.jpg" alt="AFTH Football Event">
-
-</div>
-
-<div class="apex-card-content">
-
-<h3>
-AFTH
-</h3>
-
-<p>
-APEX Football Talent Hunt — discover the next football talent.
-</p>
-
-<a class="apex-card-btn" href="afth.html">
-EXPLORE AFTH →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- DUPLICATE EVENT 3 -->
-
-<div class="apex-card">
-
-<div class="apex-card-image">
-
-<img src="event3.jpg" alt="Adventure Event">
-
-</div>
-
-<div class="apex-card-content">
-
-<h3>
-ADVENTURE
-</h3>
-
-<p>
-Challenge yourself with adventure and survival experiences.
-</p>
-
-<a class="apex-card-btn" href="adventure.html">
-EXPLORE →
-</a>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
+<section
+    class="apex-scene"
+    id="apex-media">
+
+    <div
+        class="apex-scene-bg"
+        style="background-image:url('media-home.jpg');">
+    </div>
+
+    <div class="apex-section-label">
+        03 / MEDIA
+    </div>
+
+    <div class="apex-content">
+
+        <div class="apex-small-title">
+            CREATE • RECORD • PRODUCE
+        </div>
+
+        <h2 class="apex-title">
+            <span>MEDIA</span>
+        </h2>
+
+        <p class="apex-description">
+            Music, films, podcasts, interviews, recording
+            and professional video production.
+        </p>
+
+        <a
+            href="media.html"
+            class="apex-button">
+            EXPLORE MEDIA →
+        </a>
+
+    </div>
+
+    <div class="apex-scroll">
+        SCROLL
+        <div class="apex-scroll-line"></div>
+    </div>
 
 </section>
 
 
 
 <!-- =====================================================
-     TOURS MOVING SLIDER
+     04 - EVENT
      ===================================================== -->
 
-<section class="apex-slider-section">
-
-<div class="container">
-
-<div class="apex-slider-heading">
-
-<h2>
-<span class="gold">
-TOURS
-</span>
-</h2>
-
-<p>
-Explore unforgettable travel experiences
-</p>
-
-</div>
-
-</div>
-
-
-<div class="apex-slider">
-
-<div class="apex-track tours-track">
-
-
-<!-- TOUR 1 -->
-
-<div class="apex-card">
-
-<div class="apex-card-image">
-
-<img src="tour1.jpg" alt="Kashmir Tour">
-
-</div>
-
-<div class="apex-card-content">
-
-<h3>
-KASHMIR TOUR
-</h3>
-
-<p>
-Beautiful Kashmir travel experience with THE APEX 99.
-</p>
-
-<a class="apex-card-btn" href="tours.html">
-VIEW TOUR →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- TOUR 2 -->
-
-<div class="apex-card">
-
-<div class="apex-card-image">
-
-<img src="tour2.jpg" alt="Digha Tour">
-
-</div>
-
-<div class="apex-card-content">
-
-<h3>
-DIGHA TOUR
-</h3>
-
-<p>
-Enjoy a memorable beach holiday with our travel packages.
-</p>
-
-<a class="apex-card-btn" href="tours.html">
-VIEW TOUR →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- TOUR 3 -->
-
-<div class="apex-card">
-
-<div class="apex-card-image">
-
-<img src="tour3.jpg" alt="THE APEX 99 Travel">
-
-</div>
-
-<div class="apex-card-content">
-
-<h3>
-MORE TOURS
-</h3>
-
-<p>
-Discover more destinations and travel packages.
-</p>
-
-<a class="apex-card-btn" href="tours.html">
-VIEW TOURS →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- DUPLICATE TOUR 1 -->
-
-<div class="apex-card">
-
-<div class="apex-card-image">
-
-<img src="tour1.jpg" alt="Kashmir Tour">
-
-</div>
-
-<div class="apex-card-content">
-
-<h3>
-KASHMIR TOUR
-</h3>
-
-<p>
-Beautiful Kashmir travel experience with THE APEX 99.
-</p>
-
-<a class="apex-card-btn" href="tours.html">
-VIEW TOUR →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- DUPLICATE TOUR 2 -->
-
-<div class="apex-card">
-
-<div class="apex-card-image">
-
-<img src="tour2.jpg" alt="Digha Tour">
-
-</div>
-
-<div class="apex-card-content">
-
-<h3>
-DIGHA TOUR
-</h3>
-
-<p>
-Enjoy a memorable beach holiday with our travel packages.
-</p>
-
-<a class="apex-card-btn" href="tours.html">
-VIEW TOUR →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- DUPLICATE TOUR 3 -->
-
-<div class="apex-card">
-
-<div class="apex-card-image">
-
-<img src="tour3.jpg" alt="THE APEX 99 Travel">
-
-</div>
-
-<div class="apex-card-content">
-
-<h3>
-MORE TOURS
-</h3>
-
-<p>
-Discover more destinations and travel packages.
-</p>
-
-<a class="apex-card-btn" href="tours.html">
-VIEW TOURS →
-</a>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
+<section
+    class="apex-scene"
+    id="apex-event">
+
+    <div
+        class="apex-scene-bg"
+        style="background-image:url('event1.jpg');">
+    </div>
+
+    <div class="apex-section-label">
+        04 / EVENT
+    </div>
+
+    <div class="apex-content">
+
+        <div class="apex-small-title">
+            COMPETE • PERFORM • WIN
+        </div>
+
+        <h2 class="apex-title">
+            <span>EVENT</span>
+        </h2>
+
+        <p class="apex-description">
+            Exciting competitions, football events,
+            talent hunts and unforgettable experiences.
+        </p>
+
+        <a
+            href="events.html"
+            class="apex-button">
+            VIEW EVENTS →
+        </a>
+
+    </div>
+
+    <div class="apex-scroll">
+        SCROLL
+        <div class="apex-scroll-line"></div>
+    </div>
 
 </section>
 
 
 
 <!-- =====================================================
-     COMPETITIONS MOVING SLIDER
+     05 - ADVENTURE
      ===================================================== -->
 
-<section class="apex-slider-section">
-
-<div class="container">
-
-<div class="apex-slider-heading">
-
-<h2>
-<span class="gold">
-COMPETITIONS
-</span>
-</h2>
-
-<p>
-Compete. Perform. Become THE ONE.
-</p>
-
-</div>
-
-</div>
-
-
-<div class="apex-slider">
-
-<div class="apex-track competition-track">
-
-
-<!-- COMPETITION 1 -->
-
-<div class="apex-card">
-
-<div class="apex-card-image">
-
-<img src="competition1.jpg" alt="Football Competition">
-
-</div>
-
-<div class="apex-card-content">
-
-<h3>
-FOOTBALL COMPETITION
-</h3>
-
-<p>
-Show your skills and compete with talented players.
-</p>
-
-<a class="apex-card-btn" href="competitions.html">
-VIEW DETAILS →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- COMPETITION 2 -->
-
-<div class="apex-card">
-
-<div class="apex-card-image">
-
-<img src="competition2.jpg" alt="Sports Competition">
-
-</div>
-
-<div class="apex-card-content">
-
-<h3>
-SPORTS COMPETITION
-</h3>
-
-<p>
-Professional competitions created to identify talent.
-</p>
-
-<a class="apex-card-btn" href="competitions.html">
-VIEW DETAILS →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- COMPETITION 3 -->
-
-<div class="apex-card">
-
-<div class="apex-card-image">
-
-<img src="competition3.jpg" alt="THE APEX 99 Competition">
-
-</div>
-
-<div class="apex-card-content">
-
-<h3>
-THE APEX 99
-</h3>
-
-<p>
-Participate, perform and prove that you are THE ONE.
-</p>
-
-<a class="apex-card-btn" href="competitions.html">
-VIEW COMPETITIONS →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- DUPLICATE 1 -->
-
-<div class="apex-card">
-
-<div class="apex-card-image">
-
-<img src="competition1.jpg" alt="Football Competition">
-
-</div>
-
-<div class="apex-card-content">
-
-<h3>
-FOOTBALL COMPETITION
-</h3>
-
-<p>
-Show your skills and compete with talented players.
-</p>
-
-<a class="apex-card-btn" href="competitions.html">
-VIEW DETAILS →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- DUPLICATE 2 -->
-
-<div class="apex-card">
-
-<div class="apex-card-image">
-
-<img src="competition2.jpg" alt="Sports Competition">
-
-</div>
-
-<div class="apex-card-content">
-
-<h3>
-SPORTS COMPETITION
-</h3>
-
-<p>
-Professional competitions created to identify talent.
-</p>
-
-<a class="apex-card-btn" href="competitions.html">
-VIEW DETAILS →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- DUPLICATE 3 -->
-
-<div class="apex-card">
-
-<div class="apex-card-image">
-
-<img src="competition3.jpg" alt="THE APEX 99 Competition">
-
-</div>
-
-<div class="apex-card-content">
-
-<h3>
-THE APEX 99
-</h3>
-
-<p>
-Participate, perform and prove that you are THE ONE.
-</p>
-
-<a class="apex-card-btn" href="competitions.html">
-VIEW COMPETITIONS →
-</a>
-
-</div>
-
-</div>
-
-
-</div>
-
-</div>
+<section
+    class="apex-scene"
+    id="apex-adventure">
+
+    <div
+        class="apex-scene-bg"
+        style="background-image:url('event3.jpg');">
+    </div>
+
+    <div class="apex-section-label">
+        05 / ADVENTURE
+    </div>
+
+    <div class="apex-content">
+
+        <div class="apex-small-title">
+            CHALLENGE • SURVIVE • DISCOVER
+        </div>
+
+        <h2 class="apex-title">
+            <span>ADVENTURE</span>
+        </h2>
+
+        <p class="apex-description">
+            Step outside your comfort zone and experience
+            adventure, survival and the power of nature.
+        </p>
+
+        <a
+            href="adventure.html"
+            class="apex-button">
+            EXPLORE ADVENTURE →
+        </a>
+
+    </div>
+
+    <div class="apex-scroll">
+        SCROLL
+        <div class="apex-scroll-line"></div>
+    </div>
 
 </section>
 
 
 
 <!-- =====================================================
-     ACADEMY MOVING SLIDER
+     06 - ACADEMY
      ===================================================== -->
 
-<section class="apex-slider-section">
+<section
+    class="apex-scene"
+    id="apex-academy">
 
-<div class="container">
+    <div
+        class="apex-scene-bg"
+        style="background-image:url('academy1.jpg');">
+    </div>
 
-<div class="apex-slider-heading">
+    <div class="apex-section-label">
+        06 / ACADEMY
+    </div>
 
-<h2>
-<span class="gold">
-ACADEMY
-</span>
-</h2>
+    <div class="apex-content">
 
-<p>
-Train. Improve. Become a Champion.
-</p>
+        <div class="apex-small-title">
+            TRAIN • PLAY • GROW
+        </div>
 
-</div>
+        <h2 class="apex-title">
+            <span>ACADEMY</span>
+        </h2>
 
-</div>
+        <p class="apex-description">
+            Professional sports training designed to develop
+            skills, confidence and future champions.
+        </p>
 
+        <a
+            href="academy.html"
+            class="apex-button">
+            EXPLORE ACADEMY →
+        </a>
 
-<div class="apex-slider">
+    </div>
 
-<div class="apex-track academy-track">
+    <div class="apex-scroll">
+        END
+        <div class="apex-scroll-line"></div>
+    </div>
 
+</section>
 
-<!-- ACADEMY 1 -->
 
-<div class="apex-card">
 
-<div class="apex-card-image">
+<!-- =====================================================
+     BRAND FOOTER STRIP
+     ===================================================== -->
 
-<img src="academy1.jpg" alt="Football Academy">
+<section class="apex-brand-strip">
 
-</div>
+    <h2>
+        THE APEX <span>99</span>
+    </h2>
 
-<div class="apex-card-content">
+    <p>
+        WHO IS THE ONE
+    </p>
 
-<h3>
-FOOTBALL ACADEMY
-</h3>
+</section>
 
-<p>
-Professional football training with expert coaching.
-</p>
 
-<a class="apex-card-btn" href="academy.html">
-EXPLORE ACADEMY →
-</a>
+</main>
 
-</div>
 
-</div>
 
+<!-- =====================================================
+     JAVASCRIPT
+     ===================================================== -->
 
+<script>
 
-<!-- ACADEMY 2 -->
+/* =====================================================
+   MOBILE MENU
+   ===================================================== */
 
-<div class="apex-card">
+const apexHamburger =
+    document.getElementById("apexHamburger");
 
-<div class="apex-card-image">
+const apexMenu =
+    document.getElementById("apexMenu");
 
-<img src="academy2.jpg" alt="Cricket Academy">
+apexHamburger.addEventListener("click", function(){
 
-</div>
+    apexMenu.classList.toggle("open");
 
-<div class="apex-card-content">
+});
 
-<h3>
-CRICKET ACADEMY
-</h3>
 
-<p>
-Structured cricket training for developing players.
-</p>
+/* Close mobile menu after clicking */
 
-<a class="apex-card-btn" href="academy.html">
-EXPLORE ACADEMY →
-</a>
+document
+.querySelectorAll(".apex-menu a")
+.forEach(function(link){
 
-</div>
+    link.addEventListener("click", function(){
 
-</div>
+        apexMenu.classList.remove("open");
 
+    });
 
+});
 
-<!-- ACADEMY 3 -->
 
-<div class="apex-card">
 
-<div class="apex-card-image">
+/* =====================================================
+   CINEMATIC SECTION REVEAL
+   ===================================================== */
 
-<img src="academy3.jpg" alt="Residential Sports Academy">
+const apexScenes =
+    document.querySelectorAll(".apex-scene");
 
-</div>
+const apexDots =
+    document.querySelectorAll(".apex-dot");
 
-<div class="apex-card-content">
 
-<h3>
-RESIDENTIAL ACADEMY
-</h3>
+const apexObserver =
+    new IntersectionObserver(
 
-<p>
-Training, accommodation, fitness, nutrition and expert coaching.
-</p>
+        function(entries){
 
-<a class="apex-card-btn" href="academy.html">
-APPLY NOW →
-</a>
+            entries.forEach(function(entry){
 
-</div>
+                if(entry.isIntersecting){
 
-</div>
+                    entry.target.classList.add("active");
 
+                    const currentId =
+                        entry.target.id;
 
+                    apexDots.forEach(function(dot){
 
-<!-- DUPLICATE 1 -->
+                        dot.classList.remove("active");
 
-<div class="apex-card">
+                        if(
+                            dot.dataset.target === currentId
+                        ){
+                            dot.classList.add("active");
+                        }
 
-<div class="apex-card-image">
+                    });
 
-<img src="academy1.jpg" alt="Football Academy">
+                }
 
-</div>
+            });
 
-<div class="apex-card-content">
+        },
 
-<h3>
-FOOTBALL ACADEMY
-</h3>
+        {
+            threshold:.55
+        }
 
-<p>
-Professional football training with expert coaching.
-</p>
+    );
 
-<a class="apex-card-btn" href="academy.html">
-EXPLORE ACADEMY →
-</a>
 
-</div>
+apexScenes.forEach(function(scene){
 
-</div>
+    apexObserver.observe(scene);
 
+});
 
 
-<!-- DUPLICATE 2 -->
 
-<div class="apex-card">
+/* =====================================================
+   DOT NAVIGATION
+   ===================================================== */
 
-<div class="apex-card-image">
+apexDots.forEach(function(dot){
 
-<img src="academy2.jpg" alt="Cricket Academy">
+    dot.addEventListener("click", function(){
 
-</div>
-
-<div class="apex-card-content">
-
-<h3>
-CRICKET ACADEMY
-</h3>
-
-<p>
-Structured cricket training for developing players.
-</p>
-
-<a class="apex-card-btn" href="academy.html">
-EXPLORE ACADEMY →
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- DUPLICATE 3 -->
-
-<div class="apex-card">
-
-<div class="apex-
+        const target =
+            document.getElement
