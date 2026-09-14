@@ -3,34 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-
 <title>THE APEX 99 | WHO IS THE ONE</title>
-
-<meta name="description"
-content="THE APEX 99 — Events, Tours, Media, Adventure and Academy">
-
-<link rel="stylesheet" href="style.css">
+<meta name="description" content="THE APEX 99 — Events, Tours, Media, Adventure and Academy">
 
 <style>
-
-/* =====================================================
-   THE APEX 99 — HOME PAGE
-   CUSTOM BACKGROUND DESIGN
-   ===================================================== */
-
 :root{
  --gold:#e6b93f;
  --gold2:#ffd966;
- --black:#020202;
- --dark:#080808;
- --white:#ffffff;
+ --black:#050505;
+ --dark:#0b0b0c;
+ --white:#fff;
  --muted:#b9bec5;
  --line:rgba(230,185,63,.38);
 }
 
-*{
- box-sizing:border-box;
-}
+*{box-sizing:border-box}
 
 html{
  scroll-behavior:smooth;
@@ -38,7 +25,7 @@ html{
 
 body{
  margin:0;
- background:#020202;
+ background:#050505;
  color:#fff;
  font-family:Arial,Helvetica,sans-serif;
  overflow-x:hidden;
@@ -49,10 +36,11 @@ a{
  color:inherit;
 }
 
+button{
+ font:inherit;
+}
 
-/* =====================================================
-   HEADER
-   ===================================================== */
+/* ================= HEADER ================= */
 
 .apex-header{
  position:fixed;
@@ -61,11 +49,8 @@ a{
  left:0;
  width:100%;
  height:58px;
-
- background:rgba(0,0,0,.97);
-
+ background:rgba(0,0,0,.94);
  backdrop-filter:blur(12px);
-
  border-bottom:1px solid rgba(230,185,63,.5);
 }
 
@@ -74,347 +59,222 @@ a{
  width:96%;
  max-width:1500px;
  margin:auto;
-
  display:flex;
  align-items:center;
-
  gap:12px;
 }
 
 .apex-brand{
  display:flex;
  align-items:center;
-
  gap:7px;
-
  min-width:225px;
 }
 
 .apex-mark{
  font-size:39px;
  line-height:1;
-
  font-weight:1000;
-
  color:var(--gold);
-
  font-style:italic;
-
- text-shadow:
- 0 0 14px rgba(216,168,62,.25);
 }
 
 .apex-brand strong{
  display:block;
-
  font-size:14px;
-
  letter-spacing:.8px;
 }
 
 .apex-brand small{
  display:block;
-
  font-size:6px;
-
  letter-spacing:1.8px;
-
  color:#ddd;
-
  margin-top:3px;
 }
 
 .apex-menu{
  display:flex;
-
  align-items:center;
-
  gap:1px;
-
  margin-left:auto;
 }
 
 .apex-menu a{
  font-size:9px;
-
  font-weight:800;
-
  text-transform:uppercase;
-
  padding:9px 10px;
-
  border-radius:7px;
-
  transition:.25s;
 }
 
 .apex-menu a:hover,
 .apex-menu a.active{
- background:
- linear-gradient(
-  #e3b94f,
-  #b7831d
- );
-
+ background:linear-gradient(#e3b94f,#b7831d);
  color:#090909;
 }
 
 .apex-contact{
  margin-left:5px;
-
  display:flex;
-
  align-items:center;
-
  gap:8px;
-
  color:#111;
-
  background:#e7b942;
-
  border-radius:20px;
-
  padding:5px 9px;
-
  font-weight:900;
-
  font-size:10px;
 }
 
 .apex-contact span{
  background:#111;
-
  color:#fff;
-
  border-radius:50%;
-
  width:20px;
  height:20px;
-
  display:grid;
-
  place-items:center;
 }
 
 .apex-toggle{
  display:none;
-
  background:none;
-
  border:0;
-
  color:#fff;
-
  font-size:28px;
-
  margin-left:auto;
+ cursor:pointer;
 }
 
-
-/* =====================================================
-   HERO
-   ===================================================== */
+/* ================= HERO ================= */
 
 .apex-hero{
  position:relative;
-
  height:600px;
-
- min-height:0;
-
  margin-top:58px;
-
  overflow:hidden;
-
- background:#000;
+ background:#eee;
 }
 
 .apex-slide{
  position:absolute;
-
  inset:0;
-
  opacity:0;
+ transform:scale(1.05);
+ transition:opacity .8s ease,transform 6s ease;
 
- transform:scale(1.02);
-
- transition:
- opacity .8s ease,
- transform 5s ease;
-
- background-image:url('apex99-home-banner.png');
-
+ background-image:url('who-is-the-one-home-background.png');
  background-size:cover;
-
- background-position:center center;
-
+ background-position:center;
  background-repeat:no-repeat;
 }
 
 .apex-slide.active{
  opacity:1;
-
  transform:scale(1);
 }
 
 .apex-slide:after{
  content:"";
-
  position:absolute;
-
  inset:0;
-
  background:
  linear-gradient(
   90deg,
-  rgba(0,0,0,.72),
-  rgba(0,0,0,.08) 70%,
-  rgba(0,0,0,.30)
+  rgba(255,255,255,.04),
+  rgba(255,255,255,0) 70%
  ),
  linear-gradient(
   0deg,
-  rgba(0,0,0,.50),
-  transparent 50%
+  rgba(255,255,255,.03),
+  transparent 55%
  );
+ pointer-events:none;
 }
-
-
-/* =====================================================
-   HERO TEXT
-   ===================================================== */
 
 .hero-content{
  position:absolute;
-
  z-index:2;
-
  left:6%;
-
  top:50%;
-
  transform:translateY(-50%);
-
  max-width:560px;
+ text-shadow:0 2px 8px rgba(0,0,0,.35);
 }
 
 .script{
  font-family:cursive;
-
  font-style:italic;
-
- color:#f0bd35;
-
- font-size:clamp(
-  40px,
-  5vw,
-  68px
- );
-
+ color:#b7831d;
+ font-size:clamp(40px,5vw,68px);
  line-height:.9;
 }
 
 .hero-content h1{
- font-size:clamp(
-  44px,
-  6vw,
-  76px
- );
-
+ font-size:clamp(44px,6vw,76px);
  line-height:.9;
-
  margin:7px 0 12px;
-
  font-weight:1000;
-
  letter-spacing:1px;
+ color:#111;
 }
 
 .hero-content h1 span{
- color:#f3c43e;
+ color:#b7831d;
 }
 
 .hero-content p{
- font-weight:800;
-
+ font-weight:900;
  letter-spacing:2px;
-
  font-size:11px;
+ color:#111;
 }
 
 .hero-content .quote{
  font-size:13px;
-
  line-height:1.6;
-
- letter-spacing:0;
-
- font-weight:500;
-
- color:#eee;
-
+ font-weight:600;
+ color:#222;
  max-width:360px;
 }
 
 .gold-btn{
  display:inline-block;
-
  margin-top:12px;
-
  padding:9px 17px;
-
- border:1px solid var(--gold2);
-
+ border:1px solid #b7831d;
  border-radius:22px;
-
- background:rgba(0,0,0,.50);
-
- color:#fff;
-
+ background:rgba(255,255,255,.78);
+ color:#111;
  font-size:10px;
-
  font-weight:900;
-
  text-transform:uppercase;
-
  transition:.3s;
+ cursor:pointer;
 }
 
 .gold-btn:hover{
  background:var(--gold);
-
  color:#090909;
-
  transform:translateY(-2px);
 }
 
-
-/* =====================================================
-   SLIDER BUTTONS
-   ===================================================== */
+/* ================= HERO BUTTONS ================= */
 
 .slide-arrow{
  position:absolute;
-
  z-index:4;
-
  top:50%;
-
  transform:translateY(-50%);
-
  width:38px;
-
  height:38px;
-
- border:1px solid #fff;
-
+ border:1px solid #222;
  border-radius:50%;
-
- background:rgba(0,0,0,.35);
-
- color:#fff;
-
+ background:rgba(255,255,255,.7);
+ color:#111;
  font-size:22px;
-
  cursor:pointer;
 }
 
@@ -426,128 +286,70 @@ a{
  right:18px;
 }
 
-
-/* =====================================================
-   DOTS
-   ===================================================== */
-
 .hero-dots{
  position:absolute;
-
  z-index:4;
-
  bottom:13px;
-
  left:50%;
-
  transform:translateX(-50%);
-
  display:flex;
-
  gap:7px;
 }
 
 .hero-dots i{
  width:8px;
-
  height:8px;
-
  border-radius:50%;
-
- background:#fff;
-
+ background:#222;
  opacity:.45;
-
  cursor:pointer;
 }
 
 .hero-dots i.active{
- background:var(--gold2);
-
+ background:#b7831d;
  opacity:1;
-
  width:24px;
-
  border-radius:10px;
 }
 
-
-/* =====================================================
-   STATS
-   ===================================================== */
+/* ================= STATS ================= */
 
 .stats{
  display:grid;
-
- grid-template-columns:
- repeat(6,1fr);
-
- background:#020202;
-
- border-top:
- 1px solid var(--line);
-
- border-bottom:
- 1px solid var(--line);
-
+ grid-template-columns:repeat(6,1fr);
+ background:#050505;
+ border-top:1px solid var(--line);
+ border-bottom:1px solid var(--line);
  padding:12px 0;
 }
 
 .stat{
  margin:0 5px;
-
  padding:14px 5px;
-
  text-align:center;
-
- border:
- 1px solid rgba(
- 230,
- 185,
- 63,
- .28
- );
-
+ border:1px solid rgba(230,185,63,.28);
  border-radius:8px;
-
  min-height:70px;
-
- background:
- linear-gradient(
-  145deg,
-  #070707,
-  #020202
- );
+ background:linear-gradient(145deg,#101010,#030303);
 }
 
 .stat b{
  display:block;
-
  color:var(--gold2);
-
  font-size:21px;
-
  font-weight:1000;
 }
 
 .stat span{
  display:block;
-
  font-size:7px;
-
  letter-spacing:1px;
-
  color:#ddd;
-
  font-weight:800;
-
  margin-top:4px;
 }
 
-
-/* =====================================================
-   GENERAL SECTION
-   ===================================================== */
+/* ================= SECTION ================= */
 
 .section{
  background:
@@ -559,33 +361,20 @@ a{
  #030303;
 
  padding:30px 0 34px;
-
- border-bottom:
- 1px solid rgba(
- 216,
- 168,
- 62,
- .2
- );
+ border-bottom:1px solid rgba(216,168,62,.2);
 }
 
 .section-head{
  text-align:center;
-
  margin-bottom:18px;
 }
 
 .section-head h2{
  margin:0;
-
  color:#f1c95c;
-
  font-size:26px;
-
  letter-spacing:2px;
-
  font-weight:1000;
-
  text-transform:uppercase;
 }
 
@@ -595,42 +384,27 @@ a{
 
 .section-head p{
  margin:7px 0 0;
-
  color:#bbb;
-
  font-size:8px;
-
  letter-spacing:2.5px;
-
  font-weight:800;
 }
 
-
-/* =====================================================
-   CARDS
-   ===================================================== */
+/* ================= CARDS ================= */
 
 .carousel-wrap{
  position:relative;
-
  width:92%;
-
  max-width:1400px;
-
  margin:auto;
 }
 
 .cards{
  display:flex;
-
  gap:10px;
-
  overflow-x:auto;
-
  scroll-behavior:smooth;
-
  scrollbar-width:none;
-
  padding:2px 2px 8px;
 }
 
@@ -640,105 +414,64 @@ a{
 
 .card{
  flex:0 0 205px;
-
  background:#070809;
-
- border:
- 1px solid
- rgba(
- 230,
- 185,
- 63,
- .38
- );
-
+ border:1px solid rgba(230,185,63,.38);
  border-radius:7px;
-
  overflow:hidden;
-
- box-shadow:
- 0 8px 25px #000;
-
+ box-shadow:0 8px 25px #000;
  transition:.3s;
 }
 
 .card:hover{
  transform:translateY(-6px);
-
- border-color:
- var(--gold2);
+ border-color:var(--gold2);
 }
 
 .card img{
  width:100%;
-
  height:130px;
-
  object-fit:cover;
-
  display:block;
 }
 
 .card-body{
  text-align:center;
-
  padding:10px 6px 13px;
 }
 
 .card h3{
  font-size:12px;
-
  margin:0 0 5px;
-
  font-weight:1000;
 }
 
 .card p{
  font-size:7px;
-
  color:#bbb;
-
  letter-spacing:.8px;
-
  margin:0 0 10px;
 }
 
 .card .gold-btn{
  padding:6px 12px;
-
  font-size:8px;
-
  margin:0;
 }
 
-
-/* =====================================================
-   CARD ARROWS
-   ===================================================== */
+/* ================= CARD ARROWS ================= */
 
 .car-arrow{
  position:absolute;
-
  top:45%;
-
  transform:translateY(-50%);
-
  z-index:3;
-
  width:30px;
-
  height:30px;
-
  border-radius:50%;
-
  border:1px solid #fff;
-
  background:#080808;
-
  color:#fff;
-
  cursor:pointer;
-
  font-size:18px;
 }
 
@@ -750,66 +483,38 @@ a{
  right:-5px;
 }
 
-
-/* =====================================================
-   BANNER
-   ===================================================== */
+/* ================= BANNER ================= */
 
 .banner{
- min-height:220px;
-
+ min-height:250px;
  position:relative;
-
  background-size:cover;
-
  background-position:center;
-
  display:flex;
-
  align-items:center;
-
  justify-content:center;
-
  text-align:center;
-
  padding:35px 20px;
-
- border-top:
- 1px solid
- rgba(
- 230,
- 185,
- 63,
- .25
- );
-
- border-bottom:
- 1px solid
- var(--line);
+ border-top:1px solid rgba(230,185,63,.25);
+ border-bottom:1px solid var(--line);
 }
 
 .banner:before{
  content:"";
-
  position:absolute;
-
  inset:0;
-
- background:
- rgba(0,0,0,.55);
+ background:rgba(0,0,0,.48);
 }
 
 .banner-content{
  position:relative;
-
  z-index:2;
+ max-width:850px;
 }
 
 .banner h2{
  margin:0;
-
  font-size:30px;
-
  font-weight:1000;
 }
 
@@ -819,128 +524,82 @@ a{
 
 .banner p{
  font-size:9px;
-
  letter-spacing:2px;
-
  color:#eee;
-
  font-weight:800;
 }
 
-.banner .gold-btn{
- margin-top:8px;
-}
-
 .story{
- min-height:220px;
-
- background-image:
- url(
- 'apex99-home-banner.png'
- );
+ background-image:url('who-is-the-one-home-background.png');
 }
 
+/* ================= MISSION ================= */
 
-/* =====================================================
-   PEOPLE
-   ===================================================== */
-
-.people-card img{
- height:125px;
+.mission{
+ display:grid;
+ grid-template-columns:repeat(3,1fr);
+ gap:15px;
+ width:92%;
+ max-width:1200px;
+ margin:auto;
 }
 
-.people-card .card-body{
- min-height:75px;
+.mission-box{
+ padding:24px 18px;
+ border:1px solid rgba(230,185,63,.3);
+ border-radius:10px;
+ background:linear-gradient(145deg,#111,#050505);
+ text-align:center;
 }
 
-.people-card p{
- font-size:8px;
-
- color:#fff;
-
- letter-spacing:0;
-
- line-height:1.4;
+.mission-box .icon{
+ font-size:30px;
+ color:var(--gold2);
 }
 
-
-/* =====================================================
-   PARTNERS
-   ===================================================== */
-
-.partners .card{
- background:#fff;
-
- border-color:#ddd;
-
- flex-basis:190px;
+.mission-box h3{
+ font-size:14px;
+ margin:10px 0 7px;
 }
 
-.partners .card img{
- height:85px;
-
- object-fit:contain;
-
- padding:10px;
-
- background:#fff;
+.mission-box p{
+ font-size:9px;
+ line-height:1.6;
+ color:#aaa;
+ margin:0;
 }
 
-.partners .card-body{
- display:none;
-}
-
-
-/* =====================================================
-   FOOTER
-   ===================================================== */
+/* ================= FOOTER ================= */
 
 .footer{
  background:#020202;
-
  padding:35px 5% 16px;
-
- border-top:
- 1px solid
- var(--line);
+ border-top:1px solid var(--line);
 }
 
 .footer-grid{
  max-width:1300px;
-
  margin:auto;
-
  display:grid;
-
- grid-template-columns:
- 1.2fr
- 1.3fr
- 1fr
- 1fr;
-
+ grid-template-columns:1.2fr 1.3fr 1fr 1fr;
  gap:25px;
 }
 
 .footer h3{
  color:var(--gold2);
-
  font-size:13px;
-
  letter-spacing:2px;
 }
 
 .footer p,
 .footer a{
  color:#bbb;
-
  font-size:9px;
-
  line-height:1.9;
 }
 
 .footer-brand{
  font-size:23px;
-
  font-weight:1000;
 }
 
@@ -950,66 +609,25 @@ a{
 
 .social a{
  display:inline-grid;
-
  place-items:center;
-
  width:31px;
-
  height:31px;
-
  border:1px solid #555;
-
  border-radius:50%;
-
  margin-right:5px;
-
  color:#fff;
 }
 
 .copy{
- border-top:
- 1px solid #222;
-
+ border-top:1px solid #222;
  margin-top:28px;
-
  padding-top:15px;
-
  text-align:center;
-
  color:#777;
-
  font-size:8px;
 }
 
-
-/* =====================================================
-   REVEAL FIX
-   ===================================================== */
-
-.reveal{
- opacity:1 !important;
-
- transform:none !important;
-
- visibility:visible !important;
-
- transition:
- opacity .8s ease,
- transform .8s ease;
-}
-
-.reveal.show{
- opacity:1 !important;
-
- transform:none !important;
-
- visibility:visible !important;
-}
-
-
-/* =====================================================
-   TABLET
-   ===================================================== */
+/* ================= MOBILE ================= */
 
 @media(max-width:1050px){
 
@@ -1023,20 +641,13 @@ a{
 
  .apex-menu a{
   padding:10px 8px;
-
   font-size:9px;
  }
 
  .apex-contact{
   display:none;
  }
-
 }
-
-
-/* =====================================================
-   MOBILE
-   ===================================================== */
 
 @media(max-width:800px){
 
@@ -1071,26 +682,15 @@ a{
 
  .apex-menu{
   display:none;
-
   position:absolute;
-
   top:54px;
-
   left:0;
-
   width:100%;
-
   background:#080808;
-
   padding:10px 20px;
-
   flex-direction:column;
-
   align-items:stretch;
-
-  border-bottom:
-  1px solid
-  var(--line);
+  border-bottom:1px solid var(--line);
  }
 
  .apex-menu.open{
@@ -1099,109 +699,82 @@ a{
 
  .apex-menu a{
   font-size:12px;
-
   padding:13px;
-
-  border-bottom:
-  1px solid #222;
+  border-bottom:1px solid #222;
  }
-
 
  .apex-hero{
   margin-top:54px;
-
   height:390px;
  }
 
-
  .hero-content{
   left:8%;
-
   right:8%;
  }
-
 
  .script{
   font-size:43px;
  }
 
-
  .hero-content h1{
   font-size:48px;
  }
-
 
  .hero-content p{
   font-size:9px;
  }
 
-
  .hero-content .quote{
   font-size:12px;
  }
 
-
  .stats{
-  grid-template-columns:
-  repeat(3,1fr);
-
+  grid-template-columns:repeat(3,1fr);
   padding:8px 3px;
  }
 
-
  .stat{
   margin:3px;
-
   min-height:67px;
  }
-
 
  .stat b{
   font-size:18px;
  }
 
-
  .section{
   padding:24px 0 27px;
  }
-
 
  .section-head h2{
   font-size:21px;
  }
 
-
  .card{
   flex-basis:178px;
  }
-
 
  .card img{
   height:112px;
  }
 
-
  .banner{
   min-height:185px;
  }
-
 
  .banner h2{
   font-size:24px;
  }
 
-
  .footer-grid{
-  grid-template-columns:
-  1fr 1fr;
+  grid-template-columns:1fr 1fr;
  }
 
+ .mission{
+  grid-template-columns:1fr 1fr;
+ }
 }
-
-
-/* =====================================================
-   SMALL MOBILE
-   ===================================================== */
 
 @media(max-width:520px){
 
@@ -1209,637 +782,589 @@ a{
   height:350px;
  }
 
-
  .hero-content h1{
   font-size:42px;
  }
-
 
  .script{
   font-size:38px;
  }
 
-
  .hero-content .quote{
   font-size:11px;
-
   max-width:280px;
  }
 
-
  .gold-btn{
   padding:8px 14px;
-
   font-size:9px;
  }
-
 
  .section-head h2{
   font-size:20px;
  }
 
-
  .card{
   flex-basis:164px;
  }
-
 
  .card img{
   height:104px;
  }
 
-
  .footer-grid{
-  grid-template-columns:
-  1fr;
+  grid-template-columns:1fr;
  }
-
 
  .footer{
   padding-top:35px;
  }
 
+ .mission{
+  grid-template-columns:1fr;
+ }
 }
-
 </style>
 </head>
 
-
 <body>
 
-
-<!-- =====================================================
-     HEADER
-     ===================================================== -->
+<!-- ================= HEADER ================= -->
 
 <header class="apex-header">
+<div class="apex-nav">
 
- <div class="apex-nav">
+<a class="apex-brand" href="index.html">
+<span class="apex-mark">A</span>
+<span>
+<strong>THE APEX 99</strong>
+<small>WHO IS THE ONE</small>
+</span>
+</a>
 
+<button class="apex-toggle" id="menuBtn">☰</button>
 
-  <a class="apex-brand"
-     href="index.html">
+<nav class="apex-menu" id="menu">
 
-   <span class="apex-mark">
-    A
-   </span>
+<a class="active" href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="events.html">Events</a>
+<a href="academy.html">Academy</a>
+<a href="adventure.html">Adventure</a>
+<a href="tours.html">Tours</a>
+<a href="media.html">Media</a>
+<a href="contact.html">Contact</a>
 
-   <span>
+</nav>
 
-    <strong>
-     THE APEX 99
-    </strong>
+<a class="apex-contact" href="https://wa.me/917439718014">
+<span>☎</span>
+7439718014
+</a>
 
-    <small>
-     WHO IS THE ONE
-    </small>
-
-   </span>
-
-  </a>
-
-
-  <button
-   class="apex-toggle"
-   id="menuBtn">
-
-   ☰
-
-  </button>
-
-
-  <nav
-   class="apex-menu"
-   id="menu">
-
-   <a
-    class="active"
-    href="index.html">
-    Home
-   </a>
-
-   <a href="about.html">
-    About
-   </a>
-
-   <a href="events.html">
-    Events
-   </a>
-
-   <a href="academy.html">
-    Academy
-   </a>
-
-   <a href="adventure.html">
-    Adventure
-   </a>
-
-   <a href="tours.html">
-    Tours
-   </a>
-
-   <a href="media.html">
-    Media
-   </a>
-
-   <a href="contact.html">
-    Contact
-   </a>
-
-  </nav>
-
-
-  <a
-   class="apex-contact"
-   href="https://wa.me/917439718014">
-
-   <span>
-    ☎
-   </span>
-
-   7439718014
-
-  </a>
-
-
- </div>
-
+</div>
 </header>
-
-
-
-<!-- =====================================================
-     MAIN
-     ===================================================== -->
 
 <main>
 
+<!-- ================= HERO ================= -->
 
-<!-- =====================================================
-     HERO
-     ===================================================== -->
+<section class="apex-hero" id="hero">
 
-<section
- class="apex-hero"
- id="hero">
+<div class="apex-slide active">
+<div class="hero-content">
 
+<div class="script">Welcome to</div>
 
- <!-- SLIDE 1 -->
+<h1>THE APEX <span>99</span></h1>
 
- <div
-  class="apex-slide active">
+<p>WHO IS THE ONE</p>
 
-  <div class="hero-content">
+<div class="quote">
+“More than a destination, a movement for a better tomorrow.”
+</div>
 
-   <div class="script">
-    Welcome to
-   </div>
+<a class="gold-btn" href="#worlds">
+EXPLORE OUR WORLDS →
+</a>
 
-   <h1>
-    THE APEX
-    <span>99</span>
-   </h1>
+</div>
+</div>
 
-   <p>
-    WHO IS THE ONE
-   </p>
+<div class="apex-slide">
+<div class="hero-content">
 
-   <div class="quote">
-    “More than a destination,
-    a movement for a better tomorrow.”
-   </div>
+<div class="script">Discover</div>
 
-   <a
-    class="gold-btn"
-    href="#worlds">
+<h1>WHO IS THE <span>ONE?</span></h1>
 
-    EXPLORE OUR WORLDS →
+<p>ONE VISION • ONE JOURNEY</p>
 
-   </a>
+<div class="quote">
+“Find your path. Face the challenge. Become the one.”
+</div>
 
-  </div>
+<a class="gold-btn" href="#events">
+DISCOVER MORE →
+</a>
 
- </div>
+</div>
+</div>
 
+<div class="apex-slide">
+<div class="hero-content">
 
- <!-- SLIDE 2 -->
+<div class="script">Powered by</div>
 
- <div
-  class="apex-slide">
+<h1>THE APEX <span>99</span></h1>
 
-  <div class="hero-content">
+<p>A UNIT OF SMPN RECORD MANAGEMENT</p>
 
-   <div class="script">
-    Welcome to
-   </div>
+<div class="quote">
+Events • Academy • Adventure • Tours • Media
+</div>
 
-   <h1>
-    THE APEX
-    <span>99</span>
-   </h1>
+<a class="gold-btn" href="#contact">
+JOIN THE JOURNEY →
+</a>
 
-   <p>
-    WHO IS THE ONE
-   </p>
+</div>
+</div>
 
-   <div class="quote">
-    “More than a destination,
-    a movement for a better tomorrow.”
-   </div>
+<button class="slide-arrow left" id="prev">‹</button>
+<button class="slide-arrow right" id="next">›</button>
 
-   <a
-    class="gold-btn"
-    href="#worlds">
-
-    EXPLORE OUR WORLDS →
-
-   </a>
-
-  </div>
-
- </div>
-
-
- <!-- SLIDE 3 -->
-
- <div
-  class="apex-slide">
-
-  <div class="hero-content">
-
-   <div class="script">
-    Welcome to
-   </div>
-
-   <h1>
-    THE APEX
-    <span>99</span>
-   </h1>
-
-   <p>
-    WHO IS THE ONE
-   </p>
-
-   <div class="quote">
-    “More than a destination,
-    a movement for a better tomorrow.”
-   </div>
-
-   <a
-    class="gold-btn"
-    href="#worlds">
-
-    EXPLORE OUR WORLDS →
-
-   </a>
-
-  </div>
-
- </div>
-
-
- <button
-  class="slide-arrow left"
-  id="prev">
-
-  ‹
-
- </button>
-
-
- <button
-  class="slide-arrow right"
-  id="next">
-
-  ›
-
- </button>
-
-
- <div
-  class="hero-dots"
-  id="dots">
-
-  <i class="active"></i>
-
-  <i></i>
-
-  <i></i>
-
- </div>
-
+<div class="hero-dots" id="dots">
+<i class="active"></i>
+<i></i>
+<i></i>
+</div>
 
 </section>
 
+<!-- ================= STATS ================= -->
 
+<section class="stats">
 
-<!-- =====================================================
-     STATS
-     ===================================================== -->
+<div class="stat">
+<b>10000+</b>
+<span>PEOPLE CONNECTED</span>
+</div>
 
-<section class="stats reveal">
+<div class="stat">
+<b>50+</b>
+<span>EVENTS</span>
+</div>
 
+<div class="stat">
+<b>5000+</b>
+<span>OPPORTUNITIES</span>
+</div>
 
- <div class="stat">
+<div class="stat">
+<b>★</b>
+<span>REAL EXPERIENCES</span>
+</div>
 
-  <b>
-   10000+
-  </b>
+<div class="stat">
+<b>◉</b>
+<span>BIGGER IMPACT</span>
+</div>
 
-  <span>
-   PEOPLE CONNECTED
-  </span>
-
- </div>
-
-
- <div class="stat">
-
-  <b>
-   50+
-  </b>
-
-  <span>
-   EVENTS
-  </span>
-
- </div>
-
-
- <div class="stat">
-
-  <b>
-   5000+
-  </b>
-
-  <span>
-   OPPORTUNITIES
-  </span>
-
- </div>
-
-
- <div class="stat">
-
-  <b>
-   ★
-  </b>
-
-  <span>
-   REAL EXPERIENCES
-  </span>
-
- </div>
-
-
- <div class="stat">
-
-  <b>
-   ◉
-  </b>
-
-  <span>
-   BIGGER IMPACT
-  </span>
-
- </div>
-
-
- <div class="stat">
-
-  <b>
-   ∞
-  </b>
-
-  <span>
-   TOGETHER
-  </span>
-
- </div>
-
+<div class="stat">
+<b>∞</b>
+<span>TOGETHER</span>
+</div>
 
 </section>
 
+<!-- ================= EXPLORE OUR WORLDS ================= -->
 
+<section class="section" id="worlds">
 
-<!-- =====================================================
-     EXPLORE OUR WORLDS
-     ===================================================== -->
+<div class="section-head">
 
-<section
- class="section reveal"
- id="worlds">
+<h2>
+EXPLORE <span>OUR WORLDS</span>
+</h2>
 
+<p>DIFFERENT PATHS. ONE VISION.</p>
 
- <div class="section-head">
+</div>
 
-  <h2>
-   EXPLORE
-   <span>OUR WORLDS</span>
-  </h2>
+<div class="carousel-wrap">
 
-  <p>
-   DIFFERENT PATHS. ONE VISION.
-  </p>
+<button class="car-arrow l" data-target="worldsCards" data-dir="-1">‹</button>
 
- </div>
+<div class="cards" id="worldsCards">
 
+<article class="card">
 
- <div class="carousel-wrap">
+<img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=700&q=85">
 
+<div class="card-body">
 
-  <button
-   class="car-arrow l"
-   onclick="move('worlds',-1)">
+<h3>EVENTS</h3>
 
-   ‹
+<p>WHERE TALENT MEETS OPPORTUNITY</p>
 
-  </button>
+<a class="gold-btn" href="events.html">
+EXPLORE →
+</a>
 
+</div>
+</article>
 
-  <div
-   class="cards"
-   id="worlds">
+<article class="card">
 
+<img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=85">
 
-   <!-- EVENTS -->
+<div class="card-body">
 
-   <article class="card">
+<h3>ACADEMY</h3>
 
-    <img
-     src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=700&q=85">
+<p>TRAIN | LEARN | GROW</p>
 
-    <div class="card-body">
+<a class="gold-btn" href="academy.html">
+EXPLORE →
+</a>
 
-     <h3>
-      EVENTS
-     </h3>
+</div>
+</article>
 
-     <p>
-      WHERE TALENT MEETS OPPORTUNITY
-     </p>
+<article class="card">
 
-     <a
-      class="gold-btn"
-      href="events.html">
+<img src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=700&q=85">
 
-      EXPLORE →
+<div class="card-body">
 
-     </a>
+<h3>ADVENTURE</h3>
 
-    </div>
+<p>CHALLENGE | EXPLORE | SURVIVE</p>
 
-   </article>
+<a class="gold-btn" href="adventure.html">
+EXPLORE →
+</a>
 
+</div>
+</article>
 
-   <!-- ACADEMY -->
+<article class="card">
 
-   <article class="card">
+<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=85">
 
-    <img
-     src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=85">
+<div class="card-body">
 
-    <div class="card-body">
+<h3>TOURS</h3>
 
-     <h3>
-      ACADEMY
-     </h3>
+<p>PLACES | PEOPLE | MEMORIES</p>
 
-     <p>
-      TRAIN | LEARN | GROW
-     </p>
+<a class="gold-btn" href="tours.html">
+EXPLORE →
+</a>
 
-     <a
-      class="gold-btn"
-      href="academy.html">
+</div>
+</article>
 
-      EXPLORE →
+<article class="card">
 
-     </a>
+<img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=700&q=85">
 
-    </div>
+<div class="card-body">
 
-   </article>
+<h3>MEDIA</h3>
 
+<p>STORIES | MUSIC | PODCAST | PRODUCTION</p>
 
-   <!-- ADVENTURE -->
+<a class="gold-btn" href="media.html">
+EXPLORE →
+</a>
 
-   <article class="card">
+</div>
+</article>
 
-    <img
-     src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=700&q=85">
+</div>
 
-    <div class="card-body">
+<button class="car-arrow r" data-target="worldsCards" data-dir="1">›</button>
 
-     <h3>
-      ADVENTURE
-     </h3>
-
-     <p>
-      CHALLENGE | EXPLORE | SURVIVE
-     </p>
-
-     <a
-      class="gold-btn"
-      href="adventure.html">
-
-      EXPLORE →
-
-     </a>
-
-    </div>
-
-   </article>
-
-
-   <!-- TOURS -->
-
-   <article class="card">
-
-    <img
-     src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=85">
-
-    <div class="card-body">
-
-     <h3>
-      TOURS
-     </h3>
-
-     <p>
-      PLACES | PEOPLE | MEMORIES
-     </p>
-
-     <a
-      class="gold-btn"
-      href="tours.html">
-
-      EXPLORE →
-
-     </a>
-
-    </div>
-
-   </article>
-
-
-   <!-- MEDIA -->
-
-   <article class="card">
-
-    <img
-     src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=700&q=85">
-
-    <div class="card-body">
-
-     <h3>
-      MEDIA
-     </h3>
-
-     <p>
-      STORIES | MUSIC | PODCAST | PRODUCTION
-     </p>
-
-     <a
-      class="gold-btn"
-      href="media.html">
-
-      EXPLORE →
-
-     </a>
-
-    </div>
-
-   </article>
-
-
-  </div>
-
-
-  <button
-   class="car-arrow r"
-   onclick="move('worlds',1)">
-
-   ›
-
-  </button>
-
-
- </div>
-
+</div>
 </section>
 
+<!-- ================= MORE THAN A BRAND ================= -->
 
+<section class="banner story">
 
-<!-- =====================================================
-     MORE THAN A BRAND
-     ===================================================== -->
+<div class="banner-content">
 
-<section
- class="banner story reveal">
+<h2>
+MORE THAN A <span>BRAND</span>
+</h2>
 
+<p>
+WE CREATE EXPERIENCES THAT CONNECT PEOPLE,
+TALENT, ADVENTURE AND OPPORTUNITY.
+</p>
 
- <div class="banner-content">
+<a class="gold-btn" href="about.html">
+ABOUT THE APEX 99 →
+</a>
 
-  <h2>
+</div>
+</section>
 
- 
+<!-- ================= EVENTS ================= -->
+
+<section class="section" id="events">
+
+<div class="section-head">
+
+<h2>
+APEX <span>EVENTS</span>
+</h2>
+
+<p>COMPETE • PERFORM • WIN</p>
+
+</div>
+
+<div class="carousel-wrap">
+
+<button class="car-arrow l" data-target="eventCards" data-dir="-1">‹</button>
+
+<div class="cards" id="eventCards">
+
+<article class="card">
+
+<img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=700&q=85">
+
+<div class="card-body">
+
+<h3>AFTH</h3>
+
+<p>APEX FOOTBALL TALENT HUNT</p>
+
+<a class="gold-btn" href="events.html">
+VIEW EVENT →
+</a>
+
+</div>
+</article>
+
+<article class="card">
+
+<img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=700&q=85">
+
+<div class="card-body">
+
+<h3>COMPETITIONS</h3>
+
+<p>SKILL • ENERGY • OPPORTUNITY</p>
+
+<a class="gold-btn" href="events.html">
+VIEW MORE →
+</a>
+
+</div>
+</article>
+
+<article class="card">
+
+<img src="https://images.unsplash.com/photo-1461896756901-2d6b7c7a1f1e?auto=format&fit=crop&w=700&q=85">
+
+<div class="card-body">
+
+<h3>LIVE EVENTS</h3>
+
+<p>REAL PEOPLE. REAL MOMENTS.</p>
+
+<a class="gold-btn" href="events.html">
+VIEW MORE →
+</a>
+
+</div>
+</article>
+
+<article class="card">
+
+<img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=700&q=85">
+
+<div class="card-body">
+
+<h3>SPORTS</h3>
+
+<p>PLAY WITH PURPOSE</p>
+
+<a class="gold-btn" href="events.html">
+VIEW MORE →
+</a>
+
+</div>
+</article>
+
+</div>
+
+<button class="car-arrow r" data-target="eventCards" data-dir="1">›</button>
+
+</div>
+</section>
+
+<!-- ================= ACADEMY ================= -->
+
+<section class="section" id="academy">
+
+<div class="section-head">
+
+<h2>
+THE APEX 99 <span>ACADEMY</span>
+</h2>
+
+<p>TRAIN. PLAY. GROW.</p>
+
+</div>
+
+<div class="mission">
+
+<div class="mission-box">
+
+<div class="icon">⚽</div>
+
+<h3>FOOTBALL</h3>
+
+<p>
+Structured training, discipline,
+match experience and player development.
+</p>
+
+</div>
+
+<div class="mission-box">
+
+<div class="icon">🏏</div>
+
+<h3>CRICKET</h3>
+
+<p>
+Build skills, confidence, teamwork
+and competitive mindset.
+</p>
+
+</div>
+
+<div class="mission-box">
+
+<div class="icon">🏆</div>
+
+<h3>DEVELOPMENT</h3>
+
+<p>
+Training designed to help young talent
+grow step by step.
+</p>
+
+</div>
+
+</div>
+</section>
+
+<!-- ================= ADVENTURE ================= -->
+
+<section class="section" id="adventure">
+
+<div class="section-head">
+
+<h2>
+MAN V/S <span>NATURE</span>
+</h2>
+
+<p>CHALLENGE • EXPLORE • SURVIVE</p>
+
+</div>
+
+<div class="carousel-wrap">
+
+<button class="car-arrow l" data-target="adventureCards" data-dir="-1">‹</button>
+
+<div class="cards" id="adventureCards">
+
+<article class="card">
+
+<img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=700&q=85">
+
+<div class="card-body">
+
+<h3>BIKE RIDE</h3>
+
+<p>RIDE BEYOND THE ORDINARY</p>
+
+<a class="gold-btn" href="adventure.html">
+DISCOVER →
+</a>
+
+</div>
+</article>
+
+<article class="card">
+
+<img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=700&q=85">
+
+<div class="card-body">
+
+<h3>SURVIVAL</h3>
+
+<p>BUILD • FILTER • COOK • SURVIVE</p>
+
+<a class="gold-btn" href="adventure.html">
+DISCOVER →
+</a>
+
+</div>
+</article>
+
+<article class="card">
+
+<img src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=700&q=85">
+
+<div class="card-body">
+
+<h3>FOREST</h3>
+
+<p>NO GPS. JUST COURAGE.</p>
+
+<a class="gold-btn" href="adventure.html">
+DISCOVER →
+</a>
+
+</div>
+</article>
+
+<article class="card">
+
+<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=85">
+
+<div class="card-body">
+
+<h3>EXPLORE</h3>
+
+<p>FIND YOUR NEXT LIMIT</p>
+
+<a class="gold-btn" href="adventure.html">
+DISCOVER →
+</a>
+
+</div>
+</article>
+
+</div>
+
+<button class="car-arrow r" data-target="adventureCards" data-dir="1">›</button>
+
+</div>
+</section>
+
+<!-- ================= TOURS ================= -->
+
+<section class="section" id="tours">
+
+<div class="section-head">
+
+<h2>
+APEX <span>
