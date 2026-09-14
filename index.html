@@ -19,7 +19,6 @@
 }
 
 *{box-sizing:border-box}
-
 html{scroll-behavior:smooth}
 
 body{
@@ -430,9 +429,9 @@ a{
 }
 
 .card .gold-btn{
- margin:0;
  padding:6px 12px;
- font-size:8px
+ font-size:8px;
+ margin:0
 }
 
 .car-arrow{
@@ -504,9 +503,7 @@ a{
 
 .story{
  min-height:205px;
- background-image:url(
- 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85'
- )
+ background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=85')
 }
 
 /* ================= PEOPLE ================= */
@@ -530,7 +527,8 @@ a{
 
 .partners .card{
  background:#fff;
- border-color:#ddd
+ border-color:#ddd;
+ flex-basis:190px
 }
 
 .partners .card img{
@@ -542,10 +540,6 @@ a{
 
 .partners .card-body{
  display:none
-}
-
-.partners .card{
- flex-basis:190px
 }
 
 /* ================= FOOTER ================= */
@@ -606,17 +600,19 @@ a{
  font-size:8px
 }
 
-/* ================= ANIMATION ================= */
+/* ================= REVEAL FIX ================= */
 
 .reveal{
- opacity:0;
- transform:translateY(35px);
+ opacity:1 !important;
+ transform:none !important;
+ visibility:visible !important;
  transition:opacity .8s ease,transform .8s ease
 }
 
 .reveal.show{
- opacity:1;
- transform:none
+ opacity:1 !important;
+ transform:none !important;
+ visibility:visible !important
 }
 
 /* ================= TABLET ================= */
@@ -820,52 +816,103 @@ a{
 <!-- ================= HEADER ================= -->
 
 <header class="apex-header">
+
  <div class="apex-nav">
 
   <a class="apex-brand" href="index.html">
+
    <span class="apex-mark">A</span>
+
    <span>
     <strong>THE APEX 99</strong>
     <small>WHO IS THE ONE</small>
    </span>
+
   </a>
 
-  <button class="apex-toggle" id="menuBtn">☰</button>
+
+  <button class="apex-toggle" id="menuBtn">
+   ☰
+  </button>
+
 
   <nav class="apex-menu" id="menu">
-   <a class="active" href="index.html">Home</a>
-   <a href="about.html">About</a>
-   <a href="events.html">Events</a>
-   <a href="academy.html">Academy</a>
-   <a href="adventure.html">Adventure</a>
-   <a href="tours.html">Tours</a>
-   <a href="media.html">Media</a>
-   <a href="contact.html">Contact</a>
+
+   <a class="active" href="index.html">
+    Home
+   </a>
+
+   <a href="about.html">
+    About
+   </a>
+
+   <a href="events.html">
+    Events
+   </a>
+
+   <a href="academy.html">
+    Academy
+   </a>
+
+   <a href="adventure.html">
+    Adventure
+   </a>
+
+   <a href="tours.html">
+    Tours
+   </a>
+
+   <a href="media.html">
+    Media
+   </a>
+
+   <a href="contact.html">
+    Contact
+   </a>
+
   </nav>
 
-  <a class="apex-contact" href="https://wa.me/917439718014">
+
+  <a class="apex-contact"
+     href="https://wa.me/917439718014">
+
    <span>☎</span>
+
    7439718014
+
   </a>
 
  </div>
+
 </header>
+
 
 <!-- ================= MAIN ================= -->
 
 <main>
 
+
 <!-- HERO -->
 
 <section class="apex-hero" id="hero">
+
 
  <div class="apex-slide active"
  style="background-image:url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2000&q=90')">
 
   <div class="hero-content">
-   <div class="script">Explore</div>
-   <h1>THE <span>WORLD</span></h1>
-   <p>TRAVEL | PEOPLE | MEMORIES</p>
+
+   <div class="script">
+    Explore
+   </div>
+
+   <h1>
+    THE <span>WORLD</span>
+   </h1>
+
+   <p>
+    TRAVEL | PEOPLE | MEMORIES
+   </p>
 
    <div class="quote">
     “Not just destinations, but a bigger perspective.”
@@ -874,6 +921,7 @@ a{
    <a class="gold-btn" href="tours.html">
     Explore Tours →
    </a>
+
   </div>
 
  </div>
@@ -883,9 +931,18 @@ a{
  style="background-image:url('https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=2000&q=90')">
 
   <div class="hero-content">
-   <div class="script">Create</div>
-   <h1>THE <span>EXPERIENCE</span></h1>
-   <p>EVENTS | TALENT | OPPORTUNITIES</p>
+
+   <div class="script">
+    Create
+   </div>
+
+   <h1>
+    THE <span>EXPERIENCE</span>
+   </h1>
+
+   <p>
+    EVENTS | TALENT | OPPORTUNITIES
+   </p>
 
    <div class="quote">
     “Where talent meets opportunity.”
@@ -894,6 +951,7 @@ a{
    <a class="gold-btn" href="events.html">
     View Events →
    </a>
+
   </div>
 
  </div>
@@ -903,9 +961,18 @@ a{
  style="background-image:url('https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=2000&q=90')">
 
   <div class="hero-content">
-   <div class="script">Create</div>
-   <h1>YOUR <span>STORY</span></h1>
-   <p>MEDIA | MUSIC | FILM | PODCAST</p>
+
+   <div class="script">
+    Create
+   </div>
+
+   <h1>
+    YOUR <span>STORY</span>
+   </h1>
+
+   <p>
+    MEDIA | MUSIC | FILM | PODCAST
+   </p>
 
    <div class="quote">
     “Stories have the power to move people.”
@@ -914,24 +981,33 @@ a{
    <a class="gold-btn" href="media.html">
     Explore Media →
    </a>
+
   </div>
 
  </div>
 
 
- <button class="slide-arrow left" id="prev">‹</button>
- <button class="slide-arrow right" id="next">›</button>
+ <button class="slide-arrow left" id="prev">
+  ‹
+ </button>
+
+ <button class="slide-arrow right" id="next">
+  ›
+ </button>
+
 
  <div class="hero-dots" id="dots">
+
   <i class="active"></i>
   <i></i>
   <i></i>
+
  </div>
 
 </section>
 
 
-<!-- STATS -->
+<!-- ================= STATS ================= -->
 
 <section class="stats reveal">
 
@@ -968,94 +1044,171 @@ a{
 </section>
 
 
-<!-- EXPLORE OUR WORLDS -->
+<!-- ================= OUR WORLDS ================= -->
 
 <section class="section reveal">
 
  <div class="section-head">
-  <h2>EXPLORE <span>OUR WORLDS</span></h2>
-  <p>DIFFERENT PATHS. ONE VISION.</p>
+
+  <h2>
+   EXPLORE <span>OUR WORLDS</span>
+  </h2>
+
+  <p>
+   DIFFERENT PATHS. ONE VISION.
+  </p>
+
  </div>
+
 
  <div class="carousel-wrap">
 
   <button class="car-arrow l"
-  onclick="move('worlds',-1)">‹</button>
+          onclick="move('worlds',-1)">
+   ‹
+  </button>
+
 
   <div class="cards" id="worlds">
 
+
    <article class="card">
+
     <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=700&q=85">
 
     <div class="card-body">
-     <h3>EVENTS</h3>
-     <p>WHERE TALENT MEETS OPPORTUNITY</p>
-     <a class="gold-btn" href="events.html">Explore →</a>
+
+     <h3>
+      EVENTS
+     </h3>
+
+     <p>
+      WHERE TALENT MEETS OPPORTUNITY
+     </p>
+
+     <a class="gold-btn" href="events.html">
+      Explore →
+     </a>
+
     </div>
+
    </article>
 
 
    <article class="card">
+
     <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=85">
 
     <div class="card-body">
-     <h3>ACADEMY</h3>
-     <p>TRAIN | LEARN | GROW</p>
-     <a class="gold-btn" href="academy.html">Explore →</a>
+
+     <h3>
+      ACADEMY
+     </h3>
+
+     <p>
+      TRAIN | LEARN | GROW
+     </p>
+
+     <a class="gold-btn" href="academy.html">
+      Explore →
+     </a>
+
     </div>
+
    </article>
 
 
    <article class="card">
+
     <img src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=700&q=85">
 
     <div class="card-body">
-     <h3>ADVENTURE</h3>
-     <p>CHALLENGE | EXPLORE | SURVIVE</p>
-     <a class="gold-btn" href="adventure.html">Explore →</a>
+
+     <h3>
+      ADVENTURE
+     </h3>
+
+     <p>
+      CHALLENGE | EXPLORE | SURVIVE
+     </p>
+
+     <a class="gold-btn" href="adventure.html">
+      Explore →
+     </a>
+
     </div>
+
    </article>
 
 
    <article class="card">
+
     <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=85">
 
     <div class="card-body">
-     <h3>TOURS</h3>
-     <p>PLACES | PEOPLE | MEMORIES</p>
-     <a class="gold-btn" href="tours.html">Explore →</a>
+
+     <h3>
+      TOURS
+     </h3>
+
+     <p>
+      PLACES | PEOPLE | MEMORIES
+     </p>
+
+     <a class="gold-btn" href="tours.html">
+      Explore →
+     </a>
+
     </div>
+
    </article>
 
 
    <article class="card">
+
     <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=700&q=85">
 
     <div class="card-body">
-     <h3>MEDIA</h3>
-     <p>STORIES | MUSIC | PODCAST | PRODUCTION</p>
-     <a class="gold-btn" href="media.html">Explore →</a>
+
+     <h3>
+      MEDIA
+     </h3>
+
+     <p>
+      STORIES | MUSIC | PODCAST | PRODUCTION
+     </p>
+
+     <a class="gold-btn" href="media.html">
+      Explore →
+     </a>
+
     </div>
+
    </article>
+
 
   </div>
 
+
   <button class="car-arrow r"
-  onclick="move('worlds',1)">›</button>
+          onclick="move('worlds',1)">
+   ›
+  </button>
 
  </div>
 
 </section>
 
 
-<!-- BRAND MOVEMENT -->
+<!-- ================= BRAND STORY ================= -->
 
 <section class="banner story reveal">
 
  <div class="banner-content">
 
   <h2>
-   MORE THAN A BRAND<br>
+   MORE THAN A BRAND
+   <br>
    <span>A MOVEMENT</span>
   </h2>
 
@@ -1072,90 +1225,166 @@ a{
 </section>
 
 
-<!-- UPCOMING -->
+<!-- ================= UPCOMING ================= -->
 
 <section class="section reveal">
 
  <div class="section-head">
-  <h2>UPCOMING <span>HIGHLIGHTS</span></h2>
-  <p>STAY TUNED. BIG THINGS ARE COMING.</p>
+
+  <h2>
+   UPCOMING <span>HIGHLIGHTS</span>
+  </h2>
+
+  <p>
+   STAY TUNED. BIG THINGS ARE COMING.
+  </p>
+
  </div>
+
 
  <div class="carousel-wrap">
 
   <button class="car-arrow l"
-  onclick="move('highlights',-1)">‹</button>
+          onclick="move('highlights',-1)">
+   ‹
+  </button>
+
 
   <div class="cards" id="highlights">
 
+
    <article class="card">
+
     <img src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=700&q=85">
 
     <div class="card-body">
-     <h3>AFTH 2026</h3>
-     <p>25 DEC 2026</p>
-     <a class="gold-btn" href="events.html">Details →</a>
+
+     <h3>
+      AFTH 2026
+     </h3>
+
+     <p>
+      25 DEC 2026
+     </p>
+
+     <a class="gold-btn" href="events.html">
+      Details →
+     </a>
+
     </div>
+
    </article>
 
 
    <article class="card">
+
     <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=700&q=85">
 
     <div class="card-body">
-     <h3>KASHMIR TOUR</h3>
-     <p>COMING SOON</p>
-     <a class="gold-btn" href="tours.html">Details →</a>
+
+     <h3>
+      KASHMIR TOUR
+     </h3>
+
+     <p>
+      COMING SOON
+     </p>
+
+     <a class="gold-btn" href="tours.html">
+      Details →
+     </a>
+
     </div>
+
    </article>
 
 
    <article class="card">
+
     <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=700&q=85">
 
     <div class="card-body">
-     <h3>MAN V/S NATURE</h3>
-     <p>ADVENTURE</p>
-     <a class="gold-btn" href="adventure.html">Details →</a>
+
+     <h3>
+      MAN V/S NATURE
+     </h3>
+
+     <p>
+      ADVENTURE
+     </p>
+
+     <a class="gold-btn" href="adventure.html">
+      Details →
+     </a>
+
     </div>
+
    </article>
 
 
    <article class="card">
+
     <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=700&q=85">
 
     <div class="card-body">
-     <h3>NEW SONGS</h3>
-     <p>COMING SOON</p>
-     <a class="gold-btn" href="media.html">Details →</a>
+
+     <h3>
+      NEW SONGS
+     </h3>
+
+     <p>
+      COMING SOON
+     </p>
+
+     <a class="gold-btn" href="media.html">
+      Details →
+     </a>
+
     </div>
+
    </article>
 
 
    <article class="card">
+
     <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=700&q=85">
 
     <div class="card-body">
-     <h3>SHORT FILMS</h3>
-     <p>COMING SOON</p>
-     <a class="gold-btn" href="media.html">Details →</a>
+
+     <h3>
+      SHORT FILMS
+     </h3>
+
+     <p>
+      COMING SOON
+     </p>
+
+     <a class="gold-btn" href="media.html">
+      Details →
+     </a>
+
     </div>
+
    </article>
+
 
   </div>
 
+
   <button class="car-arrow r"
-  onclick="move('highlights',1)">›</button>
+          onclick="move('highlights',1)">
+   ›
+  </button>
 
  </div>
 
 </section>
 
 
-<!-- SOMETHING BIGGER -->
+<!-- ================= SOMETHING BIGGER ================= -->
 
 <section class="banner reveal"
-style="background-image:url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85')">
+ style="background-image:url('https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85')">
 
  <div class="banner-content">
 
@@ -1177,64 +1406,25 @@ style="background-image:url('https://images.unsplash.com/photo-1500534623283-312
 </section>
 
 
-<!-- REAL PEOPLE -->
+<!-- ================= REAL PEOPLE ================= -->
 
 <section class="section reveal">
 
  <div class="section-head">
-  <h2>REAL PEOPLE. <span>REAL STORIES.</span></h2>
-  <p>INSPIRING JOURNEYS. MAKING AN IMPACT.</p>
+
+  <h2>
+   REAL PEOPLE.
+   <span>REAL STORIES.</span>
+  </h2>
+
+  <p>
+   INSPIRING JOURNEYS. MAKING AN IMPACT.
+  </p>
+
  </div>
+
 
  <div class="carousel-wrap">
 
   <button class="car-arrow l"
-  onclick="move('people',-1)">‹</button>
-
-  <div class="cards" id="people">
-
-   <article class="card people-card">
-
-    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=85">
-
-    <div class="card-body">
-     <p>
-      “A life-changing experience.”
-      <br>- Participant
-     </p>
-    </div>
-
-   </article>
-
-
-   <article class="card people-card">
-
-    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=85">
-
-    <div class="card-body">
-     <p>
-      “I found my passion again.”
-      <br>- Traveller
-     </p>
-    </div>
-
-   </article>
-
-
-   <article class="card people-card">
-
-    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=700&q=85">
-
-    <div class="card-body">
-     <p>
-      “Adventure taught me more than books.”
-      <br>- Explorer
-     </p>
-    </div>
-
-   </article>
-
-
-   <article class="card people-card">
-
-    <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=700&q=85"
+     
