@@ -1,1 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>THE APEX 99 | MEDIA</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+body{
+background:#050505;
+color:#fff;
+font-family:Arial,Helvetica,sans-serif;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+.apx-wrap{
+width:min(1180px,94%);
+margin:auto;
+}
+
+/* HERO */
+
+.apx-media-hero{
+min-height:540px;
+display:flex;
+align-items:center;
+position:relative;
+
+background:
+linear-gradient(
+90deg,
+rgba(0,0,0,.92) 0%,
+rgba(0,0,0,.65) 43%,
+rgba(0,0,0,.18) 100%
+),
+
+url("https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1800&q=85")
+center/cover;
+
+border-bottom:1px solid #f5c84b;
+}
+
+.apx-hero-content{
+padding:80px 0;
+max-width:650px;
+}
+
+.apx-kicker{
+letter-spacing:5px;
+font-weight:700;
+font-size:14px;
+}
+
+.apx-media-hero h1{
+font-size:clamp(55px,9vw,110px);
+line-height:.85;
+margin:18px 0;
+color:#f5c84b;
+font-weight:900;
+}
+
+.apx-media-hero h2{
+font-size:clamp(18px,3vw,28px);
+letter-spacing:6px;
+margin-bottom:20px;
+}
+
+.apx-media-hero p{
+font-size:18px;
+line-height:1.7;
+color:#eee;
+max-width:590px;
+}
+
+.apx-buttons{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:28px;
+}
+
+.apx-btn{
+border:1px solid #f5c84b;
+padding:13px 23px;
+border-radius:30px;
+font-weight:800;
+cursor:pointer;
+display:inline-block;
+}
+
+.apx-btn.gold{
+background:#f5c84b;
+color:#080808;
+}
+
+.apx-btn.dark{
+background:#080808;
+color:#fff;
+}
+
+/* SERVICES */
+
+.apx-services{
+border-bottom:1px solid rgba(245,200,75,.45);
+background:#080808;
+}
+
+.apx-service-grid{
+display:grid;
+grid-template-columns:repeat(8,1fr);
+}
+
+.apx-service{
+padding:22px 8px;
+text-align:center;
+border-right:1px solid rgba(245,200,75,.45);
+font-size:12px;
+font-weight:800;
+line-height:1.35;
+}
+
+.apx-service:last-child{
+border-right:0;
+}
+
+.apx-icon{
+font-size:30px;
+display:block;
+margin-bottom:8px;
+}
+
+/* TITLES */
+
+.apx-title{
+text-align:center;
+padding:55px 0 25px;
+}
+
+.apx-title span{
+color:#f5c84b;
+}
+
+.apx-title h2{
+font-size:34px;
+margin-bottom:8px;
+}
+
+.apx-title p{
+color:#aaa;
+}
+
+/* FEATURE */
+
+.apx-feature-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+}
+
+.apx-feature{
+min-height:330px;
+border:1px solid rgba(245,200,75,.45);
+border-radius:10px;
+overflow:hidden;
+background-size:cover;
+background-position:center;
+}
+
+.apx-feature.story{
+background-image:
+linear-gradient(
+90deg,
+rgba(0,0,0,.92),
+rgba(0,0,0,.35)
+),
+url("https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1000&q=80");
+}
+
+.apx-feature.podcast{
+background-image:
+linear-gradient(
+90deg,
+rgba(0,0,0,.90),
+rgba(0,0,0,.25)
+),
+url("https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=1000&q=80");
+}
+
+.apx-feature-inner{
+padding:38px;
+max-width:600px;
+}
+
+.apx-feature h3{
+font-size:32px;
+color:#f5c84b;
+margin-bottom:7px;
+}
+
+.apx-feature h4{
+letter-spacing:2px;
+color:#ffd86a;
+margin-bottom:18px;
+}
+
+.apx-feature p{
+line-height:1.65;
+color:#eee;
+}
+
+/* LIST */
+
+.apx-list{
+padding:0;
+margin:18px 0;
+list-style:none;
+}
+
+.apx-list li{
+margin:8px 0;
+color:#eee;
+}
+
+.apx-list li:before{
+content:"✓";
+color:#f5c84b;
+font-weight:bold;
+margin-right:9px;
+}
+
+/* INFO */
+
+.apx-info-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:18px;
+margin-top:18px;
+}
+
+.apx-info{
+border:1px solid rgba(245,200,75,.45);
+border-radius:10px;
+background:#090909;
+padding:30px;
+}
+
+.apx-info h3{
+color:#f5c84b;
+margin-bottom:15px;
+}
+
+/* PACKAGES */
+
+.apx-packages{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+}
+
+.apx-package{
+border:1px solid rgba(245,200,75,.45);
+border-radius:10px;
+background:#090909;
+overflow:hidden;
+}
+
+.apx-package img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.apx-package-body{
+padding:25px;
+}
+
+.apx-package h3{
+color:#f5c84b;
+font-size:25px;
+}
+
+.apx-price{
+font-size:32px;
+font-weight:900;
+margin:10px 0 15px;
+}
+
+.apx-price small{
+font-size:14px;
+color:#bbb;
+font-weight:400;
+}
+
+/* PRODUCTIONS */
+
+.apx-production-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:14px;
+}
+
+.apx-production{
+border:1px solid #333;
+border-radius:8px;
+overflow:hidden;
+}
+
+.apx-production img{
+width:100%;
+height:190px;
+object-fit:cover;
+display:block;
+}
+
+.apx-production div{
+padding:13px;
+background:#090909;
+font-weight:800;
+color:#f5c84b;
+}
+
+/* CTA */
+
+.apx-cta{
+margin-top:55px;
+padding:65px 25px;
+
+background:
+linear-gradient(
+90deg,
+#050505 10%,
+rgba(5,5,5,.8)
+),
+
+url("https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1800&q=80")
+center/cover;
+
+border-top:1px solid #f5c84b;
+border-bottom:1px solid #f5c84b;
+}
+
+.apx-cta h2{
+font-size:38px;
+margin-bottom:10px;
+}
+
+.apx-cta h2 span{
+color:#f5c84b;
+}
+
+.apx-cta p{
+color:#ddd;
+max-width:570px;
+line-height:1.6;
+}
+
+/* MODAL */
+
+.apx-modal{
+display:none;
+position:fixed;
+z-index:99999;
+inset:0;
+background:rgba(0,0,0,.82);
+padding:20px;
+align-items:center;
+justify-content:center;
+}
+
+.apx-modal.show{
+display:flex;
+}
+
+.apx-modal-box{
+width:min(540px,100%);
+background:#101010;
+border:1px solid #f5c84b;
+border-radius:12px;
+padding:28px;
+position:relative;
+max-height:92vh;
+overflow:auto;
+}
+
+.apx-close{
+position:absolute;
+right:15px;
+top:10px;
+background:none;
+border:0;
+color:#fff;
+font-size:28px;
+cursor:pointer;
+}
+
+.apx-modal h3{
+color:#f5c84b;
+font-size:27px;
+margin-bottom:20px;
+}
+
+.apx-form label{
+display:block;
+font-size:13px;
+color:#ddd;
+margin:12px 0 6px;
+}
+
+.apx-form input,
+.apx-form select,
+.apx-form textarea{
+width:100%;
+padding:12px;
+border-radius:7px;
+border:1px solid #555;
+background:#080808;
+color:#fff;
+}
+
+.apx-form textarea{
+min-height:100px;
+resize:vertical;
+}
+
+.apx-note{
+font-size:12px;
+color:#999;
+margin-top:12px;
+line-height:1.5;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.apx-service-grid{
+grid-template-columns:repeat(4,1fr);
+}
+
+.apx-feature-grid,
+.apx-info-grid{
+grid-template-columns:1fr;
+}
+
+.apx-packages{
+grid-template-columns:1fr;
+}
+
+.apx-production-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+
+@media(max-width:600px){
+
+.apx-media-hero{
+min-height:520px;
+}
+
+.apx-hero-content{
+padding:70px 0 50px;
+}
+
+.apx-service-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.apx-service{
+border-bottom:1px solid rgba(245,200,75,.45);
+}
+
+.apx-production-grid{
+grid-template-columns:1fr;
+}
+
+.apx-feature-inner{
+padding:28px 22px;
+}
+
+.apx-title h2{
+font-size:28px;
+}
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- HERO -->
+
+<section class="apx-media-hero">
+
+<div class="apx-wrap">
+
+<div class="apx-hero-content">
+
+<div class="apx-kicker">
+THE APEX 99
+</div>
+
+<h1>
+MEDIA
+</h1>
+
+<h2>
+STORIES • CREATIVE • PRODUCTION
+</h2>
+
+<p>
+তোমার Life Story, Love Story, Struggle, Comedy বা Inspirational Story আমাদের দাও।
+আমরা সেই গল্পকে একটি সুন্দর Short Film / Video Production-এ রূপ দেওয়ার চেষ্টা করব।
+</p>
+
+<div class="apx-buttons">
+
+<button
+class="apx-btn gold"
+onclick="apxOpen('story')">
+SUBMIT YOUR STORY
+</button>
+
+<button
+class="apx-btn dark"
+onclick="apxOpen('query')">
+QUERY NOW
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<div class="apx-services">
+
+<div class="apx-wrap">
+
+<div class="apx-service-grid">
+
+<div class="apx-service">
+<span class="apx-icon">🎬</span>
+SHORT FILM<br>
+PRODUCTION
+</div>
+
+<div class="apx-service">
+<span class="apx-icon">🎙️</span>
+PODCAST<br>
+STUDIO
+</div>
+
+<div class="apx-service">
+<span class="apx-icon">👥</span>
+CONTENT<br>
+CREATION
+</div>
+
+<div class="apx-service">
+<span class="apx-icon">📹</span>
+VIDEO<br>
+PRODUCTION
+</div>
+
+<div class="apx-service">
+<span class="apx-icon">🎵</span>
+MUSIC & AUDIO<br>
+PRODUCTION
+</div>
+
+<div class="apx-service">
+<span class="apx-icon">🎞️</span>
+EDITING & POST<br>
+PRODUCTION
+</div>
+
+<div class="apx-service">
+<span class="apx-icon">📷</span>
+PHOTOGRAPHY
+</div>
+
+<div class="apx-service">
+<span class="apx-icon">▶️</span>
+SOCIAL MEDIA<br>
+CONTENT
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<div class="apx-wrap">
+
+
+<!-- WHAT WE DO -->
+
+<div class="apx-title">
+
+<h2>
+WHAT <span>WE DO</span>
+</h2>
+
+<p>
+Real stories. Creative ideas. Professional production.
+</p>
+
+</div>
+
+
+<div class="apx-feature-grid">
+
+
+<!-- SHORT FILM -->
+
+<article class="apx-feature story">
+
+<div class="apx-feature-inner">
+
+<h3>
+SHORT FILM
+</h3>
+
+<h4>
+TURN YOUR STORY INTO A FILM
+</h4>
+
+<p>
+তোমার জীবনের সত্যি ঘটনা, প্রেম, সংগ্রাম, হাসির গল্প,
+অনুপ্রেরণার গল্প বা অন্য কোনো meaningful experience আমাদের
+সঙ্গে share করতে পারো। Selected story নিয়ে আমাদের creative
+team production plan করবে।
+</p>
+
+<ul class="apx-list">
+
+<li>Life Stories</li>
+<li>Love Stories</li>
+<li>Struggle Stories</li>
+<li>Comedy & Fun Content</li>
+<li>Inspirational Stories</li>
+<li>Social Awareness</li>
+
+</ul>
+
+<div class="apx-buttons">
+
+<button
+class="apx-btn gold"
+onclick="apxOpen('story')">
+SUBMIT YOUR STORY
+</button>
+
+<button
+class="apx-btn dark"
+onclick="apxOpen('query')">
+QUERY NOW
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- PODCAST -->
+
+<article class="apx-feature podcast">
+
+<div class="apx-feature-inner">
+
+<h3>
+PODCAST STUDIO
+</h3>
+
+<h4>
+YOUR VOICE MATTERS
+</h4>
+
+<p>
+Creators, artists, entrepreneurs, students, storytellers
+এবং content makers-এর জন্য professional podcast recording space.
+</p>
+
+<ul class="apx-list">
+
+<li>Camera & Audio Recording</li>
+<li>Professional Microphone</li>
+<li>Studio Lighting</li>
+<li>Podcast Setup</li>
+<li>Technical Support</li>
+
+</ul>
+
+<div class="apx-buttons">
+
+<button
+class="apx-btn gold"
+onclick="apxOpen('booking')">
+BOOK STUDIO NOW
+</button>
+
+<button
+class="apx-btn dark"
+onclick="apxOpen('query')">
+QUERY NOW
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+</div>
+
+
+<!-- INFO -->
+
+<div class="apx-info-grid">
+
+
+<div class="apx-info">
+
+<h3>
+🎞️ WE PRODUCE
+</h3>
+
+<ul class="apx-list">
+
+<li>Life Stories</li>
+<li>Love Stories</li>
+<li>Struggle Stories</li>
+<li>Comedy & Fun Content</li>
+<li>Motivational Stories</li>
+<li>Social Awareness Videos</li>
+<li>Brand Films</li>
+<li>Documentary & Reality</li>
+<li>Music Videos</li>
+<li>And More...</li>
+
+</ul>
+
+</div>
+
+
+<div class="apx-info">
+
+<h3>
+🎙️ STUDIO FACILITIES
+</h3>
+
+<ul class="apx-list">
+
+<li>Professional Camera Setup</li>
+<li>High Quality Microphones</li>
+<li>Studio Lighting</li>
+<li>Sound Recording Space</li>
+<li>Recording Support</li>
+<li>Green Screen — subject to availability</li>
+<li>Editing Support</li>
+<li>Comfortable Seating</li>
+<li>AC Studio Room</li>
+<li>Technical Assistance</li>
+
+</ul>
+
+</div>
+
+</div>
+
+
+<!-- PACKAGES -->
+
+<div class="apx-title">
+
+<h2>
+PODCAST STUDIO <span>PACKAGES</span>
+</h2>
+
+<p>
+Choose the package that fits your recording plan.
+</p>
+
+</div>
+
+
+<div class="apx-packages">
+
+
+<!-- BASIC -->
+
+<article class="apx-package">
+
+<img
+src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=900&q=80"
+alt="Podcast studio">
+
+<div class="apx-package-body">
+
+<h3>
+BASIC
+</h3>
+
+<div class="apx-price">
+₹999 <small>/ Hour</small>
+</div>
+
+<ul class="apx-list">
+
+<li>1 Hour Studio</li>
+<li>Basic Podcast Setup</li>
+<li>Audio Recording</li>
+<li>Technical Support</li>
+
+</ul>
+
+<div class="apx-buttons">
+
+<button
+class="apx-btn gold"
+onclick="apxOpen('booking','BASIC - ₹999 / 1 Hour')">
+BOOK NOW
+</button>
+
+<button
+class="apx-btn dark"
+onclick="apxOpen('query','BASIC PACKAGE')">
+QUERY NOW
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- STANDARD -->
+
+<article class="apx-package">
+
+<img
+src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=900&q=80"
+alt="Podcast recording">
+
+<div class="apx-package-body">
+
+<h3>
+STANDARD
+</h3>
+
+<div class="apx-price">
+₹2,999 <small>/ 3 Hours</small>
+</div>
+
+<ul class="apx-list">
+
+<li>3 Hours Studio</li>
+<li>Camera + Audio</li>
+<li>Lighting Setup</li>
+<li>Basic Editing</li>
+<li>Technical Support</li>
+
+</ul>
+
+<div class="apx-buttons">
+
+<button
+class="apx-btn gold"
+onclick="apxOpen('booking','STANDARD - ₹2,999 / 3 Hours')">
+BOOK NOW
+</button>
+
+<button
+class="apx-btn dark"
+onclick="apxOpen('query','STANDARD PACKAGE')">
+QUERY NOW
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+
+<!-- PREMIUM -->
+
+<article class="apx-package">
+
+<img
+src="https://images.unsplash.com/photo-1589903308904-1010c2294adc?auto=format&fit=crop&w=900&q=80"
+alt="Premium podcast setup">
+
+<div class="apx-package-body">
+
+<h3>
+PREMIUM
+</h3>
+
+<div class="apx-price">
+₹3,999 <small>/ 4 Hours</small>
+</div>
+
+<ul class="apx-list">
+
+<li>4 Hours Studio</li>
+<li>Multi-Camera Setup</li>
+<li>Professional Audio</li>
+<li>Lighting + Green Screen</li>
+<li>Video Recording</li>
+<li>Basic Video Editing</li>
+<li>Technical Support</li>
+
+</ul>
+
+<div class="apx-buttons">
+
+<button
+class="apx-btn gold"
+onclick="apxOpen('booking','PREMIUM - ₹3,999 / 4 Hours')">
+BOOK NOW
+</button>
+
+<button
+class="apx-btn dark"
+onclick="apxOpen('query','PREMIUM PACKAGE')">
+QUERY NOW
+</button>
+
+</div>
+
+</div>
+
+</article>
+
+</div>
+
+
+<!-- PRODUCTIONS -->
+
+<div class="apx-title">
+
+<h2>
+OUR <span>PRODUCTIONS</span>
+</h2>
+
+<p>
+Short Film • Social Message • Music Video • Comedy • Podcast • Behind The Scenes
+</p>
+
+</div>
+
+
+<div class="apx-production-grid">
+
+
+<div class="apx-production">
+
+<img
+src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=800&q=80">
+
+<div>
+🎬 SHORT FILM
+</div>
+
+</div>
+
+
+<div class="apx-production">
+
+<img
+src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80">
+
+<div>
+💬 SOCIAL MESSAGE
+</div>
+
+</div>
+
+
+<div class="apx-production">
+
+<img
+src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=800&q=80">
+
+<div>
+🎵 MUSIC VIDEO
+</div>
+
+</div>
+
+
+<div class="apx-production">
+
+<img
+src="https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=800&q=80">
+
+<div>
+😂 COMEDY
+</div>
+
+</div>
+
+
+<div class="apx-production">
+
+<img
+src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=800&q=80">
+
+<div>
+🎙️ PODCAST
+</div>
+
+</div>
+
+
+<div class="apx-production">
+
+<img
+src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80">
+
+<div>
+🎥 BEHIND THE SCENES
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- FINAL CTA -->
+
+<div class="apx-cta">
+
+<div class="apx-wrap">
+
+<h2>
+HAVE A <span>STORY?</span>
+<br>
+LET'S CREATE TOGETHER.
+</h2>
+
+<p>
+তোমার গল্প আমাদের বলো। Story review করার পর selected projects-এর
+জন্য production discussion করা হবে।
+</p>
+
+<button
+class="apx-btn gold"
+onclick="apxOpen('story')">
+SUBMIT YOUR STORY
+</button>
+
+</div>
+
+</div>
+
+
+<!-- BOOKING / QUERY POPUP -->
+
+<div
+class="apx-modal"
+id="apxModal"
+onclick="if(event.target===this)apxClose()">
+
+<div class="apx-modal-box">
+
+<button
+class="apx-close"
+onclick="apxClose()">
+×
+</button>
+
+<h3 id="apxModalTitle">
+BOOKING / QUERY
+</h3>
+
+
+<form
+class="apx-form"
+onsubmit="apxSubmit(event)">
+
+
+<label>
+আপনার নাম *
+</label>
+
+<input
+id="apxName"
+required>
+
+
+<label>
+Mobile / WhatsApp *
+</label>
+
+<input
+id="apxPhone"
+required>
+
+
+<label>
+Service / Package
+</label>
+
+<select id="apxService">
+
+<option>
+Short Film / Story Submission
+</option>
+
+<option>
+Podcast Studio - Basic ₹999 / 1 Hour
+</option>
+
+<option>
+Podcast Studio - Standard ₹2,999 / 3 Hours
+</option>
+
+<option>
+Podcast Studio - Premium ₹3,999 / 4 Hours
+</option>
+
+<option>
+Other Media Service
+</option>
+
+</select>
+
+
+<label>
+Preferred Date
+</label>
+
+<input
+id="apxDate"
+type="date">
+
+
+<label>
+Preferred Time
+</label>
+
+<input
+id="apxTime"
+type="time">
+
+
+<label>
+আপনার Message / Story Details
+</label>
+
+<textarea
+id="apxMessage"
+placeholder="আপনার গল্প বা booking/query details লিখুন...">
+</textarea>
+
+
+<div class="apx-buttons">
+
+<button
+class="apx-btn gold"
+type="submit">
+SUBMIT REQUEST
+</button>
+
+<button
+class="apx-btn dark"
+type="button"
+onclick="apxClose()">
+CLOSE
+</button>
+
+</div>
+
+
+<div class="apx-note">
+
+এই formটি বর্তমানে website-এর front-end form।
+Google Sheet / WhatsApp / Email-এর সঙ্গে connect করলে
+customer-এর booking বা query সরাসরি তোমার কাছে আসবে।
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+
+<script>
+
+let apxMode='query';
+let apxPreset='';
+
+
+function apxOpen(mode,preset=''){
+
+apxMode=mode;
+apxPreset=preset;
+
+const modal=
+document.getElementById('apxModal');
+
+const title=
+document.getElementById('apxModalTitle');
+
+
+title.textContent=
+mode==='booking'
+?'PODCAST STUDIO BOOKING'
+:
+mode==='story'
+?'SUBMIT YOUR STORY'
+:
+'MEDIA QUERY';
+
+
+if(preset){
+
+const service=
+document.getElementById('apxService');
+
+[...service.options].forEach(option=>{
+
+if(
+option.text.includes(
+preset.split(' - ')[0]
+)
+){
+
+service.value=option.text;
+
+}
+
+});
+
+}
+
+
+modal.classList.add('show');
+
+document.body.style.overflow='hidden';
+
+}
+
+
+function apxClose(){
+
+document
+.getElementById('apxModal')
+.classList.remove('show');
+
+document.body.style.overflow='';
+
+}
+
+
+function apxSubmit(e){
+
+e.preventDefault();
+
+
+const name=
+document
+.getElementById('apxName')
+.value
+.trim();
+
+
+const phone=
+document
+.getElementById('apxPhone')
+.value
+.trim();
+
+
+const service=
+document
+.getElementById('apxService')
+.value;
+
+
+const date=
+document
+.getElementById('apxDate')
+.value
+||
+'Not specified';
+
+
+const time=
+document
+.getElementById('apxTime')
+.value
+||
+'Not specified';
+
+
+const msg=
+document
+.getElementById('apxMessage')
+.value
+.trim()
+||
+'No additional message';
+
+
+alert(
+'Thank you, '+name+
+'! Your '+
+(
+apxMode==='booking'
+?'booking request'
+:'query'
+)+
+' has been received on this page.\n\n'+
+'For live submission to your team, connect this form with Google Forms/Sheets or WhatsApp.'
+);
+
+
+console.log({
+
+name:name,
+phone:phone,
+service:service,
+date:date,
+time:time,
+message:msg,
+mode:apxMode
+
+});
+
+
+apxClose();
+
+}
+
+</script>
+
+</body>
+</html>
