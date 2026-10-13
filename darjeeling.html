@@ -1,1 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Darjeeling Tour 2026 | THE APEX 99</title>
+
+<meta name="description" content="Explore Darjeeling with THE APEX 99. 4 Nights 5 Days tour departing 18 November 2026. Package price ₹5999 per person.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+    --gold:#e4b448;
+    --black:#090909;
+    --card:#151515;
+    --white:#f5f5f5;
+    --muted:#bbbbbb;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--black);
+    color:var(--white);
+    line-height:1.7;
+}
+
+a{
+    text-decoration:none;
+}
+
+header{
+    background:#080808;
+    border-bottom:1px solid #282828;
+    padding:15px 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.logo{
+    color:var(--gold);
+    font-size:22px;
+    font-weight:900;
+    letter-spacing:1px;
+}
+
+nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+nav a{
+    color:white;
+    font-size:13px;
+}
+
+nav a:hover{
+    color:var(--gold);
+}
+
+.hero{
+    min-height:470px;
+    padding:75px 6%;
+    display:flex;
+    align-items:center;
+    background:
+    linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.35)),
+    url('tour1.jpg') center/cover no-repeat;
+}
+
+.hero-content{
+    max-width:750px;
+}
+
+.label{
+    color:var(--gold);
+    letter-spacing:3px;
+    font-size:13px;
+    font-weight:bold;
+}
+
+h1{
+    font-size:clamp(35px,6vw,65px);
+    line-height:1.15;
+    margin:15px 0;
+}
+
+.hero p{
+    color:#eeeeee;
+    font-size:17px;
+}
+
+.hero-info{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin:25px 0;
+}
+
+.badge{
+    background:rgba(0,0,0,.65);
+    border:1px solid var(--gold);
+    padding:9px 13px;
+    border-radius:5px;
+    font-size:13px;
+}
+
+.button{
+    display:inline-block;
+    background:var(--gold);
+    color:#111;
+    padding:13px 23px;
+    border-radius:5px;
+    font-weight:bold;
+    border:0;
+    cursor:pointer;
+    margin:5px 5px 5px 0;
+}
+
+.button:hover{
+    background:#f3ce72;
+}
+
+.button-outline{
+    background:transparent;
+    color:var(--gold);
+    border:1px solid var(--gold);
+}
+
+section{
+    padding:55px 6%;
+}
+
+.section-title{
+    font-size:30px;
+    margin-bottom:12px;
+}
+
+.section-subtitle{
+    color:var(--muted);
+    margin-bottom:28px;
+}
+
+.gold{
+    color:var(--gold);
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:20px;
+}
+
+.card{
+    background:var(--card);
+    border:1px solid #292929;
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.card img{
+    display:block;
+    width:100%;
+    height:210px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h3{
+    color:var(--gold);
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#cccccc;
+    font-size:14px;
+}
+
+.details{
+    background:#101010;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:15px;
+}
+
+.info-box{
+    background:var(--card);
+    border:1px solid #292929;
+    border-radius:8px;
+    padding:20px;
+}
+
+.info-box h3{
+    color:var(--gold);
+    font-size:16px;
+    margin-bottom:8px;
+}
+
+.itinerary{
+    max-width:850px;
+}
+
+.day{
+    border-left:3px solid var(--gold);
+    padding:5px 0 22px 22px;
+    margin-left:8px;
+}
+
+.day h3{
+    color:var(--gold);
+    margin-bottom:6px;
+}
+
+.day p{
+    color:#cccccc;
+}
+
+.price-section{
+    text-align:center;
+    background:linear-gradient(135deg,#18130a,#090909);
+    border-top:1px solid #3b301b;
+    border-bottom:1px solid #3b301b;
+}
+
+.price{
+    color:var(--gold);
+    font-size:clamp(40px,7vw,65px);
+    font-weight:900;
+    margin:10px 0;
+}
+
+.price-section p{
+    color:#ddd;
+    margin-bottom:15px;
+}
+
+.note{
+    max-width:800px;
+    margin:20px auto 0;
+    color:#aaa;
+    font-size:12px;
+}
+
+.booking{
+    max-width:700px;
+    margin:auto;
+}
+
+form{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.field{
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+}
+
+.field.full{
+    grid-column:1/-1;
+}
+
+label{
+    font-size:13px;
+    color:#ddd;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:13px;
+    border:1px solid #383838;
+    border-radius:5px;
+    background:#181818;
+    color:white;
+    font:inherit;
+}
+
+textarea{
+    min-height:100px;
+    resize:vertical;
+}
+
+form .button{
+    width:100%;
+    margin:0;
+}
+
+footer{
+    background:#070707;
+    border-top:1px solid #282828;
+    padding:35px 6%;
+    text-align:center;
+}
+
+footer h3{
+    color:var(--gold);
+}
+
+footer p{
+    color:#aaa;
+    font-size:13px;
+    margin-top:8px;
+}
+
+@media(max-width:750px){
+    header{
+        padding:15px 4%;
+    }
+
+    nav{
+        gap:10px;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+
+    .hero{
+        min-height:430px;
+        padding:55px 5%;
+        background-position:center;
+    }
+
+    section{
+        padding:40px 5%;
+    }
+
+    .grid,.info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .card img{
+        height:230px;
+    }
+
+    .section-title{
+        font-size:25px;
+    }
+
+    form{
+        grid-template-columns:1fr;
+    }
+
+    .field.full{
+        grid-column:auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <a class="logo" href="index.html">THE APEX 99</a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="events.html">Events</a>
+        <a href="adventure.html">Adventure</a>
+        <a href="tours.html">Tours</a>
+        <a href="booking.html">Booking</a>
+        <a href="#tour-booking">Book Now</a>
+    </nav>
+</header>
+
+<!-- HERO BANNER -->
+
+<div class="hero">
+    <div class="hero-content">
+
+        <div class="label">THE APEX 99 TOURS</div>
+
+        <h1>EXPLORE<br><span class="gold">DARJEELING</span></h1>
+
+        <p>
+            Discover the Queen of the Hills, beautiful tea gardens,
+            Himalayan views and unforgettable mountain experiences.
+        </p>
+
+        <div class="hero-info">
+            <span class="badge">📅 18 NOVEMBER 2026</span>
+            <span class="badge">🌙 4 NIGHTS / 5 DAYS</span>
+            <span class="badge">🎟️ LIMITED 12 SEATS</span>
+        </div>
+
+        <a href="#package-price" class="button">VIEW PACKAGE PRICE</a>
+        <a href="#tour-booking" class="button button-outline">BOOK YOUR TOUR</a>
+
+    </div>
+</div>
+
+<!-- TOUR OVERVIEW -->
+
+<section>
+    <div class="label">YOUR NEXT ADVENTURE</div>
+
+    <h2 class="section-title">Darjeeling <span class="gold">Tour Package</span></h2>
+
+    <p class="section-subtitle">
+        Experience the mountains with THE APEX 99.
+        Explore scenic locations and enjoy a memorable holiday.
+    </p>
+
+    <div class="info-grid">
+
+        <div class="info-box">
+            <h3>📅 Tour Date</h3>
+            <p>Departure: 18 November 2026</p>
+        </div>
+
+        <div class="info-box">
+            <h3>🌙 Tour Duration</h3>
+            <p>4 Nights / 5 Days</p>
+        </div>
+
+        <div class="info-box">
+            <h3>🚆 Transportation</h3>
+            <p>Kolkata to Kolkata by train, subject to confirmed arrangements.</p>
+        </div>
+
+        <div class="info-box">
+            <h3>🏨 Accommodation</h3>
+            <p>Hotel accommodation as specified in the confirmed package.</p>
+        </div>
+
+        <div class="info-box">
+            <h3>🍽️ Meals</h3>
+            <p>Breakfast, lunch and dinner according to the confirmed itinerary.</p>
+        </div>
+
+        <div class="info-box">
+            <h3>🎟️ Limited Seats</h3>
+            <p>Only 12 seats planned for this tour.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- SIGHTSEEING -->
+
+<section class="details">
+    <div class="label">EXPLORE THE BEAUTY</div>
+
+    <h2 class="section-title">Popular <span class="gold">Sightseeing Places</span></h2>
+
+    <p class="section-subtitle">
+        Explore Darjeeling's famous attractions.
+        Final sightseeing locations depend on the confirmed tour itinerary.
+    </p>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="tour1.jpg" alt="Himalayan mountain scenery" loading="lazy">
+            <div class="card-content">
+                <h3>Tiger Hill</h3>
+                <p>Famous for spectacular sunrise views over the Himalayan mountain ranges.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="tour3.jpg" alt="Mountain railway scenery" loading="lazy">
+            <div class="card-content">
+                <h3>Batasia Loop</h3>
+                <p>A beautiful railway loop with mountain views and landscaped gardens.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="tour4.jpg" alt="Himalayan holiday scenery" loading="lazy">
+            <div class="card-content">
+                <h3>Ghoom Monastery</h3>
+                <p>Visit a well-known Buddhist monastery near Darjeeling.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="Kashmir_Gallery_1.jpg" alt="Mountain landscape" loading="lazy">
+            <div class="card-content">
+                <h3>Himalayan Views</h3>
+                <p>Enjoy the spectacular landscapes and mountain scenery of the region.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="small469.jpg" alt="Nature and greenery" loading="lazy">
+            <div class="card-content">
+                <h3>Tea Gardens</h3>
+                <p>Discover the beautiful green tea-growing landscapes of Darjeeling.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="tour1.jpg" alt="Mountain holiday" loading="lazy">
+            <div class="card-content">
+                <h3>Local Sightseeing</h3>
+                <p>Explore additional attractions according to the final tour schedule.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ITINERARY -->
+
+<section>
+    <div class="label">YOUR JOURNEY</div>
+
+    <h2 class="section-title">5 Days <span class="gold">Tour Itinerary</span></h2>
+
+    <p class="section-subtitle">
+        The following is a provisional itinerary framework.
+        Exact travel and sightseeing schedules must be confirmed before publishing.
+    </p>
+
+    <div class="itinerary">
+
+        <div class="day">
+            <h3>DAY 1 — 18 NOVEMBER</h3>
+            <p>
+                Assemble at the designated Kolkata departure point.
+                Begin the planned journey towards North Bengal by train.
+                Train timings and arrival arrangements will be shared after confirmation.
+            </p>
+        </div>
+
+        <div class="day">
+            <h3>DAY 2 — ARRIVAL & DARJEELING</h3>
+            <p>
+                Arrival and transfer according to the confirmed arrangements.
+                Hotel check-in and sightseeing, subject to arrival time.
+            </p>
+        </div>
+
+        <div class="day">
+            <h3>DAY 3 — DARJEELING SIGHTSEEING</h3>
+            <p>
+                Planned sightseeing may include Tiger Hill, Batasia Loop,
+                Ghoom Monastery and other confirmed attractions.
+            </p>
+        </div>
+
+        <div class="day">
+            <h3>DAY 4 — LOCAL EXPLORATION</h3>
+            <p>
+                Explore the attractions included in the final itinerary.
+                Enjoy the planned activities and hotel stay.
+            </p>
+        </div>
+
+        <div class="day">
+            <h3>DAY 5 — RETURN JOURNEY</h3>
+            <p>
+                Check out and begin the return journey as per the confirmed
+                transport schedule. Arrival in Kolkata depends on train timings.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- PACKAGE PRICE -->
+
+<section class="price-section" id="package-price">
+
+    <div class="label">SPECIAL TOUR PACKAGE</div>
+
+    <h2 class="section-title">DARJEELING TOUR 2026</h2>
+
+    <div class="price">₹5,999</div>
+
+    <p>Per Person</p>
+
+    <p>📅 18 November 2026</p>
+    <p>🌙 4 Nights / 5 Days</p>
+    <p>🚆 Kolkata to Kolkata — Train</p>
+    <p>🎟️ Limited to 12 Planned Seats</p>
+
+    <a href="#tour-booking" class="button">ENQUIRE & BOOK NOW</a>
+
+    <p class="note">
+        Important: Confirm the train fare, hotel, meals, local vehicle,
+        sightseeing fees and all other inclusions before accepting payment.
+        The ₹5,999 price must be checked against the actual trip cost.
+        Do not advertise services as included unless confirmed.
+    </p>
+
+</section>
+
+<!-- BOOKING FORM -->
+
+<section id="tour-booking">
+
+    <div class="booking">
+
+        <div class="label">RESERVE YOUR SEAT</div>
+
+        <h2 class="section-title">Tour <span class="gold">Booking Enquiry</span></h2>
+
+        <p class="section-subtitle">
+            Fill in your details to enquire about the Darjeeling tour.
+        </p>
+
+        <form id="bookingForm">
+
+            <div class="field">
+                <label for="name">Full Name *</label>
+                <input id="name" name="name" type="text"
+                       placeholder="Enter your full name" required>
+            </div>
+
+            <div class="field">
+                <label for="phone">Mobile Number *</label>
+                <input id="phone" name="phone" type="tel"
+                       placeholder="Enter mobile number" required>
+            </div>
+
+            <div class="field">
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="email"
+                       placeholder="Enter email address">
+            </div>
+
+            <div class="field">
+                <label for="persons">Number of Travellers *</label>
+                <select id="persons" name="persons" required>
+                    <option value="">Select travellers</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                </select>
+            </div>
+
+            <div class="field full">
+                <label for="message">Additional Requirements</label>
+                <textarea id="message" name="message"
+                          placeholder="Tell us about your requirements"></textarea>
+            </div>
+
+            <div class="field full">
+                <button class="button" type="submit">
+                    SEND BOOKING ENQUIRY
+                </button>
+            </div>
+
+        </form>
+
+        <p class="note">
+            This form currently opens WhatsApp with your enquiry.
+            A booking is not confirmed until THE APEX 99 responds.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    <h3>THE APEX 99</h3>
+
+    <p>WHO IS THE ONE</p>
+
+    <p>A Unit of SMPN RECORD MANAGEMENT</p>
+
+    <p>Darjeeling Tour 2026 | 18 November 2026</p>
+
+    <p>Contact: +91 74397 01814</p>
+
+    <p>© 2026 THE APEX 99. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+document.getElementById("bookingForm").addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const persons = document.getElementById("persons").value;
+    const message = document.getElementById("message").value.trim();
+
+    if(!name || !phone || !persons){
+        alert("Please fill in all required fields.");
+        return;
+    }
+
+    const whatsappNumber = "917439701814";
+
+    const text =
+        "DARJEELING TOUR BOOKING ENQUIRY%0A%0A" +
+        "Name: " + encodeURIComponent(name) + "%0A" +
+        "Phone: " + encodeURIComponent(phone) + "%0A" +
+        "Email: " + encodeURIComponent(email || "Not provided") + "%0A" +
+        "Travellers: " + encodeURIComponent(persons) + "%0A" +
+        "Departure: 18 November 2026%0A" +
+        "Package: 4 Nights / 5 Days%0A" +
+        "Listed Price: ₹5999 per person%0A" +
+        "Requirements: " + encodeURIComponent(message || "None");
+
+    window.open(
+        "https://wa.me/" + whatsappNumber + "?text=" + text,
+        "_blank"
+    );
+});
+</script>
+
+</body>
+</html>
