@@ -1,357 +1,323 @@
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>THE APEX 99 | WHO IS THE ONE</title>
-<meta name="description" content="THE APEX 99 - Events, Sports Academy, Adventure, Tours and Media Production.">
-<style>
-:root {
-  --bg: #080d18;
-  --panel: #101a2b;
-  --gold: #d9ad48;
-  --white: #f7f7f7;
-  --muted: #b8c0cf;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  background: var(--bg);
-  color: var(--white);
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
-}
-a { color: inherit; text-decoration: none; }
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(8,13,24,.96);
-  border-bottom: 1px solid rgba(217,173,72,.35);
-  backdrop-filter: blur(12px);
-}
-.nav {
-  max-width: 1200px;
-  margin: auto;
-  padding: 16px 22px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-.logo { font-size: 23px; font-weight: 900; letter-spacing: 1px; }
-.logo span { color: var(--gold); }
-nav { display: flex; flex-wrap: wrap; gap: 18px; }
-nav a { font-size: 13px; color: #e4e7ee; }
-nav a:hover { color: var(--gold); }
-.hero {
-  min-height: 570px;
-  display: flex;
-  align-items: center;
-  background:
-    linear-gradient(90deg, rgba(5,9,18,.96), rgba(5,9,18,.65), rgba(5,9,18,.4)),
-    url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85") center/cover;
-  padding: 90px 7%;
-}
-.hero-content { max-width: 760px; }
-.eyebrow {
-  color: var(--gold);
-  letter-spacing: 4px;
-  font-size: 12px;
-  font-weight: bold;
-}
-h1 { font-size: clamp(42px, 7vw, 82px); line-height: 1.05; margin: 18px 0; }
-h1 span, .gold { color: var(--gold); }
-.hero p { color: #d0d5df; max-width: 600px; font-size: 17px; }
-.btn {
-  display: inline-block;
-  margin-top: 26px;
-  background: var(--gold);
-  color: #111;
-  padding: 13px 23px;
-  border-radius: 4px;
-  font-weight: 800;
-  transition: .25s;
-}
-.btn:hover { background: #f1cd76; transform: translateY(-2px); }
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  background: #0d1422;
-  border-bottom: 1px solid #202b3d;
-}
-.stat { text-align: center; padding: 25px 10px; }
-.stat strong { display: block; color: var(--gold); font-size: 25px; }
-.stat span { color: var(--muted); font-size: 12px; letter-spacing: 1px; }
-section { padding: 75px 0; }
-.container { max-width: 1200px; margin: auto; padding: 0 22px; }
-.section-head { margin-bottom: 30px; }
-.section-head small { color: var(--gold); letter-spacing: 3px; font-weight: bold; }
-.section-head h2 { font-size: clamp(28px, 4vw, 42px); margin-top: 6px; }
-.section-head p { color: var(--muted); margin-top: 8px; }
-.cards-window { overflow: hidden; }
-.cards-track {
-  display: flex;
-  gap: 20px;
-  width: max-content;
-  animation: slideCards 32s linear infinite;
-}
-.cards-window:hover .cards-track { animation-play-state: paused; }
-.card {
-  width: 280px;
-  flex-shrink: 0;
-  display: block;
-  background: var(--panel);
-  border: 1px solid #263247;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform .3s, border-color .3s, box-shadow .3s;
-}
-.card:hover {
-  transform: translateY(-7px);
-  border-color: var(--gold);
-  box-shadow: 0 12px 35px rgba(0,0,0,.3);
-}
-.card-image { height: 185px; overflow: hidden; }
-.card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform .5s;
-}
-.card:hover img { transform: scale(1.1); }
-.card-content { padding: 19px; }
-.card-content small { color: var(--gold); letter-spacing: 1.5px; font-size: 10px; font-weight: bold; }
-.card-content h3 { margin: 7px 0; font-size: 20px; }
-.card-content p { color: var(--muted); font-size: 13px; min-height: 42px; }
-.learn { display: inline-block; color: var(--gold); margin-top: 12px; font-size: 13px; font-weight: bold; }
-.card-controls { display: flex; justify-content: flex-end; gap: 10px; margin-top: 18px; }
-.card-controls button {
-  background: transparent;
-  color: var(--gold);
-  border: 1px solid var(--gold);
-  border-radius: 4px;
-  width: 42px;
-  height: 38px;
-  cursor: pointer;
-  font-size: 20px;
-}
-.card-controls button:hover { background: var(--gold); color: #111; }
-@keyframes slideCards {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-.about {
-  background: linear-gradient(135deg, #111c2e, #080d18);
-  border-top: 1px solid #202b3d;
-  border-bottom: 1px solid #202b3d;
-}
-.about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
-.about h2 { font-size: clamp(30px, 4vw, 44px); margin: 12px 0; }
-.about p { color: var(--muted); }
-.about-image { width: 100%; height: 320px; object-fit: cover; border-radius: 10px; border: 1px solid #3c4658; }
-.contact-box { text-align: center; padding: 45px 20px; border: 1px solid #443a27; border-radius: 10px; background: #101827; }
-.contact-box p { color: var(--muted); margin-top: 10px; }
-footer { padding: 30px 20px; text-align: center; color: var(--muted); font-size: 12px; border-top: 1px solid #263247; }
-footer strong { color: var(--gold); }
-@media(max-width:760px) {
-  .nav { align-items: flex-start; flex-direction: column; }
-  nav { gap: 12px; }
-  .hero { min-height: 490px; padding: 65px 22px; }
-  .about-grid { grid-template-columns: 1fr; }
-  .about-image { height: 230px; }
-  .card { width: 250px; }
-  .stats { grid-template-columns: repeat(3, 1fr); }
-  .stat strong { font-size: 20px; }
-}
-@media(prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .cards-track { animation: none; }
-  * { transition: none !important; }
-}
-</style>
+<meta name="description" content="THE APEX 99 — Events, AFTH, Sports Academy, Adventure, Tours and Media Production.">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
+<header class="top">
   <div class="nav">
-    <a class="logo" href="index.html">THE APEX <span>99</span></a>
-    <nav>
-      <a href="index.html">HOME</a>
-      <a href="about.html">ABOUT</a>
-      <a href="#events">EVENTS</a>
-      <a href="#academy">ACADEMY</a>
-      <a href="#adventure">ADVENTURE</a>
-      <a href="#tours">TOURS</a>
-      <a href="#media">MEDIA</a>
-      <a href="#contact">CONTACT</a>
+    <a class="brand" href="index.html">THE APEX <span>99</span></a>
+    <nav class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="events.html">Events</a>
+      <a href="afth.html">AFTH</a>
+      <a href="academy.html">Academy</a>
+      <a href="adventure.html">Adventure</a>
+      <a href="tours.html">Tours</a>
+      <a href="media.html">Media</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="booking.html">Booking</a>
     </nav>
+    <a class="btn" href="booking.html">BOOK / ENQUIRE</a>
   </div>
 </header>
 
 <main>
-  <section class="hero">
-    <div class="hero-content">
-      <div class="eyebrow">WELCOME TO THE APEX 99</div>
-      <h1>CREATE YOUR<br><span>OWN LEGACY.</span></h1>
-      <p>Events. Sports. Adventure. Travel. Media. Discover new experiences with THE APEX 99.</p>
-      <a class="btn" href="#worlds">EXPLORE OUR WORLDS ↗</a>
-    </div>
-  </section>
 
-  <div class="stats">
-    <div class="stat"><strong>EVENTS</strong><span>CREATE EXPERIENCES</span></div>
-    <div class="stat"><strong>SPORTS</strong><span>BUILD YOUR FUTURE</span></div>
-    <div class="stat"><strong>MEDIA</strong><span>TELL YOUR STORY</span></div>
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">WELCOME TO THE APEX 99</div>
+    <h1>CREATE YOUR<br><span class="gold">OWN LEGACY.</span></h1>
+    <p>Events and event management, sports, adventure, domestic and international tours, and media production — all under one brand.</p>
+    <a class="btn" href="#services">EXPLORE OUR WORLDS ↗</a>
+    <a class="btn alt" href="booking.html">BOOK / ENQUIRE</a>
   </div>
+</section>
 
-  <section id="worlds">
-    <div class="container">
-      <div class="section-head">
-        <small>DISCOVER MORE</small>
-        <h2>Explore Our <span class="gold">Worlds</span></h2>
-        <p>Choose a category to explore more information and services.</p>
-      </div>
-      <div class="cards-window">
-        <div class="cards-track">
-          <a class="card" href="details.html?item=events">
-            <div class="card-image"><img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=700&q=80" alt="Events"></div>
-            <div class="card-content"><small>01 / EXPERIENCES</small><h3>Events</h3><p>Competitions, live events and special experiences.</p><span class="learn">EXPLORE MORE ↗</span></div>
-          </a>
-          <a class="card" href="details.html?item=academy">
-            <div class="card-image"><img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80" alt="Sports Academy"></div>
-            <div class="card-content"><small>02 / SPORTS</small><h3>Sports Academy</h3><p>Training, development and sporting opportunities.</p><span class="learn">EXPLORE MORE ↗</span></div>
-          </a>
-          <a class="card" href="details.html?item=adventure">
-            <div class="card-image"><img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=700&q=80" alt="Adventure"></div>
-            <div class="card-content"><small>03 / EXPLORE</small><h3>Adventure</h3><p>Outdoor activities, rides and challenges.</p><span class="learn">EXPLORE MORE ↗</span></div>
-          </a>
-          <a class="card" href="details.html?item=tours">
-            <div class="card-image"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=80" alt="Tours"></div>
-            <div class="card-content"><small>04 / TRAVEL</small><h3>Tours & Travel</h3><p>Explore destinations and memorable journeys.</p><span class="learn">EXPLORE MORE ↗</span></div>
-          </a>
-          <a class="card" href="details.html?item=media">
-            <div class="card-image"><img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=700&q=80" alt="Media"></div>
-            <div class="card-content"><small>05 / CREATIVE</small><h3>Media Production</h3><p>Video production, creative projects and recording.</p><span class="learn">EXPLORE MORE ↗</span></div>
-          </a>
-          <!-- Duplicate cards create a continuous auto-sliding row -->
-          <a class="card" href="details.html?item=events" aria-hidden="true" tabindex="-1">
-            <div class="card-image"><img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=700&q=80" alt=""></div>
-            <div class="card-content"><small>01 / EXPERIENCES</small><h3>Events</h3><p>Competitions, live events and special experiences.</p><span class="learn">EXPLORE MORE ↗</span></div>
-          </a>
-          <a class="card" href="details.html?item=academy" aria-hidden="true" tabindex="-1">
-            <div class="card-image"><img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80" alt=""></div>
-            <div class="card-content"><small>02 / SPORTS</small><h3>Sports Academy</h3><p>Training, development and sporting opportunities.</p><span class="learn">EXPLORE MORE ↗</span></div>
-          </a>
-          <a class="card" href="details.html?item=adventure" aria-hidden="true" tabindex="-1">
-            <div class="card-image"><img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=700&q=80" alt=""></div>
-            <div class="card-content"><small>03 / EXPLORE</small><h3>Adventure</h3><p>Outdoor activities, rides and challenges.</p><span class="learn">EXPLORE MORE ↗</span></div>
-          </a>
-          <a class="card" href="details.html?item=tours" aria-hidden="true" tabindex="-1">
-            <div class="card-image"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=80" alt=""></div>
-            <div class="card-content"><small>04 / TRAVEL</small><h3>Tours & Travel</h3><p>Explore destinations and memorable journeys.</p><span class="learn">EXPLORE MORE ↗</span></div>
-          </a>
-          <a class="card" href="details.html?item=media" aria-hidden="true" tabindex="-1">
-            <div class="card-image"><img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=700&q=80" alt=""></div>
-            <div class="card-content"><small>05 / CREATIVE</small><h3>Media Production</h3><p>Video production, creative projects and recording.</p><span class="learn">EXPLORE MORE ↗</span></div>
-          </a>
+<section class="section">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">WHAT WE DO</div>
+      <h2>Explore Our <span class="gold">Services</span></h2>
+      <p class="muted">Select a service to see details, registration or enquiry options.</p>
+    </div>
+
+    <div class="grid four" id="services">
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=900&q=85" alt="Events">
+        <div class="cardbody">
+          <span class="tag">PLAN · ORGANISE</span>
+          <h3>Events & Event Management</h3>
+          <p>Event planning, management, coordination and production.</p>
+          <a class="btn" href="events.html">EXPLORE EVENTS ↗</a>
         </div>
-      </div>
-      <div class="card-controls">
-        <button type="button" aria-label="Move cards left" onclick="moveCards(-1)">←</button>
-        <button type="button" aria-label="Move cards right" onclick="moveCards(1)">→</button>
-      </div>
-    </div>
-  </section>
+      </article>
 
-  <section id="events">
-    <div class="container">
-      <div class="section-head"><small>COMPETE & ACHIEVE</small><h2>Our <span class="gold">Events</span></h2><p>Discover competitions and upcoming experiences.</p></div>
-      <div class="cards-window">
-        <div class="cards-track">
-          <a class="card" href="details.html?item=afth"><div class="card-image"><img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=700&q=80" alt="Football Talent Hunt"></div><div class="card-content"><small>FOOTBALL</small><h3>APEX Football Talent Hunt</h3><p>A platform to discover football talent.</p><span class="learn">VIEW DETAILS ↗</span></div></a>
-          <a class="card" href="details.html?item=competitions"><div class="card-image"><img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=700&q=80" alt="Competitions"></div><div class="card-content"><small>CHALLENGE</small><h3>Competitions</h3><p>Take part in exciting challenges and events.</p><span class="learn">VIEW DETAILS ↗</span></div></a>
-          <a class="card" href="details.html?item=live-events"><div class="card-image"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=700&q=80" alt="Live Events"></div><div class="card-content"><small>LIVE</small><h3>Live Events</h3><p>Event experiences, entertainment and production.</p><span class="learn">VIEW DETAILS ↗</span></div></a>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=900&q=85" alt="Football Talent Hunt">
+        <div class="cardbody">
+          <span class="tag">AFTH · FOOTBALL</span>
+          <h3>APEX Football Talent Hunt</h3>
+          <p>AFTH event information, eligibility and registration enquiry.</p>
+          <a class="btn" href="afth.html">VIEW AFTH ↗</a>
+          <a class="btn alt" href="register.html">REGISTER ↗</a>
         </div>
-      </div>
-    </div>
-  </section>
+      </article>
 
-  <section id="academy" class="about">
-    <div class="container about-grid">
-      <div><small class="gold">TRAIN. PLAY. GROW.</small><h2>Build Your <span class="gold">Future</span></h2><p>Explore sports training opportunities, football development and cricket activities with THE APEX 99.</p><a class="btn" href="details.html?item=academy">EXPLORE ACADEMY ↗</a></div>
-      <img class="about-image" src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1000&q=80" alt="Sports training">
-    </div>
-  </section>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=900&q=85" alt="Sports Academy">
+        <div class="cardbody">
+          <span class="tag">TRAIN · PLAY · GROW</span>
+          <h3>Sports Academy</h3>
+          <p>Sports training and player development enquiries.</p>
+          <a class="btn" href="academy.html">EXPLORE ACADEMY ↗</a>
+        </div>
+      </article>
 
-  <section id="adventure">
-    <div class="container">
-      <div class="section-head"><small>GO BEYOND</small><h2>Adventure & <span class="gold">Explore</span></h2><p>Discover outdoor experiences, rides and survival challenges.</p></div>
-      <div class="cards-window"><div class="cards-track">
-        <a class="card" href="details.html?item=bike-ride"><div class="card-image"><img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=700&q=80" alt="Bike Ride"></div><div class="card-content"><small>ON THE ROAD</small><h3>Adventure Rides</h3><p>Ride, explore and create unforgettable memories.</p><span class="learn">EXPLORE MORE ↗</span></div></a>
-        <a class="card" href="details.html?item=survival"><div class="card-image"><img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=700&q=80" alt="Survival Adventure"></div><div class="card-content"><small>TEST YOUR LIMITS</small><h3>Survival Challenge</h3><p>Outdoor challenges and practical survival skills.</p><span class="learn">EXPLORE MORE ↗</span></div></a>
-      </div></div>
-    </div>
-  </section>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=900&q=85" alt="Adventure">
+        <div class="cardbody">
+          <span class="tag">EXPLORE MORE</span>
+          <h3>Adventure</h3>
+          <p>Outdoor activities, adventure rides and survival challenges.</p>
+          <a class="btn" href="adventure.html">EXPLORE ADVENTURE ↗</a>
+        </div>
+      </article>
 
-  <section id="tours" class="about">
-    <div class="container">
-      <div class="section-head"><small>YOUR NEXT JOURNEY</small><h2>Explore <span class="gold">Tours</span></h2><p>Travel with us and discover beautiful destinations.</p></div>
-      <div class="cards-window"><div class="cards-track">
-        <a class="card" href="details.html?item=darjeeling"><div class="card-image"><img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=700&q=80" alt="Darjeeling"></div><div class="card-content"><small>MOUNTAINS</small><h3>Darjeeling Tour</h3><p>Mountain views, sightseeing and a memorable trip.</p><span class="learn">VIEW PACKAGE ↗</span></div></a>
-        <a class="card" href="details.html?item=kashmir"><div class="card-image"><img src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=700&q=80" alt="Kashmir"></div><div class="card-content"><small>PARADISE</small><h3>Kashmir Tour</h3><p>Discover scenic landscapes and mountain beauty.</p><span class="learn">VIEW PACKAGE ↗</span></div></a>
-        <a class="card" href="details.html?item=digha"><div class="card-image"><img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=700&q=80" alt="Beach tour"></div><div class="card-content"><small>SEA & SUN</small><h3>Digha Tour</h3><p>Enjoy a relaxing seaside getaway.</p><span class="learn">VIEW PACKAGE ↗</span></div></a>
-      </div></div>
-    </div>
-  </section>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85" alt="Tours and Travel">
+        <div class="cardbody">
+          <span class="tag">DOMESTIC · INTERNATIONAL</span>
+          <h3>Tours & Travel</h3>
+          <p>Darjeeling, Kashmir, Digha, Dooars, Manali and overseas destinations.</p>
+          <a class="btn" href="tours.html">VIEW PACKAGES ↗</a>
+        </div>
+      </article>
 
-  <section id="media">
-    <div class="container">
-      <div class="section-head"><small>CREATE YOUR STORY</small><h2>Media & <span class="gold">Production</span></h2><p>Bring your creative ideas to life with our media services.</p></div>
-      <div class="cards-window"><div class="cards-track">
-        <a class="card" href="details.html?item=production"><div class="card-image"><img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=700&q=80" alt="Video production"></div><div class="card-content"><small>PRODUCTION</small><h3>Video Production</h3><p>Creative video shoots and production services.</p><span class="learn">VIEW DETAILS ↗</span></div></a>
-        <a class="card" href="details.html?item=podcast"><div class="card-image"><img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=700&q=80" alt="Podcast"></div><div class="card-content"><small>VOICE & IDEAS</small><h3>Podcast Studio</h3><p>Record conversations, interviews and podcasts.</p><span class="learn">VIEW DETAILS ↗</span></div></a>
-        <a class="card" href="details.html?item=film-video"><div class="card-image"><img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=700&q=80" alt="Film video"></div><div class="card-content"><small>VISUAL STORIES</small><h3>Film & Video</h3><p>Develop stories for the screen.</p><span class="learn">VIEW DETAILS ↗</span></div></a>
-        <a class="card" href="details.html?item=short-film"><div class="card-image"><img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=700&q=80" alt="Short film"></div><div class="card-content"><small>FILM MAKING</small><h3>Short Film</h3><p>Story development, direction and filmmaking.</p><span class="learn">VIEW DETAILS ↗</span></div></a>
-        <a class="card" href="details.html?item=song-recording"><div class="card-image"><img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=700&q=80" alt="Song recording"></div><div class="card-content"><small>MUSIC</small><h3>Song Recording</h3><p>Recording and audio production services.</p><span class="learn">VIEW DETAILS ↗</span></div></a>
-      </div></div>
-    </div>
-  </section>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=900&q=85" alt="Media Production">
+        <div class="cardbody">
+          <span class="tag">FILM · SONG · PODCAST</span>
+          <h3>Media Production</h3>
+          <p>Short film making, song recording, podcast and video production.</p>
+          <a class="btn" href="media.html">EXPLORE MEDIA ↗</a>
+        </div>
+      </article>
 
-  <section id="contact">
-    <div class="container">
-      <div class="contact-box">
-        <small class="gold">LET'S CONNECT</small>
-        <h2>Ready to Create Something <span class="gold">Amazing?</span></h2>
-        <p>Contact THE APEX 99 to discuss events, sports, travel or media projects.</p>
-        <a class="btn" href="https://wa.me/917439718014" target="_blank" rel="noopener">CONTACT US ON WHATSAPP ↗</a>
-      </div>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=85" alt="Competitions">
+        <div class="cardbody">
+          <span class="tag">CHALLENGE YOURSELF</span>
+          <h3>Competitions</h3>
+          <p>Competition information and participation enquiries.</p>
+          <a class="btn" href="competitions.html">VIEW COMPETITIONS ↗</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=85" alt="Booking">
+        <div class="cardbody">
+          <span class="tag">START HERE</span>
+          <h3>Booking & Registration</h3>
+          <p>Send a booking or registration enquiry to our team.</p>
+          <a class="btn" href="booking.html">BOOK / ENQUIRE ↗</a>
+        </div>
+      </article>
+
     </div>
-  </section>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">TRAVEL THE WORLD</div>
+      <h2>Featured <span class="gold">Tour Packages</span></h2>
+      <p class="muted">Confirm availability, travel dates and final written package inclusions before payment.</p>
+    </div>
+
+    <div class="grid four">
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=900&q=85" alt="Darjeeling">
+        <div class="cardbody">
+          <span class="tag">3 NIGHTS / 4 DAYS</span>
+          <h3>Darjeeling</h3>
+          <p>Kolkata to NJP by train; NJP to hotel by car; hotel stay; breakfast, lunch and dinner; sightseeing; hotel to NJP by car; NJP to Kolkata by train.</p>
+          <div class="price">₹5,999 <small>/ person</small></div>
+          <a class="btn" href="darjeeling.html">VIEW PACKAGE ↗</a>
+          <a class="btn alt" href="booking.html">BOOK / ENQUIRE</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=900&q=85" alt="Kashmir">
+        <div class="cardbody">
+          <span class="tag">DATES TO BE ANNOUNCED</span>
+          <h3>Kashmir</h3>
+          <p>Confirm travel dates, itinerary, hotel, transport, meals and final inclusions before payment.</p>
+          <div class="price">₹14,999 <small>/ person</small></div>
+          <a class="btn" href="kashmir.html">VIEW PACKAGE ↗</a>
+          <a class="btn alt" href="booking.html">BOOK / ENQUIRE</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=900&q=85" alt="Digha">
+        <div class="cardbody">
+          <span class="tag">DOMESTIC BEACH TOUR</span>
+          <h3>Digha</h3>
+          <p>Seaside tour package. Confirm dates, hotel, meals, transport and sightseeing details.</p>
+          <div class="price">₹5,999 <small>/ person</small></div>
+          <a class="btn" href="digha.html">VIEW PACKAGE ↗</a>
+          <a class="btn alt" href="booking.html">BOOK / ENQUIRE</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=900&q=85" alt="Dooars">
+        <div class="cardbody">
+          <span class="tag">NATURE & WILDLIFE</span>
+          <h3>Dooars</h3>
+          <p>Forest landscapes and nature destinations. Ask for current itinerary and package quote.</p>
+          <div class="price">Ask for quote</div>
+          <a class="btn" href="tours.html">VIEW PACKAGE ↗</a>
+          <a class="btn alt" href="booking.html">BOOK / ENQUIRE</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=900&q=85" alt="Manali">
+        <div class="cardbody">
+          <span class="tag">MOUNTAIN ESCAPE</span>
+          <h3>Manali</h3>
+          <p>Mountain views and a memorable holiday. Ask for current itinerary and pricing.</p>
+          <div class="price">Ask for quote</div>
+          <a class="btn" href="tours.html">VIEW PACKAGE ↗</a>
+          <a class="btn alt" href="booking.html">BOOK / ENQUIRE</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=85" alt="Dubai">
+        <div class="cardbody">
+          <span class="tag">INTERNATIONAL</span>
+          <h3>Dubai Package</h3>
+          <p>Confirm flights, visa, hotel, transfers, sightseeing and final inclusions.</p>
+          <div class="price">₹1,30,000 <small>/ person</small></div>
+          <a class="btn" href="tours.html">VIEW PACKAGE ↗</a>
+          <a class="btn alt" href="booking.html">BOOK / ENQUIRE</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=900&q=85" alt="Umrah">
+        <div class="cardbody">
+          <span class="tag">PILGRIMAGE</span>
+          <h3>Umrah Package</h3>
+          <p>Confirm dates, flights, visa, accommodation, transfers and package inclusions.</p>
+          <div class="price">₹1,20,000 <small>/ person</small></div>
+          <a class="btn" href="tours.html">VIEW PACKAGE ↗</a>
+          <a class="btn alt" href="booking.html">BOOK / ENQUIRE</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=85" alt="Indonesia">
+        <div class="cardbody">
+          <span class="tag">INTERNATIONAL</span>
+          <h3>Indonesia</h3>
+          <p>Ask for dates, itinerary, flights, hotel and current package price.</p>
+          <a class="btn" href="tours.html">VIEW PACKAGE ↗</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1508009603885-50cf7c579365?auto=format&fit=crop&w=900&q=85" alt="Thailand">
+        <div class="cardbody">
+          <span class="tag">INTERNATIONAL</span>
+          <h3>Bangkok & Thailand</h3>
+          <p>Ask for dates, itinerary, flights, hotel and current package price.</p>
+          <a class="btn" href="tours.html">VIEW PACKAGE ↗</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=900&q=85" alt="Malaysia">
+        <div class="cardbody">
+          <span class="tag">INTERNATIONAL</span>
+          <h3>Malaysia</h3>
+          <p>Ask for dates, itinerary, flights, hotel and current package price.</p>
+          <a class="btn" href="tours.html">VIEW PACKAGE ↗</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=900&q=85" alt="Nepal">
+        <div class="cardbody">
+          <span class="tag">INTERNATIONAL</span>
+          <h3>Nepal</h3>
+          <p>Ask for dates, itinerary, transport, hotel and current package price.</p>
+          <a class="btn" href="tours.html">VIEW PACKAGE ↗</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=900&q=85" alt="Bhutan">
+        <div class="cardbody">
+          <span class="tag">INTERNATIONAL</span>
+          <h3>Bhutan</h3>
+          <p>Ask for dates, itinerary, transport, hotel and current package price.</p>
+          <a class="btn" href="tours.html">VIEW PACKAGE ↗</a>
+        </div>
+      </article>
+
+    </div>
+    <a class="btn" href="tours.html">VIEW ALL DESTINATIONS ↗</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap two">
+    <img style="width:100%;height:330px;border-radius:8px" src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1100&q=85" alt="Football event">
+    <div>
+      <div class="eyebrow">FEATURED EVENT</div>
+      <h2>APEX FOOTBALL <span class="gold">TALENT HUNT</span></h2>
+      <p class="muted">AFTH — football talent event organised by THE APEX 99. The previously announced date is 25 December 2026. Confirm the latest venue, registration status and event details with the organisers.</p>
+      <a class="btn" href="afth.html">EVENT DETAILS ↗</a>
+      <a class="btn alt" href="register.html">REGISTRATION ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">CUSTOMER FEEDBACK</div>
+      <h2>Ratings & <span class="gold">Reviews</span></h2>
+      <p class="muted">Share your experience with THE APEX 99.</p>
+    </div>
+    <a class="btn" href="reviews.html">WRITE A REVIEW ↗</a>
+    <div class="notice">Public reviews shared across visitors and admin moderation require a connected secure database/backend.</div>
+  </div>
+</section>
+
 </main>
 
-<footer>
-  <p><strong>THE APEX 99</strong> — WHO IS THE ONE</p>
-  <p>Powered by THE APEX 99 | A unit of SMPN RECORD MANAGEMENT</p>
-  <p>© <span id="year"></span> THE APEX 99. All rights reserved.</p>
+<footer class="footer">
+  <div class="wrap footrow">
+    <div><b>THE APEX <span class="gold">99</span></b><br>WHO IS THE ONE<br>A unit of SMPN RECORD MANAGEMENT</div>
+    <div>Events · Travel · Sports · Media</div>
+    <div>© <span data-year></span> THE APEX 99</div>
+  </div>
+  <script src="site.js"></script>
 </footer>
-
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-
-function moveCards(direction) {
-  document.querySelectorAll(".cards-window").forEach(function(windowEl) {
-    const track = windowEl.querySelector(".cards-track");
-    if (!track) return;
-    track.style.animation = "none";
-    const current = Number(track.dataset.offset || 0);
-    const next = current + direction * 300;
-    track.dataset.offset = String(next);
-    track.style.transform = "translateX(" + next + "px)";
-  });
-}
-</script>
 </body>
 </html>
