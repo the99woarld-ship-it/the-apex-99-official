@@ -5,406 +5,353 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>THE APEX 99 | WHO IS THE ONE</title>
-<meta name="description" content="THE APEX 99 — Events, Academy, Adventure, Tours and Media">
-<meta name="theme-color" content="#071a33">
-
+<meta name="description" content="THE APEX 99 - Events, Sports Academy, Adventure, Tours and Media Production.">
 <style>
-:root{--navy:#071a33;--navy2:#0b2850;--gold:#d8aa45;--gold2:#f5d27a;--white:#f7f9fc;--muted:#b8c4d5;--line:rgba(216,170,69,.35)}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:85px}
-body{margin:0;background:#061326;color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.55;overflow-x:hidden}
-a{text-decoration:none;color:inherit}
-button{font:inherit}
-.apex-header{position:sticky;top:0;z-index:999;background:rgba(5,19,39,.97);backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}
-.apex-nav{height:76px;width:92%;max-width:1440px;margin:auto;display:flex;align-items:center;gap:18px}
-.apex-brand{display:flex;align-items:center;gap:10px;min-width:220px}
-.apex-mark{font-size:45px;line-height:1;font-weight:1000;color:var(--gold2);font-style:italic}
-.apex-brand strong{display:block;font-size:16px;letter-spacing:1.4px}
-.apex-brand small{display:block;font-size:8px;letter-spacing:3px;color:#d4deeb;margin-top:3px}
-.apex-menu{display:flex;align-items:center;gap:4px;margin-left:auto}
-.apex-menu a{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.5px;padding:11px 9px;border-radius:7px;color:#e5edf7;transition:.25s}
-.apex-menu a:hover,.apex-menu a.active{background:var(--gold2);color:var(--navy)}
-.apex-contact{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--navy);border-radius:28px;padding:9px 13px;font-weight:900;font-size:11px;white-space:nowrap}
-.apex-toggle{display:none;background:transparent;border:1px solid var(--line);border-radius:8px;color:var(--gold2);font-size:26px;padding:3px 10px;margin-left:auto;cursor:pointer}
-
-/* HERO */
-.apex-hero{position:relative;height:min(690px,82vh);min-height:520px;overflow:hidden;background:var(--navy)}
-.apex-slide{position:absolute;inset:0;opacity:0;visibility:hidden;transform:scale(1.04);transition:opacity .8s ease,transform 6s ease,visibility .8s;background-size:cover;background-position:center;background-repeat:no-repeat}
-.apex-slide:nth-child(1){background-image:linear-gradient(90deg,rgba(4,17,36,.94),rgba(6,25,51,.5),rgba(6,25,51,.2)),url('who-is-the-one-home-background.png')}
-.apex-slide:nth-child(2){background-image:linear-gradient(90deg,rgba(4,17,36,.92),rgba(6,25,51,.42)),url('https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=2000&q=85')}
-.apex-slide:nth-child(3){background-image:linear-gradient(90deg,rgba(4,17,36,.92),rgba(6,25,51,.4)),url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=85')}
-.apex-slide.active{opacity:1;visibility:visible;transform:scale(1)}
-.hero-content{position:absolute;left:8%;top:50%;transform:translateY(-50%);max-width:680px;text-shadow:0 2px 15px #0004}
-.script{font-family:Georgia,serif;font-style:italic;color:var(--gold2);font-size:clamp(36px,4.5vw,66px);line-height:1.05}
-.hero-content h1{font-size:clamp(44px,6.5vw,86px);line-height:.98;margin:13px 0 16px;font-weight:1000;letter-spacing:-1.5px;color:white}
-.hero-content h1 span,.banner h2 span{color:var(--gold2)}
-.hero-content>p{font-weight:900;letter-spacing:3px;font-size:12px;color:#e7eef8}
-.quote{font-size:16px;line-height:1.7;color:#e1e9f4;max-width:470px}
-.gold-btn{display:inline-block;margin-top:18px;padding:12px 21px;border:1px solid var(--gold2);border-radius:5px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--navy);font-size:11px;font-weight:900;letter-spacing:.8px;text-transform:uppercase;transition:.25s;cursor:pointer}
-.gold-btn:hover{background:white;transform:translateY(-3px);box-shadow:0 10px 25px #0003}
-.slide-arrow{position:absolute;z-index:4;top:50%;transform:translateY(-50%);width:44px;height:44px;border:1px solid #ffffff8c;border-radius:50%;background:#05132799;color:white;font-size:26px;cursor:pointer}
-.slide-arrow.left{left:24px}.slide-arrow.right{right:24px}
-.hero-dots{position:absolute;z-index:4;bottom:22px;left:50%;transform:translateX(-50%);display:flex;gap:8px}
-.hero-dots button{width:9px;height:9px;border:0;border-radius:20px;background:white;opacity:.55;cursor:pointer;padding:0}
-.hero-dots button.active{background:var(--gold2);opacity:1;width:27px}
-
-/* STATS */
-.stats{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;background:#081b35;padding:22px 4%;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.stat{padding:18px 8px;text-align:center;border:1px solid #d8aa453b;border-radius:10px;background:linear-gradient(145deg,#10294a,#091a32)}
-.stat b{display:block;color:var(--gold2);font-size:27px;font-weight:1000}
-.stat span{display:block;font-size:9px;letter-spacing:1.2px;color:#d2deed;font-weight:800;margin-top:5px}
-
-/* SECTIONS AND MOVING CARDS */
-.section{background:linear-gradient(180deg,#0a1d38,#07162b);padding:68px 0 74px;border-bottom:1px solid #d8aa4529}
-.section-head{text-align:center;margin:0 auto 30px;padding:0 16px}
-.section-head h2{margin:0;color:var(--gold2);font-size:clamp(26px,3vw,38px);letter-spacing:1.5px;font-weight:1000;text-transform:uppercase}
-.section-head h2 span{color:white}
-.section-head p{margin:9px 0 0;color:#b9c8dc;font-size:10px;letter-spacing:2.8px;font-weight:800}
-.carousel-wrap{position:relative;width:90%;max-width:1380px;margin:auto}
-.cards{display:flex;gap:18px;overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;scrollbar-width:none;padding:5px 3px 15px}
-.cards::-webkit-scrollbar{display:none}
-.card{flex:0 0 248px;scroll-snap-align:start;background:linear-gradient(155deg,#10294a,#08172c);border:1px solid #d8aa4547;border-radius:12px;overflow:hidden;box-shadow:0 12px 32px #0003;transition:transform .3s,border-color .3s}
-.card:hover{transform:translateY(-7px);border-color:var(--gold2)}
-.card img{width:100%;height:165px;object-fit:cover;display:block;transition:transform .55s ease,filter .55s ease}
-.card:hover img,.card:focus-within img{transform:scale(1.08);filter:saturate(1.12)}
-.card-body{text-align:center;padding:17px 12px 20px}
-.card h3{font-size:15px;margin:0 0 7px;font-weight:1000;letter-spacing:.5px}
-.card p{font-size:10px;color:#b9c8dc;letter-spacing:.7px;margin:0 0 14px;min-height:30px}
-.card .gold-btn{padding:9px 14px;font-size:9px;margin:0}
-.car-arrow{position:absolute;top:44%;transform:translateY(-50%);z-index:3;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:#0a1c34;color:var(--gold2);cursor:pointer;font-size:22px}
-.car-arrow.l{left:-17px}.car-arrow.r{right:-17px}
-
-/* BANNERS */
-.banner{min-height:300px;position:relative;background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;padding:55px 20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.banner:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,19,39,.9),rgba(5,19,39,.68))}
-.banner-content{position:relative;z-index:2;max-width:850px}
-.banner h2{margin:0;font-size:clamp(28px,4vw,44px);font-weight:1000}
-.banner p{font-size:12px;letter-spacing:1.7px;color:#e2eaf5;font-weight:700}
-.story{background-image:url('https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=2000&q=85')}
-
-/* ACADEMY */
-.mission{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;width:90%;max-width:1200px;margin:auto}
-.mission-box{padding:30px 22px;border:1px solid #d8aa4540;border-radius:12px;background:linear-gradient(145deg,#10294a,#08172c);text-align:center}
-.mission-box .icon{font-size:34px;color:var(--gold2)}
-.mission-box h3{font-size:16px;margin:12px 0 8px}
-.mission-box p{font-size:12px;line-height:1.7;color:#b9c8dc;margin:0}
-
-/* FOOTER */
-.footer{background:#041022;padding:48px 5% 18px;border-top:1px solid var(--line)}
-.footer-grid{max-width:1300px;margin:auto;display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:30px}
-.footer h3{color:var(--gold2);font-size:13px;letter-spacing:1.5px}
-.footer p,.footer a{color:#bac7d8;font-size:11px;line-height:2}
-.footer a:hover{color:var(--gold2)}
-.footer-brand{font-size:25px;font-weight:1000}
-.footer-brand span{color:var(--gold2)}
-.social a{display:inline-grid;place-items:center;width:34px;height:34px;border:1px solid #3d526e;border-radius:50%;margin-right:6px;color:white}
-.copy{border-top:1px solid #233750;margin-top:30px;padding-top:16px;text-align:center;color:#8190a5;font-size:10px}
-
-@media(max-width:1100px){
-.apex-nav{width:95%;gap:10px}.apex-brand{min-width:180px}
-.apex-menu a{font-size:9px;padding:10px 6px}.apex-contact{display:none}
-.stats{grid-template-columns:repeat(3,1fr)}
+:root {
+  --bg: #080d18;
+  --panel: #101a2b;
+  --gold: #d9ad48;
+  --white: #f7f7f7;
+  --muted: #b8c0cf;
 }
-@media(max-width:850px){
-.apex-nav{height:68px;width:92%}.apex-brand{min-width:0}
-.apex-mark{font-size:37px}.apex-brand strong{font-size:14px}
-.apex-brand small{font-size:7px}.apex-toggle{display:block}
-.apex-menu{display:none;position:absolute;top:68px;left:0;width:100%;background:#06162c;padding:12px 5%;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--line)}
-.apex-menu.open{display:flex}.apex-menu a{font-size:12px;padding:12px;border-bottom:1px solid #1b3452}
-.apex-hero{height:570px;min-height:0}.hero-content{left:8%;right:8%}
-.hero-content h1{font-size:clamp(42px,8vw,64px)}.quote{font-size:14px}
-.stats{grid-template-columns:repeat(3,1fr);padding:14px 3%;gap:8px}
-.stat{padding:14px 5px}.stat b{font-size:22px}
-.section{padding:48px 0 52px}.card{flex-basis:220px}
-.card img{height:145px}.mission{grid-template-columns:1fr 1fr}
-.footer-grid{grid-template-columns:1fr 1fr}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
 }
-@media(max-width:540px){
-.apex-hero{height:510px}.apex-slide{background-position:60% center}
-.script{font-size:39px}.hero-content h1{font-size:43px;letter-spacing:-.8px}
-.hero-content>p{font-size:9px;letter-spacing:2px}.quote{font-size:12px}
-.slide-arrow{width:34px;height:34px;font-size:20px}
-.slide-arrow.left{left:10px}.slide-arrow.right{right:10px}
-.stats{grid-template-columns:repeat(2,1fr)}
-.stat b{font-size:20px}.stat span{font-size:8px}
-.section-head h2{font-size:23px}.section-head p{font-size:8px;letter-spacing:1.7px}
-.carousel-wrap{width:86%}.card{flex-basis:190px}.card img{height:125px}
-.mission{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr}
-.banner{min-height:230px}.banner p{font-size:10px}
+a { color: inherit; text-decoration: none; }
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8,13,24,.96);
+  border-bottom: 1px solid rgba(217,173,72,.35);
+  backdrop-filter: blur(12px);
 }
-@media(prefers-reduced-motion:reduce){
-html{scroll-behavior:auto}
-*,*:before,*:after{transition:none!important;animation:none!important}
+.nav {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.logo { font-size: 23px; font-weight: 900; letter-spacing: 1px; }
+.logo span { color: var(--gold); }
+nav { display: flex; flex-wrap: wrap; gap: 18px; }
+nav a { font-size: 13px; color: #e4e7ee; }
+nav a:hover { color: var(--gold); }
+.hero {
+  min-height: 570px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(5,9,18,.96), rgba(5,9,18,.65), rgba(5,9,18,.4)),
+    url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1800&q=85") center/cover;
+  padding: 90px 7%;
+}
+.hero-content { max-width: 760px; }
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+h1 { font-size: clamp(42px, 7vw, 82px); line-height: 1.05; margin: 18px 0; }
+h1 span, .gold { color: var(--gold); }
+.hero p { color: #d0d5df; max-width: 600px; font-size: 17px; }
+.btn {
+  display: inline-block;
+  margin-top: 26px;
+  background: var(--gold);
+  color: #111;
+  padding: 13px 23px;
+  border-radius: 4px;
+  font-weight: 800;
+  transition: .25s;
+}
+.btn:hover { background: #f1cd76; transform: translateY(-2px); }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #0d1422;
+  border-bottom: 1px solid #202b3d;
+}
+.stat { text-align: center; padding: 25px 10px; }
+.stat strong { display: block; color: var(--gold); font-size: 25px; }
+.stat span { color: var(--muted); font-size: 12px; letter-spacing: 1px; }
+section { padding: 75px 0; }
+.container { max-width: 1200px; margin: auto; padding: 0 22px; }
+.section-head { margin-bottom: 30px; }
+.section-head small { color: var(--gold); letter-spacing: 3px; font-weight: bold; }
+.section-head h2 { font-size: clamp(28px, 4vw, 42px); margin-top: 6px; }
+.section-head p { color: var(--muted); margin-top: 8px; }
+.cards-window { overflow: hidden; }
+.cards-track {
+  display: flex;
+  gap: 20px;
+  width: max-content;
+  animation: slideCards 32s linear infinite;
+}
+.cards-window:hover .cards-track { animation-play-state: paused; }
+.card {
+  width: 280px;
+  flex-shrink: 0;
+  display: block;
+  background: var(--panel);
+  border: 1px solid #263247;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform .3s, border-color .3s, box-shadow .3s;
+}
+.card:hover {
+  transform: translateY(-7px);
+  border-color: var(--gold);
+  box-shadow: 0 12px 35px rgba(0,0,0,.3);
+}
+.card-image { height: 185px; overflow: hidden; }
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s;
+}
+.card:hover img { transform: scale(1.1); }
+.card-content { padding: 19px; }
+.card-content small { color: var(--gold); letter-spacing: 1.5px; font-size: 10px; font-weight: bold; }
+.card-content h3 { margin: 7px 0; font-size: 20px; }
+.card-content p { color: var(--muted); font-size: 13px; min-height: 42px; }
+.learn { display: inline-block; color: var(--gold); margin-top: 12px; font-size: 13px; font-weight: bold; }
+.card-controls { display: flex; justify-content: flex-end; gap: 10px; margin-top: 18px; }
+.card-controls button {
+  background: transparent;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  width: 42px;
+  height: 38px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.card-controls button:hover { background: var(--gold); color: #111; }
+@keyframes slideCards {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.about {
+  background: linear-gradient(135deg, #111c2e, #080d18);
+  border-top: 1px solid #202b3d;
+  border-bottom: 1px solid #202b3d;
+}
+.about-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
+.about h2 { font-size: clamp(30px, 4vw, 44px); margin: 12px 0; }
+.about p { color: var(--muted); }
+.about-image { width: 100%; height: 320px; object-fit: cover; border-radius: 10px; border: 1px solid #3c4658; }
+.contact-box { text-align: center; padding: 45px 20px; border: 1px solid #443a27; border-radius: 10px; background: #101827; }
+.contact-box p { color: var(--muted); margin-top: 10px; }
+footer { padding: 30px 20px; text-align: center; color: var(--muted); font-size: 12px; border-top: 1px solid #263247; }
+footer strong { color: var(--gold); }
+@media(max-width:760px) {
+  .nav { align-items: flex-start; flex-direction: column; }
+  nav { gap: 12px; }
+  .hero { min-height: 490px; padding: 65px 22px; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-image { height: 230px; }
+  .card { width: 250px; }
+  .stats { grid-template-columns: repeat(3, 1fr); }
+  .stat strong { font-size: 20px; }
+}
+@media(prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .cards-track { animation: none; }
+  * { transition: none !important; }
 }
 </style>
 </head>
-
 <body>
-<header class="apex-header">
-  <div class="apex-nav">
-    <a class="apex-brand" href="index.html">
-      <span class="apex-mark">A</span>
-      <span><strong>THE APEX 99</strong><small>WHO IS THE ONE</small></span>
-    </a>
-    <button class="apex-toggle" id="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
-    <nav class="apex-menu" id="menu">
-      <a class="active" href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="events.html">Events</a>
-      <a href="academy.html">Academy</a>
-      <a href="adventure.html">Adventure</a>
-      <a href="tours.html">Tours</a>
-      <a href="media.html">Media</a>
-      <a href="contact.html">Contact</a>
+
+<header>
+  <div class="nav">
+    <a class="logo" href="index.html">THE APEX <span>99</span></a>
+    <nav>
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="#events">EVENTS</a>
+      <a href="#academy">ACADEMY</a>
+      <a href="#adventure">ADVENTURE</a>
+      <a href="#tours">TOURS</a>
+      <a href="#media">MEDIA</a>
+      <a href="#contact">CONTACT</a>
     </nav>
-    <a class="apex-contact" href="https://wa.me/917439718014">☎ 7439718014</a>
   </div>
 </header>
 
 <main>
-<section class="apex-hero" id="hero">
-  <div class="apex-slide active">
+  <section class="hero">
     <div class="hero-content">
-      <div class="script">Welcome to</div>
-      <h1>THE APEX <span>99</span></h1>
-      <p>WHO IS THE ONE</p>
-      <div class="quote">More than a destination, a movement for a better tomorrow.</div>
-      <a class="gold-btn" href="#worlds">EXPLORE OUR WORLDS →</a>
+      <div class="eyebrow">WELCOME TO THE APEX 99</div>
+      <h1>CREATE YOUR<br><span>OWN LEGACY.</span></h1>
+      <p>Events. Sports. Adventure. Travel. Media. Discover new experiences with THE APEX 99.</p>
+      <a class="btn" href="#worlds">EXPLORE OUR WORLDS ↗</a>
     </div>
+  </section>
+
+  <div class="stats">
+    <div class="stat"><strong>EVENTS</strong><span>CREATE EXPERIENCES</span></div>
+    <div class="stat"><strong>SPORTS</strong><span>BUILD YOUR FUTURE</span></div>
+    <div class="stat"><strong>MEDIA</strong><span>TELL YOUR STORY</span></div>
   </div>
-  <div class="apex-slide">
-    <div class="hero-content">
-      <div class="script">Discover</div>
-      <h1>WHO IS THE <span>ONE?</span></h1>
-      <p>ONE VISION • ONE JOURNEY</p>
-      <div class="quote">Find your path. Face the challenge. Become the one.</div>
-      <a class="gold-btn" href="#events">DISCOVER MORE →</a>
+
+  <section id="worlds">
+    <div class="container">
+      <div class="section-head">
+        <small>DISCOVER MORE</small>
+        <h2>Explore Our <span class="gold">Worlds</span></h2>
+        <p>Choose a category to explore more information and services.</p>
+      </div>
+      <div class="cards-window">
+        <div class="cards-track">
+          <a class="card" href="details.html?item=events">
+            <div class="card-image"><img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=700&q=80" alt="Events"></div>
+            <div class="card-content"><small>01 / EXPERIENCES</small><h3>Events</h3><p>Competitions, live events and special experiences.</p><span class="learn">EXPLORE MORE ↗</span></div>
+          </a>
+          <a class="card" href="details.html?item=academy">
+            <div class="card-image"><img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80" alt="Sports Academy"></div>
+            <div class="card-content"><small>02 / SPORTS</small><h3>Sports Academy</h3><p>Training, development and sporting opportunities.</p><span class="learn">EXPLORE MORE ↗</span></div>
+          </a>
+          <a class="card" href="details.html?item=adventure">
+            <div class="card-image"><img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=700&q=80" alt="Adventure"></div>
+            <div class="card-content"><small>03 / EXPLORE</small><h3>Adventure</h3><p>Outdoor activities, rides and challenges.</p><span class="learn">EXPLORE MORE ↗</span></div>
+          </a>
+          <a class="card" href="details.html?item=tours">
+            <div class="card-image"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=80" alt="Tours"></div>
+            <div class="card-content"><small>04 / TRAVEL</small><h3>Tours & Travel</h3><p>Explore destinations and memorable journeys.</p><span class="learn">EXPLORE MORE ↗</span></div>
+          </a>
+          <a class="card" href="details.html?item=media">
+            <div class="card-image"><img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=700&q=80" alt="Media"></div>
+            <div class="card-content"><small>05 / CREATIVE</small><h3>Media Production</h3><p>Video production, creative projects and recording.</p><span class="learn">EXPLORE MORE ↗</span></div>
+          </a>
+          <!-- Duplicate cards create a continuous auto-sliding row -->
+          <a class="card" href="details.html?item=events" aria-hidden="true" tabindex="-1">
+            <div class="card-image"><img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?auto=format&fit=crop&w=700&q=80" alt=""></div>
+            <div class="card-content"><small>01 / EXPERIENCES</small><h3>Events</h3><p>Competitions, live events and special experiences.</p><span class="learn">EXPLORE MORE ↗</span></div>
+          </a>
+          <a class="card" href="details.html?item=academy" aria-hidden="true" tabindex="-1">
+            <div class="card-image"><img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=700&q=80" alt=""></div>
+            <div class="card-content"><small>02 / SPORTS</small><h3>Sports Academy</h3><p>Training, development and sporting opportunities.</p><span class="learn">EXPLORE MORE ↗</span></div>
+          </a>
+          <a class="card" href="details.html?item=adventure" aria-hidden="true" tabindex="-1">
+            <div class="card-image"><img src="https://images.unsplash.com/photo-1551632811-561732d1e306?auto=format&fit=crop&w=700&q=80" alt=""></div>
+            <div class="card-content"><small>03 / EXPLORE</small><h3>Adventure</h3><p>Outdoor activities, rides and challenges.</p><span class="learn">EXPLORE MORE ↗</span></div>
+          </a>
+          <a class="card" href="details.html?item=tours" aria-hidden="true" tabindex="-1">
+            <div class="card-image"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=80" alt=""></div>
+            <div class="card-content"><small>04 / TRAVEL</small><h3>Tours & Travel</h3><p>Explore destinations and memorable journeys.</p><span class="learn">EXPLORE MORE ↗</span></div>
+          </a>
+          <a class="card" href="details.html?item=media" aria-hidden="true" tabindex="-1">
+            <div class="card-image"><img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=700&q=80" alt=""></div>
+            <div class="card-content"><small>05 / CREATIVE</small><h3>Media Production</h3><p>Video production, creative projects and recording.</p><span class="learn">EXPLORE MORE ↗</span></div>
+          </a>
+        </div>
+      </div>
+      <div class="card-controls">
+        <button type="button" aria-label="Move cards left" onclick="moveCards(-1)">←</button>
+        <button type="button" aria-label="Move cards right" onclick="moveCards(1)">→</button>
+      </div>
     </div>
-  </div>
-  <div class="apex-slide">
-    <div class="hero-content">
-      <div class="script">Powered by</div>
-      <h1>THE APEX <span>99</span></h1>
-      <p>A UNIT OF SMPN RECORD MANAGEMENT</p>
-      <div class="quote">Events • Academy • Adventure • Tours • Media</div>
-      <a class="gold-btn" href="#contact">JOIN THE JOURNEY →</a>
+  </section>
+
+  <section id="events">
+    <div class="container">
+      <div class="section-head"><small>COMPETE & ACHIEVE</small><h2>Our <span class="gold">Events</span></h2><p>Discover competitions and upcoming experiences.</p></div>
+      <div class="cards-window">
+        <div class="cards-track">
+          <a class="card" href="details.html?item=afth"><div class="card-image"><img src="https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=700&q=80" alt="Football Talent Hunt"></div><div class="card-content"><small>FOOTBALL</small><h3>APEX Football Talent Hunt</h3><p>A platform to discover football talent.</p><span class="learn">VIEW DETAILS ↗</span></div></a>
+          <a class="card" href="details.html?item=competitions"><div class="card-image"><img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=700&q=80" alt="Competitions"></div><div class="card-content"><small>CHALLENGE</small><h3>Competitions</h3><p>Take part in exciting challenges and events.</p><span class="learn">VIEW DETAILS ↗</span></div></a>
+          <a class="card" href="details.html?item=live-events"><div class="card-image"><img src="https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=700&q=80" alt="Live Events"></div><div class="card-content"><small>LIVE</small><h3>Live Events</h3><p>Event experiences, entertainment and production.</p><span class="learn">VIEW DETAILS ↗</span></div></a>
+        </div>
+      </div>
     </div>
-  </div>
-  <button class="slide-arrow left" id="prev" aria-label="Previous slide">‹</button>
-  <button class="slide-arrow right" id="next" aria-label="Next slide">›</button>
-  <div class="hero-dots" id="dots">
-    <button class="active" aria-label="Slide 1"></button>
-    <button aria-label="Slide 2"></button>
-    <button aria-label="Slide 3"></button>
-  </div>
-</section>
+  </section>
 
-<section class="stats">
-  <div class="stat"><b>10000+</b><span>PEOPLE CONNECTED</span></div>
-  <div class="stat"><b>50+</b><span>EVENTS</span></div>
-  <div class="stat"><b>5000+</b><span>OPPORTUNITIES</span></div>
-  <div class="stat"><b>★</b><span>REAL EXPERIENCES</span></div>
-  <div class="stat"><b>◉</b><span>BIGGER IMPACT</span></div>
-  <div class="stat"><b>∞</b><span>TOGETHER</span></div>
-</section>
-
-<section class="section" id="worlds">
-  <div class="section-head"><h2>EXPLORE <span>OUR WORLDS</span></h2><p>DIFFERENT PATHS. ONE VISION.</p></div>
-  <div class="carousel-wrap">
-    <button class="car-arrow l" data-target="worldsCards" data-dir="-1" aria-label="Scroll left">‹</button>
-    <div class="cards" id="worldsCards">
-      <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?auto=format&fit=crop&w=700&q=85" alt="Live event"><div class="card-body"><h3>EVENTS</h3><p>WHERE TALENT MEETS OPPORTUNITY</p><a class="gold-btn" href="events.html">EXPLORE →</a></div></article>
-      <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=700&q=85" alt="Sports academy"><div class="card-body"><h3>ACADEMY</h3><p>TRAIN | LEARN | GROW</p><a class="gold-btn" href="academy.html">EXPLORE →</a></div></article>
-      <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=700&q=85" alt="Forest adventure"><div class="card-body"><h3>ADVENTURE</h3><p>CHALLENGE | EXPLORE | SURVIVE</p><a class="gold-btn" href="adventure.html">EXPLORE →</a></div></article>
-      <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=85" alt="Travel destination"><div class="card-body"><h3>TOURS</h3><p>PLACES | PEOPLE | MEMORIES</p><a class="gold-btn" href="tours.html">EXPLORE →</a></div></article>
-      <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=700&q=85" alt="Media production"><div class="card-body"><h3>MEDIA</h3><p>STORIES | MUSIC | PODCAST | PRODUCTION</p><a class="gold-btn" href="media.html">EXPLORE →</a></div></article>
+  <section id="academy" class="about">
+    <div class="container about-grid">
+      <div><small class="gold">TRAIN. PLAY. GROW.</small><h2>Build Your <span class="gold">Future</span></h2><p>Explore sports training opportunities, football development and cricket activities with THE APEX 99.</p><a class="btn" href="details.html?item=academy">EXPLORE ACADEMY ↗</a></div>
+      <img class="about-image" src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1000&q=80" alt="Sports training">
     </div>
-    <button class="car-arrow r" data-target="worldsCards" data-dir="1" aria-label="Scroll right">›</button>
-  </div>
-</section>
+  </section>
 
-<section class="banner story">
-  <div class="banner-content"><h2>MORE THAN A <span>BRAND</span></h2><p>WE CREATE EXPERIENCES THAT CONNECT PEOPLE, TALENT, ADVENTURE AND OPPORTUNITY.</p><a class="gold-btn" href="about.html">ABOUT THE APEX 99 →</a></div>
-</section>
-
-<section class="section" id="events">
-  <div class="section-head"><h2>APEX <span>EVENTS</span></h2><p>COMPETE • PERFORM • WIN</p></div>
-  <div class="carousel-wrap">
-    <button class="car-arrow l" data-target="eventCards" data-dir="-1" aria-label="Scroll events left">‹</button>
-    <div class="cards" id="eventCards">
-      <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=700&q=85" alt="Football event"><div class="card-body"><h3>AFTH</h3><p>APEX FOOTBALL TALENT HUNT</p><a class="gold-btn" href="events.html">VIEW EVENT →</a></div></article>
-      <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=700&q=85" alt="Sports competition"><div class="card-body"><h3>COMPETITIONS</h3><p>SKILL • ENERGY • OPPORTUNITY</p><a class="gold-btn" href="events.html">VIEW MORE →</a></div></article>
-      <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1461896756901-2d6b7c7a1f1e?auto=format&fit=crop&w=700&q=85" alt="Live sporting event"><div class="card-body"><h3>LIVE EVENTS</h3><p>REAL PEOPLE. REAL MOMENTS.</p><a class="gold-btn" href="events.html">VIEW MORE →</a></div></article>
-      <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=700&q=85" alt="Football match"><div class="card-body"><h3>SPORTS</h3><p>PLAY WITH PURPOSE</p><a class="gold-btn" href="events.html">VIEW MORE →</a></div></article>
+  <section id="adventure">
+    <div class="container">
+      <div class="section-head"><small>GO BEYOND</small><h2>Adventure & <span class="gold">Explore</span></h2><p>Discover outdoor experiences, rides and survival challenges.</p></div>
+      <div class="cards-window"><div class="cards-track">
+        <a class="card" href="details.html?item=bike-ride"><div class="card-image"><img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&w=700&q=80" alt="Bike Ride"></div><div class="card-content"><small>ON THE ROAD</small><h3>Adventure Rides</h3><p>Ride, explore and create unforgettable memories.</p><span class="learn">EXPLORE MORE ↗</span></div></a>
+        <a class="card" href="details.html?item=survival"><div class="card-image"><img src="https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=700&q=80" alt="Survival Adventure"></div><div class="card-content"><small>TEST YOUR LIMITS</small><h3>Survival Challenge</h3><p>Outdoor challenges and practical survival skills.</p><span class="learn">EXPLORE MORE ↗</span></div></a>
+      </div></div>
     </div>
-    <button class="car-arrow r" data-target="eventCards" data-dir="1" aria-label="Scroll events right">›</button>
-  </div>
-</section>
+  </section>
 
-<section class="section" id="academy">
-  <div class="section-head"><h2>THE APEX 99 <span>ACADEMY</span></h2><p>TRAIN. PLAY. GROW.</p></div>
-  <div class="mission">
-    <div class="mission-box"><div class="icon">⚽</div><h3>FOOTBALL</h3><p>Structured training, discipline, match experience and player development.</p></div>
-    <div class="mission-box"><div class="icon">🏏</div><h3>CRICKET</h3><p>Build skills, confidence, teamwork and competitive mindset.</p></div>
-    <div class="mission-box"><div class="icon">🏆</div><h3>DEVELOPMENT</h3><p>Training designed to help young talent grow step by step.</p></div>
-  </div>
-  <div style="text-align:center;margin-top:25px"><a class="gold-btn" href="academy.html">EXPLORE ACADEMY →</a></div>
-</section>
-
-<section class="section" id="adventure">
-  <div class="section-head"><h2>MAN V/S <span>NATURE</span></h2><p>CHALLENGE • EXPLORE • SURVIVE</p></div>
-  <div class="carousel-wrap">
-    <button class="car-arrow l" data-target="adventureCards" data-dir="-1" aria-label="Scroll adventure left">‹</button>
-    <div class="cards" id="adventureCards">
-      <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=700&q=85" alt="Outdoor trip"><div class="card-body"><h3>BIKE RIDE</h3><p>RIDE BEYOND THE ORDINARY</p><a class="gold-btn" href="adventure.html">DISCOVER →</a></div></article>
-      <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=700&q=85" alt="Camping"><div class="card-body"><h3>SURVIVAL</h3><p>BUILD • FILTER • COOK • SURVIVE</p><a class="gold-btn" href="adventure.html">DISCOVER →</a></div></article>
-      <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=700&q=85" alt="Forest"><div class="card-body"><h3>FOREST</h3><p>NO GPS. JUST COURAGE.</p><a class="gold-btn" href="adventure.html">DISCOVER →</a></div></article>
-      <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=85" alt="Mountain landscape"><div class="card-body"><h3>EXPLORE</h3><p>FIND YOUR NEXT LIMIT</p><a class="gold-btn" href="adventure.html">DISCOVER →</a></div></article>
+  <section id="tours" class="about">
+    <div class="container">
+      <div class="section-head"><small>YOUR NEXT JOURNEY</small><h2>Explore <span class="gold">Tours</span></h2><p>Travel with us and discover beautiful destinations.</p></div>
+      <div class="cards-window"><div class="cards-track">
+        <a class="card" href="details.html?item=darjeeling"><div class="card-image"><img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=700&q=80" alt="Darjeeling"></div><div class="card-content"><small>MOUNTAINS</small><h3>Darjeeling Tour</h3><p>Mountain views, sightseeing and a memorable trip.</p><span class="learn">VIEW PACKAGE ↗</span></div></a>
+        <a class="card" href="details.html?item=kashmir"><div class="card-image"><img src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=700&q=80" alt="Kashmir"></div><div class="card-content"><small>PARADISE</small><h3>Kashmir Tour</h3><p>Discover scenic landscapes and mountain beauty.</p><span class="learn">VIEW PACKAGE ↗</span></div></a>
+        <a class="card" href="details.html?item=digha"><div class="card-image"><img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=700&q=80" alt="Beach tour"></div><div class="card-content"><small>SEA & SUN</small><h3>Digha Tour</h3><p>Enjoy a relaxing seaside getaway.</p><span class="learn">VIEW PACKAGE ↗</span></div></a>
+      </div></div>
     </div>
-    <button class="car-arrow r" data-target="adventureCards" data-dir="1" aria-label="Scroll adventure right">›</button>
-  </div>
-</section>
+  </section>
 
-<section class="section" id="tours">
-  <div class="section-head"><h2>APEX <span>TOURS</span></h2><p>PLACES • PEOPLE • MEMORIES</p></div>
-  <div class="carousel-wrap">
-    <button class="car-arrow l" data-target="tourCards" data-dir="-1" aria-label="Scroll tours left">‹</button>
-    <div class="cards" id="tourCards">
-      <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1506461883276-594a12b11cf3?auto=format&fit=crop&w=700&q=85" alt="Kashmir travel"><div class="card-body"><h3>KASHMIR</h3><p>MOUNTAINS • BEAUTY • MEMORIES</p><a class="gold-btn" href="tours.html">EXPLORE →</a></div></article>
-      <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=85" alt="Beach destination"><div class="card-body"><h3>DIGHA</h3><p>SEA • SUN • ESCAPE</p><a class="gold-btn" href="tours.html">EXPLORE →</a></div></article>
-      <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=700&q=85" alt="Travel landscape"><div class="card-body"><h3>TRAVEL</h3><p>NEW PLACES. NEW STORIES.</p><a class="gold-btn" href="tours.html">EXPLORE →</a></div></article>
-      <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=700&q=85" alt="Nature getaway"><div class="card-body"><h3>GETAWAY</h3><p>LIVE THE JOURNEY</p><a class="gold-btn" href="tours.html">EXPLORE →</a></div></article>
+  <section id="media">
+    <div class="container">
+      <div class="section-head"><small>CREATE YOUR STORY</small><h2>Media & <span class="gold">Production</span></h2><p>Bring your creative ideas to life with our media services.</p></div>
+      <div class="cards-window"><div class="cards-track">
+        <a class="card" href="details.html?item=production"><div class="card-image"><img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=700&q=80" alt="Video production"></div><div class="card-content"><small>PRODUCTION</small><h3>Video Production</h3><p>Creative video shoots and production services.</p><span class="learn">VIEW DETAILS ↗</span></div></a>
+        <a class="card" href="details.html?item=podcast"><div class="card-image"><img src="https://images.unsplash.com/photo-1590602847861-f357a9332bbc?auto=format&fit=crop&w=700&q=80" alt="Podcast"></div><div class="card-content"><small>VOICE & IDEAS</small><h3>Podcast Studio</h3><p>Record conversations, interviews and podcasts.</p><span class="learn">VIEW DETAILS ↗</span></div></a>
+        <a class="card" href="details.html?item=film-video"><div class="card-image"><img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=700&q=80" alt="Film video"></div><div class="card-content"><small>VISUAL STORIES</small><h3>Film & Video</h3><p>Develop stories for the screen.</p><span class="learn">VIEW DETAILS ↗</span></div></a>
+        <a class="card" href="details.html?item=short-film"><div class="card-image"><img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=700&q=80" alt="Short film"></div><div class="card-content"><small>FILM MAKING</small><h3>Short Film</h3><p>Story development, direction and filmmaking.</p><span class="learn">VIEW DETAILS ↗</span></div></a>
+        <a class="card" href="details.html?item=song-recording"><div class="card-image"><img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=700&q=80" alt="Song recording"></div><div class="card-content"><small>MUSIC</small><h3>Song Recording</h3><p>Recording and audio production services.</p><span class="learn">VIEW DETAILS ↗</span></div></a>
+      </div></div>
     </div>
-    <button class="car-arrow r" data-target="tourCards" data-dir="1" aria-label="Scroll tours right">›</button>
-  </div>
-</section>
+  </section>
 
-<section class="section" id="media">
-  <div class="section-head"><h2>APEX <span>MEDIA</span></h2><p>STORIES • MUSIC • PODCAST • PRODUCTION</p></div>
-  <div class="carousel-wrap">
-    <button class="car-arrow l" data-target="mediaCards" data-dir="-1" aria-label="Scroll media left">‹</button>
-    <div class="cards" id="mediaCards">
-      <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=700&q=85" alt="Music production studio"><div class="card-body"><h3>PRODUCTION</h3><p>CREATE STORIES THAT MATTER</p><a class="gold-btn" href="media.html">EXPLORE →</a></div></article>
-      <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&w=700&q=85" alt="Podcast microphone"><div class="card-body"><h3>PODCAST</h3><p>VOICES • IDEAS • PEOPLE</p><a class="gold-btn" href="media.html">EXPLORE →</a></div></article>
-      <article class="card"><img loading="lazy" src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=700&q=85" alt="Video production"><div class="card-body"><h3>FILM & VIDEO</h3><p>TURN MOMENTS INTO STORIES</p><a class="gold-btn" href="media.html">EXPLORE →</a></div></article>
+  <section id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <small class="gold">LET'S CONNECT</small>
+        <h2>Ready to Create Something <span class="gold">Amazing?</span></h2>
+        <p>Contact THE APEX 99 to discuss events, sports, travel or media projects.</p>
+        <a class="btn" href="https://wa.me/917439718014" target="_blank" rel="noopener">CONTACT US ON WHATSAPP ↗</a>
+      </div>
     </div>
-    <button class="car-arrow r" data-target="mediaCards" data-dir="1" aria-label="Scroll media right">›</button>
-  </div>
-</section>
-
-<section class="banner" style="background-image:url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=2000&q=85')">
-  <div class="banner-content"><h2>YOUR NEXT CHAPTER <span>STARTS HERE</span></h2><p>JOIN A COMMUNITY BUILT AROUND TALENT, EXPERIENCE AND OPPORTUNITY.</p><a class="gold-btn" href="contact.html">CONNECT WITH US →</a></div>
-</section>
+  </section>
 </main>
 
-<footer class="footer" id="contact">
-  <div class="footer-grid">
-    <div><div class="footer-brand">THE APEX <span>99</span></div><p>WHO IS THE ONE</p><p>Events • Academy • Adventure • Tours • Media</p></div>
-    <div><h3>EXPLORE</h3><p><a href="about.html">About Us</a><br><a href="events.html">Events</a><br><a href="academy.html">Academy</a><br><a href="adventure.html">Adventure</a></p></div>
-    <div><h3>DISCOVER</h3><p><a href="tours.html">Tours</a><br><a href="media.html">Media</a><br><a href="booking.html">Booking</a><br><a href="contact.html">Contact</a></p></div>
-    <div><h3>LET'S CONNECT</h3><p>Have a question or want to collaborate?</p><p><a href="https://wa.me/917439718014" target="_blank" rel="noopener">WhatsApp: 7439718014</a></p><div class="social"><a href="https://www.facebook.com/" aria-label="Facebook">f</a><a href="https://www.instagram.com/" aria-label="Instagram">◎</a><a href="https://www.youtube.com/" aria-label="YouTube">▶</a></div></div>
-  </div>
-  <div class="copy">© <span id="year">2026</span> THE APEX 99. All rights reserved. | WHO IS THE ONE</div>
+<footer>
+  <p><strong>THE APEX 99</strong> — WHO IS THE ONE</p>
+  <p>Powered by THE APEX 99 | A unit of SMPN RECORD MANAGEMENT</p>
+  <p>© <span id="year"></span> THE APEX 99. All rights reserved.</p>
 </footer>
 
 <script>
-(() => {
-  // HERO SLIDER
-  const slides = [...document.querySelectorAll('.apex-slide')];
-  const dots = [...document.querySelectorAll('#dots button')];
-  let current = 0, heroTimer;
+document.getElementById("year").textContent = new Date().getFullYear();
 
-  function showSlide(index) {
-    current = (index + slides.length) % slides.length;
-    slides.forEach((s, i) => s.classList.toggle('active', i === current));
-    dots.forEach((d, i) => d.classList.toggle('active', i === current));
-  }
-
-  function restartHero() {
-    clearInterval(heroTimer);
-    if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      heroTimer = setInterval(() => showSlide(current + 1), 6500);
-    }
-  }
-
-  document.getElementById('prev').addEventListener('click', () => {
-    showSlide(current - 1); restartHero();
+function moveCards(direction) {
+  document.querySelectorAll(".cards-window").forEach(function(windowEl) {
+    const track = windowEl.querySelector(".cards-track");
+    if (!track) return;
+    track.style.animation = "none";
+    const current = Number(track.dataset.offset || 0);
+    const next = current + direction * 300;
+    track.dataset.offset = String(next);
+    track.style.transform = "translateX(" + next + "px)";
   });
-  document.getElementById('next').addEventListener('click', () => {
-    showSlide(current + 1); restartHero();
-  });
-  dots.forEach((dot, i) => dot.addEventListener('click', () => {
-    showSlide(i); restartHero();
-  }));
-  restartHero();
-
-  // MOBILE MENU
-  const menuBtn = document.getElementById('menuBtn');
-  const menu = document.getElementById('menu');
-
-  menuBtn.addEventListener('click', () => {
-    const open = menu.classList.toggle('open');
-    menuBtn.setAttribute('aria-expanded', String(open));
-    menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-    menuBtn.textContent = open ? '×' : '☰';
-  });
-
-  menu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-    menu.classList.remove('open');
-    menuBtn.setAttribute('aria-expanded', 'false');
-    menuBtn.setAttribute('aria-label', 'Open menu');
-    menuBtn.textContent = '☰';
-  }));
-
-  // MANUAL CAROUSEL ARROWS
-  document.querySelectorAll('.car-arrow').forEach(button => {
-    button.addEventListener('click', () => {
-      const row = document.getElementById(button.dataset.target);
-      if (!row) return;
-      const direction = Number(button.dataset.dir || 1);
-      row.scrollBy({
-        left: direction * Math.max(220, row.clientWidth * .75),
-        behavior: 'smooth'
-      });
-    });
-  });
-
-  // AUTO-MOVING CARDS
-  document.querySelectorAll('.cards').forEach(row => {
-    let paused = false;
-    let autoTimer;
-
-    function moveCards() {
-      if (paused || row.scrollWidth <= row.clientWidth + 5) return;
-      const step = Math.max(210, Math.min(280, row.clientWidth * .72));
-      const atEnd = row.scrollLeft + row.clientWidth >= row.scrollWidth - 8;
-      row.scrollTo({
-        left: atEnd ? 0 : row.scrollLeft + step,
-        behavior: 'smooth'
-      });
-    }
-
-    function startAutoMove() {
-      clearInterval(autoTimer);
-      if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        autoTimer = setInterval(moveCards, 2800);
-      }
-    }
-
-    row.addEventListener('mouseenter', () => paused = true);
-    row.addEventListener('mouseleave', () => paused = false);
-    row.addEventListener('focusin', () => paused = true);
-    row.addEventListener('focusout', () => paused = false);
-    row.addEventListener('touchstart', () => paused = true, {passive:true});
-    row.addEventListener('touchend', () => {
-      paused = false;
-      startAutoMove();
-    }, {passive:true});
-    startAutoMove();
-  });
-
-  document.getElementById('year').textContent = new Date().getFullYear();
-})();
+}
 </script>
 </body>
 </html>
