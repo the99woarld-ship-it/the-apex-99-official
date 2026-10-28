@@ -1,1 +1,270 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore | THE APEX 99</title>
+<style>
+:root {
+  --bg: #080d18;
+  --panel: #111c2e;
+  --gold: #d9ad48;
+  --white: #f7f7f7;
+  --muted: #b8c0cf;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+}
+header {
+  padding: 18px 6%;
+  background: #0d1422;
+  border-bottom: 1px solid #514323;
+}
+nav {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.logo { font-weight: 900; font-size: 23px; text-decoration: none; color: white; }
+.logo span, .gold { color: var(--gold); }
+.back { color: var(--gold); text-decoration: none; font-size: 14px; }
+.hero {
+  min-height: 360px;
+  padding: 75px 22px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(5,9,18,.96), rgba(5,9,18,.5)),
+    url("https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1600&q=80") center/cover;
+}
+.hero-inner { width: 100%; max-width: 1100px; margin: auto; }
+.eyebrow { color: var(--gold); letter-spacing: 3px; font-size: 12px; font-weight: bold; }
+h1 { font-size: clamp(38px, 7vw, 68px); line-height: 1.12; margin: 15px 0; }
+.hero p { color: #e0e4ec; max-width: 650px; }
+.container { max-width: 1100px; margin: auto; padding: 45px 22px 70px; }
+h2 { font-size: 28px; margin-bottom: 12px; }
+p { color: var(--muted); }
+.info {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 28px;
+  margin-top: 25px;
+}
+.panel {
+  padding: 25px;
+  background: var(--panel);
+  border: 1px solid #2b374a;
+  border-radius: 9px;
+}
+.panel h2 { color: var(--gold); }
+ul { padding-left: 20px; color: var(--muted); }
+li { margin: 8px 0; }
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: var(--gold);
+  color: #111;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+.btn:hover { background: #f1cd76; }
+footer {
+  padding: 25px 15px;
+  text-align: center;
+  border-top: 1px solid #263247;
+  color: var(--muted);
+  font-size: 12px;
+}
+@media(max-width:700px) {
+  .info { grid-template-columns: 1fr; }
+  .hero { min-height: 300px; padding: 55px 20px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a class="logo" href="index.html">THE APEX <span>99</span></a>
+    <a class="back" href="index.html">← BACK TO HOME</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">DISCOVER THE APEX 99</div>
+    <h1 id="pageTitle">Explore <span class="gold">Our World</span></h1>
+    <p id="pageIntro">Discover our services, experiences and opportunities.</p>
+  </div>
+</section>
+
+<main class="container">
+  <div class="info">
+    <section class="panel">
+      <h2>About This Category</h2>
+      <p id="pageDescription"></p>
+      <h2 style="margin-top:25px">What We Offer</h2>
+      <ul id="offerList"></ul>
+    </section>
+
+    <aside class="panel">
+      <h2>Interested?</h2>
+      <p id="contactText">Contact THE APEX 99 to learn more about this category.</p>
+      <a class="btn" id="contactButton"
+         href="https://wa.me/917439718014"
+         target="_blank" rel="noopener">CONTACT US ↗</a>
+      <p style="font-size:12px;margin-top:18px">
+        THE APEX 99 — WHO IS THE ONE
+      </p>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  <p>THE APEX 99 | A unit of SMPN RECORD MANAGEMENT</p>
+  <p>© <span id="year"></span> THE APEX 99. All rights reserved.</p>
+</footer>
+
+<script>
+const pages = {
+  events: {
+    title: "Events",
+    intro: "Create experiences. Make memories.",
+    description: "Explore events, competitions and special experiences organised by THE APEX 99. Contact us for current event information and participation details.",
+    offers: ["Event planning and management", "Competitions and special events", "Event production and coordination"]
+  },
+  academy: {
+    title: "Sports Academy",
+    intro: "Train. Play. Grow.",
+    description: "Discover sports development opportunities and training programmes. Contact our team to ask about available sports, admission and schedules.",
+    offers: ["Football training information", "Cricket training information", "Training and admission enquiries"]
+  },
+  adventure: {
+    title: "Adventure",
+    intro: "Explore beyond your limits.",
+    description: "Discover outdoor experiences, adventure rides and survival challenges. Ask our team for upcoming activities, dates and participation requirements.",
+    offers: ["Adventure rides", "Outdoor activities", "Survival challenge enquiries"]
+  },
+  tours: {
+    title: "Tours & Travel",
+    intro: "Your next journey starts here.",
+    description: "Explore tour opportunities with THE APEX 99. Contact us to confirm available destinations, travel dates, package inclusions and prices.",
+    offers: ["Tour package enquiries", "Hotel and sightseeing information", "Travel planning assistance"]
+  },
+  media: {
+    title: "Media Production",
+    intro: "Create your story.",
+    description: "Explore creative media and production services. Contact us to discuss your project, production requirements and availability.",
+    offers: ["Video production enquiries", "Podcast and recording enquiries", "Film and creative projects"]
+  },
+  afth: {
+    title: "APEX Football Talent Hunt",
+    intro: "Discover talent. Pursue your dream.",
+    description: "Learn about the APEX Football Talent Hunt. Contact the organisers to verify current event dates, eligibility, registration and official announcements.",
+    offers: ["Football talent opportunities", "Event and eligibility information", "Registration enquiries"]
+  },
+  competitions: {
+    title: "Competitions",
+    intro: "Challenge yourself.",
+    description: "Explore competition opportunities and ask about upcoming events, eligibility and participation rules.",
+    offers: ["Competition information", "Participation enquiries", "Event updates"]
+  },
+  "live-events": {
+    title: "Live Events",
+    intro: "Bring people together.",
+    description: "Discover live event and entertainment opportunities. Contact our team to discuss event planning and production.",
+    offers: ["Event coordination", "Live event enquiries", "Production support"]
+  },
+  "bike-ride": {
+    title: "Adventure Rides",
+    intro: "Ride. Discover. Experience.",
+    description: "Find out about upcoming rides and adventure activities. Confirm routes, dates, safety requirements and availability before participating.",
+    offers: ["Ride information", "Group adventure enquiries", "Activity schedules"]
+  },
+  survival: {
+    title: "Survival Challenge",
+    intro: "Test your skills in the outdoors.",
+    description: "Explore outdoor survival activities and challenges. Ask about safety arrangements, equipment and participation requirements.",
+    offers: ["Outdoor challenge information", "Survival skill activities", "Safety and equipment enquiries"]
+  },
+  darjeeling: {
+    title: "Darjeeling Tour",
+    intro: "Discover the beauty of the mountains.",
+    description: "Ask THE APEX 99 about current Darjeeling packages, available dates, accommodation, transport and included services. Confirm prices and availability before booking.",
+    offers: ["Tour dates and seat availability", "Hotel and sightseeing details", "Transport and package enquiries"]
+  },
+  kashmir: {
+    title: "Kashmir Tour",
+    intro: "Discover a spectacular mountain destination.",
+    description: "Contact us for current Kashmir tour plans, itinerary, accommodation, transport and package availability.",
+    offers: ["Itinerary enquiries", "Accommodation information", "Package availability"]
+  },
+  digha: {
+    title: "Digha Tour",
+    intro: "Enjoy a seaside escape.",
+    description: "Ask about upcoming Digha tours, travel arrangements, accommodation and available packages.",
+    offers: ["Tour dates", "Travel and hotel details", "Package enquiries"]
+  },
+  production: {
+    title: "Video Production",
+    intro: "Turn your ideas into visuals.",
+    description: "Discuss video production projects, filming requirements and creative ideas with our team.",
+    offers: ["Video shoot enquiries", "Production planning", "Creative project discussions"]
+  },
+  podcast: {
+    title: "Podcast Studio",
+    intro: "Your voice. Your story.",
+    description: "Contact us about podcast recording, interviews and studio requirements. Confirm availability and pricing directly.",
+    offers: ["Podcast recording enquiries", "Interview recording", "Audio production enquiries"]
+  },
+  "film-video": {
+    title: "Film & Video",
+    intro: "Stories made for the screen.",
+    description: "Explore film and video project opportunities, including creative planning and production enquiries.",
+    offers: ["Film project discussions", "Video production", "Creative collaboration"]
+  },
+  "short-film": {
+    title: "Short Film",
+    intro: "Every story deserves a screen.",
+    description: "Discover short film projects and filmmaking opportunities with THE APEX 99. Contact us for current auditions, casting notices and production updates.",
+    offers: ["Short film projects", "Audition and casting enquiries", "Direction and production discussions"]
+  },
+  "song-recording": {
+    title: "Song Recording",
+    intro: "Bring your sound to life.",
+    description: "Ask about song recording and audio production services, available facilities and booking arrangements.",
+    offers: ["Song recording enquiries", "Vocal recording", "Audio production discussions"]
+  }
+};
+
+const key = new URLSearchParams(window.location.search).get("item") || "events";
+const page = pages[key] || pages.events;
+
+document.title = page.title + " | THE APEX 99";
+document.getElementById("pageTitle").innerHTML =
+  page.title + ' <span class="gold">THE APEX 99</span>';
+document.getElementById("pageIntro").textContent = page.intro;
+document.getElementById("pageDescription").textContent = page.description;
+document.getElementById("offerList").innerHTML =
+  page.offers.map(function(item) {
+    const li = document.createElement("li");
+    li.textContent = item;
+    return li.outerHTML;
+  }).join("");
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
+
