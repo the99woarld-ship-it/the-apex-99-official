@@ -9,491 +9,794 @@
 <title>THE APEX 99 | WHO IS THE ONE</title>
 
 <style>
-:root{
---blue:#063b91;--deep:#031b48;--bright:#0874e8;
---gold:#ffd23f;--white:#fff;--light:#f4f8ff;--text:#14284a
+:root {
+  --blue:#063b91;
+  --deep:#031b48;
+  --bright:#0874e8;
+  --gold:#ffd23f;
+  --white:#fff;
+  --light:#f4f8ff;
+  --text:#14284a;
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:100px}
-body{font-family:Arial,Helvetica,sans-serif;background:var(--light);color:var(--text);line-height:1.7}
-a{text-decoration:none;color:inherit}
-img{display:block;max-width:100%}
+* {margin:0;padding:0;box-sizing:border-box}
+html {scroll-behavior:smooth;scroll-padding-top:100px}
+body {font-family:Arial,Helvetica,sans-serif;background:var(--light);color:var(--text);line-height:1.7}
+a {text-decoration:none;color:inherit}
+img {display:block;max-width:100%}
 
-header{position:sticky;top:0;z-index:1000;background:linear-gradient(110deg,#031b48,#0874e8,#031b48);border-bottom:3px solid var(--gold);box-shadow:0 5px 20px #001d5030}
-.nav{max-width:1400px;margin:auto;padding:12px 4%;min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.brand{display:flex;align-items:center;gap:10px;color:var(--gold);font-family:Georgia,serif;font-weight:900}
-.brand-mark{width:47px;height:47px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-size:27px}
-.brand-name{font-size:23px;white-space:nowrap;display:block;line-height:1.2}
-.brand-tag{display:block;color:white;font:bold 10px Arial,sans-serif;letter-spacing:4px;margin-top:5px}
-nav{display:flex;align-items:center;gap:14px}
-nav a{color:white;font-size:12px;font-weight:bold;transition:.2s}
-nav a:hover{color:var(--gold)}
-.menu-toggle{display:none;background:transparent;border:0;color:white;font-size:29px;cursor:pointer}
-.contact-btn,.btn{display:inline-block;padding:12px 20px;border-radius:9px;background:linear-gradient(135deg,#fff0a2,#ffbf20);color:var(--deep);font-weight:900;transition:.2s;border:0}
-.contact-btn:hover,.btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px #ffc92860}
-.btn-outline{display:inline-block;padding:10px 19px;border:2px solid white;color:white;background:#031b4880;border-radius:9px;font-weight:bold}
-.btn-outline:hover{background:white;color:var(--blue)}
-
-.hero{min-height:570px;position:relative;display:flex;align-items:center;overflow:hidden;background:var(--deep);isolation:isolate;color:white}
-.slides{position:absolute;inset:0;z-index:-2}
-.slides:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#031b48f2,#052d70c9,#031b4860)}
-.slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:slideshow 18s infinite,zoom 18s infinite}
-.slide:nth-child(1){background-image:url("https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=2000&q=85")}
-.slide:nth-child(2){background-image:url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=85");animation-delay:6s}
-.slide:nth-child(3){background-image:url("https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=2000&q=85");animation-delay:12s}
-@keyframes slideshow{0%,29%{opacity:1}34%,96%{opacity:0}100%{opacity:1}}
-@keyframes zoom{from{transform:scale(1)}to{transform:scale(1.15)}}
-.hero-content{max-width:1400px;width:100%;margin:auto;padding:80px 5% 100px}
-.eyebrow,.kicker{text-transform:uppercase;letter-spacing:5px;font-size:13px;font-weight:900;color:var(--gold);margin-bottom:15px}
-.hero h1{font:900 clamp(45px,7.5vw,95px)/1.08 Georgia,serif;color:var(--gold);text-shadow:0 4px 0 #8a5300,0 0 25px #ffce4560;margin-bottom:17px}
-.hero h2{font-size:clamp(20px,3vw,34px);letter-spacing:clamp(3px,1.3vw,12px);margin-bottom:18px}
-.rule{height:3px;width:min(480px,90%);background:linear-gradient(90deg,var(--gold),transparent);margin-bottom:20px}
-.hero p{max-width:680px;line-height:1.8;font-size:17px}
-.hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}
-.hero-note{position:absolute;right:5%;bottom:30px;color:white;font:italic 22px Georgia,serif;text-align:center;text-shadow:0 3px 10px #000}
-.hero-note span{display:block;width:100px;height:3px;background:var(--gold);margin:10px auto}
-
-.services{max-width:1400px;margin:-35px auto 0;padding:0 3%;position:relative;z-index:3;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-.card{border:2px solid var(--gold);border-radius:15px;overflow:hidden;background:white;box-shadow:0 10px 25px #05265c20;transition:transform .3s,box-shadow .3s}
-.card:hover{transform:translateY(-7px);box-shadow:0 18px 35px #05265c30}
-.photo{height:210px;overflow:hidden;background:#dce9fb}
-.photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
-.card:hover .photo img{transform:scale(1.08)}
-.card-body{text-align:center;padding:24px 20px}
-.card h3{color:var(--blue);font:900 21px/1.3 Georgia,serif;margin-bottom:12px}
-.card p{font-size:14px;line-height:1.8;min-height:75px}
-.small-btn{display:inline-block;margin:8px 4px 0;padding:10px 17px;border-radius:30px;background:linear-gradient(120deg,#06418e,#06265d);color:white;font-size:12px;font-weight:800}
-.small-btn:hover{color:var(--deep);background:linear-gradient(120deg,#ffe783,#ffbc19)}
-
-.section{padding:75px 5%}
-.section-heading{text-align:center;max-width:780px;margin:0 auto 38px}
-.section-heading .kicker{color:#ad7800}
-.section-heading h2{color:var(--blue);font:900 clamp(28px,4vw,43px)/1.2 Georgia,serif;margin:10px 0 15px}
-.section-heading p{color:#526680}
-
-.stats{max-width:1360px;margin:25px auto 0;padding:25px 3%;display:grid;grid-template-columns:repeat(5,1fr);gap:12px;background:linear-gradient(100deg,#05265f,#0874e8,#05265f);border-radius:15px;color:white}
-.stat{display:flex;align-items:center;justify-content:center;gap:10px;border-right:1px solid #ffffff50}
-.stat:last-child{border:0}
-.stat-icon{font-size:28px;color:var(--gold)}
-.stat strong{display:block;color:var(--gold);font-size:19px}
-.stat span:last-child{font-size:12px}
-
-.about{max-width:1400px;margin:auto;padding:75px 5%;display:grid;grid-template-columns:1fr 1.3fr;gap:40px;align-items:center}
-.about-img{width:100%;height:350px;object-fit:cover;border-radius:15px;border:3px solid var(--gold)}
-.about h2{color:var(--blue);font:900 clamp(28px,3vw,40px) Georgia,serif;margin:12px 0}
-.about p{line-height:1.9;color:#35496a;margin-bottom:14px}
-.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:25px}
-.why-item{text-align:center;font-size:13px;font-weight:bold;color:var(--blue)}
-.why-item b{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;margin:0 auto 9px;background:linear-gradient(135deg,#fff2a7,#ffc629);border:1px solid #f4b20b;font-size:21px}
-
-.highlight{background:linear-gradient(120deg,#031b48,#06418e);color:white}
-.highlight .section-heading h2{color:white}
-.highlight .section-heading p{color:#dbe8fa}
-.features{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.feature{padding:25px 18px;border:1px solid #ffffff45;border-radius:12px;text-align:center}
-.feature b{display:block;color:var(--gold);font-size:30px;margin-bottom:8px}
-.feature h3{margin-bottom:8px}
-.feature p{color:#dbe8fa;font-size:14px}
-
-.quick-actions{padding:55px 5%;text-align:center;background:#e7efff}
-.quick-actions h2{color:var(--blue);font:900 clamp(27px,4vw,40px) Georgia,serif;margin-bottom:12px}
-.quick-actions p{color:#526680;margin-bottom:20px}
-.quick-actions .btn{margin:7px}
-
-.contact-section{padding:75px 5%;background:linear-gradient(135deg,#f4f8ff,#e7efff)}
-.contact-wrap{max-width:1180px;margin:auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:35px;align-items:start}
-.contact-info h2{margin:12px 0 16px;color:var(--blue);font:900 clamp(30px,4vw,45px)/1.15 Georgia,serif}
-.contact-info p{line-height:1.8;color:#35496a}
-.quick-links{display:grid;gap:12px;margin-top:23px}
-.quick-links a{display:flex;align-items:center;gap:12px;padding:13px 15px;border:1px solid #d5b34d;border-radius:11px;background:white;color:var(--blue);font-weight:bold}
-.quick-links a:hover{box-shadow:0 8px 20px #05265c18}
-.quick-icon{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--blue);color:var(--gold);font-size:19px;flex-shrink:0}
-.enquiry-card{padding:clamp(22px,4vw,35px);border-radius:18px;background:white;border:2px solid var(--gold);box-shadow:0 14px 35px #05265c20}
-.enquiry-card h3{font:900 28px Georgia,serif;color:var(--blue);margin:8px 0}
-.form-intro{font-size:14px;color:#5d6e87;margin-bottom:20px}
-.enquiry-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.field.full{grid-column:1/-1}
-.field label{display:block;margin-bottom:6px;font-size:13px;font-weight:800;color:var(--blue)}
-.field input,.field select,.field textarea{width:100%;padding:12px;border:1px solid #ccd7e8;border-radius:8px;background:#fbfcff;color:var(--text);font:inherit;font-size:14px}
-.field textarea{resize:vertical;min-height:110px}
-.field input:focus,.field select:focus,.field textarea:focus{outline:2px solid var(--gold)}
-.consent{display:flex;align-items:flex-start;gap:9px;margin-top:16px;font-size:12px;color:#53647d}
-.consent input{margin-top:4px}
-.submit-btn{width:100%;margin-top:18px;padding:14px;border:0;border-radius:9px;background:linear-gradient(120deg,#ffe783,#ffbf20);color:var(--deep);font-weight:900;cursor:pointer}
-.form-note{font-size:11px;color:#748198;text-align:center;margin-top:12px}
-.honey{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
-
-footer{padding:35px 5%;text-align:center;color:white;background:linear-gradient(100deg,#031b48,#06418e,#031b48);border-top:3px solid var(--gold)}
-footer strong{color:var(--gold);font-size:25px}
-footer p{margin-top:9px;font-size:13px;color:#e0eaff}
-.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin:18px 0}
-.footer-links a{font-size:13px;color:white}
-.footer-links a:hover{color:var(--gold)}
-.floating-whatsapp{position:fixed;right:18px;bottom:18px;z-index:9999;padding:12px 17px;border-radius:999px;background:#16a34a;color:white;font-weight:900;box-shadow:0 8px 24px #0003;border:2px solid white}
-.reveal{animation:fadeIn .7s ease both}
-@keyframes fadeIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
-
-@media(max-width:1100px){
-.nav{flex-wrap:wrap}
-.menu-toggle{display:block}
-nav{display:none;order:5;width:100%;flex-direction:column;align-items:stretch;gap:0}
-nav.open{display:flex}
-nav a{padding:12px 4px;border-top:1px solid #ffffff30}
-.contact-btn{display:none}
-.services{grid-template-columns:repeat(2,minmax(0,1fr))}
-.about{grid-template-columns:1fr}
-.contact-wrap{grid-template-columns:1fr}
+header {
+  position:sticky;top:0;z-index:1000;
+  background:linear-gradient(110deg,#031b48,#0874e8,#031b48);
+  border-bottom:3px solid var(--gold);
+  box-shadow:0 5px 20px #001d5030;
 }
-@media(max-width:620px){
-.nav{padding:10px 4%;gap:10px}
-.brand-mark{width:39px;height:39px;font-size:22px}
-.brand-name{font-size:18px}
-.brand-tag{font-size:8px;letter-spacing:3px}
-.hero{min-height:520px}
-.hero-content{padding:60px 5% 85px}
-.hero h1{font-size:clamp(40px,11vw,65px)}
-.hero h2{letter-spacing:4px}
-.hero-note{display:none}
-.hero-actions .btn,.hero-actions .btn-outline{padding:11px 13px;font-size:13px}
-.services{grid-template-columns:1fr;padding:0 4%}
-.photo{height:220px}
-.stats{grid-template-columns:repeat(2,1fr);border-radius:0}
-.stat{justify-content:flex-start;padding:10px 4px;border-right:0;border-bottom:1px solid #ffffff30}
-.stat:last-child{grid-column:span 2;justify-content:center}
-.why-grid{grid-template-columns:repeat(2,1fr)}
-.features{grid-template-columns:repeat(2,1fr)}
-.enquiry-grid{grid-template-columns:1fr}
-.field.full{grid-column:auto}
-.floating-whatsapp{right:10px;bottom:10px;padding:10px 13px;font-size:13px}
+.nav {
+  max-width:1400px;margin:auto;padding:12px 4%;
+  min-height:78px;display:flex;align-items:center;
+  justify-content:space-between;gap:18px;
 }
-@media(prefers-reduced-motion:reduce){
-*,*::before,*::after{animation-duration:.01ms!important;scroll-behavior:auto!important;transition:none!important}
+.brand {display:flex;align-items:center;gap:10px;color:var(--gold);font-family:Georgia,serif;font-weight:900}
+.brand-mark {width:47px;height:47px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-size:27px}
+.brand-name {font-size:23px;white-space:nowrap;display:block;line-height:1.2}
+.brand-tag {display:block;color:white;font:bold 10px Arial,sans-serif;letter-spacing:4px;margin-top:5px}
+nav {display:flex;align-items:center;gap:14px}
+nav a {color:white;font-size:12px;font-weight:bold;transition:.2s}
+nav a:hover {color:var(--gold)}
+.menu-toggle {display:none;background:transparent;border:0;color:white;font-size:29px;cursor:pointer}
+.contact-btn,.btn {
+  display:inline-block;padding:12px 20px;border-radius:9px;
+  background:linear-gradient(135deg,#fff0a2,#ffbf20);
+  color:var(--deep);font-weight:900;transition:.2s;border:0;
+}
+.contact-btn:hover,.btn:hover {transform:translateY(-3px);box-shadow:0 8px 20px #ffc92860}
+.btn-outline {display:inline-block;padding:10px 19px;border:2px solid white;color:white;background:#031b4880;border-radius:9px;font-weight:bold}
+.btn-outline:hover {background:white;color:var(--blue)}
+
+.hero {min-height:570px;position:relative;display:flex;align-items:center;overflow:hidden;background:var(--deep);isolation:isolate;color:white}
+.slides {position:absolute;inset:0;z-index:-2}
+.slides:after {content:"";position:absolute;inset:0;background:linear-gradient(90deg,#031b48f2,#052d70c9,#031b4860)}
+.slide {position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:slideshow 18s infinite,zoom 18s infinite}
+.slide:nth-child(1) {background-image:url("https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=2000&q=85")}
+.slide:nth-child(2) {background-image:url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=85");animation-delay:6s}
+.slide:nth-child(3) {background-image:url("https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=2000&q=85");animation-delay:12s}
+@keyframes slideshow {0%,29%{opacity:1}34%,96%{opacity:0}100%{opacity:1}}
+@keyframes zoom {from{transform:scale(1)}to{transform:scale(1.15)}}
+.hero-content {max-width:1400px;width:100%;margin:auto;padding:80px 5% 100px}
+.eyebrow,.kicker {text-transform:uppercase;letter-spacing:5px;font-size:13px;font-weight:900;color:var(--gold);margin-bottom:15px}
+.hero h1 {font:900 clamp(45px,7.5vw,95px)/1.08 Georgia,serif;color:var(--gold);text-shadow:0 4px 0 #8a5300,0 0 25px #ffce4560;margin-bottom:17px}
+.hero h2 {font-size:clamp(20px,3vw,34px);letter-spacing:clamp(3px,1.3vw,12px);margin-bottom:18px}
+.rule {height:3px;width:min(480px,90%);background:linear-gradient(90deg,var(--gold),transparent);margin-bottom:20px}
+.hero p {max-width:680px;line-height:1.8;font-size:17px}
+.hero-actions {display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}
+.hero-note {position:absolute;right:5%;bottom:30px;color:white;font:italic 22px Georgia,serif;text-align:center;text-shadow:0 3px 10px #000}
+.hero-note span {display:block;width:100px;height:3px;background:var(--gold);margin:10px auto}
+
+.services {max-width:1400px;margin:-35px auto 0;padding:0 3%;position:relative;z-index:3;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card {border:2px solid var(--gold);border-radius:15px;overflow:hidden;background:white;box-shadow:0 10px 25px #05265c20;transition:transform .3s,box-shadow .3s}
+.card:hover {transform:translateY(-7px);box-shadow:0 18px 35px #05265c30}
+.photo {height:210px;overflow:hidden;background:#dce9fb}
+.photo img {width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.card:hover .photo img {transform:scale(1.08)}
+.card-body {text-align:center;padding:24px 20px}
+.card h3 {color:var(--blue);font:900 21px/1.3 Georgia,serif;margin-bottom:12px}
+.card p {font-size:14px;line-height:1.8;min-height:75px}
+.small-btn {display:inline-block;margin:8px 4px 0;padding:10px 17px;border-radius:30px;background:linear-gradient(120deg,#06418e,#06265d);color:white;font-size:12px;font-weight:800}
+.small-btn:hover {color:var(--deep);background:linear-gradient(120deg,#ffe783,#ffbc19)}
+
+.section {padding:75px 5%}
+.section-heading {text-align:center;max-width:780px;margin:0 auto 38px}
+.section-heading .kicker {color:#ad7800}
+.section-heading h2 {color:var(--blue);font:900 clamp(28px,4vw,43px)/1.2 Georgia,serif;margin:10px 0 15px}
+.section-heading p {color:#526680}
+
+.stats {max-width:1360px;margin:25px auto 0;padding:25px 3%;display:grid;grid-template-columns:repeat(5,1fr);gap:12px;background:linear-gradient(100deg,#05265f,#0874e8,#05265f);border-radius:15px;color:white}
+.stat {display:flex;align-items:center;justify-content:center;gap:10px;border-right:1px solid #ffffff50}
+.stat:last-child {border:0}
+.stat-icon {font-size:28px;color:var(--gold)}
+.stat strong {display:block;color:var(--gold);font-size:19px}
+.stat span:last-child {font-size:12px}
+
+.about {max-width:1400px;margin:auto;padding:75px 5%;display:grid;grid-template-columns:1fr 1.3fr;gap:40px;align-items:center}
+.about-img {width:100%;height:350px;object-fit:cover;border-radius:15px;border:3px solid var(--gold)}
+.about h2 {color:var(--blue);font:900 clamp(28px,3vw,40px) Georgia,serif;margin:12px 0}
+.about p {line-height:1.9;color:#35496a;margin-bottom:14px}
+.why-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:25px}
+.why-item {text-align:center;font-size:13px;font-weight:bold;color:var(--blue)}
+.why-item b {width:50px;height:50px;border-radius:50%;display:grid;place-items:center;margin:0 auto 9px;background:linear-gradient(135deg,#fff2a7,#ffc629);border:1px solid #f4b20b;font-size:21px}
+
+.highlight {background:linear-gradient(120deg,#031b48,#06418e);color:white}
+.highlight .section-heading h2 {color:white}
+.highlight .section-heading p {color:#dbe8fa}
+.features {max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.feature {padding:25px 18px;border:1px solid #ffffff45;border-radius:12px;text-align:center}
+.feature b {display:block;color:var(--gold);font-size:30px;margin-bottom:8px}
+.feature h3 {margin-bottom:8px}
+.feature p {color:#dbe8fa;font-size:14px}
+
+.quick-actions {padding:55px 5%;text-align:center;background:#e7efff}
+.quick-actions h2 {color:var(--blue);font:900 clamp(27px,4vw,40px) Georgia,serif;margin-bottom:12px}
+.quick-actions p {color:#526680;margin-bottom:20px}
+.quick-actions .btn {margin:7px}
+
+.contact-section {padding:75px 5%;background:linear-gradient(135deg,#f4f8ff,#e7efff)}
+.contact-wrap {max-width:1180px;margin:auto;display:grid;grid-template-columns:.9fr 1.1fr;gap:35px;align-items:start}
+.contact-info h2 {margin:12px 0 16px;color:var(--blue);font:900 clamp(30px,4vw,45px)/1.15 Georgia,serif}
+.contact-info p {line-height:1.8;color:#35496a}
+.quick-links {display:grid;gap:12px;margin-top:23px}
+.quick-links a {display:flex;align-items:center;gap:12px;padding:13px 15px;border:1px solid #d5b34d;border-radius:11px;background:white;color:var(--blue);font-weight:bold}
+.quick-links a:hover {box-shadow:0 8px 20px #05265c18}
+.quick-icon {display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--blue);color:var(--gold);font-size:19px;flex-shrink:0}
+.enquiry-card {padding:clamp(22px,4vw,35px);border-radius:18px;background:white;border:2px solid var(--gold);box-shadow:0 14px 35px #05265c20}
+.enquiry-card h3 {font:900 28px Georgia,serif;color:var(--blue);margin:8px 0}
+.form-intro {font-size:14px;color:#5d6e87;margin-bottom:20px}
+.enquiry-grid {display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field.full {grid-column:1/-1}
+.field label {display:block;margin-bottom:6px;font-size:13px;font-weight:800;color:var(--blue)}
+.field input,.field select,.field textarea {width:100%;padding:12px;border:1px solid #ccd7e8;border-radius:8px;background:#fbfcff;color:var(--text);font:inherit;font-size:14px}
+.field textarea {resize:vertical;min-height:110px}
+.field input:focus,.field select:focus,.field textarea:focus {outline:2px solid var(--gold)}
+.consent {display:flex;align-items:flex-start;gap:9px;margin-top:16px;font-size:12px;color:#53647d}
+.consent input {margin-top:4px}
+.submit-btn {width:100%;margin-top:18px;padding:14px;border:0;border-radius:9px;background:linear-gradient(120deg,#ffe783,#ffbf20);color:var(--deep);font-weight:900;cursor:pointer}
+.submit-btn:disabled {opacity:.65;cursor:wait}
+.form-note {font-size:11px;color:#748198;text-align:center;margin-top:12px}
+.honey {position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+
+footer {padding:35px 5%;text-align:center;color:white;background:linear-gradient(100deg,#031b48,#06418e,#031b48);border-top:3px solid var(--gold)}
+footer strong {color:var(--gold);font-size:25px}
+footer p {margin-top:9px;font-size:13px;color:#e0eaff}
+.footer-links {display:flex;justify-content:center;flex-wrap:wrap;gap:16px;margin:18px 0}
+.footer-links a {font-size:13px;color:white}
+.footer-links a:hover {color:var(--gold)}
+.floating-whatsapp {position:fixed;right:18px;bottom:18px;z-index:9999;padding:12px 17px;border-radius:999px;background:#16a34a;color:white;font-weight:900;box-shadow:0 8px 24px #0003;border:2px solid white}
+.reveal {animation:fadeIn .7s ease both}
+@keyframes fadeIn {from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+/* CUSTOMER REVIEWS & RATINGS */
+.reviews-section {padding:75px 5%;background:linear-gradient(180deg,#f4f8ff,#e7efff)}
+.reviews-wrap {max-width:1200px;margin:auto;display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:28px;align-items:start}
+.review-panel {background:#fff;border:2px solid var(--gold);border-radius:16px;padding:clamp(20px,3vw,32px);box-shadow:0 12px 30px #05265c18}
+.review-panel h3 {color:var(--blue);font:900 25px Georgia,serif;margin-bottom:8px}
+.review-panel p {font-size:14px;color:#526680;margin-bottom:15px}
+.review-summary {display:flex;align-items:center;gap:14px;padding:18px;border-radius:12px;background:linear-gradient(120deg,#031b48,#0874e8);color:white;margin:18px 0}
+.review-average {font-size:38px;font-weight:900;color:var(--gold);line-height:1}
+.review-stars {color:#e3a900;letter-spacing:3px;font-size:23px}
+.review-list {display:grid;gap:14px}
+.review-item {padding:20px;border:1px solid #d9e2f0;border-radius:12px;background:#fff;box-shadow:0 6px 18px #05265c0d;overflow-wrap:anywhere}
+.review-item-head {display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin-bottom:8px}
+.review-item h4 {color:var(--blue);font-size:16px}
+.review-item time {color:#748198;font-size:11px}
+.review-item p {white-space:pre-wrap;color:#35496a;font-size:14px;margin-top:8px}
+.review-form-grid {display:grid;grid-template-columns:1fr;gap:13px}
+.review-field label {display:block;font-size:13px;font-weight:800;color:var(--blue);margin-bottom:5px}
+.review-field input,.review-field textarea {width:100%;padding:12px;border:1px solid #ccd7e8;border-radius:8px;background:#fbfcff;color:var(--text);font:inherit;font-size:14px}
+.review-field textarea {min-height:105px;resize:vertical}
+.rating-select {display:flex;flex-direction:row-reverse;justify-content:flex-end;gap:5px}
+.rating-select input {position:absolute;opacity:0;width:1px;height:1px}
+.rating-select label {font-size:32px;line-height:1;color:#cbd5e1;cursor:pointer;margin:0}
+.rating-select label:hover,.rating-select label:hover~label,.rating-select input:checked~label {color:#f2b705}
+.rating-select input:focus-visible+label {outline:2px solid var(--blue);outline-offset:3px;border-radius:3px}
+.review-status {min-height:22px;font-size:13px;font-weight:700;margin-top:12px;color:var(--blue)}
+.review-status.error {color:#b42318}
+.review-status.success {color:#16713b}
+.review-empty {padding:22px;border:1px dashed #b7c7dd;border-radius:12px;text-align:center;color:#526680;background:#fff}
+.review-small {font-size:11px!important;color:#748198!important;margin-top:10px!important}
+@media(max-width:1100px) {
+  .nav {flex-wrap:wrap}
+  .menu-toggle {display:block}
+  nav {display:none;order:5;width:100%;flex-direction:column;align-items:stretch;gap:0}
+  nav.open {display:flex}
+  nav a {padding:12px 4px;border-top:1px solid #ffffff30}
+  .contact-btn {display:none}
+  .services {grid-template-columns:repeat(2,minmax(0,1fr))}
+  .about {grid-template-columns:1fr}
+  .contact-wrap {grid-template-columns:1fr}
+}
+@media(max-width:800px) {
+  .reviews-wrap {grid-template-columns:1fr}
+}
+@media(max-width:620px) {
+  .nav {padding:10px 4%;gap:10px}
+  .brand-mark {width:39px;height:39px;font-size:22px}
+  .brand-name {font-size:18px}
+  .brand-tag {font-size:8px;letter-spacing:3px}
+  .hero {min-height:520px}
+  .hero-content {padding:60px 5% 85px}
+  .hero h1 {font-size:clamp(40px,11vw,65px)}
+  .hero h2 {letter-spacing:4px}
+  .hero-note {display:none}
+  .hero-actions .btn,.hero-actions .btn-outline {padding:11px 13px;font-size:13px}
+  .services {grid-template-columns:1fr;padding:0 4%}
+  .photo {height:220px}
+  .stats {grid-template-columns:repeat(2,1fr);border-radius:0}
+  .stat {justify-content:flex-start;padding:10px 4px;border-right:0;border-bottom:1px solid #ffffff30}
+  .stat:last-child {grid-column:span 2;justify-content:center}
+  .why-grid {grid-template-columns:repeat(2,1fr)}
+  .features {grid-template-columns:repeat(2,1fr)}
+  .enquiry-grid {grid-template-columns:1fr}
+  .field.full {grid-column:auto}
+  .floating-whatsapp {right:10px;bottom:10px;padding:10px 13px;font-size:13px}
+}
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after {animation-duration:.01ms!important;scroll-behavior:auto!important;transition:none!important}
 }
 </style>
 </head>
 
 <body>
 <header>
-<div class="nav">
-<a class="brand" href="index.html" aria-label="THE APEX 99 Home">
-<span class="brand-mark">A</span>
-<span>
-<span class="brand-name">THE APEX 99</span>
-<span class="brand-tag">WHO IS THE ONE</span>
-</span>
-</a>
+  <div class="nav">
+    <a class="brand" href="index.html" aria-label="THE APEX 99 Home">
+      <span class="brand-mark">A</span>
+      <span>
+        <span class="brand-name">THE APEX 99</span>
+        <span class="brand-tag">WHO IS THE ONE</span>
+      </span>
+    </a>
 
-<button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <button class="menu-toggle" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button>
 
-<nav id="mainNav" aria-label="Main navigation">
-<a href="index.html">Home</a>
-<a href="about.html">About Us</a>
-<a href="event-management.html">Events</a>
-<a href="tours.html">Tours</a>
-<a href="media.html">Media</a>
-<a href="sports.html">Sports</a>
-<a href="admission.html">Admission</a>
-<a href="booking.html">Booking</a>
-<a href="gallery.html">Gallery</a>
-<a href="details.html">More Details</a>
-<a href="#contact">Contact</a>
-</nav>
+    <nav id="mainNav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="event-management.html">Events</a>
+      <a href="tours.html">Tours</a>
+      <a href="media.html">Media</a>
+      <a href="sports.html">Sports</a>
+      <a href="admission.html">Admission</a>
+      <a href="booking.html">Booking</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="details.html">More Details</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-<a class="contact-btn" href="#contact">Get In Touch →</a>
-</div>
+    <a class="contact-btn" href="#contact">Get In Touch →</a>
+  </div>
 </header>
 
 <main>
 <section class="hero" id="home">
-<div class="slides" aria-hidden="true">
-<div class="slide"></div><div class="slide"></div><div class="slide"></div>
-</div>
-<div class="hero-content">
-<div class="eyebrow">A Unit of SMPN Record Management</div>
-<h1>THE APEX 99</h1>
-<h2>WHO IS THE ONE</h2>
-<div class="rule"></div>
-<p>We Plan | We Organise | We Travel | We Create | We Make It Happen</p>
-<p>Explore event management, travel experiences, media production, sports training, competitions and adventure programmes with THE APEX 99.</p>
-<div class="hero-actions">
-<a class="btn" href="#services">Explore Our Services →</a>
-<a class="btn-outline" href="#contact">Contact Our Team</a>
-</div>
-</div>
-<div class="hero-note">More Than Just a Service<br>It's an Experience<span></span></div>
+  <div class="slides" aria-hidden="true">
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+  </div>
+  <div class="hero-content">
+    <div class="eyebrow">A Unit of SMPN Record Management</div>
+    <h1>THE APEX 99</h1>
+    <h2>WHO IS THE ONE</h2>
+    <div class="rule"></div>
+    <p>We Plan | We Organise | We Travel | We Create | We Make It Happen</p>
+    <p>Explore event management, travel experiences, media production, sports training, competitions and adventure programmes with THE APEX 99.</p>
+    <div class="hero-actions">
+      <a class="btn" href="#services">Explore Our Services →</a>
+      <a class="btn-outline" href="#contact">Contact Our Team</a>
+    </div>
+  </div>
+  <div class="hero-note">More Than Just a Service<br>It's an Experience<span></span></div>
 </section>
 
 <section class="services" id="services">
+  <article class="card reveal">
+    <div class="photo"><img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=85" alt="Event management and celebration" loading="lazy"></div>
+    <div class="card-body">
+      <h3>EVENT MANAGEMENT</h3>
+      <p>Weddings, birthdays, corporate events, parties, stage decoration and special celebrations.</p>
+      <a class="small-btn" href="event-management.html">Explore Events →</a>
+      <a class="small-btn" href="booking.html">Booking / Enquiry →</a>
+    </div>
+  </article>
 
-<article class="card reveal">
-<div class="photo"><img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=85" alt="Event management and celebration" loading="lazy"></div>
-<div class="card-body">
-<h3>EVENT MANAGEMENT</h3>
-<p>Weddings, birthdays, corporate events, parties, stage decoration and special celebrations.</p>
-<a class="small-btn" href="event-management.html">Explore Events →</a>
-<a class="small-btn" href="booking.html">Booking / Enquiry →</a>
-</div>
-</article>
+  <article class="card reveal">
+    <div class="photo"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85" alt="Mountain travel destination" loading="lazy"></div>
+    <div class="card-body">
+      <h3>TOUR & TRAVEL</h3>
+      <p>Explore domestic and international destinations, group tours, holiday packages and travel experiences.</p>
+      <a class="small-btn" href="tours.html">Explore Tours →</a>
+      <a class="small-btn" href="booking.html">Book Your Tour →</a>
+    </div>
+  </article>
 
-<article class="card reveal">
-<div class="photo"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85" alt="Mountain travel destination" loading="lazy"></div>
-<div class="card-body">
-<h3>TOUR & TRAVEL</h3>
-<p>Explore domestic and international destinations, group tours, holiday packages and travel experiences.</p>
-<a class="small-btn" href="tours.html">Explore Tours →</a>
-<a class="small-btn" href="booking.html">Book Your Tour →</a>
-</div>
-</article>
+  <article class="card reveal">
+    <div class="photo"><img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=900&q=85" alt="Media camera and production" loading="lazy"></div>
+    <div class="card-body">
+      <h3>MEDIA PRODUCTION</h3>
+      <p>Short films, podcasts, video production, interviews, promotional videos, sound recording and editing.</p>
+      <a class="small-btn" href="media.html">Explore Media →</a>
+      <a class="small-btn" href="booking.html">Booking / Enquiry →</a>
+    </div>
+  </article>
 
-<article class="card reveal">
-<div class="photo"><img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=900&q=85" alt="Media camera and production" loading="lazy"></div>
-<div class="card-body">
-<h3>MEDIA PRODUCTION</h3>
-<p>Short films, podcasts, video production, interviews, promotional videos, sound recording and editing.</p>
-<a class="small-btn" href="media.html">Explore Media →</a>
-<a class="small-btn" href="booking.html">Booking / Enquiry →</a>
-</div>
-</article>
+  <article class="card reveal">
+    <div class="photo"><img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=900&q=85" alt="Sports training and competition" loading="lazy"></div>
+    <div class="card-body">
+      <h3>SPORTS & COMPETITIONS</h3>
+      <p>Football, cricket, sports training, talent hunts, tournaments and competitions for young participants.</p>
+      <a class="small-btn" href="sports.html">Explore Sports →</a>
+      <a class="small-btn" href="admission.html">Sports Admission →</a>
+    </div>
+  </article>
 
-<article class="card reveal">
-<div class="photo"><img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=900&q=85" alt="Sports training and competition" loading="lazy"></div>
-<div class="card-body">
-<h3>SPORTS & COMPETITIONS</h3>
-<p>Football, cricket, sports training, talent hunts, tournaments and competitions for young participants.</p>
-<a class="small-btn" href="sports.html">Explore Sports →</a>
-<a class="small-btn" href="admission.html">Sports Admission →</a>
-</div>
-</article>
+  <article class="card reveal">
+    <div class="photo"><img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=900&q=85" alt="Football on a sports field" loading="lazy"></div>
+    <div class="card-body">
+      <h3>SPORTS ACADEMY</h3>
+      <p>Discover sports activities for children and teenagers, with programmes organised by sport and age group.</p>
+      <a class="small-btn" href="sports.html">Explore Academy →</a>
+      <a class="small-btn" href="admission.html">Apply for Admission →</a>
+    </div>
+  </article>
 
-<article class="card reveal">
-<div class="photo"><img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=900&q=85" alt="Football on a sports field" loading="lazy"></div>
-<div class="card-body">
-<h3>SPORTS ACADEMY</h3>
-<p>Discover sports activities for children and teenagers, with programmes organised by sport and age group.</p>
-<a class="small-btn" href="sports.html">Explore Academy →</a>
-<a class="small-btn" href="admission.html">Apply for Admission →</a>
-</div>
-</article>
+  <article class="card reveal">
+    <div class="photo"><img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=900&q=85" alt="Outdoor nature and adventure" loading="lazy"></div>
+    <div class="card-body">
+      <h3>ADVENTURE PROGRAMMES</h3>
+      <p>Discover outdoor activities, adventure experiences, group challenges and nature-based programmes.</p>
+      <a class="small-btn" href="details.html">Explore Details →</a>
+    </div>
+  </article>
 
-<article class="card reveal">
-<div class="photo"><img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=900&q=85" alt="Outdoor nature and adventure" loading="lazy"></div>
-<div class="card-body">
-<h3>ADVENTURE PROGRAMMES</h3>
-<p>Discover outdoor activities, adventure experiences, group challenges and nature-based programmes.</p>
-<a class="small-btn" href="details.html">Explore Details →</a>
-</div>
-</article>
+  <article class="card reveal">
+    <div class="photo"><img src="https://images.unsplash.com/photo-1503428593586-e225b39bddfe?auto=format&fit=crop&w=900&q=85" alt="Event photography gallery" loading="lazy"></div>
+    <div class="card-body">
+      <h3>PHOTO GALLERY</h3>
+      <p>Browse photos and visual highlights from our events, activities, creative work and experiences.</p>
+      <a class="small-btn" href="gallery.html">View Gallery →</a>
+    </div>
+  </article>
 
-<article class="card reveal">
-<div class="photo"><img src="https://images.unsplash.com/photo-1503428593586-e225b39bddfe?auto=format&fit=crop&w=900&q=85" alt="Event photography gallery" loading="lazy"></div>
-<div class="card-body">
-<h3>PHOTO GALLERY</h3>
-<p>Browse photos and visual highlights from our events, activities, creative work and experiences.</p>
-<a class="small-btn" href="gallery.html">View Gallery →</a>
-</div>
-</article>
+  <article class="card reveal">
+    <div class="photo"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85" alt="Team working together" loading="lazy"></div>
+    <div class="card-body">
+      <h3>ABOUT OUR COMPANY</h3>
+      <p>Learn about THE APEX 99, our service categories, our approach and the experiences we aim to create.</p>
+      <a class="small-btn" href="about.html">Know About Us →</a>
+    </div>
+  </article>
 
-<article class="card reveal">
-<div class="photo"><img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=85" alt="Team working together" loading="lazy"></div>
-<div class="card-body">
-<h3>ABOUT OUR COMPANY</h3>
-<p>Learn about THE APEX 99, our service categories, our approach and the experiences we aim to create.</p>
-<a class="small-btn" href="about.html">Know About Us →</a>
-</div>
-</article>
-
-<article class="card reveal">
-<div class="photo"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=85" alt="Planning and project details" loading="lazy"></div>
-<div class="card-body">
-<h3>MORE DETAILS</h3>
-<p>Find additional information about our programmes and explore the details available on our website.</p>
-<a class="small-btn" href="details.html">Read More →</a>
-</div>
-</article>
+  <article class="card reveal">
+    <div class="photo"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=85" alt="Planning and project details" loading="lazy"></div>
+    <div class="card-body">
+      <h3>MORE DETAILS</h3>
+      <p>Find additional information about our programmes and explore the details available on our website.</p>
+      <a class="small-btn" href="details.html">Read More →</a>
+    </div>
+  </article>
 </section>
 
 <section class="stats reveal" aria-label="Our service categories">
-<div class="stat"><span class="stat-icon">♟</span><div><strong>Events</strong><span>Event Planning</span></div></div>
-<div class="stat"><span class="stat-icon">🏆</span><div><strong>Sports</strong><span>Competitions</span></div></div>
-<div class="stat"><span class="stat-icon">✈</span><div><strong>Tours</strong><span>Travel Experiences</span></div></div>
-<div class="stat"><span class="stat-icon">▶</span><div><strong>Media</strong><span>Creative Projects</span></div></div>
-<div class="stat"><span class="stat-icon">★</span><div><strong>Service</strong><span>Customer Focus</span></div></div>
+  <div class="stat"><span class="stat-icon">♟</span><div><strong>Events</strong><span>Event Planning</span></div></div>
+  <div class="stat"><span class="stat-icon">🏆</span><div><strong>Sports</strong><span>Competitions</span></div></div>
+  <div class="stat"><span class="stat-icon">✈</span><div><strong>Tours</strong><span>Travel Experiences</span></div></div>
+  <div class="stat"><span class="stat-icon">▶</span><div><strong>Media</strong><span>Creative Projects</span></div></div>
+  <div class="stat"><span class="stat-icon">★</span><div><strong>Service</strong><span>Customer Focus</span></div></div>
 </section>
 
 <section class="about reveal" id="about">
-<div>
-<img class="about-img" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85" alt="Team collaboration" loading="lazy">
-</div>
-<div>
-<span class="kicker">ABOUT US</span>
-<h2>THE APEX 99</h2>
-<p>THE APEX 99 brings events, travel, competitions, sports and media together in one place. From planning celebrations to organising tours and creative projects, our aim is to provide organised service and memorable experiences.</p>
-<p>Explore our individual pages to learn more about each service. Contact us to discuss your requirements and ask questions about a programme.</p>
-<a class="small-btn" href="about.html">Discover Our Story →</a>
+  <div>
+    <img class="about-img" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1000&q=85" alt="Team collaboration" loading="lazy">
+  </div>
+  <div>
+    <span class="kicker">ABOUT US</span>
+    <h2>THE APEX 99</h2>
+    <p>THE APEX 99 brings events, travel, competitions, sports and media together in one place. From planning celebrations to organising tours and creative projects, our aim is to provide organised service and memorable experiences.</p>
+    <p>Explore our individual pages to learn more about each service. Contact us to discuss your requirements and ask questions about a programme.</p>
+    <a class="small-btn" href="about.html">Discover Our Story →</a>
 
-<h2 style="margin-top:32px">WHY CHOOSE US?</h2>
-<div class="why-grid">
-<div class="why-item"><b>✓</b>Reliable Service</div>
-<div class="why-item"><b>♟</b>Teamwork</div>
-<div class="why-item"><b>⚙</b>Planning</div>
-<div class="why-item"><b>◆</b>Creative Ideas</div>
-<div class="why-item"><b>☎</b>Client Support</div>
-<div class="why-item"><b>★</b>Many Services</div>
-</div>
-</div>
+    <h2 style="margin-top:32px">WHY CHOOSE US?</h2>
+    <div class="why-grid">
+      <div class="why-item"><b>✓</b>Reliable Service</div>
+      <div class="why-item"><b>♟</b>Teamwork</div>
+      <div class="why-item"><b>⚙</b>Planning</div>
+      <div class="why-item"><b>◆</b>Creative Ideas</div>
+      <div class="why-item"><b>☎</b>Client Support</div>
+      <div class="why-item"><b>★</b>Many Services</div>
+    </div>
+  </div>
 </section>
 
 <section class="section highlight">
-<div class="section-heading">
-<span class="kicker">THE APEX EXPERIENCE</span>
-<h2>Ideas Into Experiences</h2>
-<p>Explore our services and contact our team to discuss your next event, journey, production or sports enquiry.</p>
-</div>
-<div class="features">
-<div class="feature"><b>✦</b><h3>Creative Ideas</h3><p>Thoughtful concepts for events, travel and media projects.</p></div>
-<div class="feature"><b>◎</b><h3>Planned Experiences</h3><p>Planning and communication around your requirements.</p></div>
-<div class="feature"><b>◆</b><h3>Multiple Services</h3><p>Explore different service categories in one place.</p></div>
-<div class="feature"><b>★</b><h3>Customer Focus</h3><p>We welcome your questions, ideas and enquiries.</p></div>
-</div>
+  <div class="section-heading">
+    <span class="kicker">THE APEX EXPERIENCE</span>
+    <h2>Ideas Into Experiences</h2>
+    <p>Explore our services and contact our team to discuss your next event, journey, production or sports enquiry.</p>
+  </div>
+  <div class="features">
+    <div class="feature"><b>✦</b><h3>Creative Ideas</h3><p>Thoughtful concepts for events, travel and media projects.</p></div>
+    <div class="feature"><b>◎</b><h3>Planned Experiences</h3><p>Planning and communication around your requirements.</p></div>
+    <div class="feature"><b>◆</b><h3>Multiple Services</h3><p>Explore different service categories in one place.</p></div>
+    <div class="feature"><b>★</b><h3>Customer Focus</h3><p>We welcome your questions, ideas and enquiries.</p></div>
+  </div>
 </section>
 
 <section class="quick-actions">
-<h2>READY TO GET STARTED?</h2>
-<p>Book an event, plan your next trip or apply to our Sports Academy.</p>
-<a class="btn" href="booking.html">EVENT / TOUR / MEDIA BOOKING →</a>
-<a class="btn" href="admission.html">SPORTS ADMISSION →</a>
+  <h2>READY TO GET STARTED?</h2>
+  <p>Book an event, plan your next trip or apply to our Sports Academy.</p>
+  <a class="btn" href="booking.html">EVENT / TOUR / MEDIA BOOKING →</a>
+  <a class="btn" href="admission.html">SPORTS ADMISSION →</a>
+</section>
+
+<!-- CUSTOMER REVIEWS & RATINGS -->
+<section class="reviews-section" id="reviews">
+  <div class="section-heading">
+    <span class="kicker">CUSTOMER FEEDBACK</span>
+    <h2>REVIEWS & RATINGS</h2>
+    <p>Share your experience with THE APEX 99. Only approved reviews appear publicly.</p>
+  </div>
+
+  <div class="reviews-wrap">
+    <div class="review-panel">
+      <h3>Write a Review</h3>
+      <p>Your feedback helps us improve our services. Reviews are checked by our team before publication.</p>
+
+      <form id="apexReviewForm" class="review-form-grid">
+        <div class="review-field">
+          <label for="reviewName">Your Name *</label>
+          <input id="reviewName" name="name" type="text" maxlength="80" autocomplete="name" required placeholder="Enter your name">
+        </div>
+
+        <div class="review-field">
+          <label>Rating *</label>
+          <div class="rating-select" role="radiogroup" aria-label="Choose a rating from 1 to 5">
+            <input type="radio" id="rate5" name="rating" value="5" required><label for="rate5" title="5 stars">★</label>
+            <input type="radio" id="rate4" name="rating" value="4"><label for="rate4" title="4 stars">★</label>
+            <input type="radio" id="rate3" name="rating" value="3"><label for="rate3" title="3 stars">★</label>
+            <input type="radio" id="rate2" name="rating" value="2"><label for="rate2" title="2 stars">★</label>
+            <input type="radio" id="rate1" name="rating" value="1"><label for="rate1" title="1 star">★</label>
+          </div>
+        </div>
+
+        <div class="review-field">
+          <label for="reviewMessage">Your Review *</label>
+          <textarea id="reviewMessage" name="message" maxlength="1500" required placeholder="Tell us about your experience..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn" id="reviewSubmit">SUBMIT REVIEW →</button>
+      </form>
+
+      <div id="reviewStatus" class="review-status" role="status" aria-live="polite"></div>
+      <p class="review-small">Please do not include private information. Your review will remain pending until approved by the administrator.</p>
+    </div>
+
+    <div class="review-panel">
+      <h3>What People Say</h3>
+      <p>Published customer reviews and average rating.</p>
+      <div class="review-summary">
+        <div class="review-average" id="reviewAverage">—</div>
+        <div>
+          <div class="review-stars" id="reviewAverageStars" aria-label="Average rating">☆☆☆☆☆</div>
+          <div id="reviewCount">Loading approved reviews…</div>
+        </div>
+      </div>
+      <div class="review-list" id="approvedReviewList">
+        <div class="review-empty">Loading reviews…</div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="contact-section" id="contact">
-<div class="section-heading">
-<span class="kicker">GET IN TOUCH</span>
-<h2>LET'S CREATE SOMETHING GREAT</h2>
-<p>Planning an event, booking a tour or starting a creative project? Send us your enquiry.</p>
-</div>
+  <div class="section-heading">
+    <span class="kicker">GET IN TOUCH</span>
+    <h2>LET'S CREATE SOMETHING GREAT</h2>
+    <p>Planning an event, booking a tour or starting a creative project? Send us your enquiry.</p>
+  </div>
 
-<div class="contact-wrap">
-<div class="contact-info">
-<span class="kicker">CONTACT INFORMATION</span>
-<h2>Let's Talk About Your Plans.</h2>
-<p><strong>Company:</strong> THE APEX 99</p>
-<p><strong>Organisation:</strong> A Unit of SMPN Record Management</p>
-<p>Contact our team about events, travel, media production, sports and competitions.</p>
+  <div class="contact-wrap">
+    <div class="contact-info">
+      <span class="kicker">CONTACT INFORMATION</span>
+      <h2>Let's Talk About Your Plans.</h2>
+      <p><strong>Company:</strong> THE APEX 99</p>
+      <p><strong>Organisation:</strong> A Unit of SMPN Record Management</p>
+      <p>Contact our team about events, travel, media production, sports and competitions.</p>
 
-<div class="quick-links">
-<a href="https://wa.me/917439718014" target="_blank" rel="noopener noreferrer"><span class="quick-icon">✆</span><span>WhatsApp Chat<br><small>+91 74397 18014</small></span></a>
-<a href="tel:+917439718014"><span class="quick-icon">☎</span><span>Call Us<br><small>+91 74397 18014</small></span></a>
-<a href="mailto:the99woarld@gmail.com"><span class="quick-icon">✉</span><span>Email Us<br><small>the99woarld@gmail.com</small></span></a>
-<a href="https://www.facebook.com/share/1A7Z4GTBUP/" target="_blank" rel="noopener noreferrer"><span class="quick-icon">f</span><span>Facebook<br><small>Visit our Facebook page</small></span></a>
-<a href="https://youtube.com/@theapex99-official" target="_blank" rel="noopener noreferrer"><span class="quick-icon">▶</span><span>YouTube<br><small>Visit our channel</small></span></a>
-</div>
-</div>
+      <div class="quick-links">
+        <a href="https://wa.me/917439718014" target="_blank" rel="noopener noreferrer"><span class="quick-icon">✆</span><span>WhatsApp Chat<br><small>+91 74397 18014</small></span></a>
+        <a href="tel:+917439718014"><span class="quick-icon">☎</span><span>Call Us<br><small>+91 74397 18014</small></span></a>
+        <a href="mailto:the99woarld@gmail.com"><span class="quick-icon">✉</span><span>Email Us<br><small>the99woarld@gmail.com</small></span></a>
+        <a href="https://www.facebook.com/share/1A7Z4GTBUP/" target="_blank" rel="noopener noreferrer"><span class="quick-icon">f</span><span>Facebook<br><small>Visit our Facebook page</small></span></a>
+        <a href="https://youtube.com/@theapex99-official" target="_blank" rel="noopener noreferrer"><span class="quick-icon">▶</span><span>YouTube<br><small>Visit our channel</small></span></a>
+      </div>
+    </div>
 
-<div class="enquiry-card">
-<span class="kicker">CONTACT FORM</span>
-<h3>Send an Enquiry</h3>
-<p class="form-intro">Fill in the details below. Fields marked * are required.</p>
+    <div class="enquiry-card">
+      <span class="kicker">CONTACT FORM</span>
+      <h3>Send an Enquiry</h3>
+      <p class="form-intro">Fill in the details below. Fields marked * are required.</p>
 
-<form action="https://formsubmit.co/the99woarld@gmail.com" method="POST">
-<input type="hidden" name="_subject" value="New Website Enquiry - THE APEX 99">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="_captcha" value="true">
-<input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <form action="https://formsubmit.co/the99woarld@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New Website Enquiry - THE APEX 99">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-<div class="enquiry-grid">
-<div class="field">
-<label for="apexName">Full Name *</label>
-<input id="apexName" name="Name" type="text" maxlength="100" autocomplete="name" placeholder="Your full name" required>
-</div>
+        <div class="enquiry-grid">
+          <div class="field">
+            <label for="apexName">Full Name *</label>
+            <input id="apexName" name="Name" type="text" maxlength="100" autocomplete="name" placeholder="Your full name" required>
+          </div>
 
-<div class="field">
-<label for="apexPhone">Mobile Number *</label>
-<input id="apexPhone" name="Phone" type="tel" maxlength="30" autocomplete="tel" placeholder="+91..." required>
-</div>
+          <div class="field">
+            <label for="apexPhone">Mobile Number *</label>
+            <input id="apexPhone" name="Phone" type="tel" maxlength="30" autocomplete="tel" placeholder="+91..." required>
+          </div>
 
-<div class="field full">
-<label for="apexEmail">Email Address</label>
-<input id="apexEmail" name="Customer Email" type="email" maxlength="150" autocomplete="email" placeholder="you@example.com">
-</div>
+          <div class="field full">
+            <label for="apexEmail">Email Address</label>
+            <input id="apexEmail" name="Customer Email" type="email" maxlength="150" autocomplete="email" placeholder="you@example.com">
+          </div>
 
-<div class="field full">
-<label for="apexService">Service Type *</label>
-<select id="apexService" name="Service Type" required>
-<option value="" selected disabled>Select a service</option>
-<option>Event Management</option>
-<option>Tour & Travel</option>
-<option>Media Production</option>
-<option>Sports & Competitions</option>
-<option>Sports Academy</option>
-<option>Adventure Programmes</option>
-<option>Gallery Enquiry</option>
-<option>Other Enquiry</option>
-</select>
-</div>
+          <div class="field full">
+            <label for="apexService">Service Type *</label>
+            <select id="apexService" name="Service Type" required>
+              <option value="" selected disabled>Select a service</option>
+              <option>Event Management</option>
+              <option>Tour & Travel</option>
+              <option>Media Production</option>
+              <option>Sports & Competitions</option>
+              <option>Sports Academy</option>
+              <option>Adventure Programmes</option>
+              <option>Gallery Enquiry</option>
+              <option>Other Enquiry</option>
+            </select>
+          </div>
 
-<div class="field full">
-<label for="apexMessage">Your Message *</label>
-<textarea id="apexMessage" name="Message" maxlength="3000" rows="5" placeholder="Tell us what you need..." required></textarea>
-</div>
-</div>
+          <div class="field full">
+            <label for="apexMessage">Your Message *</label>
+            <textarea id="apexMessage" name="Message" maxlength="3000" rows="5" placeholder="Tell us what you need..." required></textarea>
+          </div>
+        </div>
 
-<label class="consent">
-<input type="checkbox" name="Contact Consent" value="Agreed" required>
-<span>I agree that THE APEX 99 may contact me about this enquiry.</span>
-</label>
+        <label class="consent">
+          <input type="checkbox" name="Contact Consent" value="Agreed" required>
+          <span>I agree that THE APEX 99 may contact me about this enquiry.</span>
+        </label>
 
-<button type="submit" class="submit-btn">SEND ENQUIRY →</button>
-<p class="form-note">Email delivery requires FormSubmit setup and may require email verification. This form does not automatically save enquiries to Google Sheets.</p>
-</form>
-</div>
-</div>
+        <button type="submit" class="submit-btn">SEND ENQUIRY →</button>
+        <p class="form-note">Email delivery requires FormSubmit setup and may require email verification. This form does not automatically save enquiries to Google Sheets.</p>
+      </form>
+    </div>
+  </div>
 </section>
 </main>
 
 <footer>
-<strong>THE APEX 99</strong>
-<p>WHO IS THE ONE</p>
-<p>A Unit of SMPN Record Management</p>
-<p>Events • Tours • Competitions • Adventure • Media Production</p>
+  <strong>THE APEX 99</strong>
+  <p>WHO IS THE ONE</p>
+  <p>A Unit of SMPN Record Management</p>
+  <p>Events • Tours • Competitions • Adventure • Media Production</p>
 
-<div class="footer-links">
-<a href="index.html">Home</a>
-<a href="about.html">About Us</a>
-<a href="event-management.html">Events</a>
-<a href="tours.html">Tours</a>
-<a href="media.html">Media</a>
-<a href="sports.html">Sports</a>
-<a href="admission.html">Admission</a>
-<a href="booking.html">Booking</a>
-<a href="gallery.html">Gallery</a>
-<a href="details.html">More Details</a>
-<a href="#contact">Contact</a>
-</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="event-management.html">Events</a>
+    <a href="tours.html">Tours</a>
+    <a href="media.html">Media</a>
+    <a href="sports.html">Sports</a>
+    <a href="admission.html">Admission</a>
+    <a href="booking.html">Booking</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="details.html">More Details</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+  </div>
 
-<p>Email: <a href="mailto:the99woarld@gmail.com">the99woarld@gmail.com</a></p>
-<p>© <span id="year"></span> THE APEX 99. All rights reserved.</p>
+  <p>Email: <a href="mailto:the99woarld@gmail.com">the99woarld@gmail.com</a></p>
+  <p>© <span id="year"></span> THE APEX 99. All rights reserved.</p>
 </footer>
 
 <a class="floating-whatsapp" href="https://wa.me/917439718014" target="_blank" rel="noopener noreferrer" aria-label="Chat with THE APEX 99 on WhatsApp">WhatsApp Chat</a>
 
 <script>
-const menuButton=document.querySelector(".menu-toggle");
-const mainNav=document.getElementById("mainNav");
+const menuButton = document.querySelector(".menu-toggle");
+const mainNav = document.getElementById("mainNav");
 
-menuButton.addEventListener("click",function(){
-const isOpen=mainNav.classList.toggle("open");
-menuButton.setAttribute("aria-expanded",String(isOpen));
-menuButton.textContent=isOpen?"×":"☰";
+menuButton.addEventListener("click", function() {
+  const isOpen = mainNav.classList.toggle("open");
+  menuButton.setAttribute("aria-expanded", String(isOpen));
+  menuButton.textContent = isOpen ? "×" : "☰";
 });
 
-mainNav.querySelectorAll("a").forEach(function(link){
-link.addEventListener("click",function(){
-mainNav.classList.remove("open");
-menuButton.setAttribute("aria-expanded","false");
-menuButton.textContent="☰";
-});
+mainNav.querySelectorAll("a").forEach(function(link) {
+  link.addEventListener("click", function() {
+    mainNav.classList.remove("open");
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.textContent = "☰";
+  });
 });
 
-document.getElementById("year").textContent=new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<script type="module">
+import {initializeApp} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import {
+  getFirestore, collection, addDoc, getDocs,
+  query, where, serverTimestamp
+} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+
+/*
+ FIREBASE REVIEW SYSTEM
+
+ IMPORTANT:
+ Replace the placeholder values below with the exact Web App
+ configuration from Firebase Console > Project settings > Your apps.
+
+ Firestore collection: reviews
+ Fields: name, rating, message, status, createdAt
+*/
+
+const firebaseConfig = {
+  apiKey: "PASTE_YOUR_FIREBASE_API_KEY",
+  authDomain: "PASTE_YOUR_PROJECT_ID.firebaseapp.com",
+  projectId: "PASTE_YOUR_PROJECT_ID",
+  storageBucket: "PASTE_YOUR_PROJECT_ID.firebasestorage.app",
+  messagingSenderId: "PASTE_YOUR_MESSAGING_SENDER_ID",
+  appId: "PASTE_YOUR_FIREBASE_APP_ID"
+};
+
+const form = document.getElementById("apexReviewForm");
+const statusBox = document.getElementById("reviewStatus");
+const submitButton = document.getElementById("reviewSubmit");
+const list = document.getElementById("approvedReviewList");
+const averageElement = document.getElementById("reviewAverage");
+const averageStars = document.getElementById("reviewAverageStars");
+const countElement = document.getElementById("reviewCount");
+
+function setStatus(message, type = "") {
+  statusBox.textContent = message;
+  statusBox.className = "review-status " + type;
+}
+
+function escapeHTML(value) {
+  return String(value ?? "").replace(/[&<>"']/g, function(ch) {
+    return {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;"
+    }[ch];
+  });
+}
+
+function stars(value) {
+  const rating = Math.max(0, Math.min(5, Math.round(Number(value) || 0)));
+  return "★".repeat(rating) + "☆".repeat(5 - rating);
+}
+
+function formatDate(value) {
+  try {
+    return value && typeof value.toDate === "function"
+      ? value.toDate().toLocaleDateString()
+      : "";
+  } catch {
+    return "";
+  }
+}
+
+const configReady =
+  firebaseConfig.apiKey !== "PASTE_YOUR_FIREBASE_API_KEY" &&
+  firebaseConfig.projectId !== "PASTE_YOUR_PROJECT_ID" &&
+  firebaseConfig.appId !== "PASTE_YOUR_FIREBASE_APP_ID" &&
+  !Object.values(firebaseConfig).some(value => String(value).startsWith("PASTE_"));
+
+if (!configReady) {
+  averageElement.textContent = "—";
+  countElement.textContent = "Firebase setup required";
+  list.innerHTML = '<div class="review-empty">Firebase configuration is not added yet. Add your real Firebase Web App configuration to enable online reviews.</div>';
+
+  form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    setStatus("Firebase setup is required before reviews can be submitted.", "error");
+  });
+} else {
+  try {
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    async function loadApprovedReviews() {
+      try {
+        const approvedQuery = query(
+          collection(db, "reviews"),
+          where("status", "==", "approved")
+        );
+
+        const snapshot = await getDocs(approvedQuery);
+
+        const approved = snapshot.docs
+          .map(document => ({id: document.id, ...document.data()}))
+          .filter(review =>
+            Number.isInteger(Number(review.rating)) &&
+            Number(review.rating) >= 1 &&
+            Number(review.rating) <= 5
+          )
+          .sort((a, b) => {
+            const timeA = a.createdAt?.toMillis ? a.createdAt.toMillis() : 0;
+            const timeB = b.createdAt?.toMillis ? b.createdAt.toMillis() : 0;
+            return timeB - timeA;
+          });
+
+        const average = approved.length
+          ? approved.reduce((sum, review) => sum + Number(review.rating), 0) / approved.length
+          : 0;
+
+        averageElement.textContent = approved.length ? average.toFixed(1) : "—";
+        averageStars.textContent = approved.length ? stars(average) : "☆☆☆☆☆";
+        countElement.textContent = approved.length + " approved review" + (approved.length === 1 ? "" : "s");
+
+        if (!approved.length) {
+          list.innerHTML = '<div class="review-empty">No published reviews yet. Be the first to share your experience.</div>';
+          return;
+        }
+
+        list.innerHTML = approved.map(review => `
+          <article class="review-item">
+            <div class="review-item-head">
+              <div>
+                <h4>${escapeHTML(review.name || "Customer")}</h4>
+                <div class="review-stars" aria-label="${Number(review.rating)} out of 5 stars">${stars(review.rating)}</div>
+              </div>
+              <time>${escapeHTML(formatDate(review.createdAt))}</time>
+            </div>
+            <p>${escapeHTML(review.message || "")}</p>
+          </article>
+        `).join("");
+
+      } catch (error) {
+        console.error("Review loading error:", error);
+        list.innerHTML = '<div class="review-empty">Could not load reviews. Please check Firestore rules and Firebase configuration.</div>';
+        countElement.textContent = "Unable to load reviews";
+      }
+    }
+
+    form.addEventListener("submit", async function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("reviewName").value.trim();
+      const message = document.getElementById("reviewMessage").value.trim();
+      const rating = Number(new FormData(form).get("rating"));
+
+      if (!name || !message || !Number.isInteger(rating) || rating < 1 || rating > 5) {
+        setStatus("Please enter your name, select 1–5 stars and write a review.", "error");
+        return;
+      }
+
+      submitButton.disabled = true;
+      submitButton.textContent = "SUBMITTING…";
+      setStatus("Submitting your review…");
+
+      try {
+        await addDoc(collection(db, "reviews"), {
+          name: name,
+          message: message,
+          rating: rating,
+          status: "pending",
+          createdAt: serverTimestamp()
+        });
+
+        form.reset();
+        setStatus("Thank you! Your review was submitted and is waiting for admin approval.", "success");
+
+      } catch (error) {
+        console.error("Review submission error:", error);
+        setStatus("Could not submit your review. Please check Firestore rules and try again.", "error");
+
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = "SUBMIT REVIEW →";
+      }
+    });
+
+    loadApprovedReviews();
+
+  } catch (error) {
+    console.error("Firebase initialisation error:", error);
+    list.innerHTML = '<div class="review-empty">Firebase could not start. Please verify the Web App configuration.</div>';
+    countElement.textContent = "Setup needed";
+  }
+}
 </script>
 </body>
 </html>
