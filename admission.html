@@ -1,1 +1,110 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sports Admission | THE APEX 99</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f8ff;color:#102447}
+header{background:#073b83;color:white;text-align:center;padding:25px 15px}
+header h1{margin:0;color:#ffd34d}
+header p{margin-bottom:0}
+main{max-width:760px;margin:30px auto;padding:25px;background:white;border-radius:16px;box-shadow:0 5px 25px #001b4418}
+h2{color:#073b83}
+.note{background:#fff7d9;padding:12px;border-radius:8px;font-size:14px}
+label{display:block;margin:16px 0 7px;font-weight:bold}
+input,select,textarea{width:100%;padding:12px;border:1px solid #ccd5e5;border-radius:7px;font-size:15px}
+button{margin-top:20px;width:100%;padding:15px;background:#073b83;color:white;border:0;border-radius:8px;font-weight:bold;font-size:16px;cursor:pointer}
+button:hover{background:#05285b}
+footer{text-align:center;padding:20px;color:#53647e}
+a{color:#073b83}
+</style>
+</head>
+<body>
+<header>
+<h1>THE APEX 99</h1>
+<p>SPORTS ACADEMY | WHO IS THE ONE</p>
+<p>Powered by SMPN Record Management</p>
+</header>
 
+<main>
+<h2>Sports Academy Admission Enquiry</h2>
+<p>Fill in this form to enquire about joining our Sports Academy.</p>
+<p class="note">This is an enquiry only. Admission is not confirmed until our team contacts you.</p>
+
+<form action="https://formsubmit.co/the99woarld@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="New Sports Admission Enquiry - THE APEX 99">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="true">
+<input type="text" name="_honey" style="display:none">
+
+<label>Guardian's Full Name *</label>
+<input type="text" name="Guardian Name" required>
+
+<label>Guardian's Mobile Number *</label>
+<input type="tel" name="Guardian Phone" pattern="[0-9+() -]{8,20}" required>
+
+<label>Student's Full Name *</label>
+<input type="text" name="Student Name" required>
+
+<label>Student's Age Group *</label>
+<select name="Age Group" required>
+<option value="">Select age group</option>
+<option>Under 5</option>
+<option>5–8 years</option>
+<option>9–11 years</option>
+<option>12–15 years</option>
+<option>16–18 years</option>
+</select>
+
+<label>Gender (Optional)</label>
+<select name="Gender">
+<option value="">Prefer not to say</option>
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+
+<label>Sport Interested In *</label>
+<select name="Sport" required>
+<option value="">Select a sport</option>
+<option>Football</option>
+<option>Cricket</option>
+<option>Athletics</option>
+<option>Basketball / Court Sports</option>
+<option>Multi-Sport</option>
+<option>Other</option>
+</select>
+
+<label>Previous Sports Experience</label>
+<select name="Experience">
+<option>Beginner</option>
+<option>Some experience</option>
+<option>Played for a school or club</option>
+</select>
+
+<label>Email Address (Optional)</label>
+<input type="email" name="Email">
+
+<label>Additional Information (Optional)</label>
+<textarea name="Additional Information" rows="4" placeholder="Tell us about your enquiry"></textarea>
+
+<label style="font-weight:normal">
+<input type="checkbox" name="Guardian Consent" value="Yes" required style="width:auto">
+ I confirm that I am the parent/guardian or have permission to submit this enquiry.
+</label>
+
+<p class="note">Please do not submit Aadhaar numbers, identity documents, or other sensitive personal information through this form.</p>
+
+<button type="submit">SUBMIT ADMISSION ENQUIRY</button>
+</form>
+
+<p><a href="index.html">← Back to Home</a></p>
+</main>
+
+<footer>© 2026 THE APEX 99. All rights reserved.</footer>
+</body>
+</html>
+```
