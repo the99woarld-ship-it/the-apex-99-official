@@ -18,104 +18,511 @@
   --light:#f4f8ff;
   --text:#10264c;
 }
+
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:var(--light);overflow-x:hidden}
 a{text-decoration:none;color:inherit}
-header{position:sticky;top:0;z-index:100;background:linear-gradient(110deg,#03245c,#0874e8,#03245c);border-bottom:3px solid var(--gold);box-shadow:0 5px 20px #001d5030}
-.nav{max-width:1400px;margin:auto;padding:12px 5%;min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.brand{display:flex;align-items:center;gap:12px;color:var(--gold);font-family:Georgia,serif;font-weight:900}
-.brand-mark{width:48px;height:48px;border:2px solid var(--gold);border-radius:50%;display:grid;place-items:center;font-size:28px;text-shadow:0 0 12px var(--gold)}
-.brand-name{font-size:25px;white-space:nowrap}
-.brand-tag{display:block;color:white;font:700 10px Arial,sans-serif;letter-spacing:5px;margin-top:4px}
-nav{display:flex;align-items:center;gap:20px}
-nav a{color:white;font-size:14px;font-weight:700;transition:.25s}
-nav a:hover{color:var(--gold)}
-.contact-btn,.btn{display:inline-block;padding:14px 22px;border-radius:12px;color:var(--deep);background:linear-gradient(135deg,#fff0a2,#ffbf20);font-weight:800;border:1px solid white;transition:.25s}
-.contact-btn:hover,.btn:hover{transform:translateY(-3px);box-shadow:0 8px 20px #ffc92860}
-.socials{display:flex;gap:8px;align-items:center}
-.socials a{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:#0874e8;color:white;border:1px solid #ffffff80;font-weight:900}
-.socials .instagram{background:linear-gradient(135deg,#7438d6,#f32383,#ffb52b)}
-.socials .youtube{background:#ff1825}
-.menu-toggle{display:none;border:0;color:white;background:transparent;font-size:30px;cursor:pointer}
 
-/* HERO AND CINEMATIC SLIDESHOW */
-.hero{min-height:550px;position:relative;display:flex;align-items:center;overflow:hidden;background:var(--deep);isolation:isolate}
-.slides,.slides:after{position:absolute;inset:0}
-.slides{z-index:-2}
-.slides:after{content:"";background:linear-gradient(90deg,#031b48f5 0%,#052d70df 40%,#031b4860 100%)}
-.slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:slideShow 18s infinite,cinematicZoom 18s infinite}
-.slide:nth-child(1){background-image:url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=2000&q=90');animation-delay:0s}
-.slide:nth-child(2){background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=90');animation-delay:6s}
-.slide:nth-child(3){background-image:url('https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=2000&q=90');animation-delay:12s}
-@keyframes slideShow{0%,29%{opacity:1}34%,96%{opacity:0}100%{opacity:1}}
-@keyframes cinematicZoom{from{transform:scale(1)}to{transform:scale(1.15)}}
-.hero-content{width:100%;max-width:1400px;margin:auto;padding:75px 5% 100px;color:white}
-.eyebrow{text-transform:uppercase;letter-spacing:7px;font-size:14px;font-weight:bold;margin-bottom:15px;animation:fadeUp .8s both}
-
-/* REPEATING APEX TITLE ANIMATION */
-#animatedTitle{display:flex;flex-wrap:wrap;gap:.025em;font:900 clamp(48px,7.5vw,100px)/1 Georgia,serif;color:var(--gold);letter-spacing:-2px;text-shadow:0 4px 0 #8a5300,0 0 25px #ffce4560;margin-bottom:20px;perspective:600px}
-#animatedTitle span{display:inline-block;opacity:0;transform:translateY(35px) scale(.75) rotateX(45deg);animation:apexLetterMove .55s ease-out forwards;animation-delay:var(--delay,0s)}
-#animatedTitle span.space{width:.25em}
-@keyframes apexLetterMove{
-  0%{opacity:0;transform:translateY(35px) scale(.75) rotateX(45deg)}
-  70%{opacity:1;transform:translateY(-5px) scale(1.08) rotateX(0)}
-  100%{opacity:1;transform:translateY(0) scale(1) rotateX(0)}
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:linear-gradient(110deg,#03245c,#0874e8,#03245c);
+  border-bottom:3px solid var(--gold);
+  box-shadow:0 5px 20px #001d5030;
 }
-.hero h2{font-size:clamp(20px,3vw,34px);letter-spacing:clamp(4px,1.3vw,13px);margin-bottom:18px}
-.rule{height:3px;width:min(480px,90%);background:linear-gradient(90deg,var(--gold),transparent);margin-bottom:20px}
-.hero p{max-width:680px;line-height:1.8;font-size:clamp(14px,1.5vw,18px)}
-.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
-.btn-outline{display:inline-block;padding:13px 21px;border:2px solid white;color:white;background:#031b4880;border-radius:12px;font-weight:700}
-.btn-outline:hover{background:white;color:var(--navy)}
-.hero-note{position:absolute;right:5%;bottom:35px;color:white;font:italic 25px Georgia,serif;text-align:center;text-shadow:0 3px 10px #000}
-.hero-note span{display:block;width:100px;height:3px;background:var(--gold);margin:10px auto}
-@keyframes fadeUp{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
 
-/* FOUR SERVICE CARDS */
-.services{max-width:1400px;margin:-35px auto 0;padding:0 3%;position:relative;z-index:3;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
-.card{border:2px solid var(--gold);border-radius:18px;overflow:hidden;background:white;box-shadow:0 10px 25px #05265c20;transition:transform .3s,box-shadow .3s}
-.card:hover{transform:translateY(-8px);box-shadow:0 18px 35px #05265c30}
-.photo{height:190px;position:relative;overflow:hidden;background:#dce9fb}
-.photo img{width:100%;height:100%;object-fit:cover;transition:transform .7s}
+.nav{
+  max-width:1400px;
+  margin:auto;
+  padding:12px 5%;
+  min-height:80px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:var(--gold);
+  font-family:Georgia,serif;
+  font-weight:900;
+}
+
+.brand-mark{
+  width:48px;
+  height:48px;
+  border:2px solid var(--gold);
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  font-size:28px;
+  text-shadow:0 0 12px var(--gold);
+}
+
+.brand-name{font-size:25px;white-space:nowrap}
+
+.brand-tag{
+  display:block;
+  color:white;
+  font:700 10px Arial,sans-serif;
+  letter-spacing:5px;
+  margin-top:4px;
+}
+
+nav{display:flex;align-items:center;gap:20px}
+
+nav a{
+  color:white;
+  font-size:14px;
+  font-weight:700;
+  transition:.25s;
+}
+
+nav a:hover{color:var(--gold)}
+
+.contact-btn,.btn{
+  display:inline-block;
+  padding:14px 22px;
+  border-radius:12px;
+  color:var(--deep);
+  background:linear-gradient(135deg,#fff0a2,#ffbf20);
+  font-weight:800;
+  border:1px solid white;
+  transition:.25s;
+}
+
+.contact-btn:hover,.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px #ffc92860;
+}
+
+.socials{display:flex;gap:8px;align-items:center}
+
+.socials a{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#0874e8;
+  color:white;
+  border:1px solid #ffffff80;
+  font-weight:900;
+}
+
+.socials .instagram{
+  background:linear-gradient(135deg,#7438d6,#f32383,#ffb52b);
+}
+
+.socials .youtube{background:#ff1825}
+
+.menu-toggle{
+  display:none;
+  border:0;
+  color:white;
+  background:transparent;
+  font-size:30px;
+  cursor:pointer;
+}
+
+/* CINEMATIC HERO SLIDESHOW */
+
+.hero{
+  min-height:550px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:var(--deep);
+  isolation:isolate;
+}
+
+.slides,.slides:after{
+  position:absolute;
+  inset:0;
+}
+
+.slides{z-index:-2}
+
+.slides:after{
+  content:"";
+  background:linear-gradient(
+    90deg,
+    #031b48f5 0%,
+    #052d70df 40%,
+    #031b4860 100%
+  );
+}
+
+.slide{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  animation:slideShow 18s infinite,cinematicZoom 18s infinite;
+}
+
+.slide:nth-child(1){
+  background-image:url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=2000&q=90');
+  animation-delay:0s;
+}
+
+.slide:nth-child(2){
+  background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=90');
+  animation-delay:6s;
+}
+
+.slide:nth-child(3){
+  background-image:url('https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=2000&q=90');
+  animation-delay:12s;
+}
+
+@keyframes slideShow{
+  0%,29%{opacity:1}
+  34%,96%{opacity:0}
+  100%{opacity:1}
+}
+
+@keyframes cinematicZoom{
+  from{transform:scale(1)}
+  to{transform:scale(1.15)}
+}
+
+.hero-content{
+  width:100%;
+  max-width:1400px;
+  margin:auto;
+  padding:75px 5% 100px;
+  color:white;
+}
+
+.eyebrow{
+  text-transform:uppercase;
+  letter-spacing:7px;
+  font-size:14px;
+  font-weight:bold;
+  margin-bottom:15px;
+  animation:fadeUp .8s both;
+}
+
+/* REPEATING THE APEX 99 LETTER ANIMATION */
+
+#animatedTitle{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.025em;
+  font:900 clamp(48px,7.5vw,100px)/1 Georgia,serif;
+  color:var(--gold);
+  letter-spacing:-2px;
+  text-shadow:0 4px 0 #8a5300,0 0 25px #ffce4560;
+  margin-bottom:20px;
+  perspective:600px;
+}
+
+#animatedTitle span{
+  display:inline-block;
+  opacity:0;
+  transform:translateY(35px) scale(.75) rotateX(45deg);
+  animation:apexLetterMove .55s ease-out forwards;
+  animation-delay:var(--delay,0s);
+}
+
+#animatedTitle span.space{width:.25em}
+
+@keyframes apexLetterMove{
+  0%{
+    opacity:0;
+    transform:translateY(35px) scale(.75) rotateX(45deg);
+  }
+  70%{
+    opacity:1;
+    transform:translateY(-5px) scale(1.08) rotateX(0);
+  }
+  100%{
+    opacity:1;
+    transform:translateY(0) scale(1) rotateX(0);
+  }
+}
+
+.hero h2{
+  font-size:clamp(20px,3vw,34px);
+  letter-spacing:clamp(4px,1.3vw,13px);
+  margin-bottom:18px;
+}
+
+.rule{
+  height:3px;
+  width:min(480px,90%);
+  background:linear-gradient(90deg,var(--gold),transparent);
+  margin-bottom:20px;
+}
+
+.hero p{
+  max-width:680px;
+  line-height:1.8;
+  font-size:clamp(14px,1.5vw,18px);
+}
+
+.hero-actions{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+
+.btn-outline{
+  display:inline-block;
+  padding:13px 21px;
+  border:2px solid white;
+  color:white;
+  background:#031b4880;
+  border-radius:12px;
+  font-weight:700;
+}
+
+.btn-outline:hover{background:white;color:var(--navy)}
+
+.hero-note{
+  position:absolute;
+  right:5%;
+  bottom:35px;
+  color:white;
+  font:italic 25px Georgia,serif;
+  text-align:center;
+  text-shadow:0 3px 10px #000;
+}
+
+.hero-note span{
+  display:block;
+  width:100px;
+  height:3px;
+  background:var(--gold);
+  margin:10px auto;
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(15px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* FOUR SERVICE CARDS - NUMBER LABELS REMOVED */
+
+.services{
+  max-width:1400px;
+  margin:-35px auto 0;
+  padding:0 3%;
+  position:relative;
+  z-index:3;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:15px;
+}
+
+.card{
+  border:2px solid var(--gold);
+  border-radius:18px;
+  overflow:hidden;
+  background:white;
+  box-shadow:0 10px 25px #05265c20;
+  transition:transform .3s,box-shadow .3s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 18px 35px #05265c30;
+}
+
+.photo{
+  height:190px;
+  position:relative;
+  overflow:hidden;
+  background:#dce9fb;
+}
+
+.photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .7s;
+}
+
 .card:hover .photo img{transform:scale(1.1)}
-.number{position:absolute;top:12px;left:12px;background:var(--gold);color:var(--deep);padding:9px 12px;border-radius:9px;font-weight:900}
-.icon-circle{position:absolute;bottom:-25px;left:50%;transform:translateX(-50%);width:58px;height:58px;display:grid;place-items:center;border-radius:50%;background:var(--navy);color:var(--gold);border:3px solid var(--gold);font-size:25px}
+
+/* No 01, 02, 03 or 04 labels */
+
+.number{display:none!important}
+
+.icon-circle{
+  position:absolute;
+  bottom:-25px;
+  left:50%;
+  transform:translateX(-50%);
+  width:58px;
+  height:58px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--navy);
+  color:var(--gold);
+  border:3px solid var(--gold);
+  font-size:25px;
+}
+
 .card-body{text-align:center;padding:35px 17px 20px}
-.card h3{color:var(--navy);font:900 19px/1.2 Georgia,serif;min-height:48px;display:grid;place-items:center;margin-bottom:10px}
-.card p{font-size:14px;line-height:1.6;min-height:88px}
-.small-btn{display:inline-block;margin-top:13px;padding:11px 22px;border-radius:30px;background:linear-gradient(120deg,#06418e,#06265d);color:white;font-size:13px;font-weight:800}
-.small-btn:hover{color:var(--deep);background:linear-gradient(120deg,#ffe783,#ffbc19)}
+
+.card h3{
+  color:var(--navy);
+  font:900 19px/1.2 Georgia,serif;
+  min-height:48px;
+  display:grid;
+  place-items:center;
+  margin-bottom:10px;
+}
+
+.card p{
+  font-size:14px;
+  line-height:1.6;
+  min-height:88px;
+}
+
+.small-btn{
+  display:inline-block;
+  margin-top:13px;
+  padding:11px 22px;
+  border-radius:30px;
+  background:linear-gradient(120deg,#06418e,#06265d);
+  color:white;
+  font-size:13px;
+  font-weight:800;
+}
+
+.small-btn:hover{
+  color:var(--deep);
+  background:linear-gradient(120deg,#ffe783,#ffbc19);
+}
 
 /* COMPANY HIGHLIGHTS */
-.stats{max-width:1360px;margin:22px auto 0;padding:22px 3%;display:grid;grid-template-columns:repeat(5,1fr);gap:12px;background:linear-gradient(100deg,#05265f,#0874e8,#05265f);border-radius:15px;color:white;box-shadow:0 8px 25px #06295c25}
-.stat{display:flex;align-items:center;justify-content:center;gap:12px;border-right:1px solid #ffffff50}
+
+.stats{
+  max-width:1360px;
+  margin:22px auto 0;
+  padding:22px 3%;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:12px;
+  background:linear-gradient(100deg,#05265f,#0874e8,#05265f);
+  border-radius:15px;
+  color:white;
+  box-shadow:0 8px 25px #06295c25;
+}
+
+.stat{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  border-right:1px solid #ffffff50;
+}
+
 .stat:last-child{border:0}
 .stat-icon{font-size:32px;color:var(--gold)}
 .stat strong{display:block;color:var(--gold);font-size:23px}
 .stat span:last-child{font-size:12px}
 
 /* ABOUT AND WHY CHOOSE US */
-.about{max-width:1400px;margin:auto;padding:65px 5%;display:grid;grid-template-columns:1fr 1.5fr;gap:45px;align-items:center}
-.kicker{color:#ad7800;letter-spacing:5px;font-size:12px;font-weight:900}
-.about h2{color:var(--navy);font:900 clamp(28px,3vw,42px) Georgia,serif;margin:12px 0}
+
+.about{
+  max-width:1400px;
+  margin:auto;
+  padding:65px 5%;
+  display:grid;
+  grid-template-columns:1fr 1.5fr;
+  gap:45px;
+  align-items:center;
+}
+
+.kicker{
+  color:#ad7800;
+  letter-spacing:5px;
+  font-size:12px;
+  font-weight:900;
+}
+
+.about h2{
+  color:var(--navy);
+  font:900 clamp(28px,3vw,42px) Georgia,serif;
+  margin:12px 0;
+}
+
 .about p{line-height:1.8;color:#35496a}
-.why-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:22px}
-.why-item{text-align:center;font-size:13px;font-weight:700;color:var(--navy)}
-.why-item b{width:52px;height:52px;border-radius:50%;display:grid;place-items:center;margin:0 auto 12px;background:linear-gradient(135deg,#fff2a7,#ffc629);border:1px solid #f4b20b;font-size:23px}
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:10px;
+  margin-top:22px;
+}
+
+.why-item{
+  text-align:center;
+  font-size:13px;
+  font-weight:700;
+  color:var(--navy);
+}
+
+.why-item b{
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  margin:0 auto 12px;
+  background:linear-gradient(135deg,#fff2a7,#ffc629);
+  border:1px solid #f4b20b;
+  font-size:23px;
+}
 
 /* FOOTER */
-footer{padding:35px 5%;text-align:center;color:white;background:linear-gradient(100deg,#031b48,#06418e,#031b48);border-top:3px solid var(--gold)}
+
+footer{
+  padding:35px 5%;
+  text-align:center;
+  color:white;
+  background:linear-gradient(100deg,#031b48,#06418e,#031b48);
+  border-top:3px solid var(--gold);
+}
+
 footer strong{color:var(--gold);font-size:24px}
 footer p{margin-top:9px;font-size:13px;color:#e0eaff}
 .footer-socials{justify-content:center;margin:18px 0}
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+
+.reveal{
+  opacity:0;
+  transform:translateY(22px);
+  transition:opacity .7s,transform .7s;
+}
+
 .reveal.visible{opacity:1;transform:translateY(0)}
+
+/* TABLET */
 
 @media(max-width:1100px){
   .nav{flex-wrap:wrap}
   .menu-toggle{display:block}
-  nav{display:none;order:5;width:100%;flex-direction:column;align-items:stretch;gap:0}
+  nav{
+    display:none;
+    order:5;
+    width:100%;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+  }
   nav.open{display:flex}
   nav a{padding:13px 4px;border-top:1px solid #ffffff30}
   .socials{margin-left:auto}
@@ -123,6 +530,9 @@ footer p{margin-top:9px;font-size:13px;color:#e0eaff}
   .services{grid-template-columns:repeat(2,1fr)}
   .about{grid-template-columns:1fr}
 }
+
+/* MOBILE */
+
 @media(max-width:620px){
   .nav{padding:10px 4%;gap:10px}
   .brand-mark{width:39px;height:39px;font-size:23px}
@@ -146,15 +556,23 @@ footer p{margin-top:9px;font-size:13px;color:#e0eaff}
   .why-item:last-child{grid-column:span 2}
   .about{padding:42px 5%}
 }
+
 @media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition:none!important}
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+    transition:none!important;
+  }
 }
 </style>
 </head>
 
 <body>
+
 <header>
   <div class="nav">
+
     <a class="brand" href="#home" aria-label="THE APEX 99 Home">
       <span class="brand-mark">A</span>
       <span>
@@ -175,17 +593,24 @@ footer p{margin-top:9px;font-size:13px;color:#e0eaff}
 
     <div class="socials">
       <a href="https://www.facebook.com/share/1A7Z4GTBUP/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
-      <!-- Instagram URL will be updated when you provide your profile link -->
+
+      <!-- Replace with your real Instagram profile link -->
       <a class="instagram" href="https://www.instagram.com/ADD_YOUR_USERNAME_HERE/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a>
+
       <a class="youtube" href="https://youtube.com/@theapex99-official?si=EV8rRD_UH0viTJUs" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶</a>
     </div>
 
     <a class="contact-btn" href="#contact">Get In Touch →</a>
+
   </div>
 </header>
 
 <main>
+
+<!-- HERO SECTION -->
+
 <section class="hero" id="home">
+
   <div class="slides" aria-hidden="true">
     <div class="slide"></div>
     <div class="slide"></div>
@@ -193,90 +618,150 @@ footer p{margin-top:9px;font-size:13px;color:#e0eaff}
   </div>
 
   <div class="hero-content">
+
     <div class="eyebrow">Welcome to</div>
+
     <h1 id="animatedTitle">THE APEX 99</h1>
+
     <h2>WHO IS THE ONE</h2>
+
     <div class="rule"></div>
+
     <p>We Plan | We Organise | We Travel | We Create | We Make It Happen</p>
 
     <div class="hero-actions">
       <a class="btn" href="#services">Explore Our Services →</a>
       <a class="btn-outline" href="#media">▶ Discover Our Work</a>
     </div>
+
   </div>
 
-  <div class="hero-note">More Than Just a Service<br>It’s an Experience<span></span></div>
+  <div class="hero-note">
+    More Than Just a Service<br>
+    It’s an Experience
+    <span></span>
+  </div>
+
 </section>
 
+<!-- FOUR MAIN SERVICES -->
+
 <section class="services" id="services">
+
   <article class="card reveal" id="events">
+
     <div class="photo">
       <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=900&q=85" alt="Elegant event and celebration setup" loading="lazy">
-      <span class="number">01</span><span class="icon-circle">♟</span>
+      <span class="icon-circle">♟</span>
     </div>
+
     <div class="card-body">
       <h3>EVENT MANAGEMENT<br>&amp; ORGANISER</h3>
       <p>Weddings, corporate events, birthdays, stage decoration, conferences and all types of celebrations.</p>
       <a class="small-btn" href="#contact">View Details →</a>
     </div>
+
   </article>
 
   <article class="card reveal" id="tours">
+
     <div class="photo">
       <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85" alt="Mountain travel destination" loading="lazy">
-      <span class="number">02</span><span class="icon-circle">✈</span>
+      <span class="icon-circle">✈</span>
     </div>
+
     <div class="card-body">
       <h3>DOMESTIC &amp;<br>INTERNATIONAL TOURS</h3>
       <p>Discover destinations across India and around the world with thoughtfully planned tour packages.</p>
       <a class="small-btn" href="#contact">View Details →</a>
     </div>
+
   </article>
 
   <article class="card reveal" id="media">
+
     <div class="photo">
       <img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=900&q=85" alt="Professional camera for media production" loading="lazy">
-      <span class="number">03</span><span class="icon-circle">▶</span>
+      <span class="icon-circle">▶</span>
     </div>
+
     <div class="card-body">
       <h3>MEDIA PRODUCTION</h3>
       <p>Short films, photography, video production, advertisements and digital content.</p>
       <a class="small-btn" href="#contact">View Details →</a>
     </div>
+
   </article>
 
   <article class="card reveal">
+
     <div class="photo">
       <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=85" alt="Creative planning workspace" loading="lazy">
-      <span class="number">04</span><span class="icon-circle">✦</span>
+      <span class="icon-circle">✦</span>
     </div>
+
     <div class="card-body">
       <h3>CREATE EXPERIENCES</h3>
       <p>Competitions, adventure programmes, creative projects and memorable experiences.</p>
       <a class="small-btn" href="#contact">View Details →</a>
     </div>
+
   </article>
+
 </section>
+
+<!-- COMPANY HIGHLIGHTS -->
 
 <section class="stats reveal" aria-label="Company highlights">
-  <div class="stat"><span class="stat-icon">♟</span><div><strong>1000+</strong><span>Happy Clients</span></div></div>
-  <div class="stat"><span class="stat-icon">🏆</span><div><strong>200+</strong><span>Events Organised</span></div></div>
-  <div class="stat"><span class="stat-icon">✈</span><div><strong>50+</strong><span>Tour Destinations</span></div></div>
-  <div class="stat"><span class="stat-icon">▣</span><div><strong>200+</strong><span>Media Projects</span></div></div>
-  <div class="stat"><span class="stat-icon">★</span><div><strong>100%</strong><span>Customer Focus</span></div></div>
+
+  <div class="stat">
+    <span class="stat-icon">♟</span>
+    <div><strong>1000+</strong><span>Happy Clients</span></div>
+  </div>
+
+  <div class="stat">
+    <span class="stat-icon">🏆</span>
+    <div><strong>200+</strong><span>Events Organised</span></div>
+  </div>
+
+  <div class="stat">
+    <span class="stat-icon">✈</span>
+    <div><strong>50+</strong><span>Tour Destinations</span></div>
+  </div>
+
+  <div class="stat">
+    <span class="stat-icon">▣</span>
+    <div><strong>200+</strong><span>Media Projects</span></div>
+  </div>
+
+  <div class="stat">
+    <span class="stat-icon">★</span>
+    <div><strong>100%</strong><span>Customer Focus</span></div>
+  </div>
+
 </section>
 
+<!-- ABOUT US -->
+
 <section class="about reveal">
+
   <div>
     <span class="kicker">ABOUT US</span>
     <h2>THE APEX 99</h2>
-    <p>We bring events, travel and media together to create memorable experiences. From the first idea to the final detail, our focus is creative planning and dependable service.</p>
+
+    <p>
+      We bring events, travel and media together to create
+      memorable experiences. From the first idea to the final
+      detail, our focus is creative planning and dependable service.
+    </p>
+
     <a class="small-btn" href="#contact">Work With Us →</a>
   </div>
 
   <div>
     <span class="kicker">OUR PROMISE</span>
     <h2>WHY CHOOSE US?</h2>
+
     <div class="why-grid">
       <div class="why-item"><b>✓</b>Trusted &amp; Reliable</div>
       <div class="why-item"><b>♟</b>Experienced Team</div>
@@ -285,36 +770,51 @@ footer p{margin-top:9px;font-size:13px;color:#e0eaff}
       <div class="why-item"><b>☎</b>Client Support</div>
     </div>
   </div>
+
 </section>
+
 </main>
 
+<!-- FOOTER AND SOCIAL LINKS -->
+
 <footer id="contact">
+
   <strong>THE APEX 99</strong>
+
   <p>WHO IS THE ONE</p>
+
   <p>Events • Domestic &amp; International Tours • Media Production</p>
 
   <div class="socials footer-socials">
     <a href="https://www.facebook.com/share/1A7Z4GTBUP/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">f</a>
+
     <a class="instagram" href="https://www.instagram.com/ADD_YOUR_USERNAME_HERE/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a>
+
     <a class="youtube" href="https://youtube.com/@theapex99-official?si=EV8rRD_UH0viTJUs" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶</a>
   </div>
 
   <p>Contact details can be added here.</p>
+
   <p>© <span id="year"></span> THE APEX 99. All rights reserved.</p>
+
 </footer>
 
 <script>
-/* THE APEX 99 repeating letter animation */
+
+/* THE APEX 99 REPEATING LETTER ANIMATION */
+
 const apexTitle = document.getElementById("animatedTitle");
 const apexText = "THE APEX 99";
 let apexTimer;
 
 function animateApexTitle() {
+
   if (!apexTitle) return;
 
   apexTitle.innerHTML = "";
 
   [...apexText].forEach((char, index) => {
+
     const letter = document.createElement("span");
 
     if (char === " ") {
@@ -325,58 +825,98 @@ function animateApexTitle() {
     }
 
     letter.style.setProperty("--delay", `${index * 0.09}s`);
+
     apexTitle.appendChild(letter);
+
   });
+
 }
 
 function startApexAnimation() {
+
   animateApexTitle();
+
   clearInterval(apexTimer);
+
   apexTimer = setInterval(animateApexTitle, 3500);
+
 }
 
 startApexAnimation();
 
-/* Mobile menu */
+
+/* MOBILE MENU */
+
 const menuButton = document.querySelector(".menu-toggle");
 const mainNav = document.getElementById("mainNav");
 
 menuButton.addEventListener("click", () => {
+
   const isOpen = mainNav.classList.toggle("open");
+
   menuButton.setAttribute("aria-expanded", String(isOpen));
+
   menuButton.textContent = isOpen ? "×" : "☰";
+
 });
 
 mainNav.querySelectorAll("a").forEach(link => {
+
   link.addEventListener("click", () => {
+
     mainNav.classList.remove("open");
+
     menuButton.setAttribute("aria-expanded", "false");
+
     menuButton.textContent = "☰";
+
   });
+
 });
 
-/* Scroll reveal */
+
+/* SCROLL REVEAL ANIMATION */
+
 if ("IntersectionObserver" in window) {
+
   const revealObserver = new IntersectionObserver(entries => {
+
     entries.forEach(entry => {
+
       if (entry.isIntersecting) {
+
         entry.target.classList.add("visible");
+
         revealObserver.unobserve(entry.target);
+
       }
+
     });
+
   }, {threshold:0.12});
 
   document.querySelectorAll(".reveal").forEach(section => {
+
     revealObserver.observe(section);
+
   });
+
 } else {
+
   document.querySelectorAll(".reveal").forEach(section => {
+
     section.classList.add("visible");
+
   });
+
 }
 
-/* Current year */
+
+/* AUTOMATIC COPYRIGHT YEAR */
+
 document.getElementById("year").textContent = new Date().getFullYear();
+
 </script>
+
 </body>
 </html>
