@@ -1,1 +1,120 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tour Booking | THE APEX 99</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f3f7ff;color:#102447}
+header{background:#073b83;color:white;text-align:center;padding:25px 15px}
+header h1{color:#ffd34d;margin:0;font-size:32px}
+header p{margin-bottom:0}
+.hero{background:linear-gradient(90deg,#062b62e8,#062b62aa),url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80') center/cover;color:white;text-align:center;padding:55px 20px}
+.hero h2{font-size:32px;margin:0 0 12px}
+main{max-width:760px;margin:30px auto;padding:25px;background:white;border-radius:16px;box-shadow:0 5px 25px #001b4418}
+h2{color:#073b83}
+.note{background:#fff7d9;padding:12px;border-radius:8px;font-size:14px;line-height:1.6}
+label{display:block;margin:16px 0 7px;font-weight:bold}
+input,select,textarea{width:100%;padding:12px;border:1px solid #ccd5e5;border-radius:7px;font-size:15px}
+button{margin-top:20px;width:100%;padding:15px;background:#073b83;color:white;border:0;border-radius:8px;font-weight:bold;font-size:16px;cursor:pointer}
+button:hover{background:#05285b}
+footer{text-align:center;padding:20px;color:#53647e}
+a{color:#073b83}
+</style>
+</head>
+<body>
+<header>
+<h1>THE APEX 99</h1>
+<p>TOURS & TRAVEL | WHO IS THE ONE</p>
+<p>Powered by SMPN Record Management</p>
+</header>
 
+<section class="hero">
+<h2>EXPLORE YOUR WORLD</h2>
+<p>Discover new places. Create unforgettable memories.</p>
+</section>
+
+<main>
+<h2>Tour Booking Enquiry</h2>
+<p>Tell us about your trip. Our team will contact you with package details.</p>
+
+<p class="note">Submitting this form sends a booking enquiry only. Your booking is not confirmed until our team contacts you and confirms availability, price and payment details.</p>
+
+<form action="https://formsubmit.co/the99woarld@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="New Tour Booking Enquiry - THE APEX 99">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="true">
+<input type="text" name="_honey" style="display:none">
+
+<label>Full Name *</label>
+<input type="text" name="Full Name" autocomplete="name" required>
+
+<label>Mobile Number *</label>
+<input type="tel" name="Mobile Number" pattern="[0-9+() -]{8,20}" autocomplete="tel" required>
+
+<label>Email Address *</label>
+<input type="email" name="Email" autocomplete="email" required>
+
+<label>Choose Your Destination / Package *</label>
+<select name="Destination" required>
+<option value="">Select destination</option>
+<option>Darjeeling</option>
+<option>Digha</option>
+<option>Kashmir</option>
+<option>Darjeeling and Dooars</option>
+<option>Ladakh</option>
+<option>Other / Custom Tour</option>
+</select>
+
+<label>Preferred Travel Date *</label>
+<input type="date" name="Travel Date" required>
+
+<label>Number of Travellers *</label>
+<select name="Number of Travellers" required>
+<option value="">Select group size</option>
+<option>1 person</option>
+<option>2 people</option>
+<option>3–5 people</option>
+<option>6–10 people</option>
+<option>11–20 people</option>
+<option>More than 20 people</option>
+</select>
+
+<label>Trip Duration</label>
+<select name="Trip Duration">
+<option>Not decided</option>
+<option>1–2 days</option>
+<option>3–4 days</option>
+<option>5–7 days</option>
+<option>More than 7 days</option>
+</select>
+
+<label>Approximate Budget Per Person</label>
+<select name="Budget Per Person">
+<option>Not decided</option>
+<option>Below ₹5,000</option>
+<option>₹5,000–₹10,000</option>
+<option>₹10,001–₹20,000</option>
+<option>Above ₹20,000</option>
+</select>
+
+<label>Additional Requirements</label>
+<textarea name="Additional Requirements" rows="4" placeholder="Hotel, transport, sightseeing or any special requests"></textarea>
+
+<label style="font-weight:normal">
+<input type="checkbox" name="Consent" value="Yes" required style="width:auto">
+ I agree that THE APEX 99 may contact me about this tour enquiry.
+</label>
+
+<button type="submit">SEND BOOKING ENQUIRY</button>
+</form>
+
+<p><a href="index.html">← Back to Home</a></p>
+</main>
+
+<footer>© 2026 THE APEX 99. All rights reserved.</footer>
+</body>
+</html>
+```
