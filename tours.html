@@ -1,1 +1,489 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tour & Travel | THE APEX 99</title>
+<meta name="description" content="Explore domestic and international holiday packages with THE APEX 99. Discover Darjeeling, Kashmir, Ladakh, Digha, Sundarbans, Nepal, Bhutan, Dubai, Umrah and more.">
+
+<style>
+:root{--blue:#082d57;--blue2:#104b83;--gold:#e7b84b;--white:#fff;--light:#f3f7fc;--text:#233247}
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.6;background:white}
+a{text-decoration:none}
+header{position:sticky;top:0;z-index:99;background:var(--blue);box-shadow:0 3px 18px #0002}
+.topline{text-align:center;background:#061e3b;color:white;padding:6px;font-size:11px;letter-spacing:1.5px}
+.navbar{max-width:1200px;margin:auto;padding:15px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-weight:900;color:white;font-size:23px;white-space:nowrap}
+.logo span{color:var(--gold)}
+.logo small{display:block;font-size:9px;letter-spacing:3px;color:#dce8f7}
+nav{display:flex;align-items:center;gap:17px;flex-wrap:wrap}
+nav a{font-size:13px;font-weight:bold;color:white}
+nav a:hover{color:var(--gold)}
+nav .cta{background:var(--gold);color:var(--blue);padding:9px 13px;border-radius:4px}
+.hero{padding:95px 22px;background:linear-gradient(100deg,#041c38ee,#082d57a8),url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=85') center/cover;color:white}
+.hero-inner{max-width:1150px;margin:auto}
+.tag{color:var(--gold);font-weight:bold;font-size:12px;letter-spacing:2px}
+.hero h1{font-size:clamp(38px,6vw,70px);line-height:1.1;margin:15px 0}
+.hero h1 span{color:var(--gold)}
+.hero p{max-width:700px;color:#e2eaf5;font-size:17px;margin-bottom:25px}
+.btn{display:inline-block;border:1px solid var(--gold);padding:12px 19px;border-radius:5px;font-size:14px;font-weight:bold;transition:.2s}
+.btn-gold{background:var(--gold);color:var(--blue)}
+.btn-outline{color:white}
+.btn:hover{transform:translateY(-2px);background:white;color:var(--blue)}
+.hero .btn{margin:5px 8px 5px 0}
+.trust{padding:15px;text-align:center;background:var(--gold);color:var(--blue);font-size:12px;font-weight:bold;letter-spacing:1px}
+section{padding:70px 22px}
+.container{max-width:1200px;margin:auto}
+.heading{text-align:center;max-width:750px;margin:0 auto 35px}
+.heading h2{font-size:clamp(29px,4vw,42px);color:var(--blue);line-height:1.2;margin:9px 0 13px}
+.heading p{color:#66758a}
+.category-links{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin:25px 0 35px}
+.category-links a{border:1px solid #d5dfec;border-radius:30px;padding:9px 16px;color:var(--blue);font-weight:bold;font-size:13px}
+.category-links a:hover{background:var(--blue);color:white}
+.tours{background:var(--light)}
+.tour-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.tour-card{background:white;border:1px solid #e0e8f2;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 7px 25px #082d570c;transition:.2s}
+.tour-card:hover{transform:translateY(-5px);box-shadow:0 15px 30px #082d571b}
+.tour-card img{display:block;width:100%;height:210px;object-fit:cover;background:#e5eaf0}
+.tour-content{padding:20px;display:flex;flex-direction:column;flex:1}
+.region{font-size:10px;letter-spacing:1.5px;font-weight:bold;color:#98701b;text-transform:uppercase}
+.tour-content h3{color:var(--blue);font-size:22px;margin:5px 0}
+.tour-content p{color:#64748b;font-size:14px;margin-bottom:12px}
+.meta{font-size:12px;color:#4b5b70;margin-bottom:9px}
+.price{color:var(--blue);font-size:22px;font-weight:900;margin:5px 0}
+.price small{font-size:11px;font-weight:normal;color:#66758a}
+.includes{font-size:12px;color:#53647a;margin:6px 0 18px}
+.card-bottom{margin-top:auto}
+.card-bottom a{display:block;text-align:center}
+.package-info{background:white}
+.info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.info-card{padding:24px;border:1px solid #e0e8f2;border-radius:10px;background:white}
+.info-card h3{color:var(--blue);margin-bottom:10px}
+.info-card p,.info-card li{font-size:14px;color:#64748b}
+.info-card ul{padding-left:19px}
+.booking{background:var(--blue);color:white}
+.booking-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px;align-items:start}
+.booking h2{font-size:clamp(29px,4vw,42px);line-height:1.2;margin:10px 0 16px}
+.booking-copy p{color:#d8e5f5;margin-bottom:16px}
+.booking-copy li{margin:8px 0;color:#e1eaf6}
+.booking-form{background:white;color:var(--text);padding:28px;border-radius:12px}
+.booking-form h3{font-size:25px;color:var(--blue);margin-bottom:16px}
+.field{margin-bottom:14px}
+.field label{display:block;color:var(--blue);font-size:13px;font-weight:bold;margin-bottom:6px}
+.field input,.field select,.field textarea{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:5px;font:inherit;background:white}
+.field textarea{min-height:100px;resize:vertical}
+.booking-form button{width:100%;cursor:pointer;font:inherit}
+.note{font-size:11px;color:#64748b;margin-top:12px}
+footer{background:#061e3b;color:white;text-align:center;padding:32px 20px}
+footer strong{font-size:22px}
+footer strong span{color:var(--gold)}
+footer p{font-size:12px;color:#d8e5f5;margin-top:7px}
+.footer-links{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:18px}
+.footer-links a{font-size:13px;color:white}
+.footer-links a:hover{color:var(--gold)}
+@media(max-width:900px){.navbar{flex-direction:column}.tour-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.info-grid{grid-template-columns:1fr}.booking-grid{grid-template-columns:1fr}}
+@media(max-width:560px){nav{justify-content:center;gap:12px}nav a{font-size:12px}.hero{padding:65px 20px}.tour-grid{grid-template-columns:1fr}section{padding:52px 17px}.tour-card img{height:220px}.booking-form{padding:20px}}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="topline">A UNIT OF SMPN RECORD MANAGEMENT</div>
+  <div class="navbar">
+    <a href="index.html" class="logo">THE APEX <span>99</span><small>WHO IS THE ONE</small></a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="event-management.html">Event Management</a>
+      <a href="tours.html">Tours</a>
+      <a href="details.html">Events</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="#booking" class="cta">Book a Tour</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-inner">
+    <span class="tag">DISCOVER THE WORLD WITH THE APEX 99</span>
+    <h1>YOUR NEXT JOURNEY.<br><span>YOUR NEXT STORY.</span></h1>
+    <p>Discover beautiful destinations across India and around the world. From Himalayan adventures and peaceful beaches to international holidays and spiritual journeys, let us help plan your next trip.</p>
+    <a class="btn btn-gold" href="#domestic">EXPLORE DOMESTIC TOURS</a>
+    <a class="btn btn-outline" href="#international">EXPLORE INTERNATIONAL TOURS</a>
+  </div>
+</section>
+
+<div class="trust">DOMESTIC HOLIDAYS • INTERNATIONAL TOURS • GROUP TRAVEL • FAMILY TRIPS • CUSTOM PACKAGES</div>
+
+<section class="tours" id="domestic">
+  <div class="container">
+    <div class="heading">
+      <span class="tag">EXPLORE INDIA</span>
+      <h2>Domestic Tour Packages</h2>
+      <p>From mountains and beaches to wildlife, city holidays and spiritual destinations, discover India with THE APEX 99.</p>
+    </div>
+    <div class="category-links">
+      <a href="#domestic">Domestic Tours</a>
+      <a href="#international">International Tours</a>
+      <a href="#booking">Custom Package Enquiry</a>
+    </div>
+
+    <div class="tour-grid">
+
+      <article class="tour-card">
+        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=900&q=85" alt="Darjeeling mountain scenery" loading="lazy">
+        <div class="tour-content">
+          <span class="region">West Bengal</span><h3>Darjeeling</h3>
+          <p>Enjoy Himalayan views, tea gardens, Tiger Hill sunrise, Batasia Loop and the famous hill-town atmosphere.</p>
+          <div class="meta">Suggested duration: 4 Nights / 5 Days</div>
+          <div class="price">₹9,999 <small>starting estimate / person</small></div>
+          <div class="includes">Basic plan: hotel stay, local sightseeing and transfers as per itinerary. Train/air tickets may be extra.</div>
+          <div class="card-bottom"><a class="btn btn-gold" href="#booking" data-destination="Darjeeling">ENQUIRE NOW</a></div>
+        </div>
+      </article>
+
+      <article class="tour-card">
+        <img src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=900&q=85" alt="Kashmir valley and mountains" loading="lazy">
+        <div class="tour-content">
+          <span class="region">Jammu & Kashmir</span><h3>Kashmir</h3>
+          <p>Explore Srinagar, Dal Lake, Gulmarg, Pahalgam and the breathtaking scenery of the Kashmir Valley.</p>
+          <div class="meta">Suggested duration: 5 Nights / 6 Days</div>
+          <div class="price">₹22,000 <small>starting estimate / person</small></div>
+          <div class="includes">Basic land package may include hotel, transfers and sightseeing. Flights, special activities and some fees extra.</div>
+          <div class="card-bottom"><a class="btn btn-gold" href="#booking" data-destination="Kashmir">ENQUIRE NOW</a></div>
+        </div>
+      </article>
+
+      <article class="tour-card">
+        <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=85" alt="High mountain landscape" loading="lazy">
+        <div class="tour-content">
+          <span class="region">Himalayan Region</span><h3>Ladakh</h3>
+          <p>Discover dramatic mountain passes, Leh town, monasteries, Nubra Valley and the iconic Pangong Lake.</p>
+          <div class="meta">Suggested duration: 5 Nights / 6 Days</div>
+          <div class="price">₹25,000 <small>starting estimate / person</small></div>
+          <div class="includes">Basic land package estimate. Flights, permits, acclimatisation days and high-altitude activities affect the final price.</div>
+          <div class="card-bottom"><a class="btn btn-gold" href="#booking" data-destination="Ladakh">ENQUIRE NOW</a></div>
+        </div>
+      </article>
+
+      <article class="tour-card">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=85" alt="Sunny beach and sea" loading="lazy">
+        <div class="tour-content">
+          <span class="region">West Bengal</span><h3>Digha</h3>
+          <p>Enjoy a relaxing beach break, seaside walks, local seafood and nearby attractions around Digha and Mandarmani.</p>
+          <div class="meta">Suggested duration: 2 Nights / 3 Days</div>
+          <div class="price">₹3,999 <small>starting estimate / person</small></div>
+          <div class="includes">Basic group estimate with shared accommodation and selected local transfers. Transport plan depends on group size.</div>
+          <div class="card-bottom"><a class="btn btn-gold" href="#booking" data-destination="Digha">ENQUIRE NOW</a></div>
+        </div>
+      </article>
+
+      <article class="tour-card">
+        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=85" alt="Green forest and wildlife landscape" loading="lazy">
+        <div class="tour-content">
+          <span class="region">West Bengal</span><h3>Sundarbans</h3>
+          <p>Experience mangrove waterways, boat safaris, village life and the unique natural landscape of the Sundarbans.</p>
+          <div class="meta">Suggested duration: 1 Night / 2 Days</div>
+          <div class="price">₹4,500 <small>starting estimate / person</small></div>
+          <div class="includes">Basic group package may include meals, accommodation, boat arrangements and selected transfers.</div>
+          <div class="card-bottom"><a class="btn btn-gold" href="#booking" data-destination="Sundarbans">ENQUIRE NOW</a></div>
+        </div>
+      </article>
+
+      <article class="tour-card">
+        <img src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?auto=format&fit=crop&w=900&q=85" alt="Indian city architecture" loading="lazy">
+        <div class="tour-content">
+          <span class="region">Rajasthan</span><h3>Ajmer & Pushkar</h3>
+          <p>Visit Ajmer Sharif Dargah, explore the city and discover nearby Pushkar's lake, temples and markets.</p>
+          <div class="meta">Suggested duration: 3 Nights / 4 Days</div>
+          <div class="price">₹12,999 <small>starting estimate / person</small></div>
+          <div class="includes">Basic package estimate for hotel and local travel. Long-distance train or air tickets may be extra.</div>
+          <div class="card-bottom"><a class="btn btn-gold" href="#booking" data-destination="Ajmer and Pushkar">ENQUIRE NOW</a></div>
+        </div>
+      </article>
+
+      <article class="tour-card">
+        <img src="https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=900&q=85" alt="Mumbai city skyline" loading="lazy">
+        <div class="tour-content">
+          <span class="region">Maharashtra</span><h3>Mumbai & Haji Ali</h3>
+          <p>Explore the Gateway of India, Marine Drive, city attractions and the famous Haji Ali Dargah.</p>
+          <div class="meta">Suggested duration: 3 Nights / 4 Days</div>
+          <div class="price">₹14,999 <small>starting estimate / person</small></div>
+          <div class="includes">Basic package estimate for accommodation and selected sightseeing. Long-distance transport may be extra.</div>
+          <div class="card-bottom"><a class="btn btn-gold" href="#booking" data-destination="Mumbai and Haji Ali">ENQUIRE NOW</a></div>
+        </div>
+      </article>
+
+      <article class="tour-card">
+        <img src="https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=900&q=85" alt="Himalayan pilgrimage mountain region" loading="lazy">
+        <div class="tour-content">
+          <span class="region">Uttarakhand</span><h3>Kedarnath Temple</h3>
+          <p>Plan a spiritual journey to Kedarnath with route planning, accommodation guidance and travel arrangements.</p>
+          <div class="meta">Suggested duration: 4 Nights / 5 Days</div>
+          <div class="price">₹12,999 <small>starting estimate / person</small></div>
+          <div class="includes">Indicative basic estimate. Registration, transport, accommodation, weather and route conditions affect the trip.</div>
+          <div class="card-bottom"><a class="btn btn-gold" href="#booking" data-destination="Kedarnath Temple">ENQUIRE NOW</a></div>
+        </div>
+      </article>
+
+      <article class="tour-card">
+        <img src="https://images.unsplash.com/photo-1500534623283-312aаде485b7?auto=format&fit=crop&w=900&q=85" alt="Countryside hill landscape" loading="lazy">
+        <div class="tour-content">
+          <span class="region">Purulia, West Bengal</span><h3>Ayodhya Pahar</h3>
+          <p>Enjoy a peaceful nature getaway with hills, scenic viewpoints, waterfalls in season and local village experiences.</p>
+          <div class="meta">Suggested duration: 2 Nights / 3 Days</div>
+          <div class="price">₹4,999 <small>starting estimate / person</small></div>
+          <div class="includes">Basic group estimate with accommodation and selected local sightseeing. Transport depends on departure point.</div>
+          <div class="card-bottom"><a class="btn btn-gold" href="#booking" data-destination="Ayodhya Pahar">ENQUIRE NOW</a></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="international">
+  <div class="container">
+    <div class="heading">
+      <span class="tag">GO BEYOND BORDERS</span>
+      <h2>International Tour Packages</h2>
+      <p>Discover new cultures, iconic cities, tropical islands and spiritual journeys with a package planned around your needs.</p>
+    </div>
+
+    <div class="tour-grid">
+
+      <article class="tour-card">
+        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=900&q=85" alt="Nepal mountain landscape" loading="lazy">
+        <div class="tour-content">
+          <span class="region">International</span><h3>Nepal</h3>
+          <p>Explore Kathmandu temples, Pokhara's lakes, Himalayan scenery and cultural landmarks.</p>
+          <div class="meta">Suggested duration: 4 Nights / 5 Days</div>
+          <div class="price">₹28,000 <small>starting estimate / person</small></div>
+          <div class="includes">Indicative package budget. Transport, hotel category and route change the final price.</div>
+          <div class="card-bottom"><a class="btn btn-gold" href="#booking" data-destination="Nepal">ENQUIRE NOW</a></div>
+        </div>
+      </article>
+
+      <article class="tour-card">
+        <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=85" alt="Bhutan traditional architecture" loading="lazy">
+        <div class="tour-content">
+          <span class="region">International</span><h3>Bhutan</h3>
+          <p>Discover Paro, Thimphu, Punakha and Bhutan's mountain scenery, monasteries and traditional culture.</p>
+          <div class="meta">Suggested duration: 4 Nights / 5 Days</div>
+          <div class="price">₹35,000 <small>starting estimate / person</small></div>
+          <div class="includes">Indicative package budget. Entry permits, applicable fees, transport and hotel choice must be confirmed.</div>
+          <div class="card-bottom"><a class="btn btn-gold" href="#booking" data-destination="Bhutan">ENQUIRE NOW</a></div>
+        </div>
+      </article>
+
+      <article class="tour-card">
+        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=900&q=85" alt="Dubai modern skyline" loading="lazy">
+        <div class="tour-content">
+          <span class="region">Middle East</span><h3>Dubai</h3>
+          <p>Visit iconic skyscrapers, explore traditional souks, enjoy city sightseeing and choose optional desert experiences.</p>
+          <div class="meta">Suggested duration: 4 Nights / 5 Days</div>
+          <div class="price">₹40,000 <small>starting estimate / person</small></div>
+          <div class="includes">Indicative budget; flight, visa, insurance, hotel and sightseeing inclusions need confirmation.</div>
+          <div class="card-bottom"><a class="btn btn-gold" href="#booking" data-destination="Dubai">ENQUIRE NOW</a></div>
+        </div>
+      </article>
+
+      <article class="tour-card">
+        <img src="https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=900&q=85" alt="Mosque architecture in Saudi Arabia" loading="lazy">
+        <div class="tour-content">
+          <span class="region">Spiritual Journey</span><h3>Saudi Arabia — Umrah</h3>
+          <p>Request an Umrah package with travel coordination, hotel options in Makkah and Madinah and itinerary guidance.</p>
+          <div class="meta">Duration: Depends on selected package</div>
+          <div class="price">₹85,000 <small>indicative estimate / person</small></div>
+          <div class="includes">Price depends on season, flights, hotel distance, visa rules, group size and services. Confirm all arrangements before payment.</div>
+          <div class="card-bottom"><a class="btn btn-gold" href="#booking" data-destination="Saudi Arabia Umrah">ENQUIRE NOW</a></div>
+        </div>
+      </article>
+
+      <article class="tour-card">
+        <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=85" alt="Bali Indonesia tropical destination" loading="lazy">
+        <div class="tour-content">
+          <span class="region">Southeast Asia</span><h3>Indonesia</h3>
+          <p>Explore Bali's beaches, temples, rice terraces, island scenery and relaxing holiday experiences.</p>
+          <div class="meta">Suggested duration: 4 Nights / 5 Days</div>
+          <div class="price">₹45,000 <small>starting estimate / person</small></div>
+          <div class="includes">Indicative budget; flights, visa or entry requirements, hotel and island transfers depend on the plan.</div>
+          <div class="card-bottom"><a class="btn btn-gold" href="#booking" data-destination="Indonesia">ENQUIRE NOW</a></div>
+        </div>
+      </article>
+
+      <article class="tour-card">
+        <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07?auto=format&fit=crop&w=900&q=85" alt="Kuala Lumpur Malaysia skyline" loading="lazy">
+        <div class="tour-content">
+          <span class="region">Southeast Asia</span><h3>Malaysia</h3>
+          <p>Discover Kuala Lumpur, the Petronas Towers, cultural neighbourhoods and optional island or highland excursions.</p>
+          <div class="meta">Suggested duration: 4 Nights / 5 Days</div>
+          <div class="price">₹35,000 <small>starting estimate / person</small></div>
+          <div class="includes">Indicative budget; airfare, visa or entry requirements, accommodation and excursions need confirmation.</div>
+          <div class="card-bottom"><a class="btn btn-gold" href="#booking" data-destination="Malaysia">ENQUIRE NOW</a></div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="package-info">
+  <div class="container">
+    <div class="heading">
+      <span class="tag">TRAVEL YOUR WAY</span>
+      <h2>What Can a Basic Package Include?</h2>
+      <p>Every itinerary can be customised according to your budget, travel dates and group size.</p>
+    </div>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>Stay & Transfers</h3>
+        <ul>
+          <li>Hotel or guesthouse options</li>
+          <li>Station or airport transfers, if selected</li>
+          <li>Local transport as per itinerary</li>
+          <li>Private or group travel options</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>Sightseeing & Meals</h3>
+        <ul>
+          <li>Selected sightseeing locations</li>
+          <li>Breakfast or meal plan as quoted</li>
+          <li>Local tour coordination</li>
+          <li>Optional activities at extra cost</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3>Customise Your Trip</h3>
+        <ul>
+          <li>Budget, standard and premium stays</li>
+          <li>Family, couple and group tours</li>
+          <li>Domestic and international itineraries</li>
+          <li>Special requests by prior arrangement</li>
+        </ul>
+      </div>
+    </div>
+    <p style="text-align:center;color:#64748b;font-size:12px;margin-top:25px">
+      Prices shown are planning estimates only, not guaranteed live quotations. Final cost depends on dates, availability, group size, hotel, transport, taxes, permits and included services. Confirm the written itinerary and inclusions before booking.
+    </p>
+  </div>
+</section>
+
+<section class="booking" id="booking">
+  <div class="container booking-grid">
+    <div class="booking-copy">
+      <span class="tag">PLAN YOUR NEXT JOURNEY</span>
+      <h2>Tell Us Where You Want to Go.</h2>
+      <p>Share your destination, travel date and group size. THE APEX 99 can prepare a suitable itinerary and package quotation for your enquiry.</p>
+      <ul>
+        <li>✓ Domestic and international travel enquiries</li>
+        <li>✓ Family, group and customised tours</li>
+        <li>✓ Package details before confirmation</li>
+        <li>✓ Budget options based on your requirements</li>
+      </ul>
+      <p style="margin-top:20px"><strong>Email:</strong> the99woarld@gmail.com</p>
+    </div>
+
+    <form class="booking-form" action="https://formsubmit.co/the99woarld@gmail.com" method="POST">
+      <h3>Tour Enquiry Form</h3>
+      <input type="hidden" name="_subject" value="New Tour Enquiry - THE APEX 99">
+      <input type="hidden" name="_template" value="table">
+
+      <div class="field">
+        <label for="fullname">Full Name *</label>
+        <input id="fullname" name="Full Name" required placeholder="Enter your name">
+      </div>
+
+      <div class="field">
+        <label for="phone">Phone / WhatsApp *</label>
+        <input id="phone" name="Phone / WhatsApp" type="tel" required placeholder="Enter contact number">
+      </div>
+
+      <div class="field">
+        <label for="email">Email Address</label>
+        <input id="email" name="Email" type="email" placeholder="Enter your email">
+      </div>
+
+      <div class="field">
+        <label for="destination">Select Destination *</label>
+        <select id="destination" name="Destination" required>
+          <option value="">Choose destination</option>
+          <optgroup label="Domestic Tours">
+            <option>Darjeeling</option><option>Kashmir</option><option>Ladakh</option>
+            <option>Digha</option><option>Sundarbans</option><option>Ajmer and Pushkar</option>
+            <option>Mumbai and Haji Ali</option><option>Kedarnath Temple</option><option>Ayodhya Pahar</option>
+          </optgroup>
+          <optgroup label="International Tours">
+            <option>Nepal</option><option>Bhutan</option><option>Dubai</option>
+            <option>Saudi Arabia Umrah</option><option>Indonesia</option><option>Malaysia</option>
+          </optgroup>
+          <option>Other / Custom Destination</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="date">Preferred Travel Date</label>
+        <input id="date" name="Preferred Travel Date" type="date">
+      </div>
+
+      <div class="field">
+        <label for="people">Number of Travellers</label>
+        <select id="people" name="Number of Travellers">
+          <option>1 person</option><option>2 people</option><option>3–5 people</option>
+          <option>6–10 people</option><option>11–25 people</option><option>26+ people</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="budget">Approximate Budget Per Person</label>
+        <select id="budget" name="Approximate Budget">
+          <option>Not decided</option><option>Below ₹10,000</option>
+          <option>₹10,000–₹25,000</option><option>₹25,000–₹50,000</option>
+          <option>₹50,000–₹1,00,000</option><option>Above ₹1,00,000</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="message">Additional Requirements</label>
+        <textarea id="message" name="Additional Requirements" placeholder="Tell us about hotel, transport, meals or other needs"></textarea>
+      </div>
+
+      <button class="btn btn-gold" type="submit">SEND TOUR ENQUIRY</button>
+      <p class="note">Email delivery depends on the form service and its verification process. Test the form after publishing.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <strong>THE APEX <span>99</span></strong>
+  <p>WHO IS THE ONE</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="event-management.html">Event Management</a>
+    <a href="tours.html">Tours</a>
+    <a href="details.html">Events</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="#booking">Enquiry</a>
+  </div>
+  <p>© <span id="year"></span> THE APEX 99. All rights reserved.</p>
+  <p>A unit of SMPN RECORD MANAGEMENT</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.querySelectorAll("[data-destination]").forEach(function(link) {
+  link.addEventListener("click", function() {
+    document.getElementById("destination").value = this.dataset.destination;
+  });
+});
+</script>
+</body>
+</html>
+
