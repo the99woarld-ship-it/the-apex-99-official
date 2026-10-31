@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -72,6 +71,31 @@ footer{background:#061a37;color:white;text-align:center;padding:30px 0}
  .hero{padding:70px 0}
  section{padding:50px 0}
 }
+
+/* AFTH SECTION CSS */
+.afth-section{background:#080808;color:#fff;padding:75px 0;border-top:3px solid #d9ad45;border-bottom:3px solid #d9ad45}
+.afth-section .afth-container{width:min(1120px,92%);margin:auto}
+.afth-section .afth-eyebrow{color:#d9ad45;font-size:13px;font-weight:bold;letter-spacing:3px;text-align:center}
+.afth-section .afth-title{text-align:center;color:#e4c36e;font-size:clamp(34px,5vw,58px);line-height:1.12;margin:18px 0}
+.afth-section .afth-subtitle{text-align:center;color:#fff;font-size:clamp(17px,2.5vw,24px);letter-spacing:2px;font-weight:bold}
+.afth-section .afth-description{max-width:780px;margin:20px auto 0;text-align:center;color:#ddd}
+.afth-section .afth-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:38px auto;max-width:900px}
+.afth-section .afth-stat{background:#151515;border:1px solid #9b7935;border-radius:9px;text-align:center;padding:25px 12px}
+.afth-section .afth-stat strong{display:block;color:#e4c36e;font-size:clamp(25px,4vw,38px);line-height:1.2}
+.afth-section .afth-stat span{display:block;color:#ddd;font-size:12px;font-weight:bold;letter-spacing:1px;margin-top:9px}
+.afth-section .afth-date{text-align:center;color:#e4c36e;font-weight:bold;font-size:19px;margin:20px 0}
+.afth-section .afth-button{display:inline-block;background:linear-gradient(135deg,#f1d889,#b58a32);color:#111!important;padding:14px 27px;border-radius:5px;font-weight:900;letter-spacing:1px;text-decoration:none;margin:12px 6px}
+.afth-section .afth-actions{text-align:center}
+.afth-section .afth-form-wrap{max-width:850px;margin:35px auto 0;background:#151515;border:1px solid #9b7935;border-radius:10px;padding:18px}
+.afth-section .afth-form-wrap h3{text-align:center;color:#e4c36e;margin:5px 0 12px}
+.afth-section .afth-form-wrap p{text-align:center;color:#ccc;font-size:14px;margin-bottom:15px}
+.afth-section .afth-form-wrap iframe{display:block;width:100%;height:1100px;border:0;border-radius:5px;background:#fff}
+@media(max-width:650px){
+ .afth-section .afth-stats{grid-template-columns:1fr}
+ .afth-section{padding:52px 0}
+ .afth-section .afth-form-wrap{padding:8px}
+ .afth-section .afth-form-wrap iframe{height:1200px}
+}
 </style>
 </head>
 <body>
@@ -93,6 +117,52 @@ footer{background:#061a37;color:white;text-align:center;padding:30px 0}
 <a class="btn" href="#enquiry">PLAN YOUR EVENT</a>
 </div>
 </section>
+
+<!-- AFTH PAGE SECTION -->
+<section class="afth-section" id="afth">
+<div class="afth-container">
+<div class="afth-eyebrow">THE APEX 99 PRESENTS • UPCOMING EVENT 2026</div>
+<h2 class="afth-title">APEX FOOTBALL<br>TALENT HUNT</h2>
+<div class="afth-subtitle">WEST BENGAL</div>
+
+<p class="afth-description">
+<strong style="color:#e4c36e">POWERED BY THE APEX 99</strong><br><br>
+One Platform. One Dream. One World.<br>
+From West Bengal to the World.<br>
+The World Will Witness This Talent.
+</p>
+
+<div class="afth-date">EVENT DATE: 25 DECEMBER 2026</div>
+
+<div class="afth-stats">
+<div class="afth-stat"><strong>UNDER 5–18</strong><span>AGE GROUP</span></div>
+<div class="afth-stat"><strong>1,100</strong><span>PLAYERS PER AGE GROUP</span></div>
+<div class="afth-stat"><strong>11</strong><span>WINNERS PER AGE GROUP</span></div>
+</div>
+
+<p class="afth-description">
+A platform to discover, recognize and showcase the next generation
+of football talent from West Bengal. Registration is completely free.
+</p>
+
+<div class="afth-actions">
+<a class="afth-button" href="https://docs.google.com/forms/d/e/1FAIpQLSceGktNM0lD15e4CgztxNRzBOnxOph4HBw-RJDtghie3-ohcA/viewform" target="_blank" rel="noopener noreferrer">REGISTER NOW →</a>
+</div>
+
+<div class="afth-form-wrap" id="afth-registration">
+<h3>ONLINE PLAYER REGISTRATION</h3>
+<p>Complete the form below to register for APEX FOOTBALL TALENT HUNT – WEST BENGAL.</p>
+<iframe
+src="https://docs.google.com/forms/d/e/1FAIpQLSceGktNM0lD15e4CgztxNRzBOnxOph4HBw-RJDtghie3-ohcA/viewform?embedded=true"
+title="AFTH Online Player Registration Form"
+loading="lazy">Loading registration form…</iframe>
+<div class="afth-actions">
+<a class="afth-button" href="https://docs.google.com/forms/d/e/1FAIpQLSceGktNM0lD15e4CgztxNRzBOnxOph4HBw-RJDtghie3-ohcA/viewform" target="_blank" rel="noopener noreferrer">OPEN FORM IN NEW TAB →</a>
+</div>
+</div>
+</div>
+</section>
+<!-- END AFTH SECTION -->
 
 <section>
 <div class="container heading">
@@ -319,4 +389,3 @@ eventForm.addEventListener("submit",async function(e){
 </script>
 </body>
 </html>
-
