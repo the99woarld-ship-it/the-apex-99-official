@@ -5,14 +5,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Media Production Studio | THE APEX 99</title>
-<meta name="description" content="THE APEX 99 Media Production offers short film production, story-based filmmaking, podcast production, sound recording, audio editing, video production and creative media services.">
+<title>Media Production | THE APEX 99</title>
+<meta name="description" content="THE APEX 99 Media Production - Original films, short films, podcasts, sound recording and video production.">
 
 <style>
 :root {
   --blue: #082d57;
   --deep: #061b34;
-  --blue2: #12518a;
   --gold: #e7b84b;
   --white: #ffffff;
   --light: #f3f7fc;
@@ -36,6 +35,8 @@ body {
 
 a { text-decoration: none; }
 img { max-width: 100%; }
+
+/* HEADER */
 
 header {
   position: sticky;
@@ -104,57 +105,120 @@ nav .nav-cta {
   border-radius: 4px;
 }
 
-/* HERO */
+/* FULL SCREEN SHESH LORAI HERO */
 
 .hero {
-  min-height: 590px;
+  position: relative;
+  min-height: calc(100svh - 125px);
+  min-height: max(650px, calc(100vh - 125px));
+  width: 100%;
+  overflow: hidden;
   display: flex;
   align-items: center;
-  padding: 85px 22px;
+  justify-content: center;
+  background: #080808;
   color: white;
-  background:
-    linear-gradient(100deg,#04162ff2,#082d57c9,#082d574d),
-    url('https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=2000&q=85')
-    center/cover no-repeat;
+  isolation: isolate;
 }
 
-.container {
+/* Blurred image fills the entire screen */
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: -30px;
+  z-index: -2;
+  background-image: url("shesh-lorai-banner.png.png");
+  background-size: cover;
+  background-position: center 40%;
+  background-repeat: no-repeat;
+  filter: blur(16px);
+  transform: scale(1.08);
+}
+
+/* Dark cinematic overlay */
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgba(0,0,0,.70),
+    rgba(0,0,0,.22),
+    rgba(0,0,0,.60)
+  );
+}
+
+/* Complete original poster remains visible */
+
+.hero-poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  z-index: -1;
+}
+
+/* Hero text */
+
+.hero-content {
   width: 100%;
   max-width: 1160px;
   margin: auto;
+  padding: 50px 35px;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  text-shadow: 0 3px 12px rgba(0,0,0,.9);
 }
-
-.hero-content { max-width: 850px; }
 
 .eyebrow {
   display: inline-block;
-  border: 1px solid #e7b84b99;
+  border: 1px solid var(--gold);
   color: var(--gold);
-  padding: 7px 13px;
+  padding: 8px 17px;
   border-radius: 30px;
-  font-size: 11px;
-  letter-spacing: 2px;
+  font-size: 12px;
+  letter-spacing: 3px;
   font-weight: bold;
+  background: rgba(0,0,0,.55);
 }
 
 .hero h1 {
-  font-size: clamp(40px,6vw,75px);
-  line-height: 1.08;
-  margin: 22px 0;
+  font-size: clamp(38px, 6vw, 76px);
+  line-height: 1.1;
+  margin: 25px 0 12px;
+  font-weight: 900;
+  color: white;
 }
 
-.hero h1 span { color: var(--gold); }
+.hero h1 span {
+  color: var(--gold);
+}
 
 .hero p {
-  max-width: 700px;
+  max-width: 650px;
+  margin: 0 auto 28px;
   font-size: 17px;
-  color: #e2eaf5;
-  margin-bottom: 28px;
+  color: #ffffff;
+}
+
+.coming-soon {
+  color: #ff3434;
+  font-size: clamp(27px, 4vw, 48px);
+  font-weight: 900;
+  letter-spacing: 5px;
+  margin: 20px 0;
+  text-shadow: 0 4px 15px #000;
 }
 
 .btn {
   display: inline-block;
-  padding: 12px 19px;
+  padding: 13px 22px;
   border: 1px solid var(--gold);
   border-radius: 5px;
   font-size: 13px;
@@ -169,16 +233,21 @@ nav .nav-cta {
   color: var(--blue);
 }
 
-.btn-outline { color: white; }
+.btn-outline {
+  color: white;
+  background: rgba(0,0,0,.4);
+}
 
 .btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
   background: white;
   color: var(--blue);
   border-color: white;
 }
 
-.hero .btn { margin: 5px 8px 5px 0; }
+.hero .btn { margin: 5px; }
+
+/* TRUST BAR */
 
 .trust {
   background: var(--gold);
@@ -190,57 +259,17 @@ nav .nav-cta {
   letter-spacing: 1px;
 }
 
-section { padding: 75px 22px; }
-
-/* SHESH LORAI FEATURED FILM */
-
-.featured-film {
-  background: radial-gradient(ellipse at center, #18202a 0%, #050608 72%);
-  padding: 38px 18px 48px;
-  text-align: center;
-  border-bottom: 1px solid rgba(231,184,75,.25);
+section {
+  padding: 75px 22px;
 }
 
-.featured-film .film-kicker {
-  color: #e7b84b;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 3px;
-  margin-bottom: 18px;
-}
-
-.featured-film .film-poster {
-  width: min(100%, 560px);
-  margin: 0 auto;
-  overflow: hidden;
-  border: 1px solid rgba(231,184,75,.45);
-  border-radius: 8px;
-  box-shadow:
-    0 18px 55px rgba(0,0,0,.55),
-    0 0 28px rgba(231,184,75,.12);
-  background: #080808;
-}
-
-.featured-film .film-poster img {
-  display: block;
+.container {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  max-width: 1160px;
+  margin: auto;
 }
 
-.featured-film .film-caption {
-  color: #f4f1e9;
-  margin: 18px auto 0;
-  font-size: 13px;
-  letter-spacing: 2px;
-  font-weight: 700;
-}
-
-.featured-film .film-caption span {
-  color: #e7b84b;
-}
-
-/* SECTION HEADINGS */
+/* HEADINGS */
 
 .section-heading {
   text-align: center;
@@ -263,7 +292,9 @@ section { padding: 75px 22px; }
   margin: 10px 0 15px;
 }
 
-.section-heading p { color: var(--muted); }
+.section-heading p {
+  color: var(--muted);
+}
 
 /* INTRODUCTION */
 
@@ -277,7 +308,9 @@ section { padding: 75px 22px; }
 .intro-image {
   min-height: 390px;
   border-radius: 12px;
-  background: url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1100&q=85') center/cover;
+  background:
+    url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1100&q=85')
+    center/cover;
 }
 
 .intro-copy h2 {
@@ -310,7 +343,9 @@ section { padding: 75px 22px; }
 
 /* SERVICES */
 
-.services { background: var(--light); }
+.services {
+  background: var(--light);
+}
 
 .service-grid {
   display: grid;
@@ -340,7 +375,9 @@ section { padding: 75px 22px; }
   background: #e5eaf0;
 }
 
-.service-body { padding: 25px; }
+.service-body {
+  padding: 25px;
+}
 
 .service-number {
   font-size: 11px;
@@ -375,7 +412,9 @@ section { padding: 75px 22px; }
   margin-bottom: 20px;
 }
 
-.service-body li { margin: 4px 0; }
+.service-body li {
+  margin: 4px 0;
+}
 
 .text-link {
   font-size: 13px;
@@ -383,7 +422,9 @@ section { padding: 75px 22px; }
   font-weight: bold;
 }
 
-.text-link:hover { color: var(--blue); }
+.text-link:hover {
+  color: var(--blue);
+}
 
 /* PROCESS */
 
@@ -424,8 +465,13 @@ section { padding: 75px 22px; }
   color: white;
 }
 
-.showcase .section-heading h2 { color: white; }
-.showcase .section-heading p { color: #d8e5f5; }
+.showcase .section-heading h2 {
+  color: white;
+}
+
+.showcase .section-heading p {
+  color: #d8e5f5;
+}
 
 .showcase-grid {
   display: grid;
@@ -447,7 +493,9 @@ section { padding: 75px 22px; }
   display: block;
 }
 
-.showcase-item div { padding: 18px; }
+.showcase-item div {
+  padding: 18px;
+}
 
 .showcase-item h3 {
   color: var(--gold);
@@ -488,7 +536,9 @@ section { padding: 75px 22px; }
 
 /* CONTACT */
 
-.contact { background: var(--light); }
+.contact {
+  background: var(--light);
+}
 
 .contact-grid {
   display: grid;
@@ -534,7 +584,9 @@ section { padding: 75px 22px; }
   margin-bottom: 18px;
 }
 
-.field { margin-bottom: 15px; }
+.field {
+  margin-bottom: 15px;
+}
 
 .field label {
   display: block;
@@ -592,7 +644,9 @@ footer {
   font-weight: 900;
 }
 
-.footer-logo span { color: var(--gold); }
+.footer-logo span {
+  color: var(--gold);
+}
 
 footer p {
   color: #d8e5f5;
@@ -613,12 +667,17 @@ footer p {
   font-size: 13px;
 }
 
-.footer-links a:hover { color: var(--gold); }
+.footer-links a:hover {
+  color: var(--gold);
+}
 
-/* RESPONSIVE */
+/* TABLET */
 
 @media(max-width:900px) {
-  .navbar { flex-direction: column; }
+
+  .navbar {
+    flex-direction: column;
+  }
 
   .intro-grid,
   .contact-grid {
@@ -634,23 +693,58 @@ footer p {
     grid-template-columns: repeat(2,minmax(0,1fr));
   }
 
-  .intro-image { min-height: 300px; }
+  .intro-image {
+    min-height: 300px;
+  }
 }
 
+/* MOBILE */
+
 @media(max-width:600px) {
+
   nav {
     justify-content: center;
     gap: 11px;
   }
 
-  nav a { font-size: 12px; }
-
-  .hero {
-    padding: 65px 19px;
-    min-height: 520px;
+  nav a {
+    font-size: 12px;
   }
 
-  section { padding: 55px 17px; }
+  section {
+    padding: 55px 17px;
+  }
+
+  .hero {
+    min-height: 78vh;
+    min-height: 78svh;
+  }
+
+  .hero-content {
+    padding: 35px 18px;
+  }
+
+  .hero h1 {
+    font-size: clamp(35px,10vw,55px);
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .hero::before {
+    background-position: center center;
+  }
+
+  .hero-poster {
+    object-fit: contain;
+    object-position: center center;
+  }
+
+  .coming-soon {
+    font-size: 28px;
+    letter-spacing: 3px;
+  }
 
   .service-grid,
   .showcase-grid,
@@ -659,28 +753,23 @@ footer p {
     grid-template-columns: 1fr;
   }
 
-  .service-card img { height: 220px; }
-  .service-body { padding: 21px; }
-  .feature-list { grid-template-columns: 1fr; }
+  .service-card img {
+    height: 220px;
+  }
+
+  .service-body {
+    padding: 21px;
+  }
+
+  .feature-list {
+    grid-template-columns: 1fr;
+  }
 
   .contact-form,
   .contact-info {
     padding: 22px;
   }
 
-  .featured-film {
-    padding: 25px 14px 32px;
-  }
-
-  .featured-film .film-kicker {
-    font-size: 10px;
-    letter-spacing: 2px;
-  }
-
-  .featured-film .film-caption {
-    font-size: 11px;
-    line-height: 1.7;
-  }
 }
 
 </style>
@@ -688,10 +777,16 @@ footer p {
 
 <body>
 
+<!-- HEADER -->
+
 <header>
-  <div class="topline">A UNIT OF SMPN RECORD MANAGEMENT</div>
+
+  <div class="topline">
+    A UNIT OF SMPN RECORD MANAGEMENT
+  </div>
 
   <div class="navbar">
+
     <a class="logo" href="index.html">
       THE APEX <span>99</span>
       <small>WHO IS THE ONE</small>
@@ -705,63 +800,55 @@ footer p {
       <a href="#services">Media Services</a>
       <a href="#contact" class="nav-cta">Contact Us</a>
     </nav>
+
   </div>
 </header>
 
-<!-- SHESH LORAI FEATURED FILM -->
-
-<section class="featured-film" aria-label="Featured film: Shesh Lorai">
-
-  <div class="film-kicker">
-    THE APEX 99 ORIGINAL FILM
-  </div>
-
-  <div class="film-poster">
-    <img
-      src="shesh-lorai-banner.png.png"
-      alt="Shesh Lorai - A short film by THE APEX 99 - Coming Soon"
-      fetchpriority="high"
-    >
-  </div>
-
-  <p class="film-caption">
-    PROJECT COMING SOON <span>•</span> SHESH LORAI
-  </p>
-
-</section>
-
 <main>
 
-<!-- HERO SECTION -->
+<!-- SHESH LORAI FULL SCREEN HERO -->
 
 <section class="hero">
+
+  <img
+    class="hero-poster"
+    src="shesh-lorai-banner.png.png"
+    alt="SHESH LORAI - THE APEX 99 Original Film"
+    fetchpriority="high"
+  >
+
   <div class="container hero-content">
 
     <span class="eyebrow">
-      THE APEX 99 • MEDIA PRODUCTION
+      THE APEX 99 ORIGINAL FILM
     </span>
 
     <h1>
-      YOUR STORY.<br>
-      <span>OUR CREATIVE VISION.</span>
+      SHESH <span>LORAI</span>
     </h1>
 
+    <div class="coming-soon">
+      COMING SOON
+    </div>
+
     <p>
-      From powerful short films and original story-based filmmaking to
-      professional podcast production, sound recording and creative video
-      content, we help bring ideas to life through sound and visuals.
+      A STORY OF JUSTICE, HUMANITY AND A FATHER'S FIGHT.
+      A POWERFUL ORIGINAL SHORT FILM BY THE APEX 99.
     </p>
 
     <a href="#services" class="btn btn-gold">
-      EXPLORE OUR SERVICES
+      EXPLORE OUR MEDIA
     </a>
 
     <a href="#contact" class="btn btn-outline">
-      DISCUSS YOUR PROJECT
+      CONTACT US
     </a>
 
   </div>
+
 </section>
+
+<!-- TRUST BAR -->
 
 <div class="trust">
   SHORT FILMS • STORY-BASED FILMMAKING • PODCASTS • SOUND RECORDING • VIDEO PRODUCTION
@@ -770,6 +857,7 @@ footer p {
 <!-- INTRODUCTION -->
 
 <section>
+
   <div class="container intro-grid">
 
     <div
@@ -780,9 +868,13 @@ footer p {
 
     <div class="intro-copy">
 
-      <span class="tag">CREATIVITY MEETS PRODUCTION</span>
+      <span class="tag">
+        CREATIVITY MEETS PRODUCTION
+      </span>
 
-      <h2>Ideas Deserve to Be Seen and Heard.</h2>
+      <h2>
+        Ideas Deserve to Be Seen and Heard.
+      </h2>
 
       <p>
         THE APEX 99 Media Production brings storytelling, visual creativity
@@ -810,26 +902,33 @@ footer p {
       </a>
 
     </div>
+
   </div>
+
 </section>
 
-<!-- MEDIA SERVICES -->
+<!-- SERVICES -->
 
 <section class="services" id="services">
 
   <div class="container">
 
     <div class="section-heading">
+
       <span class="tag">WHAT WE CREATE</span>
+
       <h2>Our Media Production Services</h2>
 
       <p>
         Flexible creative services for original stories, independent creators,
         businesses, interviews, digital content and audio projects.
       </p>
+
     </div>
 
     <div class="service-grid">
+
+      <!-- SERVICE 01 -->
 
       <article class="service-card">
 
@@ -840,7 +939,9 @@ footer p {
         >
 
         <div class="service-body">
+
           <span class="service-number">SERVICE 01</span>
+
           <h3>Short Film Production</h3>
 
           <p>
@@ -863,8 +964,11 @@ footer p {
           <a class="text-link" href="#contact" data-service="Short Film Production">
             DISCUSS A SHORT FILM →
           </a>
+
         </div>
       </article>
+
+      <!-- SERVICE 02 -->
 
       <article class="service-card">
 
@@ -875,7 +979,9 @@ footer p {
         >
 
         <div class="service-body">
+
           <span class="service-number">SERVICE 02</span>
+
           <h3>Story-Based Film Making</h3>
 
           <p>
@@ -898,8 +1004,11 @@ footer p {
           <a class="text-link" href="#contact" data-service="Story-Based Film Making">
             SHARE YOUR STORY →
           </a>
+
         </div>
       </article>
+
+      <!-- SERVICE 03 -->
 
       <article class="service-card">
 
@@ -910,7 +1019,9 @@ footer p {
         >
 
         <div class="service-body">
+
           <span class="service-number">SERVICE 03</span>
+
           <h3>Podcast Studio & Production</h3>
 
           <p>
@@ -932,8 +1043,11 @@ footer p {
           <a class="text-link" href="#contact" data-service="Podcast Studio & Production">
             PLAN YOUR PODCAST →
           </a>
+
         </div>
       </article>
+
+      <!-- SERVICE 04 -->
 
       <article class="service-card">
 
@@ -944,7 +1058,9 @@ footer p {
         >
 
         <div class="service-body">
+
           <span class="service-number">SERVICE 04</span>
+
           <h3>Sound Recording Studio</h3>
 
           <p>
@@ -967,8 +1083,11 @@ footer p {
           <a class="text-link" href="#contact" data-service="Sound Recording Studio">
             ASK ABOUT RECORDING →
           </a>
+
         </div>
       </article>
+
+      <!-- SERVICE 05 -->
 
       <article class="service-card">
 
@@ -979,7 +1098,9 @@ footer p {
         >
 
         <div class="service-body">
+
           <span class="service-number">SERVICE 05</span>
+
           <h3>Video Editing & Post-Production</h3>
 
           <p>
@@ -1001,8 +1122,11 @@ footer p {
           <a class="text-link" href="#contact" data-service="Video Editing & Post-Production">
             DISCUSS VIDEO EDITING →
           </a>
+
         </div>
       </article>
+
+      <!-- SERVICE 06 -->
 
       <article class="service-card">
 
@@ -1013,7 +1137,9 @@ footer p {
         >
 
         <div class="service-body">
+
           <span class="service-number">SERVICE 06</span>
+
           <h3>Promotional Videos & Interviews</h3>
 
           <p>
@@ -1036,6 +1162,7 @@ footer p {
           <a class="text-link" href="#contact" data-service="Promotional Videos & Interviews">
             PLAN A VIDEO PROJECT →
           </a>
+
         </div>
       </article>
 
@@ -1050,13 +1177,16 @@ footer p {
   <div class="container">
 
     <div class="section-heading">
+
       <span class="tag">FROM IDEA TO FINAL CUT</span>
+
       <h2>How We Work</h2>
 
       <p>
         A clear process helps every project begin with shared expectations
         and a practical production plan.
       </p>
+
     </div>
 
     <div class="process-grid">
@@ -1108,13 +1238,16 @@ footer p {
   <div class="container">
 
     <div class="section-heading">
+
       <span class="tag">CREATIVE POSSIBILITIES</span>
+
       <h2>Content for Different Audiences</h2>
 
       <p>
         Different stories need different approaches. We can discuss
         the most suitable format for your idea.
       </p>
+
     </div>
 
     <div class="showcase-grid">
@@ -1184,13 +1317,16 @@ footer p {
   <div class="container">
 
     <div class="section-heading">
+
       <span class="tag">WHY WORK WITH US</span>
+
       <h2>A Creative Partner for Your Project</h2>
 
       <p>
         Our approach begins by understanding what you want to communicate
         and how your audience should experience it.
       </p>
+
     </div>
 
     <div class="why-grid">
@@ -1230,7 +1366,9 @@ footer p {
   <div class="container">
 
     <div class="section-heading">
+
       <span class="tag">LET'S CREATE SOMETHING MEANINGFUL</span>
+
       <h2>Tell Us About Your Project</h2>
 
       <p>
@@ -1238,6 +1376,7 @@ footer p {
         We will use your details to understand your requirements
         and discuss the next steps.
       </p>
+
     </div>
 
     <div class="contact-grid">
